@@ -1,14 +1,14 @@
-# Scénario C4 : dire et taire un savoir savant
+# Scénario « Dire et taire » : la circulation d'un savoir savant
 
-*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 11 du 16 octobre 2026 : suites de la revue n° 2 (dix-sept décisions du chercheur, consignées dans « ../revues/revue-adversariale-2-cadre-et-C4.md », section 10). Principaux changements : HT1 relative aux contrastes déclarés, contraste principal de scène, fiche à étendue maximale et contrôle de manipulation (1.5, 1.6, 7.2) ; règle de décision de HT2 (7.3) ; borne de HO9 abaissée à ±0,05 (7.4) ; modèle nul des chaînes linéaires pour la convergence (7.5) et règle pour HO8 (7.6) ; mémoire d'entraînement et test de connaissance préalable (1.2, 3.2, étape 0a) ; gazette neutre G= (3.8) ; enquête du matin (4.1) ; versions de modèles épinglées (3.1) ; M-PLU sans Le Chonk ni Gemma, comparé à M-AUT (3.1) ; 10 graines pour les bras de HO11 joués entre simulations (6) ; codage de référence et fiabilité précisés (7) ; billets de méthode seulement avant l'élection présidentielle de 2027 (8, 9). La version 10 avait fixé la condition de référence « tout Le Chonk » ; la version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts-C4.html »).*
+*Scénario unique du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 11.1 du 17 octobre 2026 : le projet ne compte plus qu'un scénario ; les codes « C4 » et les renvois aux anciennes expériences C0 à C3 sont retirés ; la construction des 40 habitants entre dans l'étape 1 (3.1, 5, 8). Version 11 du 16 octobre 2026 : suites de la revue n° 2 (dix-sept décisions du chercheur, consignées dans « ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Principaux changements : HT1 relative aux contrastes déclarés, contraste principal de scène, fiche à étendue maximale et contrôle de manipulation (1.5, 1.6, 7.2) ; règle de décision de HT2 (7.3) ; borne de HO9 abaissée à ±0,05 (7.4) ; modèle nul des chaînes linéaires pour la convergence (7.5) et règle pour HO8 (7.6) ; mémoire d'entraînement et test de connaissance préalable (1.2, 3.2, étape 0a) ; gazette neutre G= (3.8) ; enquête du matin (4.1) ; versions de modèles épinglées (3.1) ; M-PLU sans Le Chonk ni Gemma, comparé à M-AUT (3.1) ; 10 graines pour les bras de HO11 joués entre simulations (6) ; codage de référence et fiabilité précisés (7) ; billets de méthode seulement avant l'élection présidentielle de 2027 (8, 9). La version 10 avait fixé la condition de référence « tout Le Chonk » ; la version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts.html »).*
 
-*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6.2), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « preenregistrement-C4-premier-temps.md » (ébauche du premier temps du préenregistrement), « ../revues/revue-adversariale-1-cadre-et-C4.md » et « ../revues/revue-adversariale-2-cadre-et-C4.md » (revues et décisions).*
+*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6.3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « preenregistrement-premier-temps.md » (ébauche du premier temps du préenregistrement), « ../revues/revue-adversariale-1-cadre-et-scenario.md » et « ../revues/revue-adversariale-2-cadre-et-scenario.md » (revues et décisions).*
 
 *Projet mené seul par l'ingénieur pédagogique (SIC), qui assure aussi la relecture. Les pairs interviennent ensuite : publication progressive de billets sur le carnet de recherche (jediopenlab.hypotheses.org), puis soumission d'articles. La méthode compense l'absence de second codeur (section 7).*
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
-**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO11 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du C4. G0, G=, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-LC, M-AUT, M-PLU : modèle qui joue le village. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
+**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO11 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du scénario. G0, G=, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-LC, M-AUT, M-PLU : modèle qui joue le village. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
 
 ---
 
@@ -16,9 +16,9 @@
 
 ### 1.1 La clef de lecture : qui se tait quand un agent se tait ?
 
-Le C4 met en circulation dans le village une thèse d'historien moralement chargée, et observe ce qui s'en dit et ce qui s'en tait. La théorie de la spirale du silence (Noelle-Neumann, 1974, 1993) sert d'instrument : elle oblige à regarder ce qui **ne circule pas**, et elle fournit des mesures (climat perçu, test du train, écart entre ce qui est déclaré et ce qui est exprimé).
+Le scénario met en circulation dans le village une thèse d'historien moralement chargée, et observe ce qui s'en dit et ce qui s'en tait. La théorie de la spirale du silence (Noelle-Neumann, 1974, 1993) sert d'instrument : elle oblige à regarder ce qui **ne circule pas**, et elle fournit des mesures (climat perçu, test du train, écart entre ce qui est déclaré et ce qui est exprimé).
 
-Mais la question du C4 n'est pas de savoir si des machines « reproduisent » la spirale du silence. Elle découle de la clef de lecture de tout le projet, la **co-agentivité** (cadre scientifique, section 1) : une réplique n'est jamais l'acte d'un seul agent, elle est co-produite par un agencement de six instances (inventaire complet en 3.0).
+Mais la question du scénario n'est pas de savoir si des machines « reproduisent » la spirale du silence. Elle découle de la clef de lecture de tout le projet, la **co-agentivité** (cadre scientifique, section 1) : une réplique n'est jamais l'acte d'un seul agent, elle est co-produite par un agencement de six instances (inventaire complet en 3.0).
 
 | Instance | Comment elle peut produire du dire ou du taire |
 |---|---|
@@ -48,7 +48,7 @@ Le silence, s'il apparaît, n'est donc pas « celui d'un habitant » : c'est **u
 | **X** | Un dispositif génératif met en scène le dire et le taire autour d'un savoir savant | X ne présuppose pas que le silence apparaîtra : si tous les agents parlent, le résultat répond aussi à la question |
 | **Y** | Ses agents sont conçus pour toujours répondre et n'ont rien à craindre de la parole | Un modèle de langage est entraîné à produire du texte et à ne laisser aucune question sans réponse ; il n'a ni corps social, ni réputation, ni peur de l'isolement, ressort central de la spirale du silence (Noelle-Neumann, 1993), absence que reconnaissent Zhong et al. (2025) |
 
-**Ce que Y contient.** Les deux moitiés de Y ne pèsent pas le même poids. « Conçus pour toujours répondre » est vrai de la forme (un modèle ne laisse pas une question sans texte) et discutable du fond : les fournisseurs règlent aussi leurs modèles pour ne pas prendre parti sur les sujets controversés, et c'est l'un des mécanismes testés (HO5c). « N'ont rien à craindre de la parole » est la vraie tension avec la spirale du silence, dont le ressort est la peur de l'isolement. La problématique est gardée ainsi parce que la première moitié décrit l'apparence que le dispositif donne aux agents, et que c'est précisément cette apparence que le C4 interroge.
+**Ce que Y contient.** Les deux moitiés de Y ne pèsent pas le même poids. « Conçus pour toujours répondre » est vrai de la forme (un modèle ne laisse pas une question sans texte) et discutable du fond : les fournisseurs règlent aussi leurs modèles pour ne pas prendre parti sur les sujets controversés, et c'est l'un des mécanismes testés (HO5c). « N'ont rien à craindre de la parole » est la vraie tension avec la spirale du silence, dont le ressort est la peur de l'isolement. La problématique est gardée ainsi parce que la première moitié décrit l'apparence que le dispositif donne aux agents, et que c'est précisément cette apparence que le scénario interroge.
 
 **Comment la clef de lecture résout la tension.** Y n'est contradictoire que si l'on cherche le silence dans les agents. Si l'agentivité est distribuée, des agents qui n'ont rien à craindre peuvent quand même produire du taire, parce que **ce ne sont pas eux seuls qui parlent ou se taisent** : la fiche, les cadres, l'ordonnanceur, le concepteur et, derrière le modèle, son fournisseur et ses règles de neutralité, y prennent part.
 
@@ -62,7 +62,7 @@ Le silence, s'il apparaît, n'est donc pas « celui d'un habitant » : c'est **u
 | **QR-D. La trivialité co-produite** | Quelles versions de la thèse dominent ce qui s'entend dans le village, convergent-elles, et que change l'agencement social (réseau, scènes, mémoire) par rapport à une transmission linéaire ? | Conséquence |
 | **QR-E. L'étalonnage théorique** | De quelle formalisation de la spirale du silence la dynamique de l'agencement se rapproche-t-elle le plus ? Étalons publiés comme plancher (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), formalisations du projet en complément si elles existent au moment de l'analyse | Conséquence |
 
-La question QR3 du cadre (la conception de la communication que l'agencement réalise) n'a pas d'hypothèse propre dans le C4 : elle est traitée qualitativement au niveau 1 de la grille (section 7).
+La question QR3 du cadre (la conception de la communication que l'agencement réalise) n'a pas d'hypothèse propre dans le scénario : elle est traitée qualitativement au niveau 1 de la grille (section 7).
 
 **Architecture du raisonnement** : problématique (1.3) → questions de recherche (1.4) → hypothèses de travail (1.5), qui proposent des réponses → hypothèses opérationnelles (1.6), qui les traduisent en mesures et en règles de décision → instances et conditions (3.0) → dispositif (3) et mesures (4) → analyse (7).
 
@@ -110,7 +110,7 @@ La question QR3 du cadre (la conception de la communication que l'agencement ré
 
 En complément du cadre scientifique général, dont le noyau est l'agentivité distribuée :
 
-| Concept | Références | Rôle dans le C4 |
+| Concept | Références | Rôle dans le scénario |
 |---|---|---|
 | **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | Clef de lecture : la part de chaque instance dans le dire et le taire (HT1, HO11) |
 | **Architexte** | Jeanneret et Souchier (1999) | Le modèle qui écrit toutes les voix (« tout Le Chonk ») ; contrastes M-LC contre M-AUT (HT1) et M-AUT contre M-PLU (HT3, HO10b) |
@@ -137,7 +137,7 @@ En complément du cadre scientifique général, dont le noyau est l'agentivité 
 | **Spirale du silence chez des agents génératifs** | Zhong et al. (2025) ; Yang et al. (2026) | Travaux les plus proches |
 | **Suffisance générative et plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Une spirale reproduite n'est pas une spirale expliquée |
 
-**Concepts de lecture.** Script (Akrich, 1987), énonciation éditoriale (Souchier, 1998) et dispositif (Agamben, 2007) n'ont pas de mesure propre dans le C4. Ils servent à l'analyse qualitative du niveau 1 de la grille (consignes, code, carnet de conception), qui décrit ce que le concepteur et l'orchestrateur inscrivent dans le village (section 7).
+**Concepts de lecture.** Script (Akrich, 1987), énonciation éditoriale (Souchier, 1998) et dispositif (Agamben, 2007) n'ont pas de mesure propre dans le scénario. Ils servent à l'analyse qualitative du niveau 1 de la grille (consignes, code, carnet de conception), qui décrit ce que le concepteur et l'orchestrateur inscrivent dans le village (section 7).
 
 ---
 
@@ -183,7 +183,7 @@ Le dispositif traduit la clef de lecture : chaque instance de production a ses c
 
 ### 3.1 Le village et le modèle qui le joue
 
-Saint-Aubert-sur-Lys, les 40 habitants des expériences C1 à C3, construits selon le protocole anti-biais (attributs tirés par script, décorrélation, OCEAN, audits, permutations des prénoms et du genre). Société contemporaine transposée, **sans partis, élus ni personnalités réels**, **sans élection en cours**.
+Saint-Aubert-sur-Lys, 40 habitants construits à l'étape 1 selon un protocole anti-biais (attributs tirés par script, décorrélation, OCEAN, audit des fiches, permutations des prénoms et du genre). Société contemporaine transposée, **sans partis, élus ni personnalités réels**, **sans élection en cours**.
 
 | Code | Modèle du village | Rôle |
 |---|---|---|
@@ -220,7 +220,7 @@ Critères préenregistrés : même période traitée pour T3, **genre comparable
 
 **Connaissance préalable.** Les modèles connaissent probablement T1 et sa réception par leurs données d'entraînement : c'est la culture commune du village (1.2). L'étape 0a la mesure, pour chaque modèle et chaque texte source : ce que le modèle restitue à partir du seul titre et de l'auteur (recouvrement avec la grille des propositions, en pourcentage) et ce qu'il dit de la réception du livre. Critère de choix de T0 et T3 : un recouvrement du même ordre que pour T1 (écart de moins de 20 points), ou, à défaut, un recouvrement rapporté et discuté.
 
-**Masquage, en dernier recours.** Le C4 étudie un savoir savant **attribué** : « Chapoutot dit que » fait partie de ce qui circule. Le titre et l'auteur restent donc nommés par défaut. Si le modèle de référence restitue plus de 50 % de la grille à partir du seul titre, le titre et l'auteur de T1 sont masqués dans toutes les consignes du village (« un livre récent d'un historien ») ; l'étape 0a vérifie alors si le modèle ré-identifie l'ouvrage à partir des notes de lecture, et la fréquence de ré-identification est rapportée comme part du modèle. Les deux branches sont préenregistrées au premier temps ; le choix est fait après l'étape 0a.
+**Masquage, en dernier recours.** Le scénario étudie un savoir savant **attribué** : « Chapoutot dit que » fait partie de ce qui circule. Le titre et l'auteur restent donc nommés par défaut. Si le modèle de référence restitue plus de 50 % de la grille à partir du seul titre, le titre et l'auteur de T1 sont masqués dans toutes les consignes du village (« un livre récent d'un historien ») ; l'étape 0a vérifie alors si le modèle ré-identifie l'ouvrage à partir des notes de lecture, et la fréquence de ré-identification est rapportée comme part du modèle. Les deux branches sont préenregistrées au premier temps ; le choix est fait après l'étape 0a.
 
 **Le bloc T2 est exploratoire.** Question : la médiation journalistique change-t-elle ce qui se dit et ce qui se tait ? Indicateurs : taux de taire et transformations de la thèse, comparés à T1. Aucune hypothèse n'est préenregistrée ; les résultats sont rapportés comme descriptifs.
 
@@ -232,7 +232,7 @@ Un habitant, joué par le modèle du village (**Le Chonk** en M-LC), a lu le tex
 
 **Contrôle du résumé de mémoire (priorité 2).** Trois simulations T1 × G0 × M-LC où la mémoire des habitants ne passe pas par un résumé (derniers échanges conservés mot pour mot, fenêtre fixe) estiment ce que le résumé fait à la diversité des versions. Le résultat est rapporté comme part du modèle dans son rôle de résumé.
 
-### 3.4 Les personas : attributs propres au C4
+### 3.4 Les personas : attributs propres au scénario
 
 | Attribut | Construction | Statut |
 |---|---|---|
@@ -296,7 +296,7 @@ Les trois tests peuvent donner des résultats compatibles entre eux : plusieurs 
 
 ### 3.10 Chaîne de transmission préalable (QR-D, HO8)
 
-Avant le village, la thèse (T1) et le savoir témoin (T0) passent par des **chaînes linéaires de 10 agents**, selon le protocole de l'expérience C0 du cadre scientifique, jouées par Le Chonk et par le modèle de M-AUT. On obtient ainsi les transformations et la diversité dues à la seule transmission, rang par rang. Ces chaînes sont le **modèle nul** de deux hypothèses : HO10a (la pente de diversité du village est comparée à celle des chaînes) et HO8 (la conservation et les transformations du village sont comparées à celles des chaînes). La comparaison montre ce qu'ajoute la structure sociale (réseau, scènes, climat), c'est-à-dire la part des médiations.
+Avant le village, la thèse (T1) et le savoir témoin (T0) passent par des **chaînes linéaires de 10 agents**, selon le protocole de reproduction en série décrit dans le cadre scientifique (6.5 : Bartlett ; Mesoudi et Whiten), jouées par Le Chonk et par le modèle de M-AUT. On obtient ainsi les transformations et la diversité dues à la seule transmission, rang par rang. Ces chaînes sont le **modèle nul** de deux hypothèses : HO10a (la pente de diversité du village est comparée à celle des chaînes) et HO8 (la conservation et les transformations du village sont comparées à celles des chaînes). La comparaison montre ce qu'ajoute la structure sociale (réseau, scènes, climat), c'est-à-dire la part des médiations.
 
 **Profondeur de transmission.** Dans le village, la profondeur d'une version est le nombre d'intermédiaires entre le lecteur et l'agent, reconstitué à partir des traces de l'orchestrateur (qui a parlé du livre à qui, et quand). Elle ne dépend pas de la question 3 de l'enquête, qui recueille un récit de l'agent. Village et chaînes sont comparés à profondeur égale.
 
@@ -322,7 +322,7 @@ Cadre explicitement confidentiel : « Tes réponses ne seront connues de personn
 8. As-tu parlé du livre aujourd'hui ? Si oui, avec qui, et qu'as-tu dit ?
 9. **Position déclarée, formulation B** (test de stabilité) : ce livre a-t-il raison, selon toi ? (0 = pas du tout, 100 = tout à fait)
 
-Un écart de plus de 20 points entre les formulations A et B signale une position instable. La part d'agents instables est rapportée. Les échelles de 0 à 100 sont conservées, pour la comparabilité avec C1 à C3 ; la distribution des valeurs (concentration sur les nombres ronds) est rapportée, et le seuil de stabilité est réexaminé au pilote.
+Un écart de plus de 20 points entre les formulations A et B signale une position instable. La part d'agents instables est rapportée. Les échelles de 0 à 100 sont conservées ; la distribution des valeurs (concentration sur les nombres ronds) est rapportée, et le seuil de stabilité est réexaminé au pilote.
 
 La question 6 (tendance perçue) est un prédicteur secondaire de HO9 ; la question 7 (test du train) est la variable de HO9b, avec contrôle de plafond.
 
@@ -385,12 +385,12 @@ Les formes NEU et EUP sont précisément celles que la neutralité apprise peut 
 
 | Étape | Contenu | Durée |
 |---|---|---|
-| **Revue n° 2** | Faite le 16 octobre 2026 par Claude Fable ; objections et décisions consignées (« ../revues/revue-adversariale-2-cadre-et-C4.md »). Reste une relecture par un modèle d'un autre fournisseur via ILaaS (`qwen-3.8-27b`), les documents ayant été rédigés et relus par des modèles de la même famille ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
+| **Revue n° 2** | Faite le 16 octobre 2026 par Claude Fable ; objections et décisions consignées (« ../revues/revue-adversariale-2-cadre-et-scenario.md »). Reste une relecture par un modèle d'un autre fournisseur via ILaaS (`qwen-3.8-27b`), les documents ayant été rédigés et relus par des modèles de la même famille ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
 | **Étape −1. Test d'accès et de débit** | Une journée simulée (40 habitants, T1, G0, M-LC) : relève l'identifiant exact du modèle renvoyé par l'API, mesure tokens par appel, durée par scène et taux d'erreurs de débit, et donne l'ordre de grandeur d'une simulation complète. Résultat consigné avant le premier temps du préenregistrement ; il décide du plan à 70 simulations ou du repli (section 6) | 2 jours |
-| **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO11 et de leurs règles de décision, des étapes préalables, des contrastes de référence et de leur justification, des deux branches de la connaissance préalable (3.2) et du plan B (3.1). Ébauche : « preenregistrement-C4-premier-temps.md » | Avec la revue n° 2 |
+| **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO11 et de leurs règles de décision, des étapes préalables, des contrastes de référence et de leur justification, des deux branches de la connaissance préalable (3.2) et du plan B (3.1). Ébauche : « preenregistrement-premier-temps.md » | Avec la revue n° 2 |
 | **0a. Profil des modèles, connaissance préalable et test sans public** | Chaque modèle (Le Chonk, `mistral-medium` daté, `mistral-small-4-119b`, `qwen-3.8-27b`, `gemma-4-31b`, les juges) répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; restitue T0, T1, T3 et leur réception à partir du seul titre et de l'auteur (test de connaissance préalable, 10 fois) ; puis, sans persona et avec persona, seul, répond à des questions sur T0, T1, T3. Les réponses avec persona sont recueillies sous **trois paraphrases de la consigne des habitants**, pour estimer la part du concepteur dans la formulation des consignes. Dix items fixes de cette étape forment l'empreinte de comportement rejouée au début et à la fin de chaque bloc (3.1) | 1 semaine |
 | **0b. Dyades contrôlées** | 40 personas × interlocuteur favorable puis critique × T1 et T0 × 3 répétitions (environ 480 courts dialogues) ; plus une variante « étiquetée publique » à contenu identique (quelques dizaines de dialogues), qui mesure l'effet de la seule étiquette de scène | En parallèle |
-| **1. Cohérence des personas et contrôle de manipulation** | Les personas répondent aux items d'enquête et à l'échelle d'autocensure, pour Le Chonk, pour les deux candidats à M-AUT et pour les modèles de M-PLU ; contrôle de cohérence avec les attributs (sans valeur de validation) ; **contrôle de manipulation de la fiche** (3.4) ; choix du modèle de M-AUT et d'un éventuel quatrième modèle de M-PLU | 1 semaine |
+| **1. Construction des personas, cohérence et contrôle de manipulation** | Construction des 40 habitants selon le protocole anti-biais (3.1), avec les attributs propres au scénario (3.4), et audit des fiches. Les personas répondent aux items d'enquête et à l'échelle d'autocensure, pour Le Chonk, pour les deux candidats à M-AUT et pour les modèles de M-PLU ; contrôle de cohérence avec les attributs (sans valeur de validation) ; **contrôle de manipulation de la fiche** (3.4) ; choix du modèle de M-AUT et d'un éventuel quatrième modèle de M-PLU | 1 semaine |
 | **2. Grille des propositions et notes de lecture** | Extraction par Le Chonk ; validation par l'ingénieur pédagogique ; confrontation aux comptes rendus publiés de l'ouvrage | 1 semaine |
 | **3. Livres de codes** | Transformations, lectures, formes du silence, échelle de position exprimée ; test sur le mini-village ; revue par un autre modèle ; tirage de l'échantillon de validation des juges (section 7) | 1 semaine |
 | **4. Gazette** | Rédaction appariée de G=, G+ et G− ; appariement vérifié par le chercheur et par deux modèles juges | En parallèle |
@@ -473,7 +473,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 
 5. **Convergence (QR-D, HT3, HO10)** : pour chaque simulation, pente de la diversité des versions au fil des journées, pour la mesure sémantique et pour la mesure lexicale. La pente attendue par la seule transmission est estimée sur les chaînes linéaires jouées par le même modèle, en appariant les versions du village et des chaînes par profondeur de transmission (3.10). HO10a est **soutenue** si la pente est plus négative que la pente attendue, en M-LC (cœur G0) et en M-AUT, pour les deux mesures, intervalle excluant zéro. HO10b est **soutenue** si la pente est plus négative en M-AUT qu'en M-PLU, pour les deux mesures, intervalle excluant zéro. HT3 est **soutenue** si HO10a et HO10b le sont ; **réfutée** si la pente n'est pas plus négative que la pente attendue en M-LC et en M-AUT ; **indéterminée** sinon, en particulier quand la convergence est établie sans que sa cause soit départagée (HO10b non jouée ou non établie), ou quand les deux mesures divergent. Le modèle de plongement est un instrument de plus : la mesure lexicale, qui n'en dépend pas, sert de contrôle.
 
-6. **Structure sociale et trivialité (QR-D, HO8)** : à profondeur de transmission égale, comparaison du taux de conservation des propositions de la grille et du profil des transformations entre le village (M-LC, cœur G0) et les chaînes linéaires jouées par Le Chonk. Le critère de HO8 est satisfait si la différence de taux de conservation atteint au moins 10 points, intervalle excluant zéro ; le profil des transformations est comparé code par code et rapporté. La différence mesure ce que les médiations sociales du village (réseau, scènes, gazette, mémoire) font à la thèse : c'est la mesure de la trivialité co-produite dans le C4. La mémoire d'entraînement (0a) est rapportée à côté, pour ne pas attribuer aux médiations ce que le modèle savait déjà.
+6. **Structure sociale et trivialité (QR-D, HO8)** : à profondeur de transmission égale, comparaison du taux de conservation des propositions de la grille et du profil des transformations entre le village (M-LC, cœur G0) et les chaînes linéaires jouées par Le Chonk. Le critère de HO8 est satisfait si la différence de taux de conservation atteint au moins 10 points, intervalle excluant zéro ; le profil des transformations est comparé code par code et rapporté. La différence mesure ce que les médiations sociales du village (réseau, scènes, gazette, mémoire) font à la thèse : c'est la mesure de la trivialité co-produite dans le scénario. La mémoire d'entraînement (0a) est rapportée à côté, pour ne pas attribuer aux médiations ce que le modèle savait déjà.
 
 7. **Étalonnage théorique (QR-E, HO3)** : les trajectoires du village sont confrontées à des modèles publiés de la spirale du silence (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), et, s'ils existent au moment de l'analyse, aux familles de formalisations du projet ; on compare la qualité d'ajustement de chaque famille. Un bon ajustement indique une ressemblance de forme, non une identité de mécanisme (suffisance générative).
 
@@ -498,13 +498,13 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 
 ---
 
-## 8. Déroulé (une semaine de préparation et dix semaines, après validation de C1 à C3)
+## 8. Déroulé (une semaine de préparation et dix semaines, une fois la station installée et le village codé)
 
 | Semaine | Activité | Responsable |
 |---|---|---|
 | Semaine zéro | Étape −1 (test d'accès et de débit) ; identifiant du modèle consigné | Ingénieur pédagogique |
 | Semaine un | Relecture par un modèle d'un autre fournisseur ; choix de T0, T2, T3 (avec test de connaissance préalable) ; préenregistrement, premier temps | Ingénieur pédagogique |
-| Semaine deux | Étapes 0a et 0b ; étape 1 (contrôle de manipulation, choix du modèle de M-AUT) ; ajout des attributs C4 | Ingénieur pédagogique |
+| Semaine deux | Étapes 0a et 0b ; étape 1 (contrôle de manipulation, choix du modèle de M-AUT) ; construction des 40 personas et de leurs attributs | Ingénieur pédagogique |
 | Semaine trois | Étape 2 (grille et notes, confrontation aux comptes rendus publiés) ; étape 4 (gazette) ; étape 5 (chaînes) | Ingénieur pédagogique |
 | Semaine quatre | Étape 3 (livres de codes, revue par un autre modèle, échantillon de validation) ; étape 6 (pilote, puissance) ; préenregistrement, second temps | Ingénieur pédagogique |
 | Semaine cinq | Priorité 1 ; codage par les juges à la fin de chaque simulation | Ingénieur pédagogique, modèles juges |
@@ -546,9 +546,9 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 1. Le tableau des profils des modèles, de leur connaissance préalable des textes sources, des taux de neutralisation sans public et de l'effet des paraphrases de consigne.
 2. L'étude des dyades contrôlées (complaisance).
 3. La grille des propositions et les livres de codes (transformations, lectures, formes du silence, échelle de position exprimée).
-4. Le module C4 en code ouvert, avec ordonnanceur, sollicitations standardisées et configuration du modèle du village.
+4. Le module scénario en code ouvert, avec ordonnanceur, sollicitations standardisées et configuration du modèle du village.
 5. Le tableau de bord « ce qui est déclaré, ce qui s'entend ».
-6. La carte des concepts du C4, tenue à jour à chaque version.
+6. La carte des concepts du scénario, tenue à jour à chaque version.
 7. Un article de recherche en SIC : dire et taire un savoir savant dans une société d'agents génératifs.
 8. Des billets sur le carnet de recherche, dont un retour d'expérience.
 

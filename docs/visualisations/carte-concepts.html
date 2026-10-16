@@ -1,5 +1,5 @@
 <!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>
-<title>Carte des concepts du C4</title>
+<title>Carte des concepts</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,9 +88,9 @@ svg{display:block}
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Village simulé · scénario C4 « Dire et taire »</div>
-    <h1>Carte des concepts du C4</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au C4 version 11 et au cadre version 6.2, après la revue n° 2. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <div class="eyebrow">Village simulé · scénario « Dire et taire »</div>
+    <h1>Carte des concepts</h1>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11 et au cadre version 6.2, après la revue n° 2. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6.2 (sections 1, 2.5, 3, 4, 6, 7) et scénario C4 v11 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6.3 (sections 1, 2.5, 3, 4, 6, 7) et scénario v11.1 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -131,7 +131,7 @@ const N=[
 {id:"enoned",c:0,fam:"agencement",l:"Énonciation éditoriale",r:"Souchier (1998)",d:"Ce que la consigne et la mémoire assemblées par l'orchestrateur imposent aux énoncés ; analyse qualitative du niveau 1."},
 {id:"goff",c:0,fam:"agencement",l:"Cadres de l'expérience",r:"Goffman (1974)",d:"Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre."},
 {id:"dispo",c:0,fam:"agencement",l:"Dispositif",r:"Foucault ; Agamben (2007)",d:"Le village comme agencement hétérogène qui oriente les conduites ; analyse qualitative du niveau 1 et QR3."},
-{id:"trivia",c:0,fam:"agencement",l:"Trivialité",r:"Jeanneret (2008, 2014)",d:"Circulation créative des êtres culturels, réécrits à travers des médiations. Mesure circonscrite dans le C4 : conservation et transformations, village contre chaînes linéaires à profondeur égale (HO8)."},
+{id:"trivia",c:0,fam:"agencement",l:"Trivialité",r:"Jeanneret (2008, 2014)",d:"Circulation créative des êtres culturels, réécrits à travers des médiations. Mesure circonscrite dans le scénario : conservation et transformations, village contre chaînes linéaires à profondeur égale (HO8)."},
 {id:"media",c:0,fam:"agencement",l:"Médiation",r:"Jeanneret (2014) ; Davallon",d:"Compte rendu journalistique T2 (bloc exploratoire) et gazette."},
 {id:"tele",c:0,fam:"agencement",l:"Modèle télégraphique (instrument)",r:"Shannon et Weaver (1949) ; Winkin (1981)",d:"Instrument de mesure de la fidélité, et indice d'une communication-transport (QR3)."},
 {id:"bartlett",c:0,fam:"discours",l:"Reproduction en série",r:"Bartlett (1932) ; Allport et Postman (1947)",d:"Réduction, accentuation, assimilation ; protocole des chaînes linéaires."},
@@ -176,18 +176,18 @@ const N=[
 /* QR */
 {id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
 {id:"QR2",c:2,code:"QR2",l:"La part des instances",d:"Quelle part de ces transformations revient à chaque instance ? (question centrale)"},
-{id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il ? Dans le C4 : analyse qualitative du niveau 1 de la grille."},
-{id:"QR4",c:2,code:"QR4",l:"Le dire et le taire",d:"Problématique du C4."},
+{id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il ? Dans le scénario : analyse qualitative du niveau 1 de la grille."},
+{id:"QR4",c:2,code:"QR4",l:"Le dire et le taire",d:"Problématique du scénario."},
 {id:"QRA",c:2,code:"QR-A",l:"Les formes du dire et du taire",d:"Quelles positions l'agencement exprime-t-il face aux sollicitations, en public et en privé, et sous quelles formes se manifeste le taire ?"},
 {id:"QRB",c:2,code:"QR-B",l:"Le climat",d:"Comment se forme le climat perçu, quelles instances le façonnent, pèse-t-il sur ce qui se dit ?"},
-{id:"QRC",c:2,code:"QR-C",l:"La part des instances",d:"Quelle part du dire et du taire revient à chaque instance ? (question centrale du C4)"},
+{id:"QRC",c:2,code:"QR-C",l:"La part des instances",d:"Quelle part du dire et du taire revient à chaque instance ? (question centrale du scénario)"},
 {id:"QRD",c:2,code:"QR-D",l:"La trivialité co-produite",d:"Quelles versions dominent, convergent-elles, que change l'agencement social par rapport à une transmission linéaire ?"},
 {id:"QRE",c:2,code:"QR-E",l:"L'étalonnage théorique",d:"De quelle formalisation de la spirale du silence la dynamique se rapproche-t-elle ? Modèles publiés comme plancher."},
 /* HT */
-{id:"HT1",c:3,code:"HT1",regle:true,l:"Le taire est co-produit",d:"Relative aux contrastes déclarés : la scène (principal) ou un contraste secondaire pèse plus que la fiche à étendue maximale sur le taux de taire. Hypothèse centrale ; règle en C4, 7.2 (HO11)."},
-{id:"HT2",c:3,code:"HT2",regle:true,l:"Un dire vide",d:"Les formes de neutralisation font plus de la moitié du taire, et plus pour T1 que pour T0. Règle en C4, 7.3 (HO1b, HO5c)."},
-{id:"HT3",c:3,code:"HT3",regle:true,l:"Convergence vers le lieu commun",d:"La diversité des versions décroît plus vite que par la seule transmission (HO10a), et plus avec un seul modèle qu'avec plusieurs (HO10b). Règle en C4, 7.5."},
-{id:"HT4",c:3,code:"HT4",regle:true,l:"Une socialité sans climat",d:"Alignement sur l'interlocuteur ; effet du climat perçu équivalent à zéro, borne ±0,05 (HO9). Règle en C4, 7.4."},
+{id:"HT1",c:3,code:"HT1",regle:true,l:"Le taire est co-produit",d:"Relative aux contrastes déclarés : la scène (principal) ou un contraste secondaire pèse plus que la fiche à étendue maximale sur le taux de taire. Hypothèse centrale ; règle en scénario, 7.2 (HO11)."},
+{id:"HT2",c:3,code:"HT2",regle:true,l:"Un dire vide",d:"Les formes de neutralisation font plus de la moitié du taire, et plus pour T1 que pour T0. Règle en scénario, 7.3 (HO1b, HO5c)."},
+{id:"HT3",c:3,code:"HT3",regle:true,l:"Convergence vers le lieu commun",d:"La diversité des versions décroît plus vite que par la seule transmission (HO10a), et plus avec un seul modèle qu'avec plusieurs (HO10b). Règle en scénario, 7.5."},
+{id:"HT4",c:3,code:"HT4",regle:true,l:"Une socialité sans climat",d:"Alignement sur l'interlocuteur ; effet du climat perçu équivalent à zéro, borne ±0,05 (HO9). Règle en scénario, 7.4."},
 /* HO */
 {id:"S1",c:4,code:"HO1",regle:true,l:"Silence différentiel",d:"Secondaire. Plus de taire en public qu'en privé pour T1 que pour T0, chez les agents en écart d'au moins 20 points avec le climat perçu."},
 {id:"S1b",c:4,code:"HO1b",regle:true,l:"Neutralisation différentielle",d:"Principale. Taux de neutralisation (NEU + EUP) plus élevé pour T1 que pour T0 d'au moins 5 points. Entre dans la règle de HT2."},
@@ -274,25 +274,25 @@ const E=[
 ["S6","ecart"],["S6","transfo"],["S7","taire"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S10b","divers"],["HT3","S10b"],["archi","S10b"],["S11","taire"]
 ];
 const GAPS=[
-{s:"b",t:"Revue n° 2 : HT2 n'avait pas de règle",p:"Aucun point d'analyse ne tranchait HT2.",f:"C4, 7.3 : part des formes dans le taire et neutralisation différentielle (HO1b, HO5c).",n:["HT2","S1b","S5c","partF","neutrS"]},
-{s:"b",t:"Revue n° 2 : la hiérarchie des parts dépendait de la calibration",p:"L'amplitude de chaque contraste était choisie sans règle.",f:"Fiche à étendue maximale et contrôle de manipulation ; scène comme contraste principal ; Holm sur les secondaires ; 10 graines par bras entre simulations (C4, 1.6, 3.4, 6, 7.2).",n:["HT1","S11","fiche","cadres","contraste","concepteur"]},
-{s:"b",t:"Revue n° 2 : le modèle connaissait déjà le livre",p:"Rien ne mesurait la mémoire d'entraînement.",f:"Culture commune du village, mesurée par un test de connaissance préalable (étape 0a) ; critère de choix de T0 et T3 ; masquage en dernier recours (C4, 1.2, 3.2).",n:["memEnt","modele","source","connais","S10","S8"]},
-{s:"b",t:"Revue n° 2 : la borne de HO9 égalait l'effet humain",p:"±0,10 est la relation moyenne de la méta-analyse citée.",f:"Borne ±0,05 ; différence interlocuteur moins climat rapportée (C4, 7.4).",n:["HT4","S9","equiv","sensib"]},
-{s:"i",t:"Revue n° 2 : convergence et diffusion confondues",p:"La diversité peut baisser par la seule reprise du modèle.",f:"Modèle nul des chaînes linéaires à profondeur égale, profondeur tirée des traces de l'orchestrateur (C4, 3.10, 7.5).",n:["S10","penteT","social","divers"]},
-{s:"i",t:"Revue n° 2 : M-PLU mêlait pluralité et qualité",p:"« Un gros plus trois petits », et un juge qui codait ses propres répliques.",f:"M-PLU sans Le Chonk ni Gemma, comparé à M-AUT ; règle des juges par réplique (C4, 3.1).",n:["S10b","modele","juge","panick"]},
-{s:"i",t:"Revue n° 2 : la trivialité n'avait pas de mesure",p:"Le concept central n'avait qu'une hypothèse exploratoire.",f:"HO8 avec critère : taux de conservation, village contre chaînes (C4, 7.6 ; cadre, 2.5).",n:["trivia","S8","conserv","QRD"]},
-{s:"i",t:"Revue n° 2 : les questions du C4 manquaient sur la carte",p:"Seules QR1 à QR4 du cadre figuraient.",f:"Nœuds QR-A à QR-E ; chemin QR4, puis QR-x, puis HT.",n:["QRA","QRB","QRC","QRD","QRE"]},
+{s:"b",t:"Revue n° 2 : HT2 n'avait pas de règle",p:"Aucun point d'analyse ne tranchait HT2.",f:"scénario, 7.3 : part des formes dans le taire et neutralisation différentielle (HO1b, HO5c).",n:["HT2","S1b","S5c","partF","neutrS"]},
+{s:"b",t:"Revue n° 2 : la hiérarchie des parts dépendait de la calibration",p:"L'amplitude de chaque contraste était choisie sans règle.",f:"Fiche à étendue maximale et contrôle de manipulation ; scène comme contraste principal ; Holm sur les secondaires ; 10 graines par bras entre simulations (scénario, 1.6, 3.4, 6, 7.2).",n:["HT1","S11","fiche","cadres","contraste","concepteur"]},
+{s:"b",t:"Revue n° 2 : le modèle connaissait déjà le livre",p:"Rien ne mesurait la mémoire d'entraînement.",f:"Culture commune du village, mesurée par un test de connaissance préalable (étape 0a) ; critère de choix de T0 et T3 ; masquage en dernier recours (scénario, 1.2, 3.2).",n:["memEnt","modele","source","connais","S10","S8"]},
+{s:"b",t:"Revue n° 2 : la borne de HO9 égalait l'effet humain",p:"±0,10 est la relation moyenne de la méta-analyse citée.",f:"Borne ±0,05 ; différence interlocuteur moins climat rapportée (scénario, 7.4).",n:["HT4","S9","equiv","sensib"]},
+{s:"i",t:"Revue n° 2 : convergence et diffusion confondues",p:"La diversité peut baisser par la seule reprise du modèle.",f:"Modèle nul des chaînes linéaires à profondeur égale, profondeur tirée des traces de l'orchestrateur (scénario, 3.10, 7.5).",n:["S10","penteT","social","divers"]},
+{s:"i",t:"Revue n° 2 : M-PLU mêlait pluralité et qualité",p:"« Un gros plus trois petits », et un juge qui codait ses propres répliques.",f:"M-PLU sans Le Chonk ni Gemma, comparé à M-AUT ; règle des juges par réplique (scénario, 3.1).",n:["S10b","modele","juge","panick"]},
+{s:"i",t:"Revue n° 2 : la trivialité n'avait pas de mesure",p:"Le concept central n'avait qu'une hypothèse exploratoire.",f:"HO8 avec critère : taux de conservation, village contre chaînes (scénario, 7.6 ; cadre, 2.5).",n:["trivia","S8","conserv","QRD"]},
+{s:"i",t:"Revue n° 2 : les questions du scénario manquaient sur la carte",p:"Seules QR1 à QR4 du cadre figuraient.",f:"Nœuds QR-A à QR-E ; chemin QR4, puis QR-x, puis HT.",n:["QRA","QRB","QRC","QRD","QRE"]},
 {s:"i",t:"Revue n° 2 : des mesures sans hypothèse",p:"Test du train, tendance perçue, formules récurrentes.",f:"HO9b ; tendance perçue en prédicteur secondaire de HO9 ; HO10c ; enquête du matin.",n:["S9b","train","trainC","S10c","formI","matin"]},
-{s:"b",t:"HT1 n'était pas décidable",p:"Rien ne disait comment comparer une variable binaire, continue et catégorielle.",f:"Contrastes de référence en points de pourcentage de taux de taire ; règle à trois issues (HO11, C4 section 7).",n:["HT1","S11","taire","contraste","fiche","cadres","ordo","modele"]},
+{s:"b",t:"HT1 n'était pas décidable",p:"Rien ne disait comment comparer une variable binaire, continue et catégorielle.",f:"Contrastes de référence en points de pourcentage de taux de taire ; règle à trois issues (HO11, scénario section 7).",n:["HT1","S11","taire","contraste","fiche","cadres","ordo","modele"]},
 {s:"b",t:"HT4 n'avait pas de test direct",p:"Aucune hypothèse ne testait l'absence d'effet du climat à interlocuteur constant.",f:"HO9 avec test d'équivalence ; HO3 devient un résultat descriptif rattaché à l'étalonnage.",n:["HT4","S9","sensib","climat","equiv","compl","S3"]},
 {s:"b",t:"HT3 manquait d'une mesure et d'une condition",p:"Pas d'indicateur de diversité ; une « polyphonie mixte » où un seul modèle jouait déjà tous les habitants.",f:"Diversité des versions (sémantique et lexicale) ; HO10a dans les villages mono-modèles, HO10b contre M-PLU en priorité 2.",n:["HT3","S10","S10b","divers","plong","modele","archi","attr"]},
-{s:"b",t:"L'inventaire des instances variait",p:"Cinq, sept ou neuf instances selon les documents.",f:"Inventaire canonique en trois statuts : six instances de production, stimuli et structure, instruments (cadre 1.1, C4 3.0).",n:["modele","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","plong"]},
+{s:"b",t:"L'inventaire des instances variait",p:"Cinq, sept ou neuf instances selon les documents.",f:"Inventaire canonique en trois statuts : six instances de production, stimuli et structure, instruments (cadre 1.1, scénario 3.0).",n:["modele","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","plong"]},
 {s:"i",t:"La priorité 1 ne testait pas toutes les parts",p:"L'ordonnanceur et le modèle n'arrivaient qu'en priorité 2.",f:"O-HOM et M-AUT (le village entier joué par un autre modèle) en priorité 1 (35 simulations garanties en v9 ; 70 en v11, avec 10 graines pour les bras joués entre simulations).",n:["S11","ordo","modele","S7"]},
 {s:"i",t:"Des conditions sans hypothèse",p:"T2, compères, lecture intégrale, paraphrases du concepteur.",f:"T2 et compères déclarés exploratoires avec indicateurs ; lecture intégrale comme contrôle de validité ; paraphrases dans l'étape 0a.",n:["source","media","asch","cadres","orch","concepteur"]},
-{s:"i",t:"QR3 n'avait pas de traduction",p:"Aucune hypothèse du C4 ne menait à QR3.",f:"Analyse qualitative du niveau 1 de la grille, avec la fidélité comme indice d'une communication-transport.",n:["QR3","niv1","tele","dispo"]},
+{s:"i",t:"QR3 n'avait pas de traduction",p:"Aucune hypothèse du scénario ne menait à QR3.",f:"Analyse qualitative du niveau 1 de la grille, avec la fidélité comme indice d'une communication-transport.",n:["QR3","niv1","tele","dispo"]},
 {s:"i",t:"Les mesures sont aussi co-produites",p:"Enquêteur et juges n'étaient pas situés.",f:"Statut d'instrument avec garde-fous : deux juges, mesure lexicale à côté du plongement, test de stabilité.",n:["enq","juge","plong","panick"]},
 {s:"n",t:"Certains concepts restaient des lentilles",p:"Script, énonciation éditoriale, dispositif sans mesure.",f:"Rattachés à l'analyse qualitative du niveau 1.",n:["script","enoned","dispo","niv1"]},
-{s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur.",f:"Part déclarée non isolable, rapportée ensemble (cadre 7, C4 3.0).",n:["modele","neutre","S5c"]},
+{s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur.",f:"Part déclarée non isolable, rapportée ensemble (cadre 7, scénario 3.0).",n:["modele","neutre","S5c"]},
 {s:"n",t:"Qualité inégale des modèles",p:"Avec des habitants sur ILaaS et le lecteur sur Le Chonk, la qualité des modèles se mêlait à leur rôle.",f:"Référence tout Le Chonk ; contraste de HO11 entre deux villages entiers ; M-PLU en priorité 2 avec des modèles comparables, sans Llama 8b.",n:["modele","S11","S10b","divers"]},
 {s:"w",t:"À surveiller : débit de Le Chonk",p:"70 simulations en priorité 1, environ 8 000 appels chacune selon l'estimation de la revue n° 2.",f:"Journée simulée de mesure avant le préenregistrement (étape −1) ; replis préenregistrés à 40 ou 35 simulations ; consommation suivie sur le tableau de bord de l'AMUE.",n:["modele"]},
 {s:"w",t:"À surveiller : seuils, bornes et puissance",p:"5 points pour HO11, ±0,05 pour HO9 ; un écart de 5 points reste peu puissant même à 10 graines.",f:"Déposés au premier temps du préenregistrement ; simulations de puissance rejouées avec les variances du pilote ; révisables au second temps, avec justification.",n:["S11","S9","contraste","equiv"]}
@@ -317,7 +317,7 @@ function status(n){
       if(n.k==="doc")return["muted","Part documentée (carnet, paraphrases en 0a), non comparée"];
       if(o.some(t=>t.c===4&&!t.ghost))return["ok","Sa part est testée par au moins une hypothèse opérationnelle"];
       return["warn","Aucune hypothèse opérationnelle ne teste sa part"];
-    case 2: return o.length?["ok","Traduite en hypothèses"]:["warn","Sans traduction dans le C4"];
+    case 2: return o.length?["ok","Traduite en hypothèses"]:["warn","Sans traduction dans le scénario"];
     case 3:
       if(o.some(t=>t.ghost))return["warn","Incomplète : il manque une mesure ou une hypothèse opérationnelle"];
       if(n.regle!==true)return["crit","Sans règle de décision"];
@@ -372,7 +372,7 @@ const SW=P*2+6*W+5*G,SH=TOP+H+10;
 
 const svgNS="http://www.w3.org/2000/svg";
 const mk=(t,a)=>{const e=document.createElementNS(svgNS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
-const svg=mk("svg",{viewBox:`0 0 ${SW} ${SH}`,width:SW,height:SH,role:"img","aria-label":"Carte des liens entre concepts, instances, questions, hypothèses et indicateurs du C4"});
+const svg=mk("svg",{viewBox:`0 0 ${SW} ${SH}`,width:SW,height:SH,role:"img","aria-label":"Carte des liens entre concepts, instances, questions, hypothèses et indicateurs du scénario"});
 COLS.forEach((t,c)=>{const tx=mk("text",{x:P+c*(W+G),y:22,class:"col-h"});tx.textContent=t;svg.appendChild(tx)});
 const gE=mk("g",{}),gN=mk("g",{});svg.appendChild(gE);svg.appendChild(gN);
 const edgeEls=E.map(([a,b])=>{const s=byId[a],t=byId[b];const x1=s.x+W,y1=s.y+s.h/2,x2=t.x,y2=t.y+t.h/2,dx=Math.max(40,(x2-x1)*.45);
@@ -405,7 +405,7 @@ function select(id){const n=byId[id];paint(lineage(id),id);document.querySelecto
   drawer.innerHTML=`<button class="close" type="button" aria-label="Fermer">Fermer</button>
   <div class="eyebrow">${famL}</div><h2>${n.code?n.code+" · ":""}${n.l}</h2>
   <span class="status"><i style="background:${cssv(SV[st[0]])}"></i>${st[1]}</span>
-  <dl>${n.r?`<dt>Références</dt><dd>${n.r}</dd>`:""}<dt>${n.c===0?"Rôle dans le C4":"Contenu"}</dt><dd>${n.d}</dd>
+  <dl>${n.r?`<dt>Références</dt><dd>${n.r}</dd>`:""}<dt>${n.c===0?"Rôle dans le scénario":"Contenu"}</dt><dd>${n.d}</dd>
   ${n.cd?`<dt>Conditions qui la font varier</dt><dd>${n.cd}</dd>`:""}
   ${ins[id].length?`<dt>Vient de</dt><dd class="links">${ins[id].map(chip).join("")}</dd>`:""}
   ${outs[id].length?`<dt>Mène à</dt><dd class="links">${outs[id].map(chip).join("")}</dd>`:""}</dl>`;

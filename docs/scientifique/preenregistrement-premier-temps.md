@@ -1,6 +1,6 @@
-# Préenregistrement du scénario C4, premier temps (ébauche)
+# Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 16 octobre 2026, version 0.1, établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-C4.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 17 octobre 2026, version 0.2 (codes « C4 » retirés ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,11 +8,11 @@
 
 ## 1. Projet
 
-Village simulé « Dire et taire » (scénario C4). Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.2, scénario C4 11, glossaire 3, socle technique 4, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
-Problématique du C4 (QR4 du cadre) : « Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? » Les deux moitiés de Y sont explicitées en C4, 1.3. Questions QR-A à QR-E (C4, 1.4). QR-E s'appuie sur des modèles publiés, et sur les formalisations du projet seulement si elles existent au moment de l'analyse.
+Problématique du scénario (QR4 du cadre) : « Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? » Les deux moitiés de Y sont explicitées dans le scénario, 1.3. Questions QR-A à QR-E (scénario, 1.4). QR-E s'appuie sur des modèles publiés, et sur les formalisations du projet seulement si elles existent au moment de l'analyse.
 
 ## 3. Hypothèses de travail et règles de décision
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau de C4, 1.6 (version 11), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
@@ -66,7 +66,7 @@ Livres de codes figés ; nombre de graines ; température unique et graines ; mo
 
 ## 12. Reproductibilité et données
 
-Générations archivées avec consignes, graines, identifiants datés, métadonnées (schéma du socle, étape 8 bis) ; code du module C4 en licence libre ; plan de gestion des données ; exclusions (extraits longs des ouvrages, contenus discriminatoires bruts) ; conditions d'usage de T1 et de T3 consignées par écrit.
+Générations archivées avec consignes, graines, identifiants datés, métadonnées (schéma du socle, étape 8 bis) ; code du module scénario en licence libre ; plan de gestion des données ; exclusions (extraits longs des ouvrages, contenus discriminatoires bruts) ; conditions d'usage de T1 et de T3 consignées par écrit.
 
 ## 13. Publication
 

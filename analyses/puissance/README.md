@@ -1,6 +1,6 @@
-# Simulations de puissance des règles de décision du C4
+# Simulations de puissance des règles de décision du scénario
 
-*Scripts issus de la revue adversariale n° 2 (16 octobre 2026), conservés pour être rejoués avec les variances du pilote (C4, étape 6) avant le second temps du préenregistrement.*
+*Scripts issus de la revue adversariale n° 2 (16 octobre 2026), conservés pour être rejoués avec les variances du pilote (scénario, étape 6) avant le second temps du préenregistrement.*
 
 | Fichier | Contenu |
 |---|---|

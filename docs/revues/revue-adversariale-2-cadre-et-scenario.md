@@ -1,6 +1,8 @@
 # Revue adversariale n° 2 : cadre scientifique et scénario C4
 
-*Relecteur : Claude Fable 5.1 (Anthropic), même famille de modèles que l'assistant qui a rédigé les documents et mené la revue n° 1 ; ce biais est déclaré en section 8. Date : 16 octobre 2026. Documents relus : `README.md` ; `docs/README.md` ; `docs/glossaire.md` (version 2) ; `docs/scientifique/cadre-scientifique-SIC-village.md` (version 6.1) ; `docs/scientifique/scenario-C4-circulation-savoir-savant.md` (version 10) ; `docs/scientifique/projet-spirale-du-silence-formalisation.md` (version du 16 octobre 2026, sans numéro) ; `docs/revues/revue-adversariale-1-cadre-et-C4.md` (15 octobre 2026, addenda du 16) ; `docs/technique/socle-technique-le-chonk.md` (version 3, mise à jour du 16 octobre) ; `docs/visualisations/carte-concepts-C4.html` (tableaux `N`, `E`, `GAPS` lus dans le script). Accès à la recherche web : oui.*
+*Note du 17 octobre 2026 : depuis le 16 octobre, le projet ne compte plus qu'un scénario, « Dire et taire ». Dans ce document historique, « C4 » le désigne ; les renvois aux expériences C0 à C3 et C5 renvoient à un découpage retiré (voir le glossaire). Les noms de fichiers ont été mis à jour.*
+
+*Relecteur : Claude Fable 5.1 (Anthropic), même famille de modèles que l'assistant qui a rédigé les documents et mené la revue n° 1 ; ce biais est déclaré en section 8. Date : 16 octobre 2026. Documents relus : `README.md` ; `docs/README.md` ; `docs/glossaire.md` (version 2) ; `docs/scientifique/cadre-scientifique-SIC-village.md` (version 6.1) ; `docs/scientifique/scenario-dire-et-taire.md` (version 10) ; `docs/scientifique/projet-spirale-du-silence-formalisation.md` (version du 16 octobre 2026, sans numéro) ; `docs/revues/revue-adversariale-1-cadre-et-scenario.md` (15 octobre 2026, addenda du 16) ; `docs/technique/socle-technique-le-chonk.md` (version 3, mise à jour du 16 octobre) ; `docs/visualisations/carte-concepts.html` (tableaux `N`, `E`, `GAPS` lus dans le script). Accès à la recherche web : oui.*
 
 *Conventions de cette revue. « C4, 7.2 » renvoie au scénario C4, section 7, point 2 ; « cadre, 6.4 » au cadre scientifique ; « socle, 5 » au socle technique ; « formalisation, 4.6 » au projet de formalisation ; « carte » à la carte des concepts ; « revue 1 » à la revue adversariale n° 1. Les signes « G− », « K− » et « −2 » reprennent les codes du projet.*
 
@@ -299,7 +301,7 @@ Selon les décisions 7 et 16 (chiffres arrêtés en section 10) : priorité 1 à
 
 ## 10. Décisions du chercheur (16 octobre 2026)
 
-Les seize décisions proposées par le relecteur, plus une décision ajoutée par l'auteur des documents (n° 17), ont été présentées au chercheur, qui les a toutes validées le 16 octobre 2026, avec les recommandations de la section 9. Elles sont appliquées dans le scénario C4 (version 11), le cadre scientifique (6.2), le glossaire (3), le socle technique (4), le projet de formalisation (1.1), la carte des concepts et l'ébauche de préenregistrement (« ../scientifique/preenregistrement-C4-premier-temps.md »).
+Les seize décisions proposées par le relecteur, plus une décision ajoutée par l'auteur des documents (n° 17), ont été présentées au chercheur, qui les a toutes validées le 16 octobre 2026, avec les recommandations de la section 9. Elles sont appliquées dans le scénario C4 (version 11), le cadre scientifique (6.2), le glossaire (3), le socle technique (4), le projet de formalisation (1.1), la carte des concepts et l'ébauche de préenregistrement (« ../scientifique/preenregistrement-premier-temps.md »).
 
 | N° | Décision | Choix retenu | Où |
 |---|---|---|---|
@@ -325,6 +327,6 @@ Les seize décisions proposées par le relecteur, plus une décision ajoutée pa
 
 **Points ouverts de la revue n° 1 fermés.** R23 (formulation de Y) est tranché par la décision 15 ; la correspondance des anciens codes S0 et S3 avec T0 et T3 est notée dans l'addendum 6 de la revue n° 1.
 
-**Fichiers cités par la revue.** Le répertoire `propositions-correction/` du relecteur n'est pas conservé dans le dépôt : ses propositions sont appliquées dans les documents, son ébauche de préenregistrement est reprise dans « ../scientifique/preenregistrement-C4-premier-temps.md », et ses scripts de simulation (`09-scripts/`) sont conservés dans « ../../analyses/puissance/ ».
+**Fichiers cités par la revue.** Le répertoire `propositions-correction/` du relecteur n'est pas conservé dans le dépôt : ses propositions sont appliquées dans les documents, son ébauche de préenregistrement est reprise dans « ../scientifique/preenregistrement-premier-temps.md », et ses scripts de simulation (`09-scripts/`) sont conservés dans « ../../analyses/puissance/ ».
 
 **Reste à faire.** Relecture des documents par un modèle d'un autre fournisseur (C4, 5) ; rejeu des simulations de puissance avec les variances du pilote ; relevé des identifiants datés des modèles et de l'identifiant ILaaS du juge Qwen.

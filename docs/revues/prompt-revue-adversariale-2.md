@@ -1,5 +1,7 @@
 # Revue adversariale n° 2 du projet « Dire et taire » : consignes au relecteur
 
+*Note du 17 octobre 2026 : depuis le 16 octobre, le projet ne compte plus qu'un scénario, « Dire et taire ». Dans ce document historique, « C4 » le désigne ; les renvois aux expériences C0 à C3 et C5 renvoient à un découpage retiré (voir le glossaire). Les noms de fichiers ont été mis à jour.*
+
 *Ce fichier est ta consigne complète. Tu ne sais rien du projet : tout ce dont tu as besoin est ici et dans le dossier `documents/` à côté de ce fichier. Lis ce fichier en entier avant d'ouvrir les documents.*
 
 ---
@@ -28,11 +30,11 @@ Le dossier `documents/` reproduit le dépôt du projet. Ordre de lecture conseil
 | 1 | `documents/README.md` puis `documents/docs/README.md` | Présentation, architecture du raisonnement, conventions | |
 | 2 | `documents/docs/glossaire.md` | Définitions, paternité des notions, références d'origine ; à consulter en continu | 2 |
 | 3 | `documents/docs/scientifique/cadre-scientifique-SIC-village.md` | Cadre théorique général du village | 6.1 |
-| 4 | `documents/docs/scientifique/scenario-C4-circulation-savoir-savant.md` | **Protocole du C4 : document principal de la revue** | 10 |
+| 4 | `documents/docs/scientifique/scenario-dire-et-taire.md` | **Protocole du C4 : document principal de la revue** | 10 |
 | 5 | `documents/docs/scientifique/projet-spirale-du-silence-formalisation.md` | Formalisations de la spirale du silence, étalon du C4 | |
-| 6 | `documents/docs/revues/revue-adversariale-1-cadre-et-C4.md` | Revue n° 1 et ses addenda : historique des décisions | |
+| 6 | `documents/docs/revues/revue-adversariale-1-cadre-et-scenario.md` | Revue n° 1 et ses addenda : historique des décisions | |
 | 7 | `documents/docs/technique/socle-technique-le-chonk.md` | Station de travail, passe-plat des modèles, traces, agents | 3 |
-| 8 | `documents/docs/visualisations/carte-concepts-C4.html` | Carte de traçabilité (concepts, instances, questions, hypothèses, indicateurs). Les données sont dans le script de la page (tableaux `N`, `E`, `GAPS`) : lis-les directement si tu ne peux pas ouvrir la page | |
+| 8 | `documents/docs/visualisations/carte-concepts.html` | Carte de traçabilité (concepts, instances, questions, hypothèses, indicateurs). Les données sont dans le script de la page (tableaux `N`, `E`, `GAPS`) : lis-les directement si tu ne peux pas ouvrir la page | |
 
 **Absents volontairement** : la présentation PowerPoint (périmée) et deux documents conservés hors du dépôt (« prototypes-agentiques-le-chonk.md », « projet-multivers-PISA-numerique.md »). Ne les réclame pas et ne pénalise pas les renvois qui y mènent.
 

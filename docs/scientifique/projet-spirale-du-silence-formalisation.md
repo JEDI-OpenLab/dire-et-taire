@@ -1,6 +1,6 @@
 # Formaliser une théorie verbale : la spirale du silence
 
-*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version 1.1 du 16 octobre 2026 (suites de la revue n° 2 : numéro de version, nom du scénario, références corrigées). Sert d'étalon théorique au scénario C4 (QR-E et HO3 ; contrepoint de HT4). Le calendrier de ce projet n'est pas articulé à celui du C4 : l'étalonnage du C4 s'appuie d'abord sur des modèles publiés (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), et sur les formalisations de ce projet seulement si elles existent au moment de l'analyse.*
+*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version 1.2 du 17 octobre 2026 (codes « C4 » retirés ; version 1.1 du 16 octobre : suites de la revue n° 2). Sert d'étalon théorique au scénario « Dire et taire » (QR-E et HO3 ; contrepoint de HT4). Le calendrier de ce projet n'est pas articulé à celui du scénario : l'étalonnage du scénario s'appuie d'abord sur des modèles publiés (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), et sur les formalisations de ce projet seulement si elles existent au moment de l'analyse.*
 
 ---
 
@@ -116,7 +116,7 @@ Puis **classification** des formalisations selon leurs comportements : lesquelle
 
 ### 4.6 Étape 6 (option) : retour au village génératif
 
-On place les mêmes points de décision dans le village simulé (agents fondés sur des modèles de langage) et on compare la dynamique obtenue aux formalisations mathématiques. **De quelle formalisation le village génératif se rapproche-t-il le plus ?** Et, si une spirale apparaît chez des agents qui n'ont pas de peur de l'isolement, d'où vient-elle ? Ce pont relie ce projet au scénario C4 (QR-E).
+On place les mêmes points de décision dans le village simulé (agents fondés sur des modèles de langage) et on compare la dynamique obtenue aux formalisations mathématiques. **De quelle formalisation le village génératif se rapproche-t-il le plus ?** Et, si une spirale apparaît chez des agents qui n'ont pas de peur de l'isolement, d'où vient-elle ? Ce pont relie ce projet au scénario « Dire et taire » (QR-E).
 
 ### 4.7 Volet réflexif (QR5)
 

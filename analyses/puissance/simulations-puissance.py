@@ -1,4 +1,4 @@
-"""Simulations de puissance et de fiabilité pour les règles de décision du C4.
+"""Simulations de puissance et de fiabilité pour les règles de décision du scénario.
 
 Trois questions, posées par la revue adversariale n° 2 (R2-05, R2-07, R2-08) :
 

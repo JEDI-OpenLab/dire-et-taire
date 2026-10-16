@@ -49,7 +49,7 @@
 
 Lecture : à copie bruitée pure (lam = 1), la diversité augmente ; dès que la reprise est contractante, elle diminue. Le sens de l'effet de diffusion n'est donc pas connu a priori : il faut le mesurer sur les chaînes linéaires (modèle nul de HO10a).
 
-## A1 bis. HO11 à 10 graines par bras (ajout du 16 octobre 2026, C4 version 11)
+## A1 bis. HO11 à 10 graines par bras (ajout du 16 octobre 2026, scénario version 11)
 
 Même fonction `regle_ho11`, `n_par_bras=10`, 1 000 répétitions, mêmes paramètres hypothétiques.
 
@@ -62,4 +62,4 @@ Même fonction `regle_ho11`, `n_par_bras=10`, 1 000 répétitions, mêmes param�
 | 8 | 5 | 0.11 | 0.19 | 15.7 |
 | 8 | 10 | 0.32 | 0.65 | 15.5 |
 
-Lecture : à 10 graines par bras, un écart de 10 points entre un contraste secondaire et la fiche devient détectable dans la plupart des cas ; un écart de 5 points reste peu probable à établir, sauf si la variance entre graines est basse. D'où le choix du C4 version 11 (10 graines pour les bras des contrastes entre simulations, y compris le bras de référence cœur G0), et le rejeu de ces calculs avec les variances du pilote.
+Lecture : à 10 graines par bras, un écart de 10 points entre un contraste secondaire et la fiche devient détectable dans la plupart des cas ; un écart de 5 points reste peu probable à établir, sauf si la variance entre graines est basse. D'où le choix du scénario version 11 (10 graines pour les bras des contrastes entre simulations, y compris le bras de référence cœur G0), et le rejeu de ces calculs avec les variances du pilote.

@@ -1,6 +1,8 @@
 # Revue adversariale n° 1 : cadre scientifique SIC et scénario C4
 
-*Revue des documents « cadre-scientifique-SIC-village.md » (version 2) et « scenario-C4-circulation-savoir-savant.md » (version 4). Version du 15 octobre 2026.*
+*Note du 17 octobre 2026 : depuis le 16 octobre, le projet ne compte plus qu'un scénario, « Dire et taire ». Dans ce document historique, « C4 » le désigne ; les renvois aux expériences C0 à C3 et C5 renvoient à un découpage retiré (voir le glossaire). Les noms de fichiers ont été mis à jour.*
+
+*Revue des documents « cadre-scientifique-SIC-village.md » (version 2) et « scenario-dire-et-taire.md » (version 4). Version du 15 octobre 2026.*
 
 ---
 
@@ -124,4 +126,4 @@ La carte des concepts du C4 a fait apparaître quatre points bloquants, levés l
 
 ## 7. Addendum : clôture des points ouverts (revue n° 2)
 
-La revue n° 2 (« revue-adversariale-2-cadre-et-C4.md ») a repris les points ouverts de cette revue. R23 (formulation de Y) est tranché : Y est gardée, et ses deux moitiés sont explicitées dans le C4, section 1.3 (décision 15 de la revue n° 2). Plusieurs décisions de cette revue sont révisées par la revue n° 2, sans effacer leur trace ici : les contrastes de HT1 ne sont plus à égalité (la scène devient le contraste principal), le bloc pluri-modèles ne contient plus Le Chonk et se compare au village M-AUT, et HT2 reçoit une règle de décision.
+La revue n° 2 (« revue-adversariale-2-cadre-et-scenario.md ») a repris les points ouverts de cette revue. R23 (formulation de Y) est tranché : Y est gardée, et ses deux moitiés sont explicitées dans le C4, section 1.3 (décision 15 de la revue n° 2). Plusieurs décisions de cette revue sont révisées par la revue n° 2, sans effacer leur trace ici : les contrastes de HT1 ne sont plus à égalité (la scène devient le contraste principal), le bloc pluri-modèles ne contient plus Le Chonk et se compare au village M-AUT, et HT2 reçoit une règle de décision.

@@ -1,8 +1,8 @@
 # Glossaire
 
-*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
+*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3.1 du 17 octobre 2026 : codes « C4 » retirés, entrée « Expériences C0 à C5 » réécrite. Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
 
-**Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du C4.
+**Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du scénario.
 
 *Paternités à vérifier une à une avant publication, en particulier les dates d'apparition des termes.*
 
@@ -88,8 +88,8 @@
 | **Échantillons de silicium** | Usage de modèles pour simuler des sous-groupes de répondants humains | Lisa Argyle et ses collègues, science politique | Argyle et al. (2023) | |
 | **Aplatissement des identités** | Les modèles qui remplacent des participants humains écrasent la diversité interne des groupes | Angelina Wang, Jamie Morgenstern et John Dickerson | Wang et al. (2025) | |
 | **Complaisance** (*sycophancy*) | Tendance d'un modèle à s'aligner sur les opinions ou attentes de son interlocuteur | Mise en évidence et analysée par Mrinank Sharma et ses collègues | Sharma et al. (2024) | Avec la politesse |
-| **Neutralité apprise** | Tendance d'un modèle à ne pas prendre parti sur les sujets controversés, attribuée aux réglages de son fournisseur | Terme du projet ; principe de neutralité de la politique d'usage de Mistral AI, fournisseur du village ; spécification publiée par OpenAI à titre d'exemple | Mistral AI (s. d.) ; OpenAI (2026) | Avec le silence : la neutralité est une parole. Mesurée (C4, étape 0a), non attestée |
-| **Mémoire d'entraînement** | Ce que le modèle sait déjà d'un texte source et de sa réception avant toute circulation dans le village ; traitée comme la culture commune du village, identique chez tous les habitants joués par un même modèle ; mesurée par un test de connaissance préalable | Terme du projet | C4, sections 1.2, 3.2 et 5 | Avec la mémoire des habitants (souvenirs datés), qui est un dispositif du village |
+| **Neutralité apprise** | Tendance d'un modèle à ne pas prendre parti sur les sujets controversés, attribuée aux réglages de son fournisseur | Terme du projet ; principe de neutralité de la politique d'usage de Mistral AI, fournisseur du village ; spécification publiée par OpenAI à titre d'exemple | Mistral AI (s. d.) ; OpenAI (2026) | Avec le silence : la neutralité est une parole. Mesurée (scénario, étape 0a), non attestée |
+| **Mémoire d'entraînement** | Ce que le modèle sait déjà d'un texte source et de sa réception avant toute circulation dans le village ; traitée comme la culture commune du village, identique chez tous les habitants joués par un même modèle ; mesurée par un test de connaissance préalable | Terme du projet | scénario, sections 1.2, 3.2 et 5 | Avec la mémoire des habitants (souvenirs datés), qui est un dispositif du village |
 | **Fournisseur** | Entreprise qui entraîne, règle et distribue le modèle ; instance de l'agencement par ses données et ses règles | Terme du projet | | |
 | **Suffisance générative** | Reproduire un phénomène par simulation montre qu'un mécanisme peut le produire, sans prouver que c'est le bon | Joshua Epstein, sciences sociales computationnelles (« si vous ne l'avez pas fait croître, vous ne l'avez pas expliqué ») | Epstein (1999) | |
 | **Plausibilité des mécanismes** | Examen de la vraisemblance des mécanismes qui produisent un phénomène dans une simulation | Patrick Zhao, David Huu Pham et Nicholas Vincent | Zhao, Pham et Vincent (2026) | |
@@ -139,8 +139,8 @@
 | Terme | Définition | Référence |
 |---|---|---|
 | **Problématique « Comment X alors que Y »** | Forme qui met en tension l'objet étudié (X) et une contradiction apparente (Y) | Convention de rédaction du projet |
-| **Hypothèse de travail** | Réponse proposée à la problématique, interprétable en SIC (HT1 à HT4) | C4, section 1.5 |
-| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11, avec HO1b, HO7a, HO7b, HO9b, HO10a, HO10b, HO10c). Statut **principal** (entre dans une règle de décision), **secondaire** (critère propre, sans effet sur l'issue des hypothèses de travail), **descriptif** ou **exploratoire** (rapporté sans test) | C4, section 1.6 |
+| **Hypothèse de travail** | Réponse proposée à la problématique, interprétable en SIC (HT1 à HT4) | scénario, section 1.5 |
+| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11, avec HO1b, HO7a, HO7b, HO9b, HO10a, HO10b, HO10c). Statut **principal** (entre dans une règle de décision), **secondaire** (critère propre, sans effet sur l'issue des hypothèses de travail), **descriptif** ou **exploratoire** (rapporté sans test) | scénario, section 1.6 |
 | **Règle de décision à trois issues** | Critère préenregistré qui classe chaque hypothèse de travail comme soutenue, réfutée ou indéterminée | Cadre scientifique, section 6.4 |
 | **Contraste de référence** | Variation fixée à l'avance pour chaque instance (par exemple scène privée contre publique), dont l'effet est exprimé dans une unité commune pour comparer les parts. Son choix est la part du concepteur dans la mesure. Pour l'instance dont l'hypothèse centrale prédit la moindre part, le contraste reçoit son étendue maximale | Terme du projet ; cadre scientifique, section 6.4 |
 | **Contrôle de manipulation** | Vérification préalable qu'une condition produit bien la différence qu'elle est censée produire (par exemple, que la consigne d'autocensure rend l'agent plus réservé) | Usage méthodologique courant en psychologie expérimentale |
@@ -161,7 +161,7 @@
 
 ## 7. Références propres au glossaire
 
-Les références ci-dessous ne figurent pas dans les bibliographies du cadre et du C4.
+Les références ci-dessous ne figurent pas dans les bibliographies du cadre et du scénario.
 
 - Bandura, A. (2001). Social cognitive theory: An agentic perspective. *Annual Review of Psychology*, 52, 1-26.
 - Cohen, J. (1960). A coefficient of agreement for nominal scales. *Educational and Psychological Measurement*, 20(1), 37-46.

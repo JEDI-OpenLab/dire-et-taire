@@ -1,10 +1,10 @@
 # Socle technique de l'expérimentation Le Chonk
 
-*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le C4 (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
+*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4.1 du 17 octobre 2026 : un seul scénario, codes « C4 » retirés, identifiants d'essai en « DT- ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le scénario (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
 
 *Contexte : la station est un ordinateur dédié, administré entièrement par le pilote, qui mène seul ce projet et détient lui-même les clés d'API (Le Chonk et ILaaS). Le travail avec les collègues (scénarios B, A et volet D) relève d'un autre projet.*
 
-*Documents associés : « prototypes-agentiques-le-chonk.md » (cadrage), « cadre-scientifique-SIC-village.md », « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « projet-multivers-PISA-numerique.md ». Le cadrage et le projet PISA sont conservés hors du dépôt.*
+*Documents associés : « prototypes-agentiques-le-chonk.md » (cadrage), « cadre-scientifique-SIC-village.md », « scenario-dire-et-taire.md », « projet-spirale-du-silence-formalisation.md », « projet-multivers-PISA-numerique.md ». Le cadrage et le projet PISA sont conservés hors du dépôt.*
 
 ---
 
@@ -47,7 +47,7 @@ OpenRouter est un **service commercial** qui revend l'accès à de nombreux mod�
 
 | Profil | Qui | Besoins principaux |
 |---|---|---|
-| **Pilote** (seul utilisateur) | Ingénieur pédagogique | Administrateur de la station ; détenteur des clés d'API ; développer avec OpenCode (dont le bureau des agents) ; lancer et suivre les campagnes du village (C0 à C5) et des projets SHS ; consulter les traces |
+| **Pilote** (seul utilisateur) | Ingénieur pédagogique | Administrateur de la station ; détenteur des clés d'API ; développer avec OpenCode (dont le bureau des agents) ; lancer et suivre les campagnes du village (scénario « Dire et taire ») et des projets SHS ; consulter les traces |
 | **Spectateur** | Collègues, visiteurs | Regarder le petit écran |
 
 ### 2.2 Cas d'usage
@@ -55,7 +55,7 @@ OpenRouter est un **service commercial** qui revend l'accès à de nombreux mod�
 | N° | Cas d'usage | Déroulé |
 |---|---|---|
 | CU1 | Développer avec un agent | Le pilote lance OpenCode dans un dépôt, sur la station ou en SSH, et choisit Le Chonk ou un modèle ILaaS. Le personnage de l'agent s'anime dans le bureau |
-| CU2 | Lancer une campagne d'expériences | Le pilote lance une évaluation Inspect AI (par exemple l'expérience C0). Une « salle » du bureau montre l'avancement |
+| CU2 | Lancer une campagne d'expériences | Le pilote lance une évaluation Inspect AI (par exemple les chaînes linéaires du scénario). Une « salle » du bureau montre l'avancement |
 | CU3 | Lancer une simulation du village | Le pilote lance une simulation. L'écran bascule sur la vue Saint-Aubert : habitants en mouvement, bulles de dialogue |
 | CU4 | Suivre la consommation | Le pilote consulte Langfuse : coûts par usage, par modèle, par campagne |
 | CU5 | Analyser un essai | Le pilote ouvre le journal Inspect ou la trace Langfuse d'un essai précis |
@@ -214,13 +214,13 @@ Le relais convertit tout en événements de la forme :
   "source": "litellm",
   "agent": "habitant-07",
   "usage": "village",
-  "essai": "C4-P1-003",
+  "essai": "DT-P1-003",
   "etat": "parle",
   "action": "répond à une sollicitation au café",
   "extrait": "Je n'ai pas lu le livre, mais…",
   "modele": "le-chonk",
   "version_modele": "IDENTIFIANT_DATE_DU_MODELE",
-  "graine": "C4-P1-003/ordo=17/seed=17",
+  "graine": "DT-P1-003/ordo=17/seed=17",
   "tokens": 812,
   "cout_estime": 0.0
 }
@@ -233,7 +233,7 @@ Le relais convertit tout en événements de la forme :
 | Écran | Contenu |
 |---|---|
 | **Le bureau** | Un poste par agent actif (sessions OpenCode, campagnes Inspect) ; personnages animés selon l'état ; bulles d'extrait ; mur d'affichage (tokens du jour, coût du jour, essais en cours, modèle le plus sollicité) |
-| **Saint-Aubert** | Carte du village ; habitants qui se déplacent entre les lieux ; bulles de dialogue ; journée et créneau en cours ; pour le C4, le lecteur mis en évidence |
+| **Saint-Aubert** | Carte du village ; habitants qui se déplacent entre les lieux ; bulles de dialogue ; journée et créneau en cours ; pour le scénario, le lecteur mis en évidence |
 | **Rotation** | Hors activité, l'écran alterne bureau vide (agents « en pause »), statistiques de la semaine et carte du village |
 
 ### 5.6 Technique du bureau
@@ -250,7 +250,7 @@ Le relais convertit tout en événements de la forme :
 | v1 | Bureau en pixel art : postes, personnages, états | 1 à 2 semaines |
 | v2 | Intégration OpenCode (actions détaillées) et Inspect (avancement) | 1 semaine |
 | v3 | Carte de Saint-Aubert pour les simulations | 1 à 2 semaines |
-| v4 | Vues « ce qui est déclaré / ce qui s'entend » du C4 | Avec le C4 |
+| v4 | Vues « ce qui est déclaré / ce qui s'entend » du scénario | Avec le scénario |
 
 ---
 
@@ -392,7 +392,7 @@ general_settings:
   database_url: os.environ/DATABASE_URL
 ```
 
-`IDENTIFIANT_DATE_DU_MODELE` est à remplacer par l'identifiant daté fourni avec la clé Le Chonk, relevé dans la première réponse de l'API (C4, étape −1) ; `mistral-medium-AAMM` et `IDENTIFIANT_ILAAS_QWEN_3_6` par les identifiants datés publiés par ILaaS, jamais par un alias se terminant par `latest`. La date de version de chaque modèle est notée dans le carnet de bord au début de chaque campagne ; les noms `model_name` exposés par le passe-plat restent stables, seule la cible change, par une modification de configuration consignée. Si l'accès passe par l'API de Mistral, le préfixe `mistral/` peut remplacer `openai/` (voir la documentation de LiteLLM).
+`IDENTIFIANT_DATE_DU_MODELE` est à remplacer par l'identifiant daté fourni avec la clé Le Chonk, relevé dans la première réponse de l'API (scénario, étape −1) ; `mistral-medium-AAMM` et `IDENTIFIANT_ILAAS_QWEN_3_6` par les identifiants datés publiés par ILaaS, jamais par un alias se terminant par `latest`. La date de version de chaque modèle est notée dans le carnet de bord au début de chaque campagne ; les noms `model_name` exposés par le passe-plat restent stables, seule la cible change, par une modification de configuration consignée. Si l'accès passe par l'API de Mistral, le préfixe `mistral/` peut remplacer `openai/` (voir la documentation de LiteLLM).
 
 Créer `/srv/chonk/passe-plat/docker-compose.yml` :
 
@@ -507,7 +507,7 @@ OPENAI_BASE_URL=http://localhost:4000/v1
 OPENAI_API_KEY=CLE_VIRTUELLE_DE_L_USAGE
 ```
 
-Chaque appel peut porter des métadonnées pour le bureau et les traces (champ `metadata` de la requête, par exemple `{"agent": "habitant-07", "essai": "C4-P1-003"}`).
+Chaque appel peut porter des métadonnées pour le bureau et les traces (champ `metadata` de la requête, par exemple `{"agent": "habitant-07", "essai": "DT-P1-003"}`).
 
 Les scripts du village lisent aussi trois variables, fixées par simulation et consignées dans chaque trace : `VILLAGE_GRAINE_ORDO` (hasard de l'ordonnanceur), `VILLAGE_GRAINE_MODELE` (transmise comme `random_seed` ou `seed` dans chaque requête), `VILLAGE_TEMPERATURE` (valeur unique pour tous les rôles, déclarée au second temps du préenregistrement). Chaque requête porte en métadonnées la graine, la journée, la scène, le rôle et l'identifiant daté du modèle.
 
@@ -603,7 +603,7 @@ puis `http://localhost:3000` dans le navigateur du portable.
 | Système | Automatique (sécurité) | |
 | LiteLLM, Langfuse | Mensuelle, hors campagne | Sauvegarde avant ; versions notées dans le carnet de bord |
 | OpenCode, Inspect, Concordia | Hors campagne uniquement | Versions figées pendant une campagne (reproductibilité) |
-| Modèles distants | Hors du contrôle du pilote | Identifiants datés ; empreinte de comportement (dix items fixes de l'étape 0a du C4) rejouée au début et à la fin de chaque bloc ; en cas de changement, bloc rejoué et incident consigné |
+| Modèles distants | Hors du contrôle du pilote | Identifiants datés ; empreinte de comportement (dix items fixes de l'étape 0a du scénario) rejouée au début et à la fin de chaque bloc ; en cas de changement, bloc rejoué et incident consigné |
 
 ### 7.4 Démarrer et arrêter
 
@@ -664,11 +664,11 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 | Logiciels | 0 € (tous libres ou gratuits) |
 | Petit écran HDMI | Environ 50 à 90 € |
 | Disque de sauvegarde externe | Environ 60 à 100 € |
-| Appels de modèles | Clé Le Chonk fournie par l'expérimentation de Mistral Large 4 menée par l'AMUE, sans plafond connu, suivie sur le tableau de bord de l'AMUE ; l'identifiant exact du modèle, les conditions d'usage connues et le débit mesuré (C4, étape −1) sont consignés ici avant toute campagne. À ne pas confondre avec l'offre générale « Mistral ESR » de l'AMUE (Mistral Medium 3.1, 150 000 tokens par jour et par part). ILaaS selon l'expérimentation ministérielle ; budgets par usage dans le passe-plat, pour suivre la consommation de chaque usage ; plafond `max_tokens` dans tous les scripts. Pour le C4, Le Chonk joue tout le village de référence : l'usage « village » est de loin le plus consommateur. Ordre de grandeur estimé par la revue n° 2, à remplacer par la mesure : environ 8 000 appels et 30 à 40 millions de tokens d'entrée par simulation de 15 journées. Tokens et estimation énergétique rapportés |
+| Appels de modèles | Clé Le Chonk fournie par l'expérimentation de Mistral Large 4 menée par l'AMUE, sans plafond connu, suivie sur le tableau de bord de l'AMUE ; l'identifiant exact du modèle, les conditions d'usage connues et le débit mesuré (scénario, étape −1) sont consignés ici avant toute campagne. À ne pas confondre avec l'offre générale « Mistral ESR » de l'AMUE (Mistral Medium 3.1, 150 000 tokens par jour et par part). ILaaS selon l'expérimentation ministérielle ; budgets par usage dans le passe-plat, pour suivre la consommation de chaque usage ; plafond `max_tokens` dans tous les scripts. Pour le scénario, Le Chonk joue tout le village de référence : l'usage « village » est de loin le plus consommateur. Ordre de grandeur estimé par la revue n° 2, à remplacer par la mesure : environ 8 000 appels et 30 à 40 millions de tokens d'entrée par simulation de 15 journées. Tokens et estimation énergétique rapportés |
 
-**Modèles et usages dans le C4.**
+**Modèles et usages dans le scénario.**
 
-| Nom dans le passe-plat | Usage dans le C4 |
+| Nom dans le passe-plat | Usage dans le scénario |
 |---|---|
 | `le-chonk` | Village de référence M-LC (habitants, lecteur, narrateur N1, résumé de mémoire) ; lecteur et narrateur de M-PLU ; extraction de la grille (étape 2) ; chaînes linéaires (étape 5) |
 | `mistral-medium` (daté) | Village de contraste M-AUT ; M-PLU ; chaînes linéaires de M-AUT |
@@ -676,7 +676,7 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 | `qwen-3.8-27b` | Candidat de repli pour M-AUT ; narrateur N2 ; M-PLU ; relecture des documents par un modèle d'un autre fournisseur |
 | `qwen-3.6-35b-a3b` | Juge 2 (jamais pour une réplique écrite par un modèle Qwen) |
 | `gemma-4-31b` | Juge 1 ; narrateur N3 (les juges ne codent pas le narrateur) ; jamais générateur d'habitants |
-| `llama-3.1-8b` | Aucun usage dans le C4 ; réservé à des tests rapides hors expérimentation |
+| `llama-3.1-8b` | Aucun usage dans le scénario ; réservé à des tests rapides hors expérimentation |
 
 ---
 
