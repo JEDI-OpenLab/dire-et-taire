@@ -12,3 +12,6 @@ __pycache__/
 node_modules/
 .DS_Store
 ~$*
+
+# Billets de blog : brouillons de travail (Obsidian), publiés à la main sur Hypothèses
+docs/billet-*.md

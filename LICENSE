@@ -1,0 +1,75 @@
+Dire et taire : licence
+=======================
+
+Dire et taire (projet de recherche JEDI-OpenLab) est publié sous une DOUBLE LICENCE :
+
+  • Code source (scripts Python d'analyse et de simulation, script de génération
+    du site, JavaScript, CSS et gabarits HTML originaux) :
+    licence MIT, voir la section « MIT License » ci-dessous.
+
+  • Contenus originaux (protocole, scénario, cadre théorique, glossaire,
+    documentation, billets, présentation, visualisations, ainsi que les données
+    produites par le projet : journaux de simulation, codages et analyses) :
+    Creative Commons Attribution 4.0 International (CC BY 4.0), voir la section
+    « CC BY 4.0 » ci-dessous.
+
+En cas de doute sur la nature d'un fichier, le code exécutable relève de la
+licence MIT et les contenus rédactionnels, scientifiques ou de données relèvent
+de la CC BY 4.0.
+
+
+-------------------------------------------------------------------------------
+CC BY 4.0 : contenus originaux JEDI-OpenLab
+-------------------------------------------------------------------------------
+
+Sauf mention contraire, les contenus originaux de Dire et taire sont publiés
+sous licence Creative Commons Attribution 4.0 International (CC BY 4.0).
+
+Lien officiel : https://creativecommons.org/licenses/by/4.0/deed.fr
+
+Cette licence permet de partager, copier, réutiliser, adapter, traduire,
+modifier, publier et redistribuer les contenus originaux du projet, y compris
+dans d'autres travaux de recherche, formations ou contextes institutionnels, à
+condition de citer correctement l'auteur ou l'autrice, le titre de la
+ressource, la source et la licence.
+
+Citation suggérée :
+Debaecker, J. (2026). Dire et taire. JEDI-OpenLab, Centrale Lille.
+https://github.com/JEDI-OpenLab/dire-et-taire
+
+JEDI-OpenLab s'inscrit dans l'esprit de la Recommandation de l'UNESCO sur les
+ressources éducatives libres :
+https://www.unesco.org/fr/legal-affairs/recommendation-open-educational-resources-oer
+
+Contenus tiers : les œuvres citées ou mobilisées par le projet (notamment
+l'ouvrage de Johann Chapoutot, « Les irresponsables », Gallimard, 2025), les
+marques, logiciels, modèles de langage et services tiers, ainsi que les
+captures d'écran, logos, images, jeux de données, polices, vidéos, sons et
+contenus appartenant à des tiers restent soumis à leurs licences et droits
+respectifs. La présente licence ne s'applique qu'aux contenus originaux du
+projet.
+
+
+-------------------------------------------------------------------------------
+MIT License : code source
+-------------------------------------------------------------------------------
+
+Copyright (c) 2026 JEDI-OpenLab
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
