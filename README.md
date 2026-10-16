@@ -38,7 +38,7 @@ Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.m
 
 ## État
 
-Phase de conception (octobre 2026). Documents en vigueur : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4.1. La revue adversariale n° 2 est faite et ses dix-sept décisions sont consignées. Prochaines étapes : mise en place de la station et test d'accès et de débit (une journée simulée), relecture par un modèle d'un autre fournisseur, choix des textes sources T0, T2 et T3, préenregistrement (premier temps, ébauche dans `docs/scientifique/preenregistrement-premier-temps.md`). La carte des concepts (`docs/visualisations/carte-concepts.html`) montre l'état de la traçabilité entre concepts et mesures.
+Phase de conception (octobre 2026). Documents en vigueur : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4.1. La revue adversariale n° 2 est faite et ses dix-sept décisions sont consignées. Le projet ne compte plus qu'un scénario ; la rumeur de la boulangerie est gardée comme prolongement possible, selon les résultats (cadre, section 7). Prochaines étapes : mise en place de la station, programmation du village, test d'accès et de débit (une journée simulée sur des fiches provisoires), relecture par un modèle d'un autre fournisseur, choix des textes sources T0, T2 et T3, construction des 40 personas, préenregistrement (premier temps, ébauche dans `docs/scientifique/preenregistrement-premier-temps.md`). La carte des concepts (`docs/visualisations/carte-concepts.html`) montre l'état de la traçabilité entre concepts et mesures.
 
 ## Conventions
 

@@ -2,7 +2,7 @@
 
 *Le village simulé comme objet de recherche en SIC. Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
-*Documents associés : « scenario-dire-et-taire.md » (version 11), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
+*Documents associés : « scenario-dire-et-taire.md » (version 11.1), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
 ---
 
@@ -152,7 +152,7 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont d�
 | **Cadres de l'expérience** | Goffman (1974) | Les schèmes qui organisent ce qui se passe et ce qui peut se dire dans une situation | Ordonnanceur, enquêteur, gazette | Les effets du type de scène sur les énoncés |
 | **Dispositif** | Foucault ; Agamben (2007) ; Jacquinot-Delaunay et Monnoyer (1999) | Agencement hétérogène qui oriente les conduites | Le village entier | L'ensemble des règles, du réseau, des routines |
 | **Trivialité** | Jeanneret (2008, 2014) | Circulation créative des êtres culturels, réécrits à travers des médiations | Ce qui résulte de l'agencement | L'arbre complet des reprises d'un énoncé |
-| **Médiation** | Jeanneret (2014) ; Davallon | Ce qui s'interpose et transforme dans toute communication | Gazette, démenti, compte rendu, narrateur | Les transformations attribuables à un intermédiaire |
+| **Médiation** | Jeanneret (2014) ; Davallon | Ce qui s'interpose et transforme dans toute communication | Gazette, compte rendu, narrateur | Les transformations attribuables à un intermédiaire |
 
 ### 4.2 Concepts opératoires empruntés, et conditions d'emprunt
 
@@ -161,7 +161,7 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont d�
 | **Reproduction en série : réduction, accentuation, assimilation** | Bartlett (1932) ; Allport et Postman (1947) | Décrire les transformations par relais | Catégories descriptives, sans jugement de perte | Protocole de laboratoire et mémoire humaine ; comparaison par réplication procédurale (chaînes linéaires) |
 | **Chaînes de transmission, biais de contenu, attracteurs** | Mesoudi et Whiten (2008) ; Acerbi et Stubbersfield (2023) ; Perez et al. (2025) ; Sperber (1996) | Mesurer les convergences ; protocole des chaînes linéaires (modèle nul) | Protocole transposable | Cadre cognitiviste distinct de la trivialité (2.5) |
 | **Rumeur** | Morin (1969) ; Kapferer (1987) ; Froissart (2002) | Prolongement possible : rumeur de la boulangerie (section 7) | Définition descriptive | Fonctions sociales (anxiété collective, identité) sans équivalent |
-| **Rumeur et anxiété** | Rosnow (1991) | Lien entre stabilité émotionnelle attribuée et transmission | Disposition attribuée, non ressentie | Mécanisme affectif absent |
+| **Rumeur et anxiété** | Rosnow (1991) | Prolongement possible : lien entre stabilité émotionnelle attribuée et transmission de la rumeur (section 7) | Disposition attribuée, non ressentie | Mécanisme affectif absent |
 | **Correction et influence continue** | Lewandowsky et al. (2012) | Prolongement possible : survie de la rumeur après démenti (section 7) | Persistance mesurée | Mécanismes mnésiques sans équivalent direct |
 | **Flux à deux étages** | Katz et Lazarsfeld (1955) | Rôle des habitants très connectés | Position dans le réseau | Leadership fondé sur la compétence reconnue : non modélisé |
 | **Spirale du silence** | Noelle-Neumann (1974, 1993) | Scénario « Dire et taire » | Questions d'enquête, formalisations comme étalons | La peur de l'isolement n'existe que comme disposition écrite |
@@ -194,7 +194,7 @@ La grille articule cinq niveaux d'analyse. À chaque niveau, la question transve
 | Niveau | Question | Corpus | Concepts | Méthode | Instances principalement interrogées |
 |---|---|---|---|---|---|
 | **1. Agencement** | Qu'est-ce qui est inscrit dans le village avant toute circulation, et par qui ? | Code, consignes, fiches, mécanisme de mémoire, carnet de conception | Co-agentivité, script, architexte, énonciation éditoriale, dispositif | Analyse sociotechnique et sémiotique | Concepteur, orchestrateur, ordonnanceur |
-| **2. Circulation** | Par où passent les énoncés ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rumeur, masse critique | Analyse de réseau, courbes de diffusion | Ordonnanceur, réseau |
+| **2. Circulation** | Par où passent les énoncés ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rencontres homophiles (chambres d'écho) | Analyse de réseau, courbes de diffusion | Ordonnanceur, réseau |
 | **3. Énoncés** | Comment les énoncés se transforment-ils ? | Chaînes de reformulation | Trivialité, reproduction en série, attracteurs, formule | Analyse de discours, codage | Modèle et fournisseur, orchestrateur (mémoire) |
 | **4. Positions** | Quelles positions l'agencement produit-il selon les cadres d'énonciation ? | Réponses en enquête, répliques en scène | Cadres, lectures selon Hall, mémoire interdiscursive | Codage, analyse qualitative | Fiche, cadres, modèle |
 | **5. Parts et écarts** | Quelle est la part de chaque instance, et que révèlent les écarts aux phénomènes humains ? | Résultats des niveaux 2 à 4, chaînes linéaires, conditions comparées | Co-agentivité, suffisance générative, aplatissement | Décomposition des effets par instance, interprétation critique | Toutes |
@@ -383,7 +383,6 @@ Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 - Acerbi, A., & Stubbersfield, J. M. (2023). Large language models show human-like content biases in transmission chain experiments. *Proceedings of the National Academy of Sciences*, 120(44), e2313790120.
 - Allport, G. W., & Postman, L. (1947). *The Psychology of Rumor*. New York : Henry Holt.
 - Bartlett, F. C. (1932). *Remembering: A Study in Experimental and Social Psychology*. Cambridge : Cambridge University Press.
-- Centola, D., Becker, J., Brackbill, D., & Baronchelli, A. (2018). Experimental evidence for tipping points in social convention. *Science*, 360(6393), 1116-1119.
 - Froissart, P. (2002). *La rumeur. Histoire et fantasmes*. Paris : Belin.
 - Kapferer, J.-N. (1987). *Rumeurs. Le plus vieux média du monde*. Paris : Seuil.
 - Lewandowsky, S., Ecker, U. K. H., Seifert, C. M., Schwarz, N., & Cook, J. (2012). Misinformation and Its Correction. *Psychological Science in the Public Interest*, 13(3), 106-131.

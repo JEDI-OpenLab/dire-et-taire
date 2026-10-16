@@ -1,6 +1,6 @@
 # Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 17 octobre 2026, version 0.2 (codes « C4 » retirés ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 17 octobre 2026, version 0.2 (codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,7 +8,7 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4.1, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.1), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
@@ -54,7 +54,7 @@ Priorité 1 (70 simulations) : cœur T1 × G0 (10 graines), G= (5), G+ (10), G�
 
 ## 9. Étapes préalables
 
-Étape −1 (test d'accès et de débit, une journée simulée) ; 0a (profil, connaissance préalable, test sans public, trois paraphrases, empreinte de comportement) ; 0b (dyades, environ 480 dialogues, plus la variante étiquetée publique) ; 1 (cohérence des personas, contrôle de manipulation de la fiche, choix du modèle de M-AUT) ; 2 (grille et notes, confrontation aux comptes rendus publiés) ; 3 (livres de codes, revue par un autre modèle, échantillon de validation) ; 4 (gazette G=, G+, G− appariées) ; 5 (chaînes, 10 par texte source, jouées par Le Chonk et par le modèle de M-AUT) ; 6 (pilote : 3 simulations, variance entre graines, débit, saturation, facteur d'inflation de variance). Le pilote n'entre pas dans l'analyse.
+Étape −1 (test d'accès et de débit, une journée simulée sur des fiches provisoires) ; 0 (construction des 40 personas selon le protocole anti-biais, attributs propres au scénario, audit des fiches) ; 0a (profil, connaissance préalable, test sans public, trois paraphrases, empreinte de comportement) ; 0b (dyades, environ 480 dialogues, plus la variante étiquetée publique) ; 1 (cohérence des personas, contrôle de manipulation de la fiche, choix du modèle de M-AUT) ; 2 (grille et notes, confrontation aux comptes rendus publiés) ; 3 (livres de codes, revue par un autre modèle, échantillon de validation) ; 4 (gazette G=, G+, G− appariées) ; 5 (chaînes, 10 par texte source, jouées par Le Chonk et par le modèle de M-AUT) ; 6 (pilote : 3 simulations, variance entre graines, débit, saturation, facteur d'inflation de variance). Le pilote n'entre pas dans l'analyse.
 
 ## 10. Plan B
 
