@@ -1,6 +1,6 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Complète « prototypes-agentiques-le-chonk.md », « scenario-C4-circulation-savoir-savant.md » et « projet-spirale-du-silence-formalisation.md ». Version 3 du 15 octobre 2026, révisée après la revue adversariale n° 1 (« revue-adversariale-1-cadre-et-C4.md »).*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Complète « prototypes-agentiques-le-chonk.md », « scenario-C4-circulation-savoir-savant.md » et « projet-spirale-du-silence-formalisation.md ». Version 4 du 16 octobre 2026, révisée après la revue adversariale n° 1 (« revue-adversariale-1-cadre-et-C4.md ») et complétée par la notion d'agentivité distribuée.*
 
 ---
 
@@ -60,6 +60,31 @@ Deux traditions pensent la transformation d'un énoncé qui circule :
 
 Les travaux récents sur les chaînes de transmission entre modèles de langage parlent en termes d'attracteurs (Perez et al., 2025) et de biais de contenu (Acerbi et Stubbersfield, 2023). Le projet les mobilise pour **décrire** les convergences, et s'appuie sur la trivialité pour **interpréter** : dans le village, les « biais cognitifs » d'un agent sont ceux de son architexte, et les médiations sont inscrites dans le dispositif. Le dialogue entre les deux traditions fait partie de la contribution.
 
+### 1.6 Qui agit quand un agent parle ? L'agentivité distribuée
+
+**Distinction terminologique préalable.** Le projet emploie deux mots proches qu'il ne faut pas confondre :
+- un **agent** (sens informatique) est un programme qui produit des actions ou des énoncés : ici, un habitant du village ;
+- l'**agentivité** (sens des sciences sociales) est la capacité d'agir, c'est-à-dire de faire une différence dans le cours des choses.
+
+Que le village soit peuplé d'« agents » ne dit rien de l'endroit où se situe l'agentivité. C'est précisément la question.
+
+**Une réplique est co-produite.** Quand un habitant dit quelque chose au café, au moins cinq instances concourent à cet énoncé :
+
+| Instance | Ce qu'elle fait à l'énoncé |
+|---|---|
+| Le **modèle de langage** (architexte) | Il écrit la phrase, avec ses régularités, ses préférences et ses réglages (complaisance, neutralité apprise) |
+| La **fiche du persona** | Elle oriente le ton, les valeurs et les dispositions attribuées (écrite par le concepteur) |
+| L'**orchestrateur** | Il assemble la consigne et choisit quels souvenirs y figurent, donc ce que l'agent « sait » |
+| L'**ordonnanceur** | Il décide de la rencontre : qui parle à qui, où, dans quel type de scène |
+| Le **concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations |
+
+L'énoncé n'est donc pas l'acte d'un agent mais celui d'un **agencement**. Le projet adopte une conception **distribuée** de l'agentivité, issue de la sociologie des sciences et des techniques : l'action est le fait de réseaux d'actants humains et non humains (Callon, 1986 ; Latour, 2006), les objets techniques portent des scripts inscrits par leurs concepteurs (Akrich, 1987 ; Akrich et Latour, 1992), et l'action située se reconfigure dans la relation entre humains et machines (Suchman, 2007). On parlera de **co-agentivité** pour désigner cette production conjointe des énoncés par le modèle, le dispositif et le concepteur.
+
+**Conséquences pour le projet**
+1. **Pour la problématique** : des agents qui « n'ont rien à craindre de la parole » peuvent produire du silence, parce qu'ils ne sont pas seuls à parler ou à se taire. Le taire, s'il apparaît, est une production de l'agencement.
+2. **Pour l'analyse** : chaque résultat est rapporté aux instances qui le produisent. Les conditions expérimentales (modèle, ordonnanceur, cadre d'énonciation, attributs des personas) servent justement à faire varier une instance à la fois, pour estimer sa part.
+3. **Pour la réflexivité** : le concepteur est l'une des instances. Le carnet de conception n'est pas une précaution annexe, c'est la trace de sa part d'agentivité.
+
 ---
 
 ## 2. Problématique et questions de recherche
@@ -98,6 +123,7 @@ Les hypothèses chiffrées des documents de protocole (H1, S1…) sont des **hyp
 | **Dispositif** | Foucault ; Agamben (2007) ; Jacquinot-Delaunay et Monnoyer (1999) | Agencement hétérogène (technique, discursif, normatif) qui oriente les conduites | Le village entier : réseau, ordonnanceur, routines, pare-feu de la connaissance, enquêteur |
 | **Médiation** | Jeanneret (2014) ; Davallon | Ce qui s'interpose et transforme dans toute communication | La gazette, l'affiche du démenti, le compte rendu journalistique, le narrateur |
 | **Script, inscription** | Akrich (1987) | Les usages et représentations que les concepteurs inscrivent dans un objet technique | Les choix consignés dans le carnet de conception |
+| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | L'action est le fait d'un agencement d'actants humains et non humains | La part de chaque instance (modèle, fiche, orchestrateur, ordonnanceur, concepteur) dans la production des énoncés |
 
 ### 3.2 Concepts opératoires empruntés, et conditions d'emprunt
 
@@ -134,7 +160,7 @@ Les hypothèses chiffrées des documents de protocole (H1, S1…) sont des **hyp
 
 | Niveau | Question | Corpus | Concepts | Méthode | Indicateurs |
 |---|---|---|---|---|---|
-| **1. Dispositif** | Qu'est-ce qui est inscrit dans le village avant toute circulation ? | Code, consignes, fiches des personas, mécanisme de mémoire, carnet de conception | Dispositif, architexte, script, énonciation éditoriale | Analyse sociotechnique et sémiotique des consignes et des cadres d'énonciation | Inventaire commenté des choix ; ce que chaque choix rend possible ou impossible |
+| **1. Dispositif** | Qu'est-ce qui est inscrit dans le village avant toute circulation ? | Code, consignes, fiches des personas, mécanisme de mémoire, carnet de conception | Dispositif, architexte, script, énonciation éditoriale, agentivité distribuée | Analyse sociotechnique et sémiotique des consignes et des cadres d'énonciation | Inventaire commenté des choix ; ce que chaque choix rend possible ou impossible |
 | **2. Circulation** | Par où les énoncés passent-ils ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rumeur, masse critique | Analyse de réseau, courbes de diffusion | Portée, vitesse, profondeur des arbres de relais, rôle des nœuds centraux |
 | **3. Énoncés** | Comment les énoncés se transforment-ils ? | Chaînes de reformulation reconstituées | Trivialité, reproduction en série, attracteurs, formule, mise en scène de la communication | Analyse de discours, codage | Fréquence des transformations par relais ; convergences ; formules ; marqueurs de reprise |
 | **4. Appropriations simulées** | Quelles positions les agents produisent-ils, selon les cadres d'énonciation ? | Réponses en enquête, répliques en scène | Lectures selon Hall (adaptées), mémoire interdiscursive | Codage des appropriations, analyse qualitative | Répartition des lectures selon les attributs ; analogies ; écarts entre cadres d'énonciation |
@@ -281,6 +307,8 @@ Les tokens consommés sont journalisés pour chaque simulation, avec une estimat
 ### Communication, trivialité, dispositifs
 - Agamben, G. (2007). *Qu'est-ce qu'un dispositif ?* Paris : Rivages.
 - Akrich, M. (1987). Comment décrire les objets techniques ? *Techniques et culture*, 9, 49-64.
+- Akrich, M., & Latour, B. (1992). A Summary of a Convenient Vocabulary for the Semiotics of Human and Nonhuman Assemblies. In W. E. Bijker & J. Law (dir.), *Shaping Technology/Building Society* (p. 259-264). Cambridge, MA : MIT Press.
+- Callon, M. (1986). Éléments pour une sociologie de la traduction. La domestication des coquilles Saint-Jacques et des marins-pêcheurs dans la baie de Saint-Brieuc. *L'Année sociologique*, 36, 169-208.
 - Davallon, J. (2004). Objet concret, objet scientifique, objet de recherche. *Hermès*, 38, 30-37.
 - Jacquinot-Delaunay, G., & Monnoyer, L. (dir.) (1999). Le dispositif. Entre usage et concept. *Hermès*, 25.
 - Jeanneret, Y. (2008). *Penser la trivialité. Volume 1 : La vie triviale des êtres culturels*. Paris : Hermès-Lavoisier.
@@ -288,7 +316,9 @@ Les tokens consommés sont journalisés pour chaque simulation, avec une estimat
 - Jeanneret, Y., & Souchier, E. (1999). Pour une poétique de l'écrit d'écran. *Xoana*, 6-7, 97-107.
 - Shannon, C. E., & Weaver, W. (1949). *The Mathematical Theory of Communication*. Urbana : University of Illinois Press.
 - Souchier, E. (1998). L'image du texte. Pour une théorie de l'énonciation éditoriale. *Les Cahiers de médiologie*, 6, 137-145.
+- Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte. (Éd. originale : *Reassembling the Social*, Oxford University Press, 2005.)
 - Souchier, E., Jeanneret, Y., & Le Marec, J. (dir.) (2003). *Lire, écrire, récrire. Objets, signes et pratiques des médias informatisés*. Paris : Bibliothèque publique d'information.
+- Suchman, L. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions* (2e éd.). Cambridge : Cambridge University Press.
 - Winkin, Y. (dir.) (1981). *La nouvelle communication*. Paris : Seuil.
 
 ### Discours, médiation des savoirs, réception

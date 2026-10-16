@@ -38,4 +38,5 @@ Problématique générale du village (cadre, 2.1)
 
 - Problématiques formulées en « Comment [X] alors que [Y] ».
 - Vocabulaire des cadres d'énonciation : « position déclarée en enquête », « position exprimée en scène » ; aucune intériorité prêtée aux agents.
+- « Agent » au sens informatique (un programme) ; « agentivité » au sens des sciences sociales (capacité d'agir), conçue comme distribuée entre modèle, dispositif et concepteur (cadre, 1.6).
 - Chaque document indique sa version et sa date en en-tête ; chaque révision importante passe par une revue consignée dans `revues/`.

@@ -1,6 +1,6 @@
 # Scénario C4 : dire et taire un savoir savant
 
-*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 6 du 16 octobre 2026, révisée après la revue adversariale n° 1 et complétée par les hypothèses de travail (« revue-adversariale-1-cadre-et-C4.md »).*
+*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 7 du 16 octobre 2026, révisée après la revue adversariale n° 1 et complétée par les hypothèses de travail et l'agentivité distribuée (« revue-adversariale-1-cadre-et-C4.md »).*
 
 *Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « prototypes-agentiques-le-chonk.md » (cadrage d'ensemble).*
 
@@ -19,6 +19,8 @@ L'opinion publique d'une société n'est pas la somme des opinions individuelles
 ### 1.2 Posture
 
 Le village n'est pas un modèle de la société française. C'est un **dispositif génératif** étudié en tant que tel. Ses agents n'ont pas d'intériorité : ils produisent des énoncés selon le cadre d'énonciation qu'on leur fait jouer (voir le cadre scientifique, section 1.3). On parle donc de **position déclarée en enquête** (et non d'« opinion privée ») et de **position exprimée en scène** (et non d'« expression publique »). Le « silence » désigne l'absence, ou la neutralisation, de position exprimée face à une sollicitation.
+
+Enfin, une réplique n'est jamais l'acte d'un seul agent : elle est **co-produite** par le modèle de langage, la fiche du persona, l'orchestrateur, l'ordonnanceur et le concepteur (**agentivité distribuée**, voir le cadre scientifique, section 1.6). Le dire et le taire sont donc des productions de l'agencement, et chaque condition expérimentale fait varier une de ces instances pour en estimer la part.
 
 ### 1.3 Problématique
 
@@ -57,7 +59,7 @@ Les hypothèses de travail répondent directement à la problématique : elles p
 | Code | Hypothèse de travail | Réponse proposée à Y | Signature observable | Ce qui la réfuterait |
 |---|---|---|---|---|
 | **HT1. Le taire comme dire vide** | Le dispositif ne produit pas de silence au sens strict, mais de la **neutralisation** : les agents parlent toujours, pour ne rien dire | Des agents conçus pour toujours répondre ne peuvent pas se taire ; le taire se déplace dans la parole elle-même | Formes NEU, EUP et DEL bien plus fréquentes que TAC ; plus fréquentes pour S1 et S3 que pour S0, y compris sans public | Silences purs (TAC) dominants, ou neutralisation identique pour S0 |
-| **HT2. Le taire est écrit par le dispositif** | Ce qui fait varier le dire et le taire, ce sont les **cadres d'énonciation** (scène publique, enquêteur, gazette), donc les choix du concepteur, plus que les attributs des personas | Si les agents n'ont rien à craindre, c'est le cadre qui fait le travail que la peur fait chez les humains | Effets du type de scène et de la gazette supérieurs à celui de la disposition attribuée à l'autocensure | Effet dominant de la disposition attribuée (S5a confirmée seule) |
+| **HT2. Le taire est écrit par le dispositif** | Ce qui fait varier le dire et le taire, ce sont les **cadres d'énonciation** (scène publique, enquêteur, gazette), donc les choix du concepteur, plus que les attributs des personas. L'agentivité du silence est **distribuée** dans l'agencement plutôt que logée dans les agents | Si les agents n'ont rien à craindre, c'est l'agencement (cadre, ordonnanceur, concepteur) qui fait le travail que la peur fait chez les humains | Effets du type de scène et de la gazette supérieurs à celui de la disposition attribuée à l'autocensure | Effet dominant de la disposition attribuée (S5a confirmée seule) |
 | **HT3. La trivialité converge vers le lieu commun** | En circulant, la thèse savante perd ses aspérités et converge vers une **formule consensuelle**, attracteur propre à l'architexte | Si toutes les voix sont écrites par un même architexte, leurs réécritures tendent vers les mêmes formes | Baisse de la diversité des versions au fil des relais ; formules récurrentes ; convergence plus forte en « tout Le Chonk » qu'en polyphonie mixte | Diversité maintenue ou croissante ; aucune différence entre modes d'écriture |
 | **HT4. Une socialité sans climat** | Ce qui ressemble à du conformisme est un **alignement local** sur l'interlocuteur du moment, non une lecture du climat d'opinion du village : le « sens quasi statistique » n'opère pas | Sans peur de l'isolement, il reste la complaisance conversationnelle, dyadique et non collective | Position exprimée prédite par celle de l'interlocuteur (dyades), mais pas par le climat perçu déclaré | Climat perçu prédictif de l'expression, à interlocuteur constant |
 
@@ -111,6 +113,7 @@ En complément du cadre scientifique général :
 | **Cadres de l'expérience et de l'interaction** | Goffman (1974) | Les cadres (scène publique, tête-à-tête, enquête) qui organisent ce qui peut se dire : HT2 |
 | **Attracteurs culturels** | Sperber (1996) ; Perez et al. (2025) | Convergence des réécritures vers des formes stables : HT3 |
 | **Formes discursives du silence** | Projet (livre de codes 4.4) | Neutralisation, euphémisation, délégation : HT1 |
+| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | Part de chaque instance (modèle, fiche, orchestrateur, ordonnanceur, concepteur) dans le dire et le taire : HT2 |
 
 ---
 
@@ -423,9 +426,13 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 - Ross, B., Pilz, L., Cabrera, B., Brachten, F., Neubaum, G., & Stieglitz, S. (2019). Are social bots a real threat? An agent-based model of the spiral of silence to analyse the impact of manipulative actors in social networks. *European Journal of Information Systems*, 28(4), 394-412.
 - Sohn, D. (2022). Spiral of silence in the social media era: A simulation approach to the interplay between social networks and mass media. *Communication Research*, 49(1), 139-166.
 
-### Cadres de l'interaction et attracteurs culturels
+### Cadres de l'interaction, attracteurs culturels, agentivité distribuée
+- Akrich, M., & Latour, B. (1992). A Summary of a Convenient Vocabulary for the Semiotics of Human and Nonhuman Assemblies. In W. E. Bijker & J. Law (dir.), *Shaping Technology/Building Society* (p. 259-264). Cambridge, MA : MIT Press.
+- Callon, M. (1986). Éléments pour une sociologie de la traduction. *L'Année sociologique*, 36, 169-208.
 - Goffman, E. (1974). *Frame Analysis: An Essay on the Organization of Experience*. New York : Harper & Row. Trad. fr. *Les cadres de l'expérience*, Paris : Minuit, 1991.
+- Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte.
 - Sperber, D. (1996). *La contagion des idées. Théorie naturaliste de la culture*. Paris : Odile Jacob.
+- Suchman, L. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions* (2e éd.). Cambridge : Cambridge University Press.
 
 ### Ouvrage étudié
 - Chapoutot, J. (2025). *Les irresponsables. Qui a porté Hitler au pouvoir ?* Paris : Gallimard.
