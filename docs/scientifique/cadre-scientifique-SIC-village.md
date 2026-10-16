@@ -2,6 +2,8 @@
 
 *Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 5 du 16 octobre 2026 : réécriture autour de la co-agentivité, clef de lecture de l'ensemble du projet. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
 
+
+*Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 ---
 
 ## 1. La clef de lecture : la co-agentivité

@@ -4,6 +4,7 @@
 
 | N° | Document | Rôle | Question à laquelle il répond |
 |---|---|---|---|
+| 0 | `glossaire.md` | Définitions, paternité des notions, références d'origine | Que veut dire ce terme, et d'où vient-il ? (à consulter en continu) |
 | 1 | `scientifique/cadre-scientifique-SIC-village.md` | Cadre théorique général du village | Quel est l'objet de recherche, et avec quels concepts l'étudie-t-on ? |
 | 2 | `scientifique/scenario-C4-circulation-savoir-savant.md` | Protocole du scénario C4 « Dire et taire » | Que cherche-t-on précisément, comment, avec quelles mesures ? |
 | 3 | `scientifique/projet-spirale-du-silence-formalisation.md` | Formalisations de la spirale du silence | Quelles versions de la théorie servent d'étalon au C4 ? |

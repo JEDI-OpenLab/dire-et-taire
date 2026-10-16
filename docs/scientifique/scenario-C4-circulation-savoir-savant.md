@@ -6,6 +6,8 @@
 
 *Projet mené seul par l'ingénieur pédagogique (SIC). Le second codage humain et la validation de la grille des propositions sont confiés à des personnes extérieures, à identifier.*
 
+
+*Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 ---
 
 ## 1. Problématique

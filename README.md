@@ -21,7 +21,7 @@ Dans le village, une réplique n'est jamais l'acte d'un seul agent. Elle est co-
 
 ## Contenu du dépôt
 
-Voir le guide de lecture : `docs/README.md`.
+Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.md`.
 
 
 | Dossier | Contenu |
