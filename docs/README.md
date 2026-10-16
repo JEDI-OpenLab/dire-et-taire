@@ -13,7 +13,7 @@
 | 6 | `technique/socle-technique-le-chonk.md` | Station, passe-plat, traces, agents, bureau des agents | Comment fait-on tourner tout cela ? |
 | 7 | `visualisations/carte-concepts.html` | Carte des concepts du scénario (page à ouvrir dans un navigateur) | Chaque concept mène-t-il à une mesure, et chaque hypothèse à une règle de décision ? |
 | 8 | `../analyses/puissance/` | Simulations de puissance des règles de décision | Le plan a-t-il une chance de trancher ? |
-| 9 | `../presentation/dire-et-taire-le-chonk.pptx` | Présentation d'ensemble, antérieure aux hypothèses de travail et à la clef de lecture : à mettre à jour | Comment présenter le projet en 20 minutes ? |
+| 9 | `../site/`, en ligne sur [jedi-openlab.github.io/dire-et-taire](https://jedi-openlab.github.io/dire-et-taire/) | Mini-site de présentation du projet, avec le glossaire et la carte des concepts | Comment présenter le projet en quelques minutes ? |
 
 ## Architecture du raisonnement scientifique
 
