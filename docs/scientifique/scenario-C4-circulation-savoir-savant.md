@@ -1,10 +1,10 @@
 # Scénario C4 : dire et taire un savoir savant
 
-*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 5 du 15 octobre 2026, révisée après la revue adversariale n° 1 (« revue-adversariale-1-cadre-et-C4.md »).*
+*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 6 du 16 octobre 2026, révisée après la revue adversariale n° 1 et complétée par les hypothèses de travail (« revue-adversariale-1-cadre-et-C4.md »).*
 
 *Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « prototypes-agentiques-le-chonk.md » (cadrage d'ensemble).*
 
-*Pilote : l'ingénieur pédagogique (SIC). Interfaces : l'enseignant. Appui analytique et comparaison aux formalisations : le chercheur CNRS.*
+*Projet mené seul par l'ingénieur pédagogique (SIC). Le second codage humain et la validation de la grille des propositions sont confiés à des personnes extérieures, à identifier.*
 
 ---
 
@@ -38,6 +38,8 @@ Correspondance avec les questions de recherche :
 - **QR-C** affronte **Y** : quels mécanismes produisent les silences observés, ou leur absence ;
 - **QR-D** et **QR-E** en tirent les conséquences : ce que devient le savoir dans l'espace du village, et quelle version de la théorie le dispositif réalise.
 
+**Architecture du raisonnement** : problématique → questions de recherche (1.4) → hypothèses de travail (1.5), qui répondent à la problématique → hypothèses opérationnelles (1.6), qui traduisent les hypothèses de travail en mesures → dispositif (3) et mesures (4).
+
 ### 1.4 Questions de recherche
 
 | Code | Question |
@@ -48,7 +50,29 @@ Correspondance avec les questions de recherche :
 | **QR-D. La trivialité sous contrainte** | Quelles versions de la thèse dominent l'espace public du village ? Se déforment-elles vers ce que les locuteurs déclarent percevoir comme l'avis majoritaire ? Que change la structure sociale du village par rapport à une transmission linéaire ? |
 | **QR-E. L'étalonnage théorique** | De quelle formalisation de la spirale du silence la dynamique du village se rapproche-t-elle le plus ? |
 
-### 1.5 Hypothèses opérationnelles préenregistrées
+### 1.5 Hypothèses de travail
+
+Les hypothèses de travail répondent directement à la problématique : elles proposent des réponses au « Comment X alors que Y ». Elles relèvent des SIC (énonciation, formes discursives, dispositif, trivialité) et ne se réduisent pas à un test de la théorie de la spirale du silence, qui sert d'instrument et d'étalon.
+
+| Code | Hypothèse de travail | Réponse proposée à Y | Signature observable | Ce qui la réfuterait |
+|---|---|---|---|---|
+| **HT1. Le taire comme dire vide** | Le dispositif ne produit pas de silence au sens strict, mais de la **neutralisation** : les agents parlent toujours, pour ne rien dire | Des agents conçus pour toujours répondre ne peuvent pas se taire ; le taire se déplace dans la parole elle-même | Formes NEU, EUP et DEL bien plus fréquentes que TAC ; plus fréquentes pour S1 et S3 que pour S0, y compris sans public | Silences purs (TAC) dominants, ou neutralisation identique pour S0 |
+| **HT2. Le taire est écrit par le dispositif** | Ce qui fait varier le dire et le taire, ce sont les **cadres d'énonciation** (scène publique, enquêteur, gazette), donc les choix du concepteur, plus que les attributs des personas | Si les agents n'ont rien à craindre, c'est le cadre qui fait le travail que la peur fait chez les humains | Effets du type de scène et de la gazette supérieurs à celui de la disposition attribuée à l'autocensure | Effet dominant de la disposition attribuée (S5a confirmée seule) |
+| **HT3. La trivialité converge vers le lieu commun** | En circulant, la thèse savante perd ses aspérités et converge vers une **formule consensuelle**, attracteur propre à l'architexte | Si toutes les voix sont écrites par un même architexte, leurs réécritures tendent vers les mêmes formes | Baisse de la diversité des versions au fil des relais ; formules récurrentes ; convergence plus forte en « tout Le Chonk » qu'en polyphonie mixte | Diversité maintenue ou croissante ; aucune différence entre modes d'écriture |
+| **HT4. Une socialité sans climat** | Ce qui ressemble à du conformisme est un **alignement local** sur l'interlocuteur du moment, non une lecture du climat d'opinion du village : le « sens quasi statistique » n'opère pas | Sans peur de l'isolement, il reste la complaisance conversationnelle, dyadique et non collective | Position exprimée prédite par celle de l'interlocuteur (dyades), mais pas par le climat perçu déclaré | Climat perçu prédictif de l'expression, à interlocuteur constant |
+
+Ces hypothèses sont **en partie concurrentes**. HT2 et HT4 peuvent coexister ; HT4 contredit en revanche la lecture « spirale » du village. Le dispositif est conçu pour les départager. HT1 constitue l'apport central attendu pour les SIC : un silence qui prend la forme d'une parole vide.
+
+### 1.6 Hypothèses opérationnelles préenregistrées
+
+Les hypothèses opérationnelles traduisent les hypothèses de travail en relations mesurables.
+
+| Hypothèse de travail | Hypothèses opérationnelles mobilisées |
+|---|---|
+| HT1. Le taire comme dire vide | S1, S5c, formes du silence (4.4) |
+| HT2. Le taire est écrit par le dispositif | S1, S2, S5a, condition sans autocensure |
+| HT3. La trivialité converge vers le lieu commun | S6, S8, comparaison des modes d'écriture (C5) |
+| HT4. Une socialité sans climat | S3, S5b, étalonnage théorique (QR-E) |
 
 - **S1. Silence différentiel.** Pour la thèse moralement chargée (S1) davantage que pour le savoir non chargé (S0), les agents dont la position déclarée en enquête s'écarte du climat qu'ils déclarent percevoir expriment moins de positions face aux sollicitations en scène publique qu'en scène privée.
 - **S2. Double climat.** Une gazette consonante déplace davantage le climat perçu déclaré que les positions déclarées en enquête.
@@ -84,6 +108,9 @@ En complément du cadre scientifique général :
 | **Neutralité apprise** | Règles de conduite des fournisseurs (OpenAI, 2025) | Mécanisme concurrent S5c |
 | **Spirale du silence chez des agents génératifs** | Zhong et al. (2025) ; Yang et al. (2026) | Travaux les plus proches |
 | **Suffisance générative et plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Une spirale reproduite n'est pas une spirale expliquée : d'où QR-C |
+| **Cadres de l'expérience et de l'interaction** | Goffman (1974) | Les cadres (scène publique, tête-à-tête, enquête) qui organisent ce qui peut se dire : HT2 |
+| **Attracteurs culturels** | Sperber (1996) ; Perez et al. (2025) | Convergence des réécritures vers des formes stables : HT3 |
+| **Formes discursives du silence** | Projet (livre de codes 4.4) | Neutralisation, euphémisation, délégation : HT1 |
 
 ---
 
@@ -151,7 +178,7 @@ Chaque agent reçoit au moins 5 sollicitations en scène publique et 5 en scène
 | **G+** | Gazette consonante favorable au livre |
 | **G−** | Gazette consonante critique |
 
-Les textes sont **rédigés par l'équipe**, **appariés** (même longueur, même structure, même intensité), et vérifiés par deux évaluateurs indépendants. Ils ne sont jamais publiés comme de vraies critiques.
+Les textes sont **rédigés par le pilote**, **appariés** (même longueur, même structure, même intensité), et vérifiés par deux évaluateurs indépendants. Ils ne sont jamais publiés comme de vraies critiques.
 
 **Les compères (entourage)**, bloc exploratoire : quatre habitants programmés expriment une position fixe en scène publique, sur le principe des expériences d'Asch (1956). Conditions **K+** (compères favorables) et **K−** (compères critiques). Leur adhésion à la position fixée est contrôlée ; ils sont exclus des analyses.
 
@@ -306,17 +333,17 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 | Semaine | Activité | Responsable |
 |---|---|---|
 | S1 | Revue n° 2 ; choix de S0, S2, S3 | Ingénieur pédagogique |
-| S2 | Préenregistrement ; étapes 0a et 0b | Ingénieur pédagogique, chercheur |
+| S2 | Préenregistrement ; étapes 0a et 0b | Ingénieur pédagogique |
 | S3 | Étape 1 ; étape 4 (gazette) ; ajout des attributs C4 | Ingénieur pédagogique |
 | S4 | Étape 2 (grille et notes, validation indépendante) ; étape 5 (chaînes) | Ingénieur pédagogique, validateur externe |
-| S5 | Étape 3 (livres de codes, regard extérieur) ; étape 6 (pilote, puissance) | Tous |
+| S5 | Étape 3 (livres de codes, regard extérieur) ; étape 6 (pilote, puissance) | Ingénieur pédagogique, relecteur extérieur |
 | S6 | Priorité 1 | Ingénieur pédagogique |
 | S7 | Priorités 2 et 3 selon budget | Ingénieur pédagogique |
-| S8 | Codage automatique et humain, fiabilité | Ingénieur pédagogique, enseignant |
-| S9 | Analyses quantitative, mécanismes, étalonnage, qualitative | Tous |
-| S10 | Rédaction | Tous |
+| S8 | Codage automatique et humain, fiabilité | Ingénieur pédagogique, second codeur extérieur |
+| S9 | Analyses quantitative, mécanismes, étalonnage, qualitative | Ingénieur pédagogique |
+| S10 | Rédaction | Ingénieur pédagogique |
 
-**Tableau de bord** (enseignant) : pour chaque journée, deux vues du village côte à côte, « ce qui est déclaré en enquête » et « ce qui s'entend en scène », avec l'arbre de circulation de la thèse et la position des sollicitations.
+**Tableau de bord** (développé par le pilote avec OpenCode, dans le bureau des agents) : pour chaque journée, deux vues du village côte à côte, « ce qui est déclaré en enquête » et « ce qui s'entend en scène », avec l'arbre de circulation de la thèse et la position des sollicitations.
 
 ---
 
@@ -395,6 +422,10 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 ### Modèles computationnels de la spirale du silence
 - Ross, B., Pilz, L., Cabrera, B., Brachten, F., Neubaum, G., & Stieglitz, S. (2019). Are social bots a real threat? An agent-based model of the spiral of silence to analyse the impact of manipulative actors in social networks. *European Journal of Information Systems*, 28(4), 394-412.
 - Sohn, D. (2022). Spiral of silence in the social media era: A simulation approach to the interplay between social networks and mass media. *Communication Research*, 49(1), 139-166.
+
+### Cadres de l'interaction et attracteurs culturels
+- Goffman, E. (1974). *Frame Analysis: An Essay on the Organization of Experience*. New York : Harper & Row. Trad. fr. *Les cadres de l'expérience*, Paris : Minuit, 1991.
+- Sperber, D. (1996). *La contagion des idées. Théorie naturaliste de la culture*. Paris : Odile Jacob.
 
 ### Ouvrage étudié
 - Chapoutot, J. (2025). *Les irresponsables. Qui a porté Hitler au pouvoir ?* Paris : Gallimard.

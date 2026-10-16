@@ -1,6 +1,6 @@
 # Formaliser une théorie verbale : la spirale du silence
 
-*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Pilote : l'ingénieur pédagogique (SIC). Appui : le chercheur CNRS (modélisation numérique, rapports micro-macro). Version du 15 octobre 2026.*
+*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version du 16 octobre 2026. Sert d'étalon théorique au scénario C4 (QR-E, HT4).*
 
 ---
 
@@ -111,7 +111,7 @@ Puis **classification** des formalisations selon leurs comportements : lesquelle
 
 ### 4.5 Étape 5 : confrontation aux résultats empiriques (1 semaine)
 
-- **Le paradoxe micro-macro** (QR3) : pour chaque formalisation, on simule une « enquête » sur les agents (relation individuelle entre perception du climat et expression) et on compare la force de cette relation à celle des méta-analyses. Une formalisation qui produit une spirale collective nette avec une relation individuelle faible lèverait en partie le paradoxe empirique de la théorie. L'expertise micro-macro du chercheur CNRS est ici précieuse.
+- **Le paradoxe micro-macro** (QR3) : pour chaque formalisation, on simule une « enquête » sur les agents (relation individuelle entre perception du climat et expression) et on compare la force de cette relation à celle des méta-analyses. Une formalisation qui produit une spirale collective nette avec une relation individuelle faible lèverait en partie le paradoxe empirique de la théorie.
 - **Prédictions discriminantes** (QR4) : on recherche les observables qui diffèrent le plus entre familles de formalisations (par exemple : effet du silence des autres sur sa propre expression, rôle de la tendance perçue par rapport au climat présent), et on propose pour chacune un dispositif d'enquête qui permettrait de trancher.
 
 ### 4.6 Étape 6 (option) : retour au village génératif
@@ -165,7 +165,7 @@ Le carnet de conception consigne chaque traduction du texte vers le code, chaque
 | Tests de propriétés | pytest et Hypothesis |
 | Analyse de sensibilité | SALib |
 | Documentation des modèles | Protocole ODD |
-| Visualisation | matplotlib ; page web de l'enseignant pour explorer l'espace des formalisations |
+| Visualisation | matplotlib ; page web du bureau des agents pour explorer l'espace des formalisations |
 
 ---
 

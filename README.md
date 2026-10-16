@@ -6,7 +6,19 @@ Un village d'agents génératifs pour étudier la circulation d'un savoir savant
 
 Projet de recherche en sciences de l'information et de la communication, mené dans le cadre de JEDI-OpenLab (Centrale Lille).
 
+## Hypothèses de travail
+
+| Code | Hypothèse |
+|---|---|
+| HT1 | Le taire comme dire vide : les agents ne se taisent pas, ils neutralisent |
+| HT2 | Le taire est écrit par le dispositif : les cadres d'énonciation comptent plus que les attributs des personas |
+| HT3 | La trivialité converge vers le lieu commun : la thèse savante devient formule consensuelle |
+| HT4 | Une socialité sans climat : alignement sur l'interlocuteur plutôt que lecture du climat d'opinion |
+
 ## Contenu du dépôt
+
+Voir le guide de lecture : `docs/README.md`.
+
 
 | Dossier | Contenu |
 |---|---|
