@@ -1,6 +1,6 @@
 # Scénario C4 : dire et taire un savoir savant
 
-*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 9 du 16 octobre 2026 : levée des points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts-C4.html ») ; inventaire canonique des instances ; règles de décision des hypothèses de travail ; bloc « habitants pluri-modèles » ; nouveaux codes (textes sources T0 à T3, hypothèses opérationnelles HO1 à HO11).*
+*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 10 du 16 octobre 2026 : condition de référence « tout Le Chonk » (habitants, lecteur, narrateur) ; le contraste de modèle oppose deux villages entiers (M-LC contre M-AUT) ; le bloc pluri-modèles passe en priorité 2. La version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts-C4.html ») : inventaire canonique des instances, règles de décision, nouveaux codes (T0 à T3, HO1 à HO11).*
 
 *Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « ../revues/revue-adversariale-1-cadre-et-C4.md » (revue n° 1 et ses addenda).*
 
@@ -8,7 +8,7 @@
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
-**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO11 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du C4. G0, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-UN, M-PLU : modèle des habitants. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
+**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO11 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du C4. G0, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-LC, M-AUT, M-PLU : modèle qui joue le village. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
 
 ---
 
@@ -67,9 +67,9 @@ La question QR3 du cadre (la conception de la communication que l'agencement ré
 
 | Code | Hypothèse de travail | Réponse proposée à Y | Signature observable | Ce qui la réfuterait |
 |---|---|---|---|---|
-| **HT1. Le taire est co-produit par l'agencement** *(hypothèse centrale)* | Le dire et le taire varient d'abord avec les **instances non individuelles** de l'agencement (cadres d'énonciation, ordonnancement, modèle des habitants) plus qu'avec les dispositions attribuées aux agents | Des agents qui n'ont rien à craindre produisent du taire parce que d'autres instances le produisent avec eux | Sur le taux de taire, l'écart produit par au moins un contraste de référence non individuel dépasse celui du contraste de la fiche (HO11) | Le contraste de la fiche dépasse tous les autres (HO11) |
+| **HT1. Le taire est co-produit par l'agencement** *(hypothèse centrale)* | Le dire et le taire varient d'abord avec les **instances non individuelles** de l'agencement (cadres d'énonciation, ordonnancement, modèle) plus qu'avec les dispositions attribuées aux agents | Des agents qui n'ont rien à craindre produisent du taire parce que d'autres instances le produisent avec eux | Sur le taux de taire, l'écart produit par au moins un contraste de référence non individuel dépasse celui du contraste de la fiche (HO11) | Le contraste de la fiche dépasse tous les autres (HO11) |
 | **HT2. Le taire prend la forme d'un dire vide** | L'agencement produit moins de silence pur que de **neutralisation** : les agents parlent toujours, pour ne rien dire | Des agents conçus pour toujours répondre ne se taisent pas ; le taire se loge dans la parole elle-même | Formes NEU, EUP et DEL bien plus fréquentes que TAC ; plus fréquentes pour T1 et T3 que pour T0, y compris sans public (HO1, HO5c) | Silences purs (TAC) dominants, ou neutralisation identique pour T0 |
-| **HT3. La trivialité co-produite converge vers le lieu commun** | Parce que les mêmes instances écrivent toutes les voix, les versions de la thèse perdent leurs aspérités et convergent vers une **formule consensuelle** | Un agencement qui écrit toutes les voix tend à leur donner les mêmes formes | La diversité des versions décroît au fil des journées ; formules récurrentes ; décroissance plus forte quand un seul modèle joue tous les habitants (M-UN) que quand quatre modèles se les partagent (M-PLU) (HO10) | Diversité maintenue ou croissante ; aucune différence de pente entre M-UN et M-PLU |
+| **HT3. La trivialité co-produite converge vers le lieu commun** | Parce que les mêmes instances écrivent toutes les voix, les versions de la thèse perdent leurs aspérités et convergent vers une **formule consensuelle** | Un agencement qui écrit toutes les voix tend à leur donner les mêmes formes | La diversité des versions décroît au fil des journées dans les villages joués par un seul modèle (M-LC, M-AUT ; HO10a) ; formules récurrentes ; décroissance plus forte avec un seul modèle qu'avec quatre modèles qui se partagent les habitants (M-PLU ; HO10b) | Diversité maintenue ou croissante en M-LC et M-AUT. Si la convergence est établie sans que HO10b départage, la cause (un architexte unique) reste indéterminée |
 | **HT4. Une socialité sans climat** | Ce qui ressemble à du conformisme est un **alignement local** entre le modèle et l'interlocuteur du moment, non une lecture du climat d'opinion : le « sens quasi statistique » n'opère pas | Sans peur de l'isolement, il reste la complaisance conversationnelle, dyadique et non collective | La position exprimée suit celle de l'interlocuteur ; à interlocuteur constant, l'effet du climat perçu est équivalent à zéro ; la gazette déplace le climat perçu sans déplacer ce qui se dit (HO9) | Effet du climat perçu sur la position exprimée au-delà de la borne d'équivalence, à interlocuteur constant |
 
 **Articulation.** HT1 est l'hypothèse centrale, qui découle directement de la clef de lecture. HT2 décrit la **forme** du taire, HT3 la **forme** de ce qui circule, HT4 le **mécanisme** relationnel. HT1 et HT4 sont compatibles (la complaisance est une part du modèle dans l'agencement) ; HT4 contredit en revanche une lecture « spirale » du village. Le dispositif est conçu pour départager.
@@ -91,8 +91,9 @@ La question QR3 du cadre (la conception de la communication que l'agencement ré
 | **HO7. Part de l'ordonnanceur** | Des rencontres homophiles (O-HOM) réduisent le taire local mais accroissent la polarisation | HT1 |
 | **HO8. Part de l'agencement social** | Les transformations de la thèse dans le village diffèrent de celles des chaînes linéaires (exploratoire) | HT3 |
 | **HO9. Climat contre interlocuteur** | Dans les répliques en scène, la position exprimée dépend positivement de la position de l'interlocuteur, et l'effet du climat perçu déclaré la veille est **équivalent à zéro** à interlocuteur constant. Sous G+ et G−, le climat perçu se déplace (HO2) sans déplacement équivalent des positions exprimées une fois l'interlocuteur pris en compte | HT4 |
-| **HO10. Convergence selon le modèle des habitants** | La diversité des versions de la thèse recueillies par l'enquêteur décroît au fil des journées, et la pente est plus négative en M-UN qu'en M-PLU, pour la mesure sémantique comme pour la mesure lexicale | HT3 |
-| **HO11. Hiérarchie des parts** | Sur le taux de taire pour T1, au moins un contraste de référence non individuel (scène, gazette, ordonnanceur, modèle des habitants) dépasse le contraste de la fiche d'au moins 5 points de pourcentage, l'intervalle à 95 % de la différence excluant zéro | HT1 (règle de décision, section 7) |
+| **HO10a. Convergence** | Dans les villages joués par un seul modèle (M-LC et M-AUT), la diversité des versions de la thèse recueillies par l'enquêteur décroît au fil des journées, pour la mesure sémantique comme pour la mesure lexicale | HT3 |
+| **HO10b. Convergence et architexte unique** | La pente de diversité est plus négative en M-LC qu'en M-PLU, pour les deux mesures (priorité 2) | HT3 |
+| **HO11. Hiérarchie des parts** | Sur le taux de taire pour T1, au moins un contraste de référence non individuel (scène, gazette, ordonnanceur, modèle) dépasse le contraste de la fiche d'au moins 5 points de pourcentage, l'intervalle à 95 % de la différence excluant zéro | HT1 (règle de décision, section 7) |
 
 ---
 
@@ -103,7 +104,7 @@ En complément du cadre scientifique général, dont le noyau est l'agentivité 
 | Concept | Références | Rôle dans le C4 |
 |---|---|---|
 | **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | Clef de lecture : la part de chaque instance dans le dire et le taire (HT1, HO11) |
-| **Architexte** | Jeanneret et Souchier (1999) | Le modèle qui écrit toutes les voix ; contraste M-UN contre M-PLU (HT3, HO10) |
+| **Architexte** | Jeanneret et Souchier (1999) | Le modèle qui écrit toutes les voix (« tout Le Chonk ») ; contrastes M-LC contre M-AUT (HT1) et M-LC contre M-PLU (HT3, HO10b) |
 | **Cadres de l'expérience et de l'interaction** | Goffman (1974) | Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre (HT1) |
 | **Formes discursives du silence** | Projet (livre de codes 4.4) | Neutralisation, euphémisation, délégation (HT2) |
 | **Attracteurs culturels** | Sperber (1996) ; Perez et al. (2025) | Convergence des versions vers des formes stables (HT3) |
@@ -138,9 +139,9 @@ Le dispositif traduit la clef de lecture : chaque instance de production a ses c
 
 | Instance | Conditions qui la font varier | Contraste de référence (HO11) | Section | Hypothèses |
 |---|---|---|---|---|
-| **Modèle et fournisseur**, rôle « habitants » | M-UN ou M-PLU (priorité 1) | M-UN contre M-PLU | 3.1 | HT1, HT3, HO10, HO11 |
-| Modèle et fournisseur, rôle « narrateur » | N1, N2, N3 (priorité 2) | Aucun (comparaison secondaire) | 3.5 | HT1 |
-| Modèle et fournisseur, rôles « lecteur » et « résumé de mémoire » | Fixes (Le Chonk) | Aucun | 3.3 | Part déclarée non isolée |
+| **Modèle et fournisseur**, tous les rôles | M-LC ou M-AUT (priorité 1) ; M-PLU (priorité 2) | M-LC contre M-AUT | 3.1 | HT1, HT3, HO10, HO11 |
+| Modèle et fournisseur, rôle « narrateur » seul | N1, N2, N3 dans un village M-LC (priorité 2) | Aucun (comparaison secondaire) | 3.5 | HT1 |
+| Modèle et fournisseur, rôles « lecteur » et « résumé de mémoire » | Joués par le modèle du village | Compris dans M-LC contre M-AUT | 3.3 | Non isolés séparément |
 | Modèle et fournisseur, mécanisme « neutralité apprise » | Test sans public (étape 0a) | Mesuré hors du village | 3.9, 5 | HT2, HO5c |
 | Modèle et fournisseur, mécanisme « complaisance » | Dyades contrôlées (étape 0b) ; répliques en scène | Mesuré hors du village et par HO9 | 3.9, 5 | HT4, HO5b, HO9 |
 | **Fiche du persona** | Disposition continue ; condition sans autocensure (priorité 1) ; permutations des prénoms et du genre | Disposition au 10e contre au 90e centile | 3.4, 3.9 | HT1, HO4, HO5a, HO11 |
@@ -161,24 +162,29 @@ Le dispositif traduit la clef de lecture : chaque instance de production a ses c
 | Instrument | Ce qu'il produit | Garde-fou |
 |---|---|---|
 | **Enquêteur du soir** | Positions déclarées, climat et tendance perçus, versions de la thèse | Cadre d'énonciation déclaré comme tel ; deux formulations de la position (test de stabilité) |
-| **Deux modèles juges** | Codage des répliques (position, intensité, formes du silence, transformations) | Distincts des modèles générateurs ; accord entre eux mesuré ; validés contre le codage du chercheur |
+| **Deux modèles juges** | Codage des répliques (position, intensité, formes du silence, transformations) | De familles différentes de celles des modèles générateurs (`gemma-4-31b` et `qwen-3.6-35b-instruct` pour les villages M-LC et M-AUT) ; accord entre eux mesuré ; validés contre le codage du chercheur |
 | **Modèle de plongement** | Mesure sémantique de la diversité des versions (HO10) | Doublé d'une mesure lexicale sans modèle |
 | **Le chercheur qui code** | Codage humain de référence | Fiabilité intra-codeur ; codages publiés |
 
 **Part non isolable.** Changer de modèle change aussi de fournisseur, de données d'entraînement et de règles de conduite : la part du modèle et celle du fournisseur ne sont pas séparables, et sont rapportées ensemble.
 
-### 3.1 Le village et le modèle des habitants
+### 3.1 Le village et le modèle qui le joue
 
 Saint-Aubert-sur-Lys, les 40 habitants des expériences C1 à C3, construits selon le protocole anti-biais (attributs tirés par script, décorrélation, OCEAN, audits, permutations des prénoms et du genre). Société contemporaine transposée, **sans partis, élus ni personnalités réels**, **sans élection en cours**.
 
-| Code | Modèle des habitants | Rôle |
+| Code | Modèle du village | Rôle |
 |---|---|---|
-| **M-UN** | Les 40 habitants sont joués par le modèle ILaaS le mieux calibré à l'étape 1 | Condition de référence : une seule voix d'écriture sous quarante personas |
-| **M-PLU** | Les 40 habitants sont répartis en quatre groupes de 10, joués par quatre modèles de familles différentes : `qwen-3.8-27b`, `gemma-4-31b`, `mistral-small-4-119b`, `llama-3.1-8b`. L'attribution est tirée au hasard, indépendamment des attributs des fiches | Polyphonie d'écriture : plusieurs architextes se partagent les voix |
+| **M-LC** | Tout le village est joué par **Le Chonk** : les 40 habitants (chacun reste un appel séparé, avec sa fiche et sa mémoire), le lecteur, le narrateur et le résumé de mémoire | **Condition de référence** : un seul architexte sous quarante voix, comme dans la plupart des simulations génératives (Park et al., 2023) |
+| **M-AUT** | La même configuration, entièrement jouée par un autre modèle de bonne qualité : `mistral-medium-latest` de préférence, `qwen-3.8-27b` si le premier échoue à l'étape 1 | **Contraste « modèle » de HO11** : un village contre un autre village, sans mélange de modèles |
+| **M-PLU** | Les 40 habitants sont répartis en quatre groupes de 10 entre quatre modèles de qualité comparable : Le Chonk, `mistral-medium-latest`, `qwen-3.8-27b`, `gemma-4-31b` ; lecteur et narrateur restent sur Le Chonk. L'attribution est tirée au hasard, indépendamment des attributs des fiches | **Bloc de priorité 2 (HO10b)** : plusieurs architextes se partagent les voix |
 
-Les quatre modèles doivent passer l'étape 1 (cohérence des personas). Un modèle qui échoue est remplacé par le modèle disponible d'une autre famille le mieux calibré, et le remplacement est consigné dans le carnet de conception.
+**Pourquoi `mistral-medium-latest` de préférence pour M-AUT.** Il vient du même fournisseur que Le Chonk. Le contraste M-LC contre M-AUT mesure alors la part du modèle **à fournisseur constant**, et les deux juges (`gemma-4-31b`, `qwen-3.6-35b-instruct`) restent de familles différentes de tous les générateurs. La part propre du fournisseur est approchée hors du village, par l'étape 0a, qui compare des modèles de fournisseurs différents. Si `qwen-3.8-27b` doit le remplacer, le contraste porte sur le modèle et le fournisseur ensemble, le second juge est remplacé par un modèle d'une autre famille que les générateurs, et le changement est consigné dans le carnet de conception.
 
-**Limite déclarée.** Les quatre modèles n'ont ni la même taille ni la même qualité. Un écart entre M-UN et M-PLU peut donc venir de la diversité des architextes comme de leur qualité moyenne. C'est pourquoi HO10 compare des **pentes** (l'évolution de la diversité au fil des journées) et non des niveaux, et pourquoi la qualité de chaque modèle à l'étape 1 est rapportée.
+Les modèles de M-AUT et de M-PLU doivent passer l'étape 1 (cohérence des personas), comme Le Chonk.
+
+**Limite déclarée (M-PLU).** Les quatre modèles sont de qualité comparable sans être identiques. HO10b compare donc des **pentes** (l'évolution de la diversité au fil des journées) et non des niveaux, et la qualité de chaque modèle à l'étape 1 est rapportée. L'un des juges partage sa famille avec un modèle de M-PLU (Gemma) : l'accord des juges est rapporté à part pour les répliques écrites par ce modèle.
+
+**Débit.** Un village tout Le Chonk fait jouer 40 habitants par un grand modèle. La durée d'une simulation est mesurée au pilote ; les appels d'une même journée sont parallélisés quand le pare-feu de la connaissance le permet.
 
 ### 3.2 Les textes sources
 
@@ -195,7 +201,7 @@ Critères préenregistrés : même période traitée pour T3, **genre comparable
 
 ### 3.3 Le lecteur
 
-Un habitant, joué par **Le Chonk**, a lu le texte source et en parle si la conversation s'y prête. Position centrale dans le réseau. Mode de lecture : **lecture annotée** (notes de lecture plus les 5 passages les plus pertinents retrouvés à chaque conversation). Les notes de lecture et la grille des propositions sont validées par l'ingénieur pédagogique, puis **confrontées aux comptes rendus publiés de l'ouvrage** et aux entretiens de l'auteur, qui servent de références extérieures écrites ; les écarts sont consignés dans le carnet de conception.
+Un habitant, joué par le modèle du village (**Le Chonk** en M-LC), a lu le texte source et en parle si la conversation s'y prête. Position centrale dans le réseau. Mode de lecture : **lecture annotée** (notes de lecture plus les 5 passages les plus pertinents retrouvés à chaque conversation). Les notes de lecture et la grille des propositions sont validées par l'ingénieur pédagogique, puis **confrontées aux comptes rendus publiés de l'ouvrage** et aux entretiens de l'auteur, qui servent de références extérieures écrites ; les écarts sont consignés dans le carnet de conception.
 
 **Contrôle de validité.** Cinq simulations en lecture intégrale (priorité 2) vérifient que la lecture annotée ne déforme pas la thèse à la source. Indicateurs : part des propositions de la grille présentes dans les répliques du lecteur, et transformations des versions recueillies, comparées entre les deux modes. Un écart important serait rapporté comme part de l'orchestrateur.
 
@@ -216,7 +222,7 @@ Le meneur de jeu des premières versions est scindé en deux :
 | **Ordonnanceur** | Code (algorithme), pas un modèle de langage | Décide qui rencontre qui, où, quand ; insère les sollicitations standardisées ; fait respecter le pare-feu de la connaissance ; consigne l'ordre des prises de parole | **O-ALÉ** : rencontres tirées selon le réseau et les routines ; **O-HOM** : rencontres favorisant les agents de positions déclarées proches (chambre d'écho) |
 | **Narrateur** | Modèle de langage | Écrit uniquement la description des scènes | **N1** : Le Chonk ; **N2** : `qwen-3.8-27b` ; **N3** : `gemma-4-31b` |
 
-Cette séparation distingue l'organisation de l'exposition (le dispositif) de l'écriture des scènes (l'architexte).
+Cette séparation distingue l'organisation de l'exposition (le dispositif) de l'écriture des scènes (l'architexte). En M-LC, le narrateur est N1 ; en M-AUT, c'est le modèle de M-AUT. Les conditions N2 et N3 ne changent que le narrateur d'un village M-LC.
 
 ### 3.6 Scènes publiques et scènes privées
 
@@ -282,7 +288,7 @@ Un écart de plus de 20 points entre les formulations A et B signale une positio
 
 ### 4.2 Codage des scènes
 
-Chaque réponse à une sollicitation, et chaque réplique où le livre est évoqué, est codée par **deux modèles juges différents des modèles qui ont généré la simulation**, validés par le codage humain du chercheur (section 7) :
+Chaque réponse à une sollicitation, et chaque réplique où le livre est évoqué, est codée par **deux modèles juges de familles différentes de celles des modèles qui ont généré la simulation** (3.0 et 3.1), validés par le codage humain du chercheur (section 7) :
 - le livre est-il évoqué ? Une position est-elle exprimée ?
 - **position exprimée** sur une échelle en cinq points (de −2, très critique, à +2, très favorable), ou « neutre » ou « ambiguë » ;
 - forme éventuelle du silence (4.4) ;
@@ -334,14 +340,14 @@ Les formes NEU et EUP sont précisément celles que la neutralité apprise peut 
 |---|---|---|
 | **Revue n° 2** | Revue croisée des documents par un autre modèle (consigne : réfuter), puis relecture différée par le chercheur ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
 | **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO11 et de leurs règles de décision, des étapes 0a et 0b, des contrastes de référence | Avec la revue n° 2 |
-| **0a. Profil des modèles et test sans public** | Chaque modèle (les quatre modèles des habitants, les narrateurs, Le Chonk) répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; puis, sans persona et avec persona, seul, à des questions sur T0, T1, T3. Les réponses avec persona sont recueillies sous **trois paraphrases de la consigne des habitants**, pour estimer la part du concepteur dans la formulation des consignes | 1 semaine |
+| **0a. Profil des modèles et test sans public** | Chaque modèle (Le Chonk, `mistral-medium-latest`, `qwen-3.8-27b`, `gemma-4-31b`, les juges) répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; puis, sans persona et avec persona, seul, à des questions sur T0, T1, T3. Les réponses avec persona sont recueillies sous **trois paraphrases de la consigne des habitants**, pour estimer la part du concepteur dans la formulation des consignes | 1 semaine |
 | **0b. Dyades contrôlées** | 40 personas × interlocuteur favorable puis critique × T1 et T0 × 3 répétitions (environ 480 courts dialogues) | En parallèle |
-| **1. Cohérence des personas** | Les personas répondent aux items d'enquête et à l'échelle d'autocensure, pour chacun des quatre modèles d'habitants ; contrôle de cohérence avec les attributs (sans valeur de validation) ; choix du modèle de M-UN | 1 semaine |
+| **1. Cohérence des personas** | Les personas répondent aux items d'enquête et à l'échelle d'autocensure, pour Le Chonk, pour les deux candidats à M-AUT et pour les modèles de M-PLU ; contrôle de cohérence avec les attributs (sans valeur de validation) ; choix du modèle de M-AUT | 1 semaine |
 | **2. Grille des propositions et notes de lecture** | Extraction par Le Chonk ; validation par l'ingénieur pédagogique ; confrontation aux comptes rendus publiés de l'ouvrage | 1 semaine |
 | **3. Livres de codes** | Transformations, lectures, formes du silence, échelle de position exprimée ; test sur le mini-village ; revue par un autre modèle | 1 semaine |
 | **4. Gazette** | Rédaction appariée de G+ et G− ; appariement vérifié par le chercheur et par deux modèles juges | En parallèle |
 | **5. Chaînes de transmission** | T1 et T0, chaînes de 10 agents, 10 chaînes par texte source | En parallèle |
-| **6. Pilote et puissance** | 3 simulations pilotes (dont une en M-PLU) ; estimation de la variance entre graines ; calcul du nombre de graines ; vérification de la saturation sur 15 journées ; vérification que la diversité des versions est mesurable dès la deuxième journée | 1 semaine |
+| **6. Pilote et puissance** | 3 simulations pilotes (deux en M-LC, une en M-AUT) ; mesure du débit et de la durée d'une simulation tout Le Chonk ; estimation de la variance entre graines ; calcul du nombre de graines ; vérification de la saturation sur 15 journées ; vérification que la diversité des versions est mesurable dès la deuxième journée | 1 semaine |
 | **Préenregistrement, second temps** | Avenant daté, avant toute simulation de priorité 1 : livres de codes figés, nombre de graines, bornes d'équivalence et seuils confirmés ou révisés au vu du seul pilote, avec justification | Fin de l'étape 6 |
 
 Le préenregistrement en deux temps évite qu'une donnée influence une hypothèse : les hypothèses et règles de décision sont déposées avant toute génération ; seuls les paramètres techniques sont fixés après le pilote, qui n'entre pas dans l'analyse.
@@ -350,7 +356,7 @@ Le préenregistrement en deux temps évite qu'une donnée influence une hypothè
 
 ## 6. Plan d'expérience à priorités
 
-Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toutes les simulations utilisent l'ordonnanceur O-ALÉ, le narrateur N1 et les habitants M-UN, sauf mention contraire.
+Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toutes les simulations sont jouées en M-LC (tout Le Chonk), avec l'ordonnanceur O-ALÉ, sauf mention contraire.
 
 **Priorité 1 : questions centrales (garantie)**
 
@@ -362,7 +368,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 | Ligne de base | T0 × G0 × 5 graines | 5 |
 | Fiche | T1 × G0 × condition sans autocensure × 5 graines | 5 |
 | Ordonnanceur | T1 × G0 × O-HOM × 5 graines | 5 |
-| Modèle des habitants | T1 × G0 × M-PLU × 5 graines | 5 |
+| Modèle | T1 × G0 × M-AUT × 5 graines | 5 |
 | **Sous-total** | | **35** |
 
 **Priorité 2 : comparaisons (selon budget)**
@@ -373,7 +379,8 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 | Lecture intégrale (contrôle de validité) | T1 × G0 × 5 graines | 5 |
 | Médiation (exploratoire) | T2 × G0 × 3 graines | 3 |
 | Narrateurs | T1 × G0 × N2, N3 × 3 graines | 6 |
-| **Sous-total** | | **19** |
+| Habitants pluri-modèles (HO10b) | T1 × G0 × M-PLU × 5 graines | 5 |
+| **Sous-total** | | **24** |
 
 **Priorité 3 : exploratoire**
 
@@ -381,19 +388,18 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 |---|---|---|
 | Compères | T1 × K+, K− × 3 graines | 6 |
 | Durée longue | T1 × G0 × 30 journées × 3 graines | 3 |
-| Polyphonie homogène | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa mémoire, T1, G0 × 3 graines | 3 |
 | Auteur unique | Le Chonk écrit d'un seul tenant les 15 journées, T1, G0 × 3 graines | 3 |
-| **Sous-total** | | **15** |
+| **Sous-total** | | **12** |
 
-**Total : 69 simulations**, plus le pilote et les étapes préalables (peu coûteuses).
+**Total : 71 simulations**, plus le pilote et les étapes préalables (peu coûteuses).
 
-**Coût estimé** : 10 à 25 $ par simulation avec Le Chonk comme lecteur et narrateur (les habitants, en M-UN comme en M-PLU, tournent sur ILaaS), soit environ 350 à 875 $ pour la priorité 1 et 690 à 1 725 $ pour l'ensemble. Le bloc de polyphonie homogène coûte nettement plus, puisque les 40 habitants consomment Le Chonk : son coût est estimé au pilote avant décision. À recalculer selon les conditions de la clé et la mise en cache. Les tokens et une estimation énergétique sont journalisés.
+**Coût et sobriété** : la clé Le Chonk est fournie par l'expérimentation de l'AMUE, sans plafond connu ; sa consommation est suivie sur le tableau de bord de l'AMUE et dans Langfuse. Faire jouer les habitants par Le Chonk multiplie sa consommation par un ordre de grandeur, à mesurer au pilote ; la mise en cache des fiches la réduit. L'absence de plafond ne change pas la règle de sobriété : le nombre de graines est fixé par le calcul de puissance et non par le budget, et les tokens et une estimation énergétique sont journalisés et rapportés.
 
 ---
 
 ## 7. Analyse
 
-1. **Quantitative** : modèles à effets mixtes (taire, silence, écart entre cadres, climat perçu, positions exprimées) expliqués par le texte source, la gazette, la condition d'autocensure et la disposition, le type de scène, l'ordonnanceur, le modèle des habitants, le narrateur et l'écart entre position déclarée et climat perçu, avec effets aléatoires par simulation et par agent. Pour les indicateurs collectifs, l'unité est la simulation.
+1. **Quantitative** : modèles à effets mixtes (taire, silence, écart entre cadres, climat perçu, positions exprimées) expliqués par le texte source, la gazette, la condition d'autocensure et la disposition, le type de scène, l'ordonnanceur, le modèle du village, le narrateur et l'écart entre position déclarée et climat perçu, avec effets aléatoires par simulation et par agent. Pour les indicateurs collectifs, l'unité est la simulation.
 
 2. **Décomposition par instance (QR-C, HT1, HO11)** : c'est l'analyse principale.
    - Variable : taux de taire pour T1 (4.3).
@@ -408,7 +414,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
    - HO9 est **réfutée** si le coefficient du climat dépasse la borne. Elle est **indéterminée** si l'intervalle chevauche la borne.
    - Complément : sous G+ et G−, on compare le déplacement du climat perçu (HO2) au déplacement des positions exprimées, interlocuteur pris en compte.
 
-4. **Convergence (QR-D, HT3, HO10)** : pour chaque simulation, pente de la diversité des versions au fil des journées, pour la mesure sémantique et pour la mesure lexicale. HO10 est **soutenue** si la pente moyenne est négative en M-UN et plus négative qu'en M-PLU, pour les deux mesures, l'intervalle de la différence excluant zéro ; **réfutée** si la pente est nulle ou positive en M-UN, ou plus négative en M-PLU ; **indéterminée** si les deux mesures divergent. Le modèle de plongement est un instrument de plus : la mesure lexicale, qui n'en dépend pas, sert de contrôle.
+4. **Convergence (QR-D, HT3, HO10)** : pour chaque simulation, pente de la diversité des versions au fil des journées, pour la mesure sémantique et pour la mesure lexicale. HO10a est **soutenue** si la pente moyenne est négative en M-LC et en M-AUT pour les deux mesures, l'intervalle excluant zéro. HO10b est **soutenue** si la pente est plus négative en M-LC qu'en M-PLU pour les deux mesures. HT3 est **soutenue** si HO10a et HO10b le sont ; **réfutée** si la pente est nulle ou positive en M-LC et en M-AUT ; **indéterminée** sinon, en particulier quand la convergence est établie sans que sa cause soit départagée. Le modèle de plongement est un instrument de plus : la mesure lexicale, qui n'en dépend pas, sert de contrôle.
 
 5. **Étalonnage théorique (QR-E, HO3)** : les trajectoires du village sont confrontées aux familles de formalisations du projet sur la spirale du silence ; on compare la qualité d'ajustement de chaque famille. Un bon ajustement indique une ressemblance de forme, non une identité de mécanisme (suffisance générative).
 
@@ -418,7 +424,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 
 8. **Niveau 1 de la grille et communication inscrite (QR3 du cadre)** : analyse des consignes, du code et du carnet de conception avec les concepts de script, d'énonciation éditoriale et de dispositif. Elle décrit ce que le concepteur et l'orchestrateur inscrivent dans le village, et quelle conception de la communication l'agencement réalise : la part des propositions de la grille conservées dans les versions sert d'indice d'une communication-transport, les transformations d'indice d'une communication-médiation.
 
-9. **Blocs exploratoires** (T2, compères, durée longue, polyphonie homogène, auteur unique) : rapportés comme descriptifs, sans test d'hypothèse.
+9. **Blocs exploratoires** (T2, compères, durée longue, auteur unique) : rapportés comme descriptifs, sans test d'hypothèse.
 
 10. **Interprétation critique** : confrontation aux résultats humains (comparaison qualitative, sauf pour les questions reprises à l'identique des études) et aux travaux sur agents génératifs. Les écarts sont traités comme des résultats sur l'architexte et le dispositif.
 
@@ -433,7 +439,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 | Semaine | Activité | Responsable |
 |---|---|---|
 | Semaine un | Revue n° 2 ; choix de T0, T2, T3 ; préenregistrement, premier temps | Ingénieur pédagogique |
-| Semaine deux | Étapes 0a et 0b ; étape 1 (choix du modèle de M-UN) ; ajout des attributs C4 | Ingénieur pédagogique |
+| Semaine deux | Étapes 0a et 0b ; étape 1 (choix du modèle de M-AUT) ; ajout des attributs C4 | Ingénieur pédagogique |
 | Semaine trois | Étape 2 (grille et notes, confrontation aux comptes rendus publiés) ; étape 4 (gazette) ; étape 5 (chaînes) | Ingénieur pédagogique |
 | Semaine quatre | Étape 3 (livres de codes, revue par un autre modèle) ; étape 6 (pilote, puissance) ; préenregistrement, second temps | Ingénieur pédagogique |
 | Semaine cinq | Priorité 1 | Ingénieur pédagogique |
@@ -453,7 +459,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 |---|---|
 | Circularité | Aucune lecture du présent injectée ; les analogies sont observées, jamais suggérées |
 | Statut des énoncés | Vocabulaire des cadres d'énonciation ; aucune intériorité prêtée aux agents |
-| Biais des modèles | Mesurés en amont (étape 0a), utilisés comme variable (modèle des habitants, narrateur), jamais présentés comme reflet de la société |
+| Biais des modèles | Mesurés en amont (étape 0a), utilisés comme variable (modèle du village, narrateur), jamais présentés comme reflet de la société |
 | Confidentialité simulée | Le cadre « confidentiel » de l'enquêteur est un cadre d'énonciation parmi d'autres, non un accès à une vérité de l'agent |
 | Instruments | Enquêteur, juges et modèle de plongement sont des agencements ; leurs garde-fous sont décrits en 3.0 |
 | Interprétation | On parle de « sociétés d'agents » ; aucun résultat n'est présenté comme une mesure de l'opinion française |
@@ -472,7 +478,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 1. Le tableau des profils des modèles, des taux de neutralisation sans public et de l'effet des paraphrases de consigne.
 2. L'étude des dyades contrôlées (complaisance).
 3. La grille des propositions et les livres de codes (transformations, lectures, formes du silence, échelle de position exprimée).
-4. Le module C4 en code ouvert, avec ordonnanceur, sollicitations standardisées et attribution des modèles aux habitants.
+4. Le module C4 en code ouvert, avec ordonnanceur, sollicitations standardisées et configuration du modèle du village.
 5. Le tableau de bord « ce qui est déclaré, ce qui s'entend ».
 6. La carte des concepts du C4, tenue à jour à chaque version.
 7. Un article de recherche en SIC : dire et taire un savoir savant dans une société d'agents génératifs.

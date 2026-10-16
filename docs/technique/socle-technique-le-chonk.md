@@ -639,7 +639,7 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 | Logiciels | 0 € (tous libres ou gratuits) |
 | Petit écran HDMI | Environ 50 à 90 € |
 | Disque de sauvegarde externe | Environ 60 à 100 € |
-| Appels de modèles | Selon les conditions de la clé Le Chonk ; ILaaS selon l'expérimentation ministérielle ; budgets plafonnés par usage |
+| Appels de modèles | Clé Le Chonk fournie par l'expérimentation de l'AMUE, sans plafond connu, suivie sur le tableau de bord de l'AMUE ; ILaaS selon l'expérimentation ministérielle ; budgets par usage dans le passe-plat, pour suivre la consommation de chaque usage. Pour le C4, Le Chonk joue tout le village de référence (habitants, lecteur, narrateur) : l'usage « village » est de loin le plus consommateur. Les modèles ILaaS servent aux juges, au village de contraste et aux tests sans public |
 
 ---
 

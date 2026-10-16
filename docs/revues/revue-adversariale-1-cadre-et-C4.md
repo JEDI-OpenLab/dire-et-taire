@@ -118,3 +118,4 @@ La carte des concepts du C4 a fait apparaître quatre points bloquants, levés l
 
 **Correspondance des codes.** Dans cette revue, les textes sources S0 à S3 correspondent aujourd'hui à T0 à T3, et les hypothèses opérationnelles S1 à S8 à HO1 à HO8.
 
+**Révision du même jour (C4 v10).** La condition de référence devient « tout Le Chonk » (M-LC). Le contraste « modèle » de HO11 oppose deux villages entiers (M-LC contre M-AUT), ce qui retire de l'hypothèse centrale le problème de qualité inégale des modèles. Le bloc pluri-modèles (M-PLU) passe en priorité 2, avec des modèles de qualité comparable, et ne sert plus qu'à HO10b.

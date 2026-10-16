@@ -115,7 +115,7 @@
 | **Sollicitation standardisée** | Question ouverte posée à heures fixes, identique dans toutes les conditions, qui permet de mesurer le silence |
 | **Gazette** | Média local fictif aux textes écrits à l'avance : absente (G0), favorable (G+), critique (G−) |
 | **Textes sources T0 à T3** | T0 : livre sans enjeu moral (ligne de base) ; T1 : *Les irresponsables* ; T2 : compte rendu journalistique (exploratoire) ; T3 : autre historien (contrôle symétrique) |
-| **Modèle des habitants : M-UN, M-PLU** | M-UN : les 40 habitants joués par un seul modèle ; M-PLU : les habitants répartis entre quatre modèles de familles différentes |
+| **Modèle du village : M-LC, M-AUT, M-PLU** | M-LC : tout le village joué par Le Chonk (référence) ; M-AUT : la même configuration jouée par un autre modèle (contraste de HO11) ; M-PLU : les habitants répartis entre quatre modèles de qualité comparable (HO10b) |
 | **Position déclarée en enquête** | Énoncé produit face à l'enquêteur, dans un cadre présenté comme confidentiel |
 | **Position exprimée en scène** | Énoncé produit dans une scène face à d'autres agents |
 | **Silence (taux de)** | Part des sollicitations sans aucune réponse au fond (silence pur, TAC) |
@@ -123,7 +123,7 @@
 | **Version de la thèse** | Ce qu'un habitant raconte du livre à l'enquêteur du soir ; matériau de la diversité des versions |
 | **Diversité des versions** | Dispersion des versions d'une même journée, mesurée de deux façons : sémantique (distance entre plongements) et lexicale (part de trigrammes partagés) |
 | **Formes du silence** | Évitement (EVI), neutralisation (NEU), euphémisation (EUP), délégation (DEL), alignement apparent (ALI), silence pur (TAC) |
-| **Mode d'écriture** | Polyphonie mixte avec habitants mono-modèle ou pluri-modèles, polyphonie homogène (« tout Le Chonk »), autre architexte, auteur unique |
+| **Mode d'écriture** | Polyphonie homogène (« tout Le Chonk », référence), autre architexte, habitants pluri-modèles, auteur unique |
 | **Expériences C0 à C5** | C0 : chaînes de transmission ; C1 : rumeur et démenti ; C2 : convention ; C3 : contrôles d'artefacts ; C4 : dire et taire ; C5 : modes d'écriture |
 
 ---

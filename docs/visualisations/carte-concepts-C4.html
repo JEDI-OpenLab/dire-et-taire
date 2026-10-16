@@ -90,7 +90,7 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · scénario C4 « Dire et taire »</div>
     <h1>Carte des concepts du C4</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au C4 version 9 et au cadre version 6 : les quatre points bloquants de la première carte sont levés. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au C4 version 10 et au cadre version 6 : les quatre points bloquants de la première carte sont levés. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6 (sections 1, 3, 4, 6, 7) et scénario C4 v9 (sections 1.5, 1.6, 2, 3.0, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signalerait une pièce manquante ; il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6 (sections 1, 3, 4, 6, 7) et scénario C4 v10 (sections 1.5, 1.6, 2, 3.0, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signalerait une pièce manquante ; il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -126,7 +126,7 @@ const FAM={
 const N=[
 /* Concepts */
 {id:"coag",c:0,fam:"agencement",l:"Co-agentivité (agentivité distribuée)",r:"Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007)",d:"Clef de lecture : chaque énoncé est co-produit par un agencement de six instances. Sert à estimer la part de chacune (HO11)."},
-{id:"archi",c:0,fam:"agencement",l:"Architexte",r:"Jeanneret et Souchier (1999)",d:"Le modèle qui écrit toutes les voix ; contraste M-UN contre M-PLU (HT3, HO10)."},
+{id:"archi",c:0,fam:"agencement",l:"Architexte",r:"Jeanneret et Souchier (1999)",d:"Le modèle qui écrit toutes les voix (« tout Le Chonk ») ; contrastes M-LC contre M-AUT (HO11) et M-LC contre M-PLU (HO10b)."},
 {id:"script",c:0,fam:"agencement",l:"Script, inscription",r:"Akrich (1987)",d:"Ce que le concepteur inscrit dans les fiches et les consignes ; analyse qualitative du niveau 1."},
 {id:"enoned",c:0,fam:"agencement",l:"Énonciation éditoriale",r:"Souchier (1998)",d:"Ce que la consigne et la mémoire assemblées par l'orchestrateur imposent aux énoncés ; analyse qualitative du niveau 1."},
 {id:"goff",c:0,fam:"agencement",l:"Cadres de l'expérience",r:"Goffman (1974)",d:"Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre."},
@@ -160,7 +160,7 @@ const N=[
 {id:"suff",c:0,fam:"posture",l:"Suffisance générative",r:"Epstein (1999) ; Zhao, Pham et Vincent (2026)",d:"Une spirale reproduite n'est pas une spirale expliquée."},
 {id:"critique",c:0,fam:"posture",l:"Simulacres, perroquets, silicium",r:"Park et al. (2023) ; Bender et al. (2021) ; Argyle et al. (2023) ; Wang et al. (2025)",d:"Concepts critiques sur les agents génératifs ; ils cadrent l'interprétation."},
 /* Instances, stimuli, instruments */
-{id:"modele",c:1,k:"prod",l:"Modèle et fournisseur",d:"Écrit les répliques. Rôles : habitants, narrateur, lecteur, résumé de mémoire. Mécanismes : écriture, complaisance, neutralité apprise. Modèle et fournisseur ne se séparent pas.",cd:"M-UN ou M-PLU (priorité 1, contraste de référence) ; narrateurs N1 à N3 (priorité 2) ; test sans public (étape 0a) ; dyades contrôlées (étape 0b) ; polyphonie homogène et auteur unique (priorité 3)."},
+{id:"modele",c:1,k:"prod",l:"Modèle et fournisseur",d:"Écrit les répliques. Rôles : habitants, narrateur, lecteur, résumé de mémoire. Mécanismes : écriture, complaisance, neutralité apprise. Modèle et fournisseur ne se séparent pas.",cd:"Référence M-LC, tout Le Chonk ; M-AUT, le même village joué par mistral-medium-latest (priorité 1, contraste de référence) ; narrateurs N2, N3 et M-PLU (priorité 2) ; test sans public (étape 0a) ; dyades contrôlées (étape 0b) ; auteur unique (priorité 3)."},
 {id:"fiche",c:1,k:"prod",l:"Fiche du persona",d:"Oriente le ton, les valeurs, la disposition à s'autocensurer.",cd:"Disposition continue (contraste : 10e contre 90e centile) ; condition sans autocensure (priorité 1) ; permutations des prénoms et du genre."},
 {id:"orch",c:1,k:"ctrl",l:"Orchestrateur",d:"Assemble la consigne et la mémoire ; mode de lecture du lecteur.",cd:"Lecture annotée ou intégrale (priorité 2) : contrôle de validité de la lecture annotée, sans hypothèse."},
 {id:"ordo",c:1,k:"prod",l:"Ordonnanceur",d:"Décide qui rencontre qui, où, dans quel type de scène ; consigne l'ordre des prises de parole.",cd:"O-ALÉ ou O-HOM (priorité 1, 5 graines, contraste de référence)."},
@@ -169,7 +169,7 @@ const N=[
 {id:"source",c:1,k:"stim",l:"Textes sources T0 à T3",d:"Ce qui est mis en circulation. Stimulus, pas instance.",cd:"T0 et T1 (priorité 1) ; T3 (priorité 2) ; T2, compte rendu journalistique (priorité 2, exploratoire)."},
 {id:"social",c:1,k:"stim",l:"Structure sociale",d:"Réseau, scènes, mémoire, par opposition à la transmission linéaire. Structure, pas instance.",cd:"Village contre chaînes linéaires de 10 agents (étape 5)."},
 {id:"enq",c:1,k:"instr",l:"Enquêteur du soir",d:"Positions déclarées, climat perçu, versions de la thèse. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Neuf questions ; formulations A et B (test de stabilité)."},
-{id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"Distincts des générateurs ; accord entre eux mesuré ; validés contre le codage du chercheur."},
+{id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"gemma-4-31b et qwen-3.6-35b-instruct, de familles différentes des générateurs ; accord entre eux mesuré ; validés contre le codage du chercheur."},
 {id:"plong",c:1,k:"instr",l:"Modèle de plongement",d:"Mesure sémantique de la diversité des versions.",cd:"Doublé d'une mesure lexicale qui ne dépend d'aucun modèle."},
 /* QR */
 {id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
@@ -179,7 +179,7 @@ const N=[
 /* HT */
 {id:"HT1",c:3,code:"HT1",l:"Le taire est co-produit",d:"Les instances non individuelles pèsent plus que la fiche sur le taux de taire. Hypothèse centrale ; décidée par HO11."},
 {id:"HT2",c:3,code:"HT2",l:"Un dire vide",d:"Moins de silence pur que de neutralisation : les agents parlent pour ne rien dire."},
-{id:"HT3",c:3,code:"HT3",l:"Convergence vers le lieu commun",d:"La diversité des versions décroît, plus vite quand un seul modèle joue tous les habitants (HO10)."},
+{id:"HT3",c:3,code:"HT3",l:"Convergence vers le lieu commun",d:"La diversité des versions décroît dans un village joué par un seul modèle (HO10a), plus vite qu'avec plusieurs modèles (HO10b)."},
 {id:"HT4",c:3,code:"HT4",l:"Une socialité sans climat",d:"Alignement sur l'interlocuteur ; effet du climat perçu équivalent à zéro (HO9)."},
 /* HO */
 {id:"S1",c:4,code:"HO1",l:"Silence différentiel",d:"Plus de taire en public qu'en privé pour T1 que pour T0, chez les agents en écart avec le climat perçu."},
@@ -193,7 +193,8 @@ const N=[
 {id:"S7",c:4,code:"HO7",l:"Part de l'ordonnanceur",d:"Les rencontres homophiles réduisent le taire local et accroissent la polarisation."},
 {id:"S8",c:4,code:"HO8",l:"Part de l'agencement social",d:"Les transformations diffèrent entre village et chaînes linéaires (exploratoire)."},
 {id:"S9",c:4,code:"HO9",l:"Climat contre interlocuteur",d:"La position exprimée suit l'interlocuteur ; l'effet du climat perçu est équivalent à zéro (borne ±0,10 en coefficient standardisé)."},
-{id:"S10",c:4,code:"HO10",l:"Convergence selon le modèle",d:"La pente de diversité des versions est plus négative en M-UN qu'en M-PLU, pour les deux mesures."},
+{id:"S10",c:4,code:"HO10a",l:"Convergence",d:"Pente de diversité négative en M-LC et en M-AUT, pour les deux mesures (priorité 1)."},
+{id:"S10b",c:4,code:"HO10b",l:"Convergence et architexte unique",d:"Pente plus négative en M-LC qu'en M-PLU (priorité 2)."},
 {id:"S11",c:4,code:"HO11",l:"Hiérarchie des parts",d:"Au moins un contraste non individuel dépasse celui de la fiche d'au moins 5 points de taux de taire. Règle à trois issues."},
 /* Indicateurs */
 {id:"taire",c:5,l:"Taux de taire",d:"Sollicitations sans position exprimée (TAC, EVI, NEU, EUP, DEL). Variable principale de HO11."},
@@ -242,20 +243,21 @@ const E=[
 ["HT4","S5b"],["HT4","S9"],
 ["S1","taire"],["S1","silence"],["S1","ecart"],["S1","falsif"],["S2","double"],["S3","ignorI"],["S4","noyauI"],
 ["S5a","taire"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
-["S6","ecart"],["S6","transfo"],["S7","taire"],["S7","polar"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S11","taire"]
+["S6","ecart"],["S6","transfo"],["S7","taire"],["S7","polar"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S10b","divers"],["HT3","S10b"],["archi","S10b"],["S11","taire"]
 ];
 const GAPS=[
 {s:"b",t:"HT1 n'était pas décidable",p:"Rien ne disait comment comparer une variable binaire, continue et catégorielle.",f:"Contrastes de référence en points de pourcentage de taux de taire ; règle à trois issues (HO11, C4 section 7).",n:["HT1","S11","taire","contraste","fiche","cadres","ordo","modele"]},
 {s:"b",t:"HT4 n'avait pas de test direct",p:"Aucune hypothèse ne testait l'absence d'effet du climat à interlocuteur constant.",f:"HO9 avec test d'équivalence ; HO3 devient un résultat descriptif rattaché à l'étalonnage.",n:["HT4","S9","sensib","climat","equiv","compl","S3"]},
-{s:"b",t:"HT3 manquait d'une mesure et d'une condition",p:"Pas d'indicateur de diversité ; une « polyphonie mixte » où un seul modèle jouait déjà tous les habitants.",f:"Diversité des versions (sémantique et lexicale) ; bloc M-PLU en priorité 1 ; HO10 compare des pentes.",n:["HT3","S10","divers","plong","modele","archi","attr"]},
+{s:"b",t:"HT3 manquait d'une mesure et d'une condition",p:"Pas d'indicateur de diversité ; une « polyphonie mixte » où un seul modèle jouait déjà tous les habitants.",f:"Diversité des versions (sémantique et lexicale) ; HO10a dans les villages mono-modèles, HO10b contre M-PLU en priorité 2.",n:["HT3","S10","S10b","divers","plong","modele","archi","attr"]},
 {s:"b",t:"L'inventaire des instances variait",p:"Cinq, sept ou neuf instances selon les documents.",f:"Inventaire canonique en trois statuts : six instances de production, stimuli et structure, instruments (cadre 1.1, C4 3.0).",n:["modele","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","plong"]},
-{s:"i",t:"La priorité 1 ne testait pas toutes les parts",p:"L'ordonnanceur et le modèle n'arrivaient qu'en priorité 2.",f:"O-HOM et M-PLU en priorité 1 à 5 graines : 35 simulations garanties.",n:["S11","ordo","modele","S7"]},
+{s:"i",t:"La priorité 1 ne testait pas toutes les parts",p:"L'ordonnanceur et le modèle n'arrivaient qu'en priorité 2.",f:"O-HOM et M-AUT (le village entier joué par un autre modèle) en priorité 1 à 5 graines : 35 simulations garanties.",n:["S11","ordo","modele","S7"]},
 {s:"i",t:"Des conditions sans hypothèse",p:"T2, compères, lecture intégrale, paraphrases du concepteur.",f:"T2 et compères déclarés exploratoires avec indicateurs ; lecture intégrale comme contrôle de validité ; paraphrases dans l'étape 0a.",n:["source","media","asch","cadres","orch","concepteur"]},
 {s:"i",t:"QR3 n'avait pas de traduction",p:"Aucune hypothèse du C4 ne menait à QR3.",f:"Analyse qualitative du niveau 1 de la grille, avec la fidélité comme indice d'une communication-transport.",n:["QR3","niv1","tele","dispo"]},
 {s:"i",t:"Les mesures sont aussi co-produites",p:"Enquêteur et juges n'étaient pas situés.",f:"Statut d'instrument avec garde-fous : deux juges, mesure lexicale à côté du plongement, test de stabilité.",n:["enq","juge","plong","panick"]},
 {s:"n",t:"Certains concepts restaient des lentilles",p:"Script, énonciation éditoriale, dispositif sans mesure.",f:"Rattachés à l'analyse qualitative du niveau 1.",n:["script","enoned","dispo","niv1"]},
 {s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur.",f:"Part déclarée non isolable, rapportée ensemble (cadre 7, C4 3.0).",n:["modele","neutre","S5c"]},
-{s:"w",t:"À surveiller : qualité inégale des modèles en M-PLU",p:"Llama 8b est bien plus petit que les trois autres.",f:"HO10 compare des pentes ; qualité de chaque modèle rapportée à l'étape 1 ; remplacement prévu en cas d'échec.",n:["modele","S10","divers"]},
+{s:"n",t:"Qualité inégale des modèles",p:"Avec des habitants sur ILaaS et le lecteur sur Le Chonk, la qualité des modèles se mêlait à leur rôle.",f:"Référence tout Le Chonk ; contraste de HO11 entre deux villages entiers ; M-PLU en priorité 2 avec des modèles comparables, sans Llama 8b.",n:["modele","S11","S10b","divers"]},
+{s:"w",t:"À surveiller : débit de Le Chonk",p:"40 habitants sur un grand modèle, à chaque scène.",f:"Durée d'une simulation mesurée au pilote ; appels parallélisés quand le pare-feu de la connaissance le permet ; consommation suivie sur le tableau de bord de l'AMUE.",n:["modele"]},
 {s:"w",t:"À surveiller : seuils et bornes",p:"5 points pour HO11, ±0,10 pour HO9.",f:"Déposés au premier temps du préenregistrement ; révisables au second temps au vu du seul pilote, avec justification.",n:["S11","S9","contraste","equiv"]}
 ];
 

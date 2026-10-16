@@ -1,6 +1,6 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6 du 16 octobre 2026 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence et règles de décision à trois issues, modèle des habitants comme condition. La version 5 avait réécrit le cadre autour de la co-agentivité. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6 du 16 octobre 2026 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence et règles de décision à trois issues, modèle des habitants comme condition. Mise à jour du même jour : la condition de référence du village est « tout Le Chonk », et le contraste de modèle oppose deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
 
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
@@ -241,7 +241,7 @@ Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix
 
 - Préenregistrement en deux temps : questions, hypothèses, règles de décision et contrastes de référence avant toute génération ; livres de codes figés, nombre de graines et seuils techniques après le pilote, par un avenant daté. Le pilote n'entre pas dans l'analyse.
 - Codage humain par le chercheur seul : fiabilité intra-codeur (recodage à l'aveugle de 15 % du corpus après au moins trois semaines ; kappa de Cohen, seuil de 0,7) ; accord entre ce codage et deux modèles juges distincts ; livres de codes et extraits codés publiés, pour que la vérification par les pairs reste possible.
-- **Les modèles juges sont toujours différents des modèles qui ont généré la simulation codée** (Panickssery et al., 2024). Deux juges codent chaque énoncé ; leur accord est mesuré, et ils sont validés contre le codage humain.
+- **Les modèles juges sont toujours différents des modèles qui ont généré la simulation codée, et de préférence d'autres familles** (Panickssery et al., 2024). Deux juges codent chaque énoncé ; leur accord est mesuré, et ils sont validés contre le codage humain.
 - **Les autres instruments** (enquêteur, outils de mesure automatique comme un modèle de plongement) sont déclarés comme tels ; toute mesure qui dépend d'un modèle est doublée d'une mesure qui n'en dépend pas, quand c'est possible.
 - Plusieurs graines par condition ; résultats retenus seulement s'ils sont stables.
 
@@ -251,22 +251,21 @@ C'est la traduction méthodologique de la clef de lecture. Chaque instance a sa 
 
 | Instance | Condition qui la fait varier | Expériences |
 |---|---|---|
-| **Modèle de langage et fournisseur** | Habitants joués par un seul modèle ou répartis entre plusieurs modèles ; changer le narrateur, ou tous les rôles (Le Chonk, Qwen, Gemma) ; test sans public des modèles seuls | C3, C4, C5 |
+| **Modèle de langage et fournisseur** | Village entier joué par un autre modèle ; narrateur seul changé ; habitants répartis entre plusieurs modèles ; test sans public des modèles seuls | C3, C4, C5 |
 | **Fiche du persona** | Faire varier les attributs (disposition à l'autocensure, sensibilité) ; permutations des prénoms et du genre ; condition sans autocensure | C3, C4 |
 | **Orchestrateur** | Mode de lecture (intégral ou annoté) ; mécanisme de résumé de la mémoire | C4 |
 | **Ordonnanceur** | Rencontres au hasard ou homophiles ; position du premier émetteur | C1, C4 |
 | **Cadres d'énonciation** | Scène publique ou privée ; gazette ; compères ; sollicitations | C4 |
-| **Modèle et fournisseur : mode d'écriture** | Habitants mono-modèle ou pluri-modèles, polyphonie homogène, autre architexte, auteur unique | C4, C5 |
+| **Modèle et fournisseur : mode d'écriture** | Polyphonie homogène (référence), autre architexte, habitants pluri-modèles, auteur unique | C4, C5 |
 | **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) ; choix des contrastes de référence | C3, tous |
 
 Les **modes d'écriture** comparés (C5) :
 
 | Mode | Fonctionnement | Ce qu'il isole |
 |---|---|---|
-| Polyphonie mixte, habitants mono-modèle | Les habitants sont joués par un seul modèle ILaaS ; narrateur et lecteur sur Le Chonk | Condition principale |
-| Polyphonie mixte, habitants pluri-modèles | Les habitants sont répartis entre quatre modèles ILaaS de familles différentes ; narrateur et lecteur sur Le Chonk | Ce que change la pluralité des architextes parmi les voix |
-| Polyphonie homogène | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa mémoire | Un architexte unique sous des voix multiples |
-| Polyphonie d'un autre architexte | Tous les rôles joués par Qwen ou Gemma | L'effet du modèle à configuration égale |
+| Polyphonie homogène (« tout Le Chonk ») | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa fiche et sa mémoire | **Condition de référence** : un architexte unique sous des voix multiples |
+| Polyphonie d'un autre architexte | La même configuration, entièrement jouée par un autre modèle de bonne qualité (de préférence du même fournisseur) | L'effet du modèle à configuration égale, sans mélange de modèles |
+| Habitants pluri-modèles | Les habitants sont répartis entre quatre modèles de qualité comparable ; lecteur et narrateur sur Le Chonk | Ce que change la pluralité des architextes parmi les voix |
 | Auteur unique | Le Chonk écrit d'un seul tenant la vie du village, sans séparation des connaissances | Ce que change la distribution de l'écriture entre agents |
 
 Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algorithmique** (du code), séparé du **narrateur** (un modèle), pour distinguer l'organisation de l'exposition de l'écriture des scènes.
