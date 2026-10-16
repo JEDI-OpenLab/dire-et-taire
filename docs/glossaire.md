@@ -15,7 +15,7 @@
 | **Agent** | Programme qui produit des actions ou des énoncés ; ici, un habitant du village | Informatique et intelligence artificielle | Usage courant | Avec l'agentivité : un agent n'est pas nécessairement le siège de l'action |
 | **Agentivité** | Capacité d'agir, c'est-à-dire de faire une différence mesurable dans le cours des choses | Sciences sociales (*agency*) | Usage courant en sociologie | Avec l'intentionnalité : agir n'implique pas de vouloir |
 | **Agentivité distribuée** | L'action est le fait d'un agencement d'actants humains et non humains, non d'un individu isolé | Sociologie de la traduction, théorie de l'acteur-réseau (Michel Callon, Bruno Latour, Madeleine Akrich) ; action située (Lucy Suchman) | Callon (1986) ; Latour (2006) ; Suchman (2007) | |
-| **Co-agentivité** | Production conjointe d'un énoncé par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur | Terme employé dans le projet ; il prolonge l'agentivité distribuée, sans paternité unique établie | Cadre scientifique, section 1 | |
+| **Co-agentivité** | Production conjointe d'un énoncé par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur | Terme du projet, pris au sens de l'agentivité distribuée de la théorie de l'acteur-réseau : descriptif, sans intentionnalité prêtée aux instances | Cadre scientifique, section 1 | Avec la co-agentivité (ou agentivité partagée) des sciences de l'éducation et de la didactique des langues, qui part de l'agentivité intentionnelle de Bandura et des travaux sur l'agence partagée, et vise une visée normative : l'humain doit garder un contrôle critique sur l'IA (Godwin-Jones, 2024). Le projet ne retient pas cette visée normative |
 | **Actant** | Toute entité, humaine ou non, qui fait une différence dans une action | Sémiotique d'Algirdas Julien Greimas, reprise par Latour et Akrich | Akrich et Latour (1992) | Avec « acteur » au sens d'une personne |
 | **Agencement** | Ensemble hétérogène d'instances dont l'action conjointe produit un effet | Usage proche de la théorie de l'acteur-réseau | Latour (2006) | |
 | **Instance** | Chacune des composantes de l'agencement dont le projet cherche à estimer la part | Terme du projet | Cadre scientifique, section 1.1 | |
@@ -132,7 +132,8 @@
 | **Préenregistrement** | Dépôt daté des hypothèses, mesures et critères avant toute expérience | Nosek et al. (2018) |
 | **Réplication procédurale** | Reproduire dans le dispositif le protocole d'une étude humaine avant d'y comparer les résultats | Terme du projet |
 | **Graine** | Valeur qui fixe le hasard d'une simulation ; plusieurs graines par condition mesurent la variabilité | Usage technique |
-| **Double codage, kappa de Cohen** | Deux codeurs codent le même échantillon ; le kappa mesure leur accord au-delà du hasard | Cohen (1960) |
+| **Kappa de Cohen** | Mesure de l'accord entre deux codages d'un même échantillon, au-delà du hasard | Cohen (1960) |
+| **Fiabilité intra-codeur** | Le même codeur recode à l'aveugle un échantillon après un délai (ici trois semaines au moins) ; c'est la solution retenue par un projet mené seul, complétée par l'accord avec deux modèles juges et la publication des codages | Usage méthodologique courant en analyse de contenu |
 | **Modèle juge** | Modèle de langage qui code automatiquement les énoncés ; toujours différent des modèles générateurs | Panickssery et al. (2024) |
 | **Carnet de conception** | Trace datée des choix du concepteur ; trace de sa part d'agentivité | Cadre scientifique, section 6.2 |
 | **Modèles à effets mixtes** | Modèles statistiques qui tiennent compte de l'emboîtement des données (agents dans des simulations) | Usage statistique |
@@ -145,10 +146,12 @@
 
 Les références ci-dessous ne figurent pas dans les bibliographies du cadre et du C4.
 
+- Bandura, A. (2001). Social cognitive theory: An agentic perspective. *Annual Review of Psychology*, 52, 1-26.
 - Cohen, J. (1960). A coefficient of agreement for nominal scales. *Educational and Psychological Measurement*, 20(1), 37-46.
 - Costa, P. T., & McCrae, R. R. (1992). *Revised NEO Personality Inventory (NEO PI-R) and NEO Five-Factor Inventory (NEO-FFI) professional manual*. Odessa, FL : Psychological Assessment Resources.
 - Davallon, J. (2003). La médiation : la communication en procès ? *MEI Médiation et information*, 19, 37-59.
 - Genette, G. (1979). *Introduction à l'architexte*. Paris : Seuil.
+- Godwin-Jones, R. (2024). Distributed agency in language learning and teaching through generative AI. *Language Learning & Technology*, 28(2), 5-31.
 - Goldberg, L. R. (1990). An alternative "description of personality": The Big-Five factor structure. *Journal of Personality and Social Psychology*, 59(6), 1216-1229.
 - Granovetter, M. (1978). Threshold models of collective behavior. *American Journal of Sociology*, 83(6), 1420-1443.
 - Jacobs, R. A., Jordan, M. I., Nowlan, S. J., & Hinton, G. E. (1991). Adaptive mixtures of local experts. *Neural Computation*, 3(1), 79-87.

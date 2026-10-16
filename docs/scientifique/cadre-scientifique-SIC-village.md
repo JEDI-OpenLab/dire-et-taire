@@ -210,7 +210,7 @@ Les codes sont **descriptifs** : ils nomment une transformation, ils ne jugent p
 | L-NEG | Lecture négociée | Hall (adapté) | Reprise aménagée, partiellement acceptée |
 | L-OPP | Lecture oppositionnelle | Hall (adapté) | Reprise qui retourne ou rejette le sens proposé |
 
-Un même énoncé peut recevoir plusieurs codes. La **fidélité** à la source est calculée à part : c'est une lentille parmi d'autres. Le livre de codes est testé sur le mini-village, relu par un regard extérieur, révisé, puis figé et préenregistré.
+Un même énoncé peut recevoir plusieurs codes. La **fidélité** à la source est calculée à part : c'est une lentille parmi d'autres. Le livre de codes est testé sur le mini-village, soumis à une revue adversariale par un autre modèle, révisé, puis figé et préenregistré ; il est publié avec le carnet de conception pour que les pairs puissent le discuter.
 
 ---
 
@@ -231,7 +231,7 @@ Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix
 ### 6.3 Fiabilité du codage
 
 - Préenregistrement des questions, des hypothèses, des livres de codes et des critères de sélection qualitative.
-- Formation des codeurs humains ; double codage à l'aveugle sur 15 % du corpus, par une personne extérieure au projet ; kappa de Cohen (seuil de 0,7).
+- Codage humain par le chercheur seul : fiabilité intra-codeur (recodage à l'aveugle de 15 % du corpus après au moins trois semaines ; kappa de Cohen, seuil de 0,7) ; accord entre ce codage et deux modèles juges distincts ; livres de codes et extraits codés publiés, pour que la vérification par les pairs reste possible.
 - **Le modèle juge est toujours différent des modèles qui ont généré la simulation codée** (Panickssery et al., 2024). Il est validé contre le codage humain.
 - Plusieurs graines par condition ; résultats retenus seulement s'ils sont stables.
 
@@ -282,7 +282,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 
 - **Reproductibilité des analyses** garantie (toutes les générations archivées avec leurs métadonnées) ; **réplicabilité des générations** limitée et documentée.
 - **Plan de gestion des données** (DMP OPIDoR) : formats ouverts, licences, dépôt, exclusions (extraits longs d'ouvrages protégés, contenus discriminatoires bruts).
-- **Revues** : chaque révision importante des documents passe par une revue consignée (auto-revue, revue croisée par un autre modèle, relecture par un ou une collègue de SIC).
+- **Revues** : chaque révision importante des documents passe par une revue consignée (auto-revue, revue croisée par un autre modèle, relecture différée par le chercheur). Les pairs interviennent ensuite : billets sur le carnet de recherche (jediopenlab.hypotheses.org), puis articles soumis à évaluation.
 - **Sobriété** : tokens et estimation énergétique journalisés et rapportés.
 
 ---

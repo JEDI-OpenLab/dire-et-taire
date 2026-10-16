@@ -4,7 +4,7 @@
 
 *Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « prototypes-agentiques-le-chonk.md » (cadrage d'ensemble).*
 
-*Projet mené seul par l'ingénieur pédagogique (SIC). Le second codage humain et la validation de la grille des propositions sont confiés à des personnes extérieures, à identifier.*
+*Projet mené seul par l'ingénieur pédagogique (SIC), qui assure aussi la relecture. Les pairs interviennent ensuite : publication progressive de billets sur le carnet de recherche (jediopenlab.hypotheses.org), puis soumission d'articles. La méthode compense l'absence de second codeur (section 7).*
 
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
@@ -149,7 +149,7 @@ Critères préenregistrés : même période traitée pour S3, **genre comparable
 
 ### 3.3 Le lecteur
 
-Un habitant, joué par **Le Chonk**, a lu la source et en parle si la conversation s'y prête. Position centrale dans le réseau. Mode de lecture : **lecture annotée** (notes de lecture plus les 5 passages les plus pertinents retrouvés à chaque conversation). Les notes de lecture et la grille des propositions sont **validées par une seconde personne indépendante**, idéalement un ou une historienne. Cinq simulations en lecture intégrale servent de contrôle.
+Un habitant, joué par **Le Chonk**, a lu la source et en parle si la conversation s'y prête. Position centrale dans le réseau. Mode de lecture : **lecture annotée** (notes de lecture plus les 5 passages les plus pertinents retrouvés à chaque conversation). Les notes de lecture et la grille des propositions sont validées par l'ingénieur pédagogique, puis **confrontées aux comptes rendus publiés de l'ouvrage** et aux entretiens de l'auteur, qui servent de références extérieures écrites ; les écarts sont consignés dans le carnet de conception. Cinq simulations en lecture intégrale servent de contrôle.
 
 ### 3.4 Les personas : attributs propres au C4
 
@@ -234,7 +234,7 @@ Un écart de plus de 20 points entre les formulations A et B signale une positio
 
 ### 4.2 Codage des scènes
 
-Chaque réponse à une sollicitation, et chaque réplique où le livre est évoqué, est codée par un **modèle juge différent des modèles qui ont généré la simulation**, validé par double codage humain :
+Chaque réponse à une sollicitation, et chaque réplique où le livre est évoqué, est codée par un **modèle juge différent des modèles qui ont généré la simulation**, validé par le codage humain du chercheur (section 7) :
 - le livre est-il évoqué ? Une position est-elle exprimée ?
 - laquelle (favorable, critique, neutre, ambiguë) ?
 - forme éventuelle du silence (4.4) ;
@@ -278,12 +278,12 @@ Les formes NEU et EUP sont précisément celles que la neutralité apprise peut 
 
 | Étape | Contenu | Durée |
 |---|---|---|
-| **Revue n° 2** | Revue croisée des documents par un autre modèle (consigne : réfuter) et par un ou une collègue de SIC, avant le préenregistrement | 1 semaine |
+| **Revue n° 2** | Revue croisée des documents par un autre modèle (consigne : réfuter), puis relecture différée par le chercheur ; billet de présentation du dispositif sur le carnet de recherche avant le préenregistrement, pour recueillir les remarques des pairs | 1 semaine |
 | **0a. Profil des modèles et test sans public** | Chaque modèle répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; puis, sans persona et avec persona, seul, à des questions sur S0, S1, S3 | 1 semaine |
 | **0b. Dyades contrôlées** | 40 personas × interlocuteur favorable puis critique × S1 et S0 × 3 répétitions (environ 480 courts dialogues) | En parallèle |
 | **1. Cohérence des personas** | Les personas répondent aux items d'enquête et à l'échelle d'autocensure ; contrôle de cohérence avec les attributs (sans valeur de validation) | 1 semaine |
-| **2. Grille des propositions et notes de lecture** | Extraction par Le Chonk ; validation par l'ingénieur pédagogique et par une seconde personne indépendante | 1 semaine |
-| **3. Livres de codes** | Transformations, lectures, formes du silence ; test sur le mini-village ; regard extérieur ; figement et préenregistrement | 1 semaine |
+| **2. Grille des propositions et notes de lecture** | Extraction par Le Chonk ; validation par l'ingénieur pédagogique ; confrontation aux comptes rendus publiés de l'ouvrage | 1 semaine |
+| **3. Livres de codes** | Transformations, lectures, formes du silence ; test sur le mini-village ; revue par un autre modèle ; figement et préenregistrement | 1 semaine |
 | **4. Gazette** | Rédaction appariée de G+ et G−, vérification par deux évaluateurs | En parallèle |
 | **5. Chaînes de transmission** | S1 et S0, chaînes de 10 agents, 10 chaînes par source | En parallèle |
 | **6. Pilote et puissance** | 3 simulations pilotes ; estimation de la variance entre graines ; calcul du nombre de graines ; vérification de la saturation sur 15 journées | 1 semaine |
@@ -338,7 +338,7 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 5. **Qualitative** : analyse de discours d'une sélection préenregistrée de chaînes de reformulation, publiques et privées, et des formes du silence.
 6. **Interprétation critique** : confrontation aux résultats humains (comparaison qualitative, sauf pour les questions reprises à l'identique des études) et aux travaux sur agents génératifs. Les écarts sont traités comme des résultats sur l'architexte et le dispositif.
 
-**Fiabilité** : double codage humain à l'aveugle de 15 % du corpus (kappa ≥ 0,7) ; modèle juge distinct des générateurs ; résultats retenus seulement s'ils sont stables entre graines ; tests de permutation des prénoms et du genre.
+**Fiabilité** : codage humain par le chercheur seul, avec fiabilité intra-codeur (recodage à l'aveugle de 15 % du corpus après au moins trois semaines, kappa ≥ 0,7) ; accord entre ce codage et deux modèles juges distincts des générateurs ; livres de codes, extraits codés et désaccords publiés pour la vérification par les pairs ; résultats retenus seulement s'ils sont stables entre graines ; tests de permutation des prénoms et du genre.
 
 **Critères de réussite** : accord de codage atteint ; résultats de priorité 1 stables entre graines ; part de chaque instance estimée. Quel que soit le sens des résultats sur S1 à S8, une expérience qui satisfait ces critères est publiable.
 
@@ -352,10 +352,10 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 | S2 | Préenregistrement ; étapes 0a et 0b | Ingénieur pédagogique |
 | S3 | Étape 1 ; étape 4 (gazette) ; ajout des attributs C4 | Ingénieur pédagogique |
 | S4 | Étape 2 (grille et notes, validation indépendante) ; étape 5 (chaînes) | Ingénieur pédagogique, validateur externe |
-| S5 | Étape 3 (livres de codes, regard extérieur) ; étape 6 (pilote, puissance) | Ingénieur pédagogique, relecteur extérieur |
+| S5 | Étape 3 (livres de codes, revue par un autre modèle) ; étape 6 (pilote, puissance) | Ingénieur pédagogique |
 | S6 | Priorité 1 | Ingénieur pédagogique |
 | S7 | Priorités 2 et 3 selon budget | Ingénieur pédagogique |
-| S8 | Codage automatique et humain, fiabilité | Ingénieur pédagogique, second codeur extérieur |
+| S8 | Codage automatique et humain, fiabilité | Ingénieur pédagogique (fiabilité intra-codeur), modèles juges |
 | S9 | Analyses quantitative, mécanismes, étalonnage, qualitative | Ingénieur pédagogique |
 | S10 | Rédaction | Ingénieur pédagogique |
 

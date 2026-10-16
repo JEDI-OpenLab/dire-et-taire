@@ -68,7 +68,7 @@ Formaliser une théorie est long : relire les textes fondateurs, repérer chaque
 
 **Vérificateur automatique** : chaque citation est recherchée mot pour mot dans le corpus. Une citation introuvable est rejetée. C'est la parade aux références inventées.
 
-**Validation humaine** : l'ingénieur pédagogique valide la liste. Un second codeur valide un échantillon ; accord mesuré (kappa de Cohen).
+**Validation humaine** : l'ingénieur pédagogique valide la liste, puis en recode un échantillon à l'aveugle après au moins trois semaines ; accord mesuré entre ses deux codages et avec l'agent (kappa de Cohen).
 
 ### 4.2 Étape 2 : les points de décision (1 semaine)
 

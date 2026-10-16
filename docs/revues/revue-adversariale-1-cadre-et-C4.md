@@ -94,3 +94,13 @@ Chaque objection est classée :
 3. Trancher R23 (formulation de Y).
 4. Identifier un ou une historienne pour la validation indépendante de la grille (R13).
 5. Choisir S0 et S3.
+
+---
+
+## 5. Addendum : projet mené seul
+
+Le projet est mené et relu par une seule personne ; les pairs interviennent ensuite, par les billets du carnet de recherche puis les articles. Deux décisions de cette revue sont donc révisées, sans effacer leur trace :
+
+- **R13** : la validation par une seconde personne est remplacée par la confrontation des notes de lecture et de la grille aux comptes rendus publiés de l'ouvrage et aux entretiens de l'auteur, avec écarts consignés.
+- **Fiabilité du codage** : le double codage par une personne extérieure est remplacé par la fiabilité intra-codeur (recodage à l'aveugle après trois semaines au moins), l'accord avec deux modèles juges distincts et la publication des livres de codes et des extraits codés.
+- Points ouverts 2 et 4 : la relecture par un ou une collègue et la recherche d'un ou une historienne sont abandonnées ; un billet de présentation du dispositif, publié avant le préenregistrement, sollicite les remarques des pairs.
