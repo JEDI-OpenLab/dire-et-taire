@@ -1,9 +1,9 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6 du 16 octobre 2026 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence et règles de décision à trois issues, modèle des habitants comme condition. Mise à jour du même jour : la condition de référence du village est « tout Le Chonk », et le contraste de modèle oppose deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6.1 du 16 octobre 2026. Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
+*Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
-*Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 ---
 
 ## 1. La clef de lecture : la co-agentivité
@@ -178,7 +178,7 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont pr
 | **Suffisance générative, plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Reproduire une forme n'est pas en expliquer le mécanisme |
 | **Validation des simulations génératives** | Larooij et Törnberg (2025) | Structure les critères de la section 7 |
 | **Règles de conduite des fournisseurs** | OpenAI (2025) | Le fournisseur comme actant : neutralité exigée sur les sujets controversés |
-| **Préférence des juges automatiques pour leurs propres textes** | Panickssery et al. (2024) | Justifie la séparation entre modèles générateurs et modèle juge |
+| **Préférence des juges automatiques pour leurs propres textes** | Panickssery et al. (2024) | Justifie la séparation entre modèles générateurs et modèles juges |
 
 ---
 
@@ -317,7 +317,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 **Limites assumées**
 - **Le risque de dilution** : affirmer que tout est agencement n'explique rien. La co-agentivité n'a de valeur que par la décomposition expérimentale des parts ; une part qui ne peut être isolée est déclarée comme telle.
 - **La part dépend du contraste** : la part d'une instance est mesurée relativement au contraste de référence choisi ; un autre contraste donnerait une autre part. Les contrastes sont donc fixés et justifiés avant toute génération.
-- **Modèle et fournisseur ne se séparent pas** : changer de modèle change aussi de fournisseur, de données d'entraînement et de règles de conduite ; leurs parts sont rapportées ensemble.
+- **Modèle et fournisseur se séparent mal** : changer de modèle change en général aussi de fournisseur, de données d'entraînement et de règles de conduite, et leurs parts sont alors rapportées ensemble. Un contraste entre deux modèles du même fournisseur approche la part du modèle à fournisseur constant (C4, section 3.1) ; la part du fournisseur n'est approchée qu'hors du village, en comparant des modèles de fournisseurs différents.
 - **Les instruments sont des agencements** : enquêteur, juges et outils de mesure produisent eux aussi des énoncés ou des scores ; d'où leurs garde-fous (section 6.3).
 - **L'agentivité n'est pas l'intentionnalité** : dire qu'une instance « agit » signifie qu'elle fait une différence mesurable, non qu'elle veut quelque chose.
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
@@ -384,8 +384,8 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Bender, E. M., Gebru, T., McMillan-Major, A., & Shmitchell, S. (2021). On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? *Proceedings of FAccT '21*.
 - Epstein, J. M. (1999). Agent-based computational models and generative social science. *Complexity*, 4(5), 41-60.
 - Gebru, T., et al. (2021). Datasheets for Datasets. *Communications of the ACM*, 64(12), 86-92.
-- Larooij, M., & Törnberg, P. (2025). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*. *arXiv:2504.03274*.
 - Lakens, D. (2017). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. *Social Psychological and Personality Science*, 8(4), 355-362.
+- Larooij, M., & Törnberg, P. (2025). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*. *arXiv:2504.03274*.
 - Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. *Journal of Communication*, 24(2), 43-51.
 - Noelle-Neumann, E. (1993). *The Spiral of Silence: Public Opinion, Our Social Skin* (2e éd.). Chicago : University of Chicago Press.
 - OpenAI (2025). *Model Spec*. Spécification publique du comportement attendu des modèles.

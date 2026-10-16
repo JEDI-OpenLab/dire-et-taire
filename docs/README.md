@@ -10,7 +10,8 @@
 | 3 | `scientifique/projet-spirale-du-silence-formalisation.md` | Formalisations de la spirale du silence | Quelles versions de la théorie servent d'étalon au C4 ? |
 | 4 | `revues/revue-adversariale-1-cadre-et-C4.md` | Revue critique n° 1 et décisions prises | Quelles faiblesses ont été repérées, et comment ont-elles été corrigées ? |
 | 5 | `technique/socle-technique-le-chonk.md` | Station, passe-plat, traces, agents, bureau des agents | Comment fait-on tourner tout cela ? |
-| 6 | `../presentation/dire-et-taire-le-chonk.pptx` | Présentation d'ensemble | Comment présenter le projet en 20 minutes ? |
+| 6 | `visualisations/carte-concepts-C4.html` | Carte des concepts du C4 (page à ouvrir dans un navigateur) | Chaque concept mène-t-il à une mesure ? |
+| 7 | `../presentation/dire-et-taire-le-chonk.pptx` | Présentation d'ensemble, antérieure aux hypothèses de travail et à la clef de lecture : à mettre à jour | Comment présenter le projet en 20 minutes ? |
 
 ## Architecture du raisonnement scientifique
 
@@ -44,5 +45,5 @@ Problématique générale du village (cadre, 3.1)
 
 - Problématiques formulées en « Comment [X] alors que [Y] ».
 - Vocabulaire des cadres d'énonciation : « position déclarée en enquête », « position exprimée en scène » ; aucune intériorité prêtée aux agents.
-- « Agent » au sens informatique (un programme) ; « agentivité » au sens des sciences sociales (capacité d'agir), conçue comme distribuée entre modèle, dispositif et concepteur (cadre, 1.6).
+- « Agent » au sens informatique (un programme) ; « agentivité » au sens des sciences sociales (capacité d'agir), conçue comme distribuée entre modèle, dispositif et concepteur (cadre, 1.2 et 1.3).
 - Chaque document indique sa version et sa date en en-tête ; chaque révision importante passe par une revue consignée dans `revues/`.

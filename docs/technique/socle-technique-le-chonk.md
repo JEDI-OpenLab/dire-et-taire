@@ -1,10 +1,10 @@
 # Socle technique de l'expérimentation Le Chonk
 
-*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 3 du 15 octobre 2026.*
+*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 3 du 15 octobre 2026, mise à jour le 16 octobre : conditions de la clé Le Chonk (AMUE) et répartition des usages du C4 (section 10).*
 
 *Contexte : la station est un ordinateur dédié, administré entièrement par le pilote, qui mène seul ce projet et détient lui-même les clés d'API (Le Chonk et ILaaS). Le travail avec les collègues (scénarios B, A et volet D) relève d'un autre projet.*
 
-*Documents associés : « prototypes-agentiques-le-chonk.md » (cadrage), « cadre-scientifique-SIC-village.md », « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « projet-multivers-PISA-numerique.md ».*
+*Documents associés : « prototypes-agentiques-le-chonk.md » (cadrage), « cadre-scientifique-SIC-village.md », « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « projet-multivers-PISA-numerique.md ». Le cadrage et le projet PISA sont conservés hors du dépôt.*
 
 ---
 

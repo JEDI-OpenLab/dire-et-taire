@@ -29,7 +29,8 @@ Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.m
 | `docs/scientifique/` | Cadre scientifique SIC du village, protocole du scénario C4, projet de formalisation de la spirale du silence (étalon théorique du C4) |
 | `docs/revues/` | Revues adversariales successives des documents de conception |
 | `docs/technique/` | Socle technique : station Ubuntu, passe-plat LiteLLM, traces Langfuse, agents, bureau des agents |
-| `presentation/` | Présentation d'ensemble du projet |
+| `docs/visualisations/` | Carte des concepts du C4 : traçabilité des concepts jusqu'aux mesures |
+| `presentation/` | Présentation d'ensemble du projet (antérieure aux hypothèses de travail : à mettre à jour) |
 
 ## État
 
@@ -39,4 +40,4 @@ Phase de conception (octobre 2026). Prochaines étapes : revue adversariale n° 
 
 - Les clés d'API ne sont jamais versionnées (fichiers `.env` ignorés).
 - Les journaux bruts de simulation ne sont pas versionnés : ils peuvent contenir des extraits d'ouvrages protégés.
-- Les documents de conception renvoient parfois au cadrage général de l'expérimentation (« prototypes-agentiques-le-chonk.md »), conservé hors du dépôt.
+- Les documents de conception renvoient parfois à deux documents conservés hors du dépôt : le cadrage général de l'expérimentation (« prototypes-agentiques-le-chonk.md ») et le projet « multivers PISA » (« projet-multivers-PISA-numerique.md »).

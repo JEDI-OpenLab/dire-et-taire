@@ -1,6 +1,6 @@
 # Formaliser une théorie verbale : la spirale du silence
 
-*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version du 16 octobre 2026. Sert d'étalon théorique au scénario C4 (QR-E, HT4).*
+*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version du 16 octobre 2026. Sert d'étalon théorique au scénario C4 (QR-E et HO3 ; contrepoint de HT4).*
 
 ---
 

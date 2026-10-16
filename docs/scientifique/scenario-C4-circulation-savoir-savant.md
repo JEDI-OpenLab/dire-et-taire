@@ -2,7 +2,7 @@
 
 *Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 10 du 16 octobre 2026 : condition de référence « tout Le Chonk » (habitants, lecteur, narrateur) ; le contraste de modèle oppose deux villages entiers (M-LC contre M-AUT) ; le bloc pluri-modèles passe en priorité 2. La version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts-C4.html ») : inventaire canonique des instances, règles de décision, nouveaux codes (T0 à T3, HO1 à HO11).*
 
-*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « ../revues/revue-adversariale-1-cadre-et-C4.md » (revue n° 1 et ses addenda).*
+*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6.1), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « ../revues/revue-adversariale-1-cadre-et-C4.md » (revue n° 1 et ses addenda).*
 
 *Projet mené seul par l'ingénieur pédagogique (SIC), qui assure aussi la relecture. Les pairs interviennent ensuite : publication progressive de billets sur le carnet de recherche (jediopenlab.hypotheses.org), puis soumission d'articles. La méthode compense l'absence de second codeur (section 7).*
 
@@ -166,7 +166,7 @@ Le dispositif traduit la clef de lecture : chaque instance de production a ses c
 | **Modèle de plongement** | Mesure sémantique de la diversité des versions (HO10) | Doublé d'une mesure lexicale sans modèle |
 | **Le chercheur qui code** | Codage humain de référence | Fiabilité intra-codeur ; codages publiés |
 
-**Part non isolable.** Changer de modèle change aussi de fournisseur, de données d'entraînement et de règles de conduite : la part du modèle et celle du fournisseur ne sont pas séparables, et sont rapportées ensemble.
+**Modèle et fournisseur.** Changer de modèle change en général aussi de fournisseur, de données d'entraînement et de règles de conduite. Le contraste M-LC contre M-AUT, joué par deux modèles du même fournisseur, mesure la part du modèle à fournisseur constant (3.1). Les autres comparaisons de modèles (narrateurs N2 et N3, M-PLU, étape 0a) mêlent modèle et fournisseur, et sont rapportées comme telles.
 
 ### 3.1 Le village et le modèle qui le joue
 
@@ -222,7 +222,7 @@ Le meneur de jeu des premières versions est scindé en deux :
 | **Ordonnanceur** | Code (algorithme), pas un modèle de langage | Décide qui rencontre qui, où, quand ; insère les sollicitations standardisées ; fait respecter le pare-feu de la connaissance ; consigne l'ordre des prises de parole | **O-ALÉ** : rencontres tirées selon le réseau et les routines ; **O-HOM** : rencontres favorisant les agents de positions déclarées proches (chambre d'écho) |
 | **Narrateur** | Modèle de langage | Écrit uniquement la description des scènes | **N1** : Le Chonk ; **N2** : `qwen-3.8-27b` ; **N3** : `gemma-4-31b` |
 
-Cette séparation distingue l'organisation de l'exposition (le dispositif) de l'écriture des scènes (l'architexte). En M-LC, le narrateur est N1 ; en M-AUT, c'est le modèle de M-AUT. Les conditions N2 et N3 ne changent que le narrateur d'un village M-LC.
+Cette séparation distingue l'organisation de l'exposition (le dispositif) de l'écriture des scènes (l'architexte). En M-LC, le narrateur est N1 ; en M-AUT, c'est le modèle de M-AUT. Les conditions N2 et N3 ne changent que le narrateur d'un village M-LC. Les juges ne codent que les répliques des habitants, jamais les descriptions du narrateur ; le fait que N2 et N3 partagent une famille avec les juges n'entre donc pas dans le codage.
 
 ### 3.6 Scènes publiques et scènes privées
 
@@ -338,7 +338,7 @@ Les formes NEU et EUP sont précisément celles que la neutralité apprise peut 
 
 | Étape | Contenu | Durée |
 |---|---|---|
-| **Revue n° 2** | Revue croisée des documents par un autre modèle (consigne : réfuter), puis relecture différée par le chercheur ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
+| **Revue n° 2** | Revue croisée des documents par un autre modèle, consigne : réfuter (Claude Fable, puis un modèle d'un autre fournisseur via ILaaS, les documents ayant été rédigés avec un assistant de la même famille que Fable), puis relecture différée par le chercheur ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
 | **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO11 et de leurs règles de décision, des étapes 0a et 0b, des contrastes de référence | Avec la revue n° 2 |
 | **0a. Profil des modèles et test sans public** | Chaque modèle (Le Chonk, `mistral-medium-latest`, `qwen-3.8-27b`, `gemma-4-31b`, les juges) répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; puis, sans persona et avec persona, seul, à des questions sur T0, T1, T3. Les réponses avec persona sont recueillies sous **trois paraphrases de la consigne des habitants**, pour estimer la part du concepteur dans la formulation des consignes | 1 semaine |
 | **0b. Dyades contrôlées** | 40 personas × interlocuteur favorable puis critique × T1 et T0 × 3 répétitions (environ 480 courts dialogues) | En parallèle |
