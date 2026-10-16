@@ -1,0 +1,360 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>
+<title>Carte des concepts du C4</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Mise en page : en-tête, bilan chiffré, points à consolider, puis la carte pleine largeur ; le détail d'un nœud s'ouvre dans un tiroir à droite. */
+:root{
+  --bg:#F6F4F8; --surface:#FFFFFF; --ink:#231A2E; --muted:#6A6274; --line:#DCD6E3;
+  --violet:#6E4C94; --amber:#B9791A; --teal:#2F7F7A; --rose:#A8435A; --slate:#7B7586;
+  --ok:#3E8E5E; --warn:#C98A1E; --crit:#B23A48;
+  --edge:#B9B1C4; --edge-hi:#231A2E; --dim:.16;
+  --f-display:"Source Serif 4", Cambria, Georgia, serif;
+  --f-body:"IBM Plex Sans", Calibri, "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17121F; --surface:#221B2D; --ink:#EEE8F4; --muted:#A79EB3; --line:#3A3147;
+  --violet:#A98BD0; --amber:#E8A33D; --teal:#5DB7AF; --rose:#D9788E; --slate:#9C95A8;
+  --ok:#62B583; --warn:#E8A33D; --crit:#E26A78; --edge:#4B4159; --edge-hi:#EEE8F4; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17121F; --surface:#221B2D; --ink:#EEE8F4; --muted:#A79EB3; --line:#3A3147;
+  --violet:#A98BD0; --amber:#E8A33D; --teal:#5DB7AF; --rose:#D9788E; --slate:#9C95A8;
+  --ok:#62B583; --warn:#E8A33D; --crit:#E26A78; --edge:#4B4159; --edge-hi:#EEE8F4; color-scheme:dark}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 48px;max-width:1500px;margin:0 auto;display:grid;gap:28px}
+h1,h2{font-family:var(--f-display);font-weight:650;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.15}
+h2{font-size:1.25rem}
+.lede{max-width:70ch;color:var(--muted);margin:8px 0 0}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--violet)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px}
+.stat b{display:block;font-family:var(--f-display);font-size:1.6rem;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{color:var(--muted);font-size:.85rem}
+.stat.crit b{color:var(--crit)}
+.gaps{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.gap{all:unset;box-sizing:border-box;cursor:pointer;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;display:grid;gap:6px;align-content:start}
+.gap:hover{border-color:var(--violet)}
+.gap:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+.gap[aria-pressed="true"]{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.gap h3{margin:0;font-size:.98rem;font-weight:600}
+.gap p{margin:0;font-size:.88rem;color:var(--muted)}
+.gap .fix{color:var(--ink)}
+.sev{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:99px;justify-self:start}
+.sev.b{background:color-mix(in srgb,var(--crit) 16%,transparent);color:var(--crit)}
+.sev.i{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.sev.n{background:color-mix(in srgb,var(--slate) 18%,transparent);color:var(--slate)}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.legend .dot{border-radius:50%}
+button.reset{font:inherit;font-size:.85rem;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 12px;cursor:pointer}
+button.reset:focus-visible{outline:2px solid var(--violet)}
+.map{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow-x:auto}
+svg{display:block}
+.col-h{font-family:var(--f-mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;fill:var(--muted)}
+.edge{fill:none;stroke:var(--edge);stroke-width:1.1;transition:opacity .2s}
+.edge.instr{stroke-dasharray:3 3}
+.edge.ghost{stroke:var(--crit);stroke-dasharray:4 3}
+.node{cursor:pointer;transition:opacity .2s}
+.node rect.box{fill:var(--surface);stroke:var(--line);stroke-width:1}
+.node.ghost rect.box{fill:color-mix(in srgb,var(--crit) 7%,var(--surface));stroke:var(--crit);stroke-dasharray:4 3}
+.node text{font-family:var(--f-body);font-size:11.5px;fill:var(--ink)}
+.node text.code{font-family:var(--f-mono);font-size:10.5px;font-weight:500}
+.node:focus-visible rect.box{stroke:var(--violet);stroke-width:2}
+.node.sel rect.box{stroke:var(--ink);stroke-width:2}
+.focus .node:not(.on), .focus .edge:not(.on){opacity:var(--dim)}
+.focus .edge.on{stroke:var(--edge-hi);stroke-width:1.6}
+.focus .edge.ghost.on{stroke:var(--crit)}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(380px,100%);background:var(--surface);border-left:1px solid var(--line);box-shadow:-8px 0 24px rgba(0,0,0,.12);padding:calc(18px + env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) calc(18px + env(safe-area-inset-bottom,0px)) 18px;overflow-y:auto;z-index:20;display:grid;gap:12px;align-content:start}
+.drawer h2{font-size:1.2rem}
+.drawer .close{position:absolute;top:calc(10px + env(safe-area-inset-top,0px));right:max(10px,env(safe-area-inset-right,0px));font:inherit;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:2px 9px;cursor:pointer}
+.drawer dl{margin:0;display:grid;gap:8px}
+.drawer dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.drawer dd{margin:0;font-size:.9rem}
+.status{display:inline-flex;gap:6px;align-items:center;font-size:.88rem}
+.status i{width:9px;height:9px;border-radius:50%;display:inline-block}
+.links{display:flex;flex-wrap:wrap;gap:6px}
+.links button{font:inherit;font-size:.8rem;background:var(--bg);border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:2px 9px;cursor:pointer}
+.note{font-size:.82rem;color:var(--muted);max-width:90ch}
+@media (prefers-reduced-motion: reduce){.edge,.node{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Village simulé · scénario C4 « Dire et taire »</div>
+    <h1>Carte des concepts du C4</h1>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. Un chemin qui s'arrête en route est un point à consolider avant le préenregistrement. Cliquez sur un nœud pour suivre sa filiation, ou sur un point à consolider pour voir ce qu'il touche.</p>
+  </header>
+
+  <section class="stats" id="stats" aria-label="Bilan"></section>
+
+  <section>
+    <div class="bar" style="margin-bottom:12px"><h2>Points à consolider</h2></div>
+    <div class="gaps" id="gaps"></div>
+  </section>
+
+  <section>
+    <div class="bar" style="margin-bottom:12px">
+      <h2>La carte</h2>
+      <div class="legend" id="legend"></div>
+      <button class="reset" id="reset" type="button">Tout afficher</button>
+    </div>
+    <div class="map" id="map"></div>
+    <p class="note">Sources : cadre scientifique v5 (sections 1, 3, 4, 6) et scénario C4 v8 (sections 1.5, 1.6, 2, 3.0, 4, 6). Les nœuds en pointillés rouges n'existent pas encore dans les documents : ce sont les pièces qui manquent. Les liens en pointillés partent des instruments de mesure (enquêteur, modèle juge), qui sont eux aussi des agencements.</p>
+  </section>
+</div>
+
+<aside class="drawer" id="drawer" hidden aria-live="polite"></aside>
+
+<script>
+const COLS=["Concepts","Instances et instruments","Questions de recherche","Hypothèses de travail","Hypothèses opérationnelles","Indicateurs"];
+const FAM={
+  agencement:{l:"Agencement et SIC",v:"--violet"},
+  discours:{l:"Circulation et discours",v:"--teal"},
+  opinion:{l:"Spirale et opinion",v:"--amber"},
+  llm:{l:"Modèles de langage",v:"--rose"},
+  posture:{l:"Posture critique",v:"--slate"}
+};
+const N=[
+/* Concepts */
+{id:"coag",c:0,fam:"agencement",l:"Co-agentivité (agentivité distribuée)",r:"Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007)",d:"Clef de lecture : chaque énoncé est co-produit par un agencement d'instances. Sert à estimer la part de chacune."},
+{id:"archi",c:0,fam:"agencement",l:"Architexte",r:"Jeanneret et Souchier (1999)",d:"Le modèle comme outil qui préfigure les formes de l'écriture ; derrière la convergence attendue en « tout Le Chonk »."},
+{id:"script",c:0,fam:"agencement",l:"Script, inscription",r:"Akrich (1987)",d:"Ce que le concepteur inscrit dans les fiches et les consignes."},
+{id:"enoned",c:0,fam:"agencement",l:"Énonciation éditoriale",r:"Souchier (1998)",d:"Ce que la consigne et la mémoire assemblées par l'orchestrateur imposent aux énoncés."},
+{id:"goff",c:0,fam:"agencement",l:"Cadres de l'expérience",r:"Goffman (1974)",d:"Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre."},
+{id:"dispo",c:0,fam:"agencement",l:"Dispositif",r:"Foucault ; Agamben (2007)",d:"Le village comme agencement hétérogène qui oriente les conduites."},
+{id:"trivia",c:0,fam:"agencement",l:"Trivialité",r:"Jeanneret (2008, 2014)",d:"Circulation créative des êtres culturels, réécrits à travers des médiations."},
+{id:"media",c:0,fam:"agencement",l:"Médiation",r:"Jeanneret (2014) ; Davallon",d:"Ce qui s'interpose et transforme ; dans le C4, le compte rendu journalistique (source S2) et la gazette."},
+{id:"tele",c:0,fam:"agencement",l:"Modèle télégraphique (instrument)",r:"Shannon et Weaver (1949) ; Winkin (1981)",d:"Instrument de mesure de la fidélité, et objet d'enquête (QR3)."},
+{id:"bartlett",c:0,fam:"discours",l:"Reproduction en série",r:"Bartlett (1932) ; Allport et Postman (1947)",d:"Réduction, accentuation, assimilation ; protocole des chaînes linéaires."},
+{id:"attr",c:0,fam:"discours",l:"Attracteurs culturels",r:"Sperber (1996) ; Perez et al. (2025)",d:"Convergence des reprises vers des formes stables."},
+{id:"hall",c:0,fam:"discours",l:"Lectures selon Hall",r:"Hall (1973)",d:"Lectures conforme, négociée, oppositionnelle (codes L-CON, L-NEG, L-OPP)."},
+{id:"formule",c:0,fam:"discours",l:"Formule",r:"Krieg-Planque (2009)",d:"Expression figée qui résume la thèse et se répète (code FOR)."},
+{id:"moirand",c:0,fam:"discours",l:"Mémoire interdiscursive",r:"Moirand (2007)",d:"Analogies avec le présent (code ANA)."},
+{id:"authier",c:0,fam:"discours",l:"Mise en scène de la reprise",r:"Authier-Revuz (1982)",d:"Marqueurs de reformulation (code MSC)."},
+{id:"jacobi",c:0,fam:"discours",l:"Continuum de la communication scientifique",r:"Jacobi (1999)",d:"Situe les sources S0 à S3."},
+{id:"spirale",c:0,fam:"opinion",l:"Spirale du silence",r:"Noelle-Neumann (1974, 1993)",d:"Instrument et étalon : dynamique des positions exprimées selon le climat perçu."},
+{id:"climat",c:0,fam:"opinion",l:"Climat perçu, sens quasi statistique",r:"Noelle-Neumann (1993)",d:"Estimations déclarées de l'avis majoritaire et de sa tendance."},
+{id:"dbl",c:0,fam:"opinion",l:"Double climat d'opinion",r:"Noelle-Neumann (1993)",d:"Écart entre positions déclarées et climat que la gazette laisse percevoir."},
+{id:"deuxsrc",c:0,fam:"opinion",l:"Deux sources du climat",r:"Noelle-Neumann (1993)",d:"Médias (la gazette) et entourage (les compères)."},
+{id:"noyau",c:0,fam:"opinion",l:"Noyau dur, avant-garde",r:"Noelle-Neumann (1993)",d:"Agents qui expriment durablement une position perçue comme minoritaire."},
+{id:"wtsc",c:0,fam:"opinion",l:"Disposition à s'autocensurer",r:"Hayes, Glynn et Shanahan (2005)",d:"Attribut écrit dans les fiches ; son effet est une hypothèse (S5a)."},
+{id:"ignor",c:0,fam:"opinion",l:"Ignorance pluraliste",r:"Prentice et Miller (1993)",d:"Une majorité qui se déclare minoritaire."},
+{id:"kuran",c:0,fam:"opinion",l:"Falsification des préférences",r:"Kuran (1995)",d:"Positions exprimées contraires aux positions déclarées (code ALI)."},
+{id:"asch",c:0,fam:"opinion",l:"Conformité face à une majorité unanime",r:"Asch (1956)",d:"Principe des compères K+ et K−."},
+{id:"bourdieu",c:0,fam:"opinion",l:"L'opinion publique comme construction",r:"Bourdieu (1973) ; Champagne (1990)",d:"Écart entre ce qui s'entend et la distribution des positions déclarées."},
+{id:"compl",c:0,fam:"llm",l:"Complaisance",r:"Sharma et al. (2024)",d:"Part du modèle en interaction : la position suit celle de l'interlocuteur."},
+{id:"neutre",c:0,fam:"llm",l:"Neutralité apprise",r:"OpenAI (2025), Model Spec",d:"Part du fournisseur : neutralisation sans public ni interlocuteur."},
+{id:"silences",c:0,fam:"llm",l:"Formes discursives du silence",r:"Projet (livre de codes 4.4)",d:"Évitement, neutralisation, euphémisation, délégation, alignement apparent, silence pur."},
+{id:"panick",c:0,fam:"llm",l:"Préférence des juges pour leurs textes",r:"Panickssery et al. (2024)",d:"Justifie un modèle juge distinct des générateurs."},
+{id:"suff",c:0,fam:"posture",l:"Suffisance générative",r:"Epstein (1999) ; Zhao, Pham et Vincent (2026)",d:"Une spirale reproduite n'est pas une spirale expliquée."},
+{id:"critique",c:0,fam:"posture",l:"Simulacres, perroquets, silicium",r:"Park et al. (2023) ; Bender et al. (2021) ; Argyle et al. (2023) ; Wang et al. (2025)",d:"Concepts critiques sur les agents génératifs ; ils cadrent l'interprétation."},
+/* Instances */
+{id:"modele",c:1,k:"prod",l:"Modèle et fournisseur",d:"Écrit les répliques, avec ses régularités et les règles de son fournisseur.",cd:"Narrateurs N1 à N3 (priorité 2, 3 graines) ; test sans public (étape 0a) ; auteur unique (priorité 3) ; polyphonie homogène « tout Le Chonk » : absente du plan."},
+{id:"modint",c:1,k:"prod",l:"Modèle en interaction",d:"La complaisance envers l'interlocuteur du moment.",cd:"Dyades contrôlées (étape 0b)."},
+{id:"fiche",c:1,k:"prod",l:"Fiche du persona",d:"Oriente le ton, les valeurs, la disposition à s'autocensurer.",cd:"Disposition continue ; condition sans autocensure (priorité 1) ; permutations des prénoms et du genre."},
+{id:"orch",c:1,k:"prod",l:"Orchestrateur",d:"Assemble la consigne et la mémoire ; mode de lecture du lecteur.",cd:"Lecture annotée ou intégrale (priorité 2, 5 graines)."},
+{id:"ordo",c:1,k:"prod",l:"Ordonnanceur",d:"Décide qui rencontre qui, où, dans quel type de scène.",cd:"O-ALÉ ou O-HOM (priorité 2, 3 graines)."},
+{id:"cadres",c:1,k:"prod",l:"Cadres d'énonciation",d:"Scène publique ou privée, gazette, compères.",cd:"Public ou privé (dans chaque simulation) ; gazette G0, G+, G− (priorité 1) ; compères K+, K− (priorité 3)."},
+{id:"concepteur",c:1,k:"prod",l:"Concepteur",d:"A fixé consignes, règles, cadres, sollicitations.",cd:"Carnet de conception ; paraphrases de consignes (prévues au cadre, absentes du plan du C4)."},
+{id:"source",c:1,k:"stim",l:"Source (stimulus)",d:"Ce qui est mis en circulation. Ce n'est pas une instance de l'agencement.",cd:"S0 et S1 (priorité 1) ; S3 (priorité 2) ; S2, compte rendu journalistique (priorité 2, 3 graines)."},
+{id:"social",c:1,k:"stim",l:"Agencement social (structure)",d:"Réseau, scènes, mémoire, par opposition à la transmission linéaire.",cd:"Village contre chaînes linéaires de 10 agents (étape préalable)."},
+{id:"enq",c:1,k:"instr",l:"Enquêteur du soir",d:"Recueille positions déclarées et climat perçu, hors mémoire des agents. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Neuf questions ; formulations A et B (test de stabilité)."},
+{id:"juge",c:1,k:"instr",l:"Modèle juge",d:"Code les répliques ; il ajoute une instance à l'analyse elle-même.",cd:"Distinct des générateurs ; deux juges ; validé contre le codage du chercheur."},
+/* QR */
+{id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
+{id:"QR2",c:2,code:"QR2",l:"La part des instances",d:"Quelle part de ces transformations revient à chaque instance ? (question centrale)"},
+{id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ?"},
+{id:"QR4",c:2,code:"QR4",l:"Le dire et le taire",d:"Problématique du C4."},
+/* HT */
+{id:"HT1",c:3,code:"HT1",l:"Le taire est co-produit",d:"Le dire et le taire varient d'abord avec les instances non individuelles plus qu'avec les dispositions attribuées. Hypothèse centrale."},
+{id:"HT2",c:3,code:"HT2",l:"Un dire vide",d:"Moins de silence pur que de neutralisation : les agents parlent pour ne rien dire."},
+{id:"HT3",c:3,code:"HT3",l:"Convergence vers le lieu commun",d:"Les reprises perdent leurs aspérités et convergent vers une formule consensuelle, plus fortement en « tout Le Chonk »."},
+{id:"HT4",c:3,code:"HT4",l:"Une socialité sans climat",d:"Alignement local sur l'interlocuteur, non lecture du climat : le climat perçu ne prédit pas l'expression à interlocuteur constant."},
+/* S */
+{id:"S1",c:4,code:"S1",l:"Silence différentiel",d:"Plus de silence en public qu'en privé pour S1 que pour S0, chez les agents en écart avec le climat perçu."},
+{id:"S2",c:4,code:"S2",l:"Double climat",d:"La gazette déplace plus le climat perçu que les positions déclarées."},
+{id:"S3",c:4,code:"S3",l:"Ignorance pluraliste",d:"Une majorité d'agents se déclare minoritaire."},
+{id:"S4",c:4,code:"S4",l:"Noyau dur",d:"Les agents à faible disposition continuent d'exprimer une position minoritaire."},
+{id:"S5a",c:4,code:"S5a",l:"Part de la fiche",d:"L'effet S1 croît avec la disposition et disparaît sans autocensure."},
+{id:"S5b",c:4,code:"S5b",l:"Part du modèle en interaction",d:"En tête-à-tête, la position exprimée se rapproche de celle de l'interlocuteur."},
+{id:"S5c",c:4,code:"S5c",l:"Part du modèle et du fournisseur",d:"Neutralisation même sans public, plus pour S1 et S3 que pour S0."},
+{id:"S6",c:4,code:"S6",l:"Assimilation publique",d:"Les versions publiques se rapprochent de l'avis perçu comme majoritaire."},
+{id:"S7",c:4,code:"S7",l:"Part de l'ordonnanceur",d:"Les rencontres homophiles réduisent le silence local et accroissent la polarisation."},
+{id:"S8",c:4,code:"S8",l:"Part de l'agencement social",d:"Les transformations diffèrent entre village et chaînes linéaires (exploratoire)."},
+{id:"gS9",c:4,ghost:1,code:"S9 ?",l:"Climat contre interlocuteur",d:"À créer : à interlocuteur constant, le climat perçu ne prédit pas la position exprimée. C'est le test direct de HT4."},
+{id:"gS10",c:4,ghost:1,code:"S10 ?",l:"Effet du mode d'écriture",d:"À créer : convergence plus forte en polyphonie homogène qu'en polyphonie mixte. C'est le test direct de HT3, et la condition doit entrer dans le plan."},
+/* Indicateurs */
+{id:"silence",c:5,l:"Taux de silence",d:"Part des sollicitations sans position exprimée, chez les agents informés."},
+{id:"ecart",c:5,l:"Écart entre cadres d'énonciation",d:"Position déclarée en enquête contre position exprimée en scène."},
+{id:"falsif",c:5,l:"Falsification des préférences",d:"Positions exprimées contraires aux positions déclarées."},
+{id:"double",c:5,l:"Double climat",d:"Climat perçu moyen contre distribution réelle des positions déclarées."},
+{id:"ignorI",c:5,l:"Ignorance pluraliste",d:"Part des agents majoritaires qui se déclarent minoritaires."},
+{id:"noyauI",c:5,l:"Noyau dur",d:"Position minoritaire exprimée en public sur au moins 3 journées."},
+{id:"dyade",c:5,l:"Déplacement en dyade",d:"Écart de position exprimée entre interlocuteur favorable et critique."},
+{id:"neutr",c:5,l:"Neutralisation sans public",d:"Part des réponses neutralisées en test sans public, par source."},
+{id:"formes",c:5,l:"Formes du silence (EVI à TAC)",d:"Livre de codes 4.4."},
+{id:"transfo",c:5,l:"Transformations de la thèse",d:"Livre de codes unifié, versions publiques, privées et chaînes."},
+{id:"polar",c:5,l:"Polarisation",d:"Dispersion des positions déclarées et exprimées."},
+{id:"entend",c:5,k:"gen",l:"Ce qui s'entend",d:"Distribution des positions exprimées en public contre positions déclarées."},
+{id:"stab",c:5,k:"ctrl",l:"Stabilité A / B",d:"Part d'agents dont les deux formulations divergent de plus de 20 points."},
+{id:"gDiv",c:5,ghost:1,l:"Diversité des versions",d:"À créer : mesure de la dispersion des versions de la thèse au fil des relais (HT3)."},
+{id:"gMet",c:5,ghost:1,l:"Métrique commune des parts",d:"À préenregistrer : comment comparer l'effet d'une variable binaire (scène), continue (disposition) et catégorielle (modèle). Sans elle, « supérieur » dans HT1 n'est pas décidable."}
+];
+const PROD=["modele","modint","fiche","orch","ordo","cadres","concepteur"];
+const E=[
+...PROD.map(p=>["coag",p]),["coag","HT1"],["coag","QR2"],
+["archi","modele"],["archi","HT3"],["script","fiche"],["script","concepteur"],["enoned","orch"],
+["goff","cadres"],["goff","ordo"],["goff","enq"],["goff","HT1"],["dispo","ordo"],["dispo","concepteur"],["dispo","QR3"],
+["trivia","QR1"],["trivia","HT3"],["media","source"],["tele","QR3"],["tele","transfo"],
+["bartlett","social"],["bartlett","S8"],["bartlett","transfo"],["attr","HT3"],["attr","S8"],
+["hall","transfo"],["formule","HT3"],["formule","transfo"],["moirand","transfo"],["authier","transfo"],["jacobi","source"],
+["spirale","QR4"],["spirale","S1"],["spirale","HT4"],["climat","S1"],["climat","S3"],["climat","HT4"],["climat","double"],
+["dbl","S2"],["dbl","double"],["deuxsrc","cadres"],["deuxsrc","S2"],["noyau","S4"],["noyau","noyauI"],
+["wtsc","fiche"],["wtsc","S4"],["wtsc","S5a"],["ignor","S3"],["ignor","ignorI"],["kuran","falsif"],["asch","cadres"],["bourdieu","entend"],
+["compl","modint"],["compl","S5b"],["compl","HT4"],["neutre","modele"],["neutre","S5c"],["neutre","HT2"],
+["silences","HT2"],["silences","formes"],["panick","juge"],
+["modele","HT1"],["modele","HT2"],["modele","HT3"],["modele","S5c"],["modint","HT4"],["modint","S5b"],
+["fiche","HT1"],["fiche","S4"],["fiche","S5a"],["orch","HT3"],["ordo","HT1"],["ordo","S7"],
+["cadres","HT1"],["cadres","S1"],["cadres","S2"],["source","HT2"],["source","S1"],["source","S5c"],["social","HT3"],["social","S8"],
+["enq","ecart"],["enq","double"],["enq","ignorI"],["enq","stab"],["enq","falsif"],["enq","noyauI"],
+["juge","silence"],["juge","formes"],["juge","transfo"],["juge","ecart"],["juge","falsif"],["juge","neutr"],["juge","dyade"],
+["QR1","S6"],["QR1","S8"],["QR2","HT1"],["QR4","HT1"],["QR4","HT2"],["QR4","HT3"],["QR4","HT4"],
+["HT1","S1"],["HT1","S2"],["HT1","S4"],["HT1","S5a"],["HT1","S5b"],["HT1","S5c"],["HT1","S7"],["HT1","gMet"],
+["HT2","S1"],["HT2","S5c"],["HT2","formes"],
+["HT3","S6"],["HT3","S8"],["HT3","transfo"],["HT3","gDiv"],["HT3","gS10"],
+["HT4","S3"],["HT4","S5b"],["HT4","gS9"],
+["S1","silence"],["S1","ecart"],["S1","falsif"],["S2","double"],["S3","ignorI"],["S4","noyauI"],
+["S5a","silence"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
+["S6","ecart"],["S6","transfo"],["S7","polar"],["S8","transfo"],["gS9","dyade"],["gS10","gDiv"]
+];
+const GAPS=[
+{s:"b",t:"HT1 n'est pas encore décidable",p:"HT1 dit que les instances non individuelles pèsent « plus » que la fiche, mais rien ne dit comment comparer une variable binaire (scène), continue (disposition) et catégorielle (modèle).",f:"Préenregistrer une métrique commune (par exemple la part de variance attribuable à chaque instance dans un modèle mixte) et le seuil qui tranche.",n:["HT1","gMet","fiche","cadres","ordo","modele","S5a"]},
+{s:"b",t:"HT4 n'a pas de test direct",p:"Sa signature (le climat perçu ne prédit pas l'expression à interlocuteur constant) n'est portée par aucune hypothèse opérationnelle. S3 mesure l'ignorance pluraliste, qui ne départage pas HT4 d'une lecture spirale.",f:"Ajouter une hypothèse S9 et son modèle d'analyse ; revoir le rattachement de S3.",n:["HT4","S3","S5b","gS9","climat","spirale","dyade"]},
+{s:"b",t:"HT3 manque d'une mesure et d'une condition",p:"Aucun indicateur de diversité des versions, et la comparaison polyphonie mixte contre « tout Le Chonk » n'a ni hypothèse opérationnelle ni place dans le plan.",f:"Créer l'indicateur de diversité, une hypothèse S10, et un bloc de polyphonie homogène dans le plan.",n:["HT3","gDiv","gS10","modele","archi","attr","formule"]},
+{s:"b",t:"L'inventaire des instances varie selon les documents",p:"Cinq instances dans la problématique, sept dans le cadre (6.4), neuf lignes dans le C4 (3.0). La source et l'agencement social n'en sont pas ; narrateur, lecteur, enquêteur et juge ne sont pas situés.",f:"Fixer une liste canonique en trois statuts : instances de production, stimuli, instruments de mesure.",n:["modele","modint","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","coag"]},
+{s:"i",t:"La priorité 1 ne teste pas toutes les parts",p:"Seules la fiche et les cadres varient dans le bloc garanti. L'ordonnanceur et les narrateurs n'arrivent qu'en priorité 2, avec 3 graines. Les étapes 0a et 0b couvrent le modèle, pas l'ordonnanceur.",f:"Remonter O-HOM en priorité 1, ou restreindre HT1 aux parts testées dans le bloc garanti.",n:["HT1","ordo","modele","S7","fiche","cadres"]},
+{s:"i",t:"Des conditions sans hypothèse",p:"La source S2 (médiation journalistique), les compères K+ et K−, la lecture intégrale et les paraphrases du concepteur sont prévues, mais aucune hypothèse ni aucun indicateur ne dit ce qu'on en attend.",f:"Pour chacune : une hypothèse, ou le statut exploratoire déclaré avec un indicateur, ou le retrait.",n:["source","media","asch","cadres","orch","concepteur"]},
+{s:"i",t:"QR3 n'a pas de traduction dans le C4",p:"La question de la communication inscrite (transport, interaction, médiation) ne mène à aucune hypothèse du C4.",f:"La traiter qualitativement au niveau 1 de la grille, ou la renvoyer à d'autres expériences.",n:["QR3","tele","dispo"]},
+{s:"i",t:"Les mesures sont aussi co-produites",p:"L'enquêteur et le modèle juge sont des agencements : une position déclarée est un énoncé produit dans un cadre. Le cadre le dit (2.3, 7), le C4 doit en tirer les conséquences.",f:"Faire apparaître enquêteur et juge comme instruments dans la liste des instances, avec leurs garde-fous.",n:["enq","juge","goff","panick"]},
+{s:"n",t:"Certains concepts restent des lentilles",p:"Script, énonciation éditoriale et dispositif ne passent que par les instances, sans mesure propre (le dispositif mène à QR3, qui n'est pas traduite). C'est légitime en SIC, à condition de le dire.",f:"Préciser dans le C4 qu'ils relèvent de l'analyse qualitative du niveau 1 (carnet de conception).",n:["script","enoned","dispo","fiche","orch","concepteur","ordo"]},
+{s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur et de règles de conduite : les deux parts ne peuvent pas être séparées.",f:"Le déclarer comme part non isolable, comme le prévoit le cadre (section 7).",n:["modele","neutre","S5c"]}
+];
+
+/* index */
+const byId={};N.forEach((n,i)=>{n.i=i;byId[n.id]=n});
+const outs={},ins={};N.forEach(n=>{outs[n.id]=[];ins[n.id]=[]});
+E.forEach(([a,b])=>{if(!byId[a]||!byId[b])console.warn("lien",a,b);outs[a].push(b);ins[b].push(a)});
+
+function reach(id,seen=new Set()){const n=byId[id];if(n.ghost||seen.has(id))return false;seen.add(id);if(n.c===5)return true;return outs[id].some(x=>reach(x,seen))}
+function status(n){
+  if(n.ghost)return["crit","À créer"];
+  const o=outs[n.id].map(x=>byId[x]),ii=ins[n.id].map(x=>byId[x]);
+  switch(n.c){
+    case 0: if(n.fam==="posture")return["muted","Posture critique : cadre l'interprétation, sans mesure propre"];
+      if(o.some(t=>t.c>=2&&reach(t.id)))return["ok","Mobilisé dans une question, une hypothèse ou un indicateur effectif"];
+      if(o.length)return["lens","Lentille d'interprétation : passe seulement par les instances"];
+      return["warn","Non relié"];
+    case 1: if(n.k==="instr")return["lens","Instrument de mesure, lui aussi co-produit"];
+      if(o.some(t=>t.c===4&&!t.ghost))return["ok","Sa part est testée par au moins une hypothèse opérationnelle"];
+      return["warn","Aucune hypothèse opérationnelle ne teste sa part"];
+    case 2: return o.length?["ok","Traduite en hypothèses"]:["warn","Sans traduction dans le C4"];
+    case 3: return o.some(t=>t.ghost)?["warn","Incomplète : il manque une mesure ou une hypothèse opérationnelle"]:["ok","Traduite en hypothèses opérationnelles mesurables"];
+    case 4: return o.some(t=>t.c===5&&!t.ghost)?["ok","Reliée à au moins un indicateur"]:["warn","Sans indicateur"];
+    case 5: if(n.k==="ctrl")return["muted","Indicateur de contrôle"]; if(n.k==="gen")return["muted","Indicateur descriptif général"];
+      return ii.some(s=>s.c>=3)?["ok","Sert au moins une hypothèse"]:["warn","Sans hypothèse"];
+  }
+}
+const SV={ok:"--ok",warn:"--warn",crit:"--crit",lens:"--violet",muted:"--slate"};
+const cssv=v=>`var(${v})`;
+
+/* bilan */
+(function(){
+  const cs=N.filter(n=>n.c===0&&n.fam!=="posture"),m=cs.filter(n=>status(n)[0]==="ok").length;
+  const ip=N.filter(n=>n.c===1&&n.k==="prod"),it=ip.filter(n=>status(n)[0]==="ok").length;
+  const ht=N.filter(n=>n.c===3),hc=ht.filter(n=>status(n)[0]==="ok").length;
+  const b=GAPS.filter(g=>g.s==="b").length;
+  const items=[[`${m} / ${cs.length}`,"concepts opératoires reliés à une mesure"],[`${it} / ${ip.length}`,"instances dont la part est testée"],[`${hc} / ${ht.length}`,"hypothèses de travail complètes"],[N.filter(n=>n.ghost).length,"pièces manquantes"],[b,"points bloquants avant préenregistrement","crit"]];
+  document.getElementById("stats").innerHTML=items.map(([v,l,c])=>`<div class="stat ${c||""}"><b>${v}</b><span>${l}</span></div>`).join("");
+})();
+
+/* points */
+const gapsEl=document.getElementById("gaps");
+const SEV={b:"Bloquant",i:"Important",n:"À noter"};
+gapsEl.innerHTML=GAPS.map((g,i)=>`<button class="gap" type="button" id="gap${i}" data-g="${i}" aria-pressed="false"><span class="sev ${g.s}">${SEV[g.s]}</span><h3>${g.t}</h3><p>${g.p}</p><p class="fix">${g.f}</p></button>`).join("");
+
+/* légende */
+document.getElementById("legend").innerHTML=Object.values(FAM).map(f=>`<span><i style="background:${cssv(f.v)}"></i>${f.l}</span>`).join("")+
+ `<span><i class="dot" style="background:var(--ok)"></i>relié</span><span><i class="dot" style="background:var(--warn)"></i>à consolider</span><span><i class="dot" style="background:var(--crit)"></i>manquant</span>`;
+
+/* mise en page */
+const W=192,G=58,P=16,TOP=44,LH=14;
+function lines(t){const max=29;if(t.length<=max)return[t];const w=t.split(" ");let a="",b="";for(const x of w){if((a+" "+x).trim().length<=max&&!b)a=(a+" "+x).trim();else b=(b+" "+x).trim()}return[a,b]}
+N.forEach(n=>{n.ls=lines(n.l);n.h=n.ls.length*LH+(n.code?LH:0)+12});
+const cols=COLS.map((_,c)=>N.filter(n=>n.c===c));
+/* ordre par barycentre */
+cols.forEach(col=>col.forEach((n,i)=>n.o=i));
+for(let it=0;it<8;it++){
+  for(let c=1;c<6;c++){cols[c].forEach(n=>{const p=ins[n.id].map(x=>byId[x]);n.b=p.length?p.reduce((s,x)=>s+x.o/cols[x.c].length,0)/p.length:n.o/cols[c].length});cols[c].sort((a,b)=>a.b-b.b).forEach((n,i)=>n.o=i)}
+  for(let c=4;c>=0;c--){cols[c].forEach(n=>{const s=outs[n.id].map(x=>byId[x]);n.b=s.length?s.reduce((t,x)=>t+x.o/cols[x.c].length,0)/s.length:n.o/cols[c].length});cols[c].sort((a,b)=>a.b-b.b).forEach((n,i)=>n.o=i)}
+}
+const GAPY=8;
+const colH=cols.map(col=>col.reduce((s,n)=>s+n.h+GAPY,0));
+const H=Math.max(...colH);
+cols.forEach((col,c)=>{const extra=(H-colH[c])/Math.max(col.length,1);let y=TOP+extra/2;col.forEach(n=>{n.x=P+c*(W+G);n.y=y;y+=n.h+GAPY+extra})});
+const SW=P*2+6*W+5*G,SH=TOP+H+10;
+
+const svgNS="http://www.w3.org/2000/svg";
+const mk=(t,a)=>{const e=document.createElementNS(svgNS,t);for(const k in a)e.setAttribute(k,a[k]);return e};
+const svg=mk("svg",{viewBox:`0 0 ${SW} ${SH}`,width:SW,height:SH,role:"img","aria-label":"Carte des liens entre concepts, instances, questions, hypothèses et indicateurs du C4"});
+COLS.forEach((t,c)=>{const tx=mk("text",{x:P+c*(W+G),y:22,class:"col-h"});tx.textContent=t;svg.appendChild(tx)});
+const gE=mk("g",{}),gN=mk("g",{});svg.appendChild(gE);svg.appendChild(gN);
+const edgeEls=E.map(([a,b])=>{const s=byId[a],t=byId[b];const x1=s.x+W,y1=s.y+s.h/2,x2=t.x,y2=t.y+t.h/2,dx=Math.max(40,(x2-x1)*.45);
+  const cl="edge"+(t.ghost?" ghost":"")+(s.k==="instr"?" instr":"");
+  const p=mk("path",{d:`M${x1},${y1} C${x1+dx},${y1} ${x2-dx},${y2} ${x2},${y2}`,class:cl});p._a=a;p._b=b;gE.appendChild(p);return p});
+const nodeEls={};
+N.forEach(n=>{const g=mk("g",{class:"node"+(n.ghost?" ghost":""),transform:`translate(${n.x},${n.y})`,tabindex:"0",role:"button","aria-label":(n.code?n.code+" ":"")+n.l});
+  g.appendChild(mk("rect",{class:"box",width:W,height:n.h,rx:5}));
+  const famc=n.c===0?cssv(FAM[n.fam].v):n.c===1?(n.k==="prod"?"var(--violet)":n.k==="stim"?"var(--teal)":"var(--slate)"):n.c===2?"var(--ink)":n.c===3?"var(--amber)":n.c===4?"var(--rose)":"var(--teal)";
+  g.appendChild(mk("rect",{width:4,height:n.h-8,x:0,y:4,rx:2,fill:famc}));
+  const st=status(n);g.appendChild(mk("circle",{cx:W-9,cy:9,r:4,fill:cssv(SV[st[0]])}));
+  let y=17;if(n.code){const t=mk("text",{x:11,y,class:"code"});t.textContent=n.code;g.appendChild(t);y+=LH}
+  n.ls.forEach(l=>{const t=mk("text",{x:11,y});t.textContent=l;g.appendChild(t);y+=LH});
+  g.addEventListener("click",()=>select(n.id));g.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();select(n.id)}});
+  gN.appendChild(g);nodeEls[n.id]=g});
+const map=document.getElementById("map");map.appendChild(svg);
+
+/* sélection */
+function lineage(id){const S=new Set([id]);const go=(k,dir)=>{(dir?outs:ins)[k].forEach(x=>{if(!S.has(x+dir)){S.add(x+dir);S.add(x);go(x,dir)}})};go(id,1);go(id,0);return new Set([...S].filter(x=>byId[x]))}
+function paint(set,selId){svg.classList.add("focus");
+  N.forEach(n=>nodeEls[n.id].classList.toggle("on",set.has(n.id)));
+  N.forEach(n=>nodeEls[n.id].classList.toggle("sel",n.id===selId));
+  edgeEls.forEach(p=>p.classList.toggle("on",set.has(p._a)&&set.has(p._b)))}
+function clearAll(){svg.classList.remove("focus");N.forEach(n=>nodeEls[n.id].classList.remove("on","sel"));edgeEls.forEach(p=>p.classList.remove("on"));
+  document.querySelectorAll(".gap").forEach(b=>b.setAttribute("aria-pressed","false"));drawer.hidden=true}
+const drawer=document.getElementById("drawer");
+function select(id){const n=byId[id];paint(lineage(id),id);document.querySelectorAll(".gap").forEach(b=>b.setAttribute("aria-pressed","false"));
+  const st=status(n);const chip=x=>`<button type="button" data-n="${x}">${byId[x].code?byId[x].code+" ":""}${byId[x].l}</button>`;
+  const famL=n.c===0?FAM[n.fam].l:n.c===1?({prod:"Instance de production",stim:"Stimulus ou structure",instr:"Instrument de mesure"})[n.k]:COLS[n.c];
+  drawer.innerHTML=`<button class="close" type="button" aria-label="Fermer">Fermer</button>
+  <div class="eyebrow">${famL}</div><h2>${n.code?n.code+" · ":""}${n.l}</h2>
+  <span class="status"><i style="background:${cssv(SV[st[0]])}"></i>${st[1]}</span>
+  <dl>${n.r?`<dt>Références</dt><dd>${n.r}</dd>`:""}<dt>${n.c===0?"Rôle dans le C4":"Contenu"}</dt><dd>${n.d}</dd>
+  ${n.cd?`<dt>Conditions qui la font varier</dt><dd>${n.cd}</dd>`:""}
+  ${ins[id].length?`<dt>Vient de</dt><dd class="links">${ins[id].map(chip).join("")}</dd>`:""}
+  ${outs[id].length?`<dt>Mène à</dt><dd class="links">${outs[id].map(chip).join("")}</dd>`:""}</dl>`;
+  drawer.hidden=false;drawer.querySelector(".close").onclick=clearAll;drawer.querySelectorAll("[data-n]").forEach(b=>b.onclick=()=>select(b.dataset.n))}
+gapsEl.addEventListener("click",e=>{const b=e.target.closest(".gap");if(!b)return;const g=GAPS[+b.dataset.g];
+  const on=b.getAttribute("aria-pressed")==="true";clearAll();if(on)return;
+  b.setAttribute("aria-pressed","true");paint(new Set(g.n),null);
+  const ys=g.n.map(x=>byId[x]);const xs=Math.min(...ys.map(n=>n.x));map.scrollTo({left:Math.max(0,xs-40),behavior:"smooth"});
+  map.scrollIntoView({behavior:"smooth",block:"start"})});
+document.getElementById("reset").onclick=clearAll;
+document.addEventListener("keydown",e=>{if(e.key==="Escape")clearAll()});
+</script>
+</body></html>

@@ -296,7 +296,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 | Validité des comparaisons | Réplication procédurale ; expérience C0 |
 | Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
 | Réflexivité | Le concepteur traité comme une instance ; carnet de conception |
-| Fiabilité | Préenregistrement, double codage, juge indépendant, puissance, répétitions |
+| Fiabilité | Préenregistrement, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
 | Prudence interprétative | Aucune généralisation aux humains ; vocabulaire des cadres d'énonciation |
 | Transparence | Code, consignes, livres de codes, fiches, archives publiés selon le plan de gestion des données |
 

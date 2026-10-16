@@ -194,7 +194,7 @@ Chaque agent reçoit au moins 5 sollicitations en scène publique et 5 en scène
 | **G+** | Gazette consonante favorable au livre |
 | **G−** | Gazette consonante critique |
 
-Les textes sont **rédigés par le pilote**, **appariés** (même longueur, même structure, même intensité), et vérifiés par deux évaluateurs indépendants. Ils ne sont jamais publiés comme de vraies critiques.
+Les textes sont **rédigés par le pilote**, **appariés** (même longueur, même structure, même intensité), et leur appariement est vérifié par le chercheur et par deux modèles juges distincts des générateurs. Ils ne sont jamais publiés comme de vraies critiques.
 
 **Les compères (entourage)**, bloc exploratoire : quatre habitants programmés expriment une position fixe en scène publique, sur le principe des expériences d'Asch (1956). Conditions **K+** (compères favorables) et **K−** (compères critiques). Leur adhésion à la position fixée est contrôlée ; ils sont exclus des analyses.
 
@@ -244,14 +244,14 @@ Chaque réponse à une sollicitation, et chaque réplique où le livre est évoq
 
 | Indicateur | Définition | Hypothèses |
 |---|---|---|
-| **Taux de silence** | Part des sollicitations sans position exprimée, chez les agents informés, par type de scène, par source | S1, S5 |
-| **Écart entre cadres d'énonciation** | Différence entre position déclarée en enquête et position exprimée en scène, pour un même agent | S1, S5, S6 |
+| **Taux de silence** | Part des sollicitations sans position exprimée, chez les agents informés, par type de scène, par source | S1, S5a |
+| **Écart entre cadres d'énonciation** | Différence entre position déclarée en enquête et position exprimée en scène, pour un même agent | S1, S5a, S6 |
 | **Double climat** | Écart entre climat perçu moyen et distribution réelle des positions déclarées, selon la gazette | S2 |
 | **Ignorance pluraliste** | Part des agents majoritaires (en positions déclarées) qui se déclarent minoritaires | S3 |
 | **Noyau dur** | Agents exprimant en public une position perçue comme minoritaire sur au moins 3 journées | S4 |
 | **Déplacement en dyade** | Écart de position exprimée entre interlocuteur favorable et interlocuteur critique | S5b |
 | **Taux de neutralisation sans public** | Part des réponses neutralisées en test sans public, par source | S5c |
-| **Falsification des préférences** | Part des positions exprimées contraires aux positions déclarées | S1, S5 |
+| **Falsification des préférences** | Part des positions exprimées contraires aux positions déclarées | S1, S5a |
 | **Ce qui s'entend** | Distribution des positions exprimées en public, comparée à celle des positions déclarées | Toutes |
 | **Transformations de la thèse** | Livre de codes unifié, appliqué séparément aux versions publiques, privées et aux chaînes linéaires | S6, S8 |
 | **Polarisation** | Dispersion des positions déclarées et des positions exprimées | S7 |
