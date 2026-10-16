@@ -1,0 +1,137 @@
+<main>
+<section class="band">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Socle technique · version 4</div>
+      <h1>Comment ça marche</h1>
+      <p class="lead">Une station Ubuntu dédiée fait tourner le village, trace chaque appel aux modèles et montre l'activité des agents sur un petit écran. Les modèles, eux, tournent à distance : aucune carte graphique n'est nécessaire.</p>
+    </div>
+    <figure>
+      <div class="fig">
+        <svg class="wide" viewBox="0 0 760 400" role="img" aria-label="Architecture : le village, les campagnes et l'agent de code passent tous par un passe-plat unique, qui trace les appels et les envoie vers Le Chonk ou vers les modèles ILaaS.">
+          <defs><marker id="ar5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="f-m"/></marker></defs>
+          <rect x="10" y="10" width="520" height="380" rx="12" class="box" stroke-dasharray="5 4"/>
+          <text x="26" y="34" class="t-s mono muted">STATION UBUNTU DÉDIÉE</text>
+          <rect x="30" y="50" width="150" height="58" rx="8" class="box-v"/><text x="105" y="74" text-anchor="middle" class="t-m" font-weight="600">Village</text><text x="105" y="92" text-anchor="middle" class="t-s">moteur Concordia</text>
+          <rect x="195" y="50" width="150" height="58" rx="8" class="box-v"/><text x="270" y="74" text-anchor="middle" class="t-m" font-weight="600">Campagnes</text><text x="270" y="92" text-anchor="middle" class="t-s">Inspect AI</text>
+          <rect x="360" y="50" width="150" height="58" rx="8" class="box-v"/><text x="435" y="74" text-anchor="middle" class="t-m" font-weight="600">Agent de code</text><text x="435" y="92" text-anchor="middle" class="t-s">OpenCode</text>
+          <rect x="150" y="160" width="240" height="66" rx="8" class="box-a"/><text x="270" y="186" text-anchor="middle" class="t-l">Passe-plat LiteLLM</text><text x="270" y="206" text-anchor="middle" class="t-s">clé virtuelle par usage, budgets</text>
+          <g class="edge" marker-end="url(#ar5)"><path d="M105 108 C 105 140, 200 140, 220 158"/><path d="M270 108 L 270 158"/><path d="M435 108 C 435 140, 340 140, 320 158"/></g>
+          <text x="282" y="140" class="t-s muted">appels</text>
+          <rect x="30" y="280" width="150" height="58" rx="8" class="box-t"/><text x="105" y="304" text-anchor="middle" class="t-m" font-weight="600">Langfuse</text><text x="105" y="322" text-anchor="middle" class="t-s">traces de chaque appel</text>
+          <rect x="195" y="280" width="150" height="58" rx="8" class="box-t"/><text x="270" y="304" text-anchor="middle" class="t-m" font-weight="600">Relais</text><text x="270" y="322" text-anchor="middle" class="t-s">événements simplifiés</text>
+          <rect x="360" y="280" width="150" height="58" rx="8" class="box-t"/><text x="435" y="304" text-anchor="middle" class="t-m" font-weight="600">Bureau des agents</text><text x="435" y="322" text-anchor="middle" class="t-s">petit écran, pixel art</text>
+          <g class="edge-t" marker-end="url(#ar5)"><path d="M210 226 C 180 250, 120 255, 105 278"/><path d="M270 226 L 270 278"/><path d="M345 309 L 358 309"/></g>
+          <text x="40" y="262" class="t-s muted">enregistre</text><text x="278" y="258" class="t-s muted">prévient</text>
+          <text x="30" y="370" class="t-s muted">Archives : répliques, enquêtes, codes, consignes · sauvegardes chiffrées · conteneurs isolés pour le code des agents</text>
+          <rect x="580" y="90" width="170" height="80" rx="8" class="box-v"/><text x="665" y="116" text-anchor="middle" class="t-m" font-weight="600">Le Chonk</text><text x="665" y="134" text-anchor="middle" class="t-s">Mistral Large 4</text><text x="665" y="150" text-anchor="middle" class="t-s muted">expérimentation AMUE</text>
+          <rect x="580" y="220" width="170" height="96" rx="8" class="box-s"/><text x="665" y="246" text-anchor="middle" class="t-m" font-weight="600">ILaaS</text><text x="665" y="264" text-anchor="middle" class="t-s">juges, autre village,</text><text x="665" y="280" text-anchor="middle" class="t-s">plusieurs modèles,</text><text x="665" y="296" text-anchor="middle" class="t-s">tests préalables</text>
+          <g class="edge-a" marker-end="url(#ar5)"><path d="M390 180 C 480 170, 520 135, 578 130"/><path d="M390 206 C 480 215, 520 260, 578 266"/></g>
+          <text x="545" y="78" class="t-s muted">HTTPS sortant</text>
+        </svg>
+      </div>
+      <figcaption>Tous les outils passent par le même passe-plat : c'est ce qui garantit des traces complètes, quel que soit l'outil. Les clés d'API restent sur la station et ne sont jamais versionnées.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band alt" id="flux">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Le flux d'une requête</div>
+      <h2>Quatre temps, toujours les mêmes</h2>
+    </div>
+    <ol class="timeline">
+      <li><time>1 · Envoi</time><p>Un habitant du village (ou un script, ou l'agent de code) envoie sa requête au passe-plat, avec la clé virtuelle de son usage et des métadonnées : essai, journée, scène, rôle, graine.</p></li>
+      <li><time>2 · Contrôle</time><p>Le passe-plat vérifie la clé et le budget, choisit le bon fournisseur, ajoute la vraie clé d'API et transmet.</p></li>
+      <li><time>3 · Trace</time><p>À la réponse, il enregistre l'appel, envoie la trace complète à Langfuse et prévient le relais. L'identifiant de version renvoyé par le modèle est conservé.</p></li>
+      <li><time>4 · Écran</time><p>Le relais transforme l'appel en événement simple ; le bureau des agents anime le personnage correspondant.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" id="modeles">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Modèles et rôles</div>
+      <h2>Qui joue quoi</h2>
+      <p>Chaque modèle est appelé par un identifiant daté, jamais par un alias « latest ». Une empreinte de comportement (dix questions fixes) est rejouée au début et à la fin de chaque bloc de simulations ; si elle change, le bloc est rejoué.</p>
+    </div>
+    <div class="table">
+      <table>
+        <thead><tr><th>Modèle</th><th>Rôle dans le scénario C4</th></tr></thead>
+        <tbody>
+          <tr><td><b>Le Chonk</b> (Mistral Large 4)</td><td>Village de référence : les quarante habitants, le lecteur, le narrateur, le résumé des souvenirs ; extraction de la grille des propositions ; chaînes linéaires</td></tr>
+          <tr><td><b>Mistral Medium</b> (version datée)</td><td>Village de contraste, entièrement joué par lui ; un des modèles du village pluri-modèles</td></tr>
+          <tr><td><b>Mistral Small 4</b></td><td>Village pluri-modèles</td></tr>
+          <tr><td><b>Qwen 3.8 27B</b></td><td>Repli pour le village de contraste ; narrateur de comparaison ; village pluri-modèles ; relecture des documents par un autre fournisseur</td></tr>
+          <tr><td><b>Gemma 4 31B</b></td><td>Juge ; narrateur de comparaison ; jamais habitant</td></tr>
+          <tr><td><b>Qwen 3.6 35B</b></td><td>Juge, jamais pour une réplique écrite par un modèle Qwen</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="donnees">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Les données</div>
+      <h2>Ce qui est archivé pour l'analyse</h2>
+      <p>Les traces servent au suivi ; l'analyse s'appuie sur des fichiers exportés à la fin de chaque simulation, une ligne par réplique ou par réponse d'enquête.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="tag">repliques.jsonl</span><p>Essai, condition, graine ; journée, créneau, scène, type de scène ; qui est présent, qui parle, à quel rang ; sollicitation ou non ; position entendue juste avant ; modèle, version, température ; empreinte de la consigne ; texte ; tokens et durée.</p></div>
+      <div class="card"><span class="tag">enquetes.jsonl</span><p>Réponses du matin et du soir : positions déclarées, climat et tendance perçus, test du train, version de la thèse, source de l'information.</p></div>
+      <div class="card"><span class="tag">codes.jsonl</span><p>Le codage de chaque réplique par chaque juge : position, intensité, forme du silence, version du livre de codes ; et l'arbitrage du chercheur.</p></div>
+    </div>
+    <p class="small muted">Les journaux bruts ne sont pas publiés tels quels : ils peuvent contenir des extraits d'ouvrages protégés. Les livres de codes, les extraits codés et les consignes le sont, selon le plan de gestion des données.</p>
+  </div>
+</section>
+
+<section class="band" id="bureau">
+  <div class="wrap" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));align-items:center">
+    <div class="prose">
+      <div class="eyebrow">Le bureau des agents</div>
+      <h2>Voir les agents travailler</h2>
+      <p>Un petit écran montre, en pixel art, un bureau où chaque agent actif est un personnage à son poste : une bulle quand il réfléchit, un clavier qui s'anime quand il écrit, un café quand il attend. Pendant les simulations, l'écran bascule sur une carte de Saint-Aubert-sur-Lys où les habitants vont de la boulangerie au café.</p>
+      <p>C'est un outil de suivi, une vitrine, et aussi un objet d'étude : ce que l'on choisit de montrer de l'activité des agents est déjà une mise en scène.</p>
+    </div>
+    <figure>
+      <div class="fig">
+        <svg viewBox="0 0 360 220" role="img" aria-label="Croquis du bureau des agents : quatre postes, un agent qui réfléchit, un qui écrit, un qui attend, un mur de compteurs.">
+          <rect x="10" y="10" width="340" height="200" rx="8" class="box"/>
+          <rect x="24" y="22" width="312" height="34" rx="4" class="box-s"/>
+          <text x="36" y="44" class="t-s mono">appels 1 284 · tokens 3,1 M · simulation C4-P1-003</text>
+          <g>
+            <rect x="34" y="120" width="60" height="34" rx="3" class="box-v"/><circle cx="64" cy="104" r="11" class="f-a"/>
+            <rect x="114" y="120" width="60" height="34" rx="3" class="box-v"/><circle cx="144" cy="104" r="11" class="f-t"/>
+            <rect x="194" y="120" width="60" height="34" rx="3" class="box-v"/><circle cx="224" cy="104" r="11" class="f-s"/>
+            <rect x="274" y="120" width="60" height="34" rx="3" class="box-v"/><circle cx="304" cy="104" r="11" class="f-line"/>
+          </g>
+          <rect x="44" y="66" width="44" height="20" rx="8" class="box-a"/><text x="66" y="80" text-anchor="middle" class="t-s">…</text>
+          <text x="64" y="176" text-anchor="middle" class="t-s">réfléchit</text><text x="144" y="176" text-anchor="middle" class="t-s">écrit</text><text x="224" y="176" text-anchor="middle" class="t-s">exécute</text><text x="304" y="176" text-anchor="middle" class="t-s">attend</text>
+          <text x="180" y="200" text-anchor="middle" class="t-s muted">Croquis, le bureau reste à développer</text>
+        </svg>
+      </div>
+      <figcaption>Le bureau sera développé avec l'agent de code et Le Chonk : c'est aussi un cas d'usage de l'expérimentation. Les compteurs affichés sont fictifs.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band alt" id="garanties">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Garanties</div>
+      <h2>Reproductibilité, sécurité, sobriété</h2>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Reproductible</h3><p>Une graine fixe à la fois le hasard des rencontres et celui du modèle, à température unique déclarée. Toutes les générations sont archivées avec leurs métadonnées : les analyses sont reproductibles, même quand les générations ne le sont pas exactement.</p></div>
+      <div class="card"><h3>Isolé et protégé</h3><p>Le code produit par un agent s'exécute dans un conteneur. Les clés d'API ne quittent pas la station ; un contrôle automatique empêche d'en committer une. Sauvegardes chiffrées et testées.</p></div>
+      <div class="card"><h3>Sobre</h3><p>Le nombre de simulations est fixé par le calcul de puissance, pas par le budget disponible. Les tokens et une estimation énergétique sont journalisés et rapportés avec les résultats.</p></div>
+      <div class="card"><h3>Matériel</h3><p>Un ordinateur dédié de 8 cœurs, 32 Go de mémoire et 1 To de SSD, un petit écran HDMI et un disque de sauvegarde. Logiciels libres : Ubuntu, Docker, LiteLLM, Langfuse, Inspect AI, Concordia, OpenCode.</p></div>
+    </div>
+    <div class="next"><a class="btn" href="scenario.html">Retour au scénario</a><a class="btn primary" href="feuille-de-route.html">Continuer : la feuille de route</a></div>
+  </div>
+</section>
+</main>

@@ -1,0 +1,284 @@
+<main>
+<section class="band">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Scénario C4 · version 11</div>
+      <h1>Comment le village fonctionne</h1>
+      <p class="lead">Quarante habitants, quinze journées, un livre qui circule. Cette page décrit le scénario à trois échelles : le plan d'ensemble des simulations, le déroulé d'une simulation, et le trajet d'une seule réplique.</p>
+    </div>
+    <div class="cards">
+      <a class="card" href="#macro" style="text-decoration:none;color:inherit"><span class="code">Macro</span><h3>109 simulations</h3><p>Le plan d'expérience : quelles conditions, combien de fois, dans quel ordre de priorité.</p></a>
+      <a class="card" href="#meso" style="text-decoration:none;color:inherit"><span class="code">Méso</span><h3>Une simulation</h3><p>Quinze journées : rencontres, gazette, sollicitations, enquêtes du matin et du soir.</p></a>
+      <a class="card" href="#anime" style="text-decoration:none;color:inherit"><span class="code">Méso, animé</span><h3>Le village en mouvement</h3><p>Qui rencontre qui, où, et comment le livre se répand.</p></a>
+      <a class="card" href="#micro" style="text-decoration:none;color:inherit"><span class="code">Micro</span><h3>Une réplique</h3><p>Du choix de la scène au codage par les juges.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="sources">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Ce qui circule</div>
+      <h2>Un livre, et ses points de comparaison</h2>
+      <p>Un habitant, le <b>lecteur</b>, a lu le texte source. Il en parle quand la conversation s'y prête ; il dispose de notes de lecture validées et des passages les plus pertinents. Les autres n'en savent que ce qu'on leur en dit, et ce que le modèle sait déjà.</p>
+    </div>
+    <div class="table">
+      <table>
+        <thead><tr><th>Code</th><th>Texte source</th><th>Rôle</th><th>Priorité</th></tr></thead>
+        <tbody>
+          <tr><td class="code">T1</td><td><i>Les irresponsables</i>, Johann Chapoutot (Gallimard, 2025)</td><td>Le savoir savant moralement chargé que l'on étudie</td><td>1</td></tr>
+          <tr><td class="code">T0</td><td>Un essai d'historien sans enjeu moral, de même format (à choisir)</td><td>Ligne de base : combien parle-t-on d'un livre quand rien n'est en jeu ?</td><td>1</td></tr>
+          <tr><td class="code">T3</td><td>Un autre historien, autre lecture de la même période (à choisir)</td><td>Contrôle symétrique</td><td>2</td></tr>
+          <tr><td class="code">T2</td><td>Un compte rendu journalistique de T1</td><td>Ce que change la médiation journalistique (exploratoire)</td><td>2</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note warn">Les modèles connaissent probablement déjà le livre et sa réception. Le projet traite ce savoir comme la <b>culture commune</b> du village, à ceci près qu'elle est identique chez les quarante habitants. Elle est mesurée avant toute simulation, pour ne pas confondre souvenir et circulation.</p>
+  </div>
+</section>
+
+<section class="band" id="macro">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Échelle macro</div>
+      <h2>Le plan d'expérience</h2>
+      <p>Chaque carré est une simulation de quinze journées. Sauf mention contraire, tout le village (habitants, lecteur, narrateur) est joué par Le Chonk, les rencontres sont tirées au hasard et il n'y a pas de gazette. Chaque bloc ne change qu'une chose, pour isoler la part d'une instance. Une « graine » est un tirage du hasard : rejouer une condition avec plusieurs graines mesure la variabilité.</p>
+    </div>
+    <div class="units" role="img" aria-label="Plan d'expérience : 70 simulations en priorité 1, 27 en priorité 2, 12 en priorité 3, soit 109.">
+      <h3>Priorité 1 · garantie · 70 simulations</h3>
+      <div class="blk"><span>Cœur : T1, pas de gazette</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <div class="blk"><span>Cœur : T1, gazette neutre</span><span class="sq p1" data-n="5"></span><span class="tot">5</span></div>
+      <div class="blk"><span>Cœur : T1, gazette favorable</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <div class="blk"><span>Cœur : T1, gazette critique</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <div class="blk"><span>Ligne de base : T0</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <div class="blk"><span>Fiches sans autocensure</span><span class="sq p1" data-n="5"></span><span class="tot">5</span></div>
+      <div class="blk"><span>Rencontres en chambres d'écho</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <div class="blk"><span>Village joué par un autre modèle</span><span class="sq p1" data-n="10"></span><span class="tot">10</span></div>
+      <h3>Priorité 2 · comparaisons · 27 simulations</h3>
+      <div class="blk"><span>Symétrie : T3</span><span class="sq p2" data-n="5"></span><span class="tot">5</span></div>
+      <div class="blk"><span>Lecture intégrale du livre</span><span class="sq p2" data-n="5"></span><span class="tot">5</span></div>
+      <div class="blk"><span>Mémoire sans résumé</span><span class="sq p2" data-n="3"></span><span class="tot">3</span></div>
+      <div class="blk"><span>Médiation : T2</span><span class="sq p2" data-n="3"></span><span class="tot">3</span></div>
+      <div class="blk"><span>Autres narrateurs</span><span class="sq p2" data-n="6"></span><span class="tot">6</span></div>
+      <div class="blk"><span>Habitants répartis entre plusieurs modèles</span><span class="sq p2" data-n="5"></span><span class="tot">5</span></div>
+      <h3>Priorité 3 · explorations · 12 simulations</h3>
+      <div class="blk"><span>Compères à position fixe</span><span class="sq p3" data-n="6"></span><span class="tot">6</span></div>
+      <div class="blk"><span>Durée longue : 30 journées</span><span class="sq p3" data-n="3"></span><span class="tot">3</span></div>
+      <div class="blk"><span>Auteur unique de toutes les voix</span><span class="sq p3" data-n="3"></span><span class="tot">3</span></div>
+    </div>
+    <p class="small muted">Si le débit mesuré avant le préenregistrement ne permet pas 70 simulations, toutes les conditions de priorité 1 passent à 5 graines (40 simulations), et les contrastes secondaires sont déclarés de faible puissance. Les simulations de puissance sont dans le dossier <code>analyses/puissance</code> du dépôt.</p>
+  </div>
+</section>
+
+<section class="band alt" id="meso">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Échelle méso</div>
+      <h2>Une simulation : quinze journées</h2>
+      <p>Au premier matin, seul le lecteur connaît le livre. Il en parle à ceux qu'il rencontre, qui en parlent à leur tour. Selon la condition, une gazette locale paraît aux jours 2, 5, 8 et 11, neutre, favorable ou critique. Chaque soir, un enquêteur interroge les habitants hors de leur mémoire.</p>
+    </div>
+    <figure>
+      <div class="fig">
+        <svg class="wide" viewBox="0 0 760 210" role="img" aria-label="Frise de quinze journées : le lecteur seul informé au jour 1, la gazette aux jours 2, 5, 8 et 11 selon la condition, une enquête chaque matin et chaque soir, des sollicitations chaque jour.">
+          <g class="t-s muted">
+            <text x="10" y="58">Gazette</text><text x="10" y="98">Rencontres</text><text x="10" y="138">Enquêtes</text><text x="10" y="178">Mesures</text>
+          </g>
+          <g id="days"></g>
+          <g class="t-s mono muted">
+            <text x="121" y="24" text-anchor="middle">1</text><text x="163" y="24" text-anchor="middle">2</text><text x="205" y="24" text-anchor="middle">3</text><text x="247" y="24" text-anchor="middle">4</text><text x="289" y="24" text-anchor="middle">5</text>
+            <text x="331" y="24" text-anchor="middle">6</text><text x="373" y="24" text-anchor="middle">7</text><text x="415" y="24" text-anchor="middle">8</text><text x="457" y="24" text-anchor="middle">9</text><text x="499" y="24" text-anchor="middle">10</text>
+            <text x="541" y="24" text-anchor="middle">11</text><text x="583" y="24" text-anchor="middle">12</text><text x="625" y="24" text-anchor="middle">13</text><text x="667" y="24" text-anchor="middle">14</text><text x="709" y="24" text-anchor="middle">15</text>
+          </g>
+          <g>
+            <rect x="148" y="44" width="30" height="22" rx="4" class="box-a"/><rect x="274" y="44" width="30" height="22" rx="4" class="box-a"/>
+            <rect x="400" y="44" width="30" height="22" rx="4" class="box-a"/><rect x="526" y="44" width="30" height="22" rx="4" class="box-a"/>
+          </g>
+          <g id="meet"></g>
+          <g id="enq"></g>
+          <rect x="102" y="166" width="38" height="20" rx="4" class="box-v"/><text x="121" y="180" text-anchor="middle" class="t-s">L</text>
+          <text x="150" y="180" class="t-s">Jour 1 : seul le lecteur est informé. Dès le jour 2, la diversité des versions de la thèse est mesurée chaque soir.</text>
+        </svg>
+      </div>
+      <figcaption>Quinze colonnes, une par journée. Les rectangles ambre marquent la gazette (absente dans la condition de référence). Chaque journée compte plusieurs créneaux de rencontres et deux enquêtes ; chaque habitant reçoit au moins cinq sollicitations en public et cinq en privé sur l'ensemble des quinze journées.</figcaption>
+    </figure>
+
+    <div class="prose"><h3>Une journée type</h3></div>
+    <figure>
+      <div class="fig">
+        <svg class="wide" viewBox="0 0 760 250" role="img" aria-label="Une journée : enquête du matin, créneaux de rencontres avec sollicitations et résumé de mémoire, enquête du soir.">
+          <defs><marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="f-m"/></marker></defs>
+          <line x1="20" y1="40" x2="740" y2="40" class="edge" marker-end="url(#ar3)"/>
+          <g class="t-s mono muted"><text x="20" y="28">matin</text><text x="380" y="28" text-anchor="middle">journée</text><text x="740" y="28" text-anchor="end">soir</text></g>
+          <rect x="20" y="60" width="130" height="110" rx="8" class="box-t"/>
+          <text x="85" y="84" text-anchor="middle" class="t-m" font-weight="600">Enquête</text><text x="85" y="100" text-anchor="middle" class="t-m" font-weight="600">du matin</text>
+          <text x="85" y="124" text-anchor="middle" class="t-s">position déclarée</text><text x="85" y="140" text-anchor="middle" class="t-s">climat perçu</text><text x="85" y="158" text-anchor="middle" class="t-s muted">2 questions</text>
+          <g>
+            <rect x="170" y="60" width="140" height="110" rx="8" class="box"/><rect x="320" y="60" width="140" height="110" rx="8" class="box"/><rect x="470" y="60" width="140" height="110" rx="8" class="box"/>
+            <text x="240" y="82" text-anchor="middle" class="t-m" font-weight="600">Rencontres</text><text x="390" y="82" text-anchor="middle" class="t-m" font-weight="600">Rencontres</text><text x="540" y="82" text-anchor="middle" class="t-m" font-weight="600">Rencontres</text>
+            <text x="240" y="104" text-anchor="middle" class="t-s">scènes publiques</text><text x="240" y="118" text-anchor="middle" class="t-s">et tête-à-tête</text>
+            <text x="390" y="104" text-anchor="middle" class="t-s">scènes publiques</text><text x="390" y="118" text-anchor="middle" class="t-s">et tête-à-tête</text>
+            <text x="540" y="104" text-anchor="middle" class="t-s">scènes publiques</text><text x="540" y="118" text-anchor="middle" class="t-s">et tête-à-tête</text>
+            <rect x="190" y="132" width="100" height="24" rx="12" class="box-a"/><text x="240" y="148" text-anchor="middle" class="t-s">sollicitation</text>
+            <rect x="340" y="132" width="100" height="24" rx="12" class="box-a"/><text x="390" y="148" text-anchor="middle" class="t-s">sollicitation</text>
+            <rect x="490" y="132" width="100" height="24" rx="12" class="box-a"/><text x="540" y="148" text-anchor="middle" class="t-s">sollicitation</text>
+          </g>
+          <rect x="630" y="60" width="110" height="110" rx="8" class="box-t"/>
+          <text x="685" y="84" text-anchor="middle" class="t-m" font-weight="600">Enquête</text><text x="685" y="100" text-anchor="middle" class="t-m" font-weight="600">du soir</text>
+          <text x="685" y="124" text-anchor="middle" class="t-s">version de la thèse,</text><text x="685" y="140" text-anchor="middle" class="t-s">positions, climat,</text><text x="685" y="156" text-anchor="middle" class="t-s">test du train</text>
+          <rect x="170" y="190" width="440" height="40" rx="8" class="box-v"/>
+          <text x="390" y="208" text-anchor="middle" class="t-m">Après chaque rencontre : souvenir daté, résumé par le modèle</text>
+          <text x="390" y="223" text-anchor="middle" class="t-s muted">seul canal de circulation entre habitants</text>
+          <path d="M240 170 L 240 188" class="edge-v" marker-end="url(#ar3)"/><path d="M390 170 L 390 188" class="edge-v" marker-end="url(#ar3)"/><path d="M540 170 L 540 188" class="edge-v" marker-end="url(#ar3)"/>
+          <text x="685" y="200" text-anchor="middle" class="t-s muted">hors mémoire :</text><text x="685" y="214" text-anchor="middle" class="t-s muted">l'agent ne s'en</text><text x="685" y="228" text-anchor="middle" class="t-s muted">souvient pas</text>
+        </svg>
+      </div>
+      <figcaption>La sollicitation est une question ouverte posée à heure fixe par un habitant tiré au hasard, identique dans toutes les conditions : « Quelqu'un a lu quelque chose d'intéressant ces temps-ci ? », puis « Et vous, vous en pensez quoi ? ». C'est sur ces réponses que l'on mesure le dire et le taire. Le nombre de créneaux par journée sera fixé au pilote.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band" id="anime">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Le village en mouvement</div>
+      <h2>Qui rencontre qui</h2>
+      <p>L'ordonnanceur, un programme et non un modèle, compose les scènes de chaque créneau : groupes de trois à cinq au café, au marché, à la boulangerie ou à la salle des fêtes, tête-à-tête entre proches à la maison. Le livre se répand de scène en scène depuis le lecteur.</p>
+    </div>
+    <p class="note warn"><b>Illustration du mécanisme, pas un résultat.</b> Les règles de cette animation sont simplifiées et les réponses aux sollicitations sont tirées au hasard. Elle montre la mécanique des rencontres et de la circulation, rien de ce que le village dira.</p>
+    <div id="village" class="village">
+      <div class="stage">
+        <svg viewBox="0 0 760 470" role="img" aria-label="Carte animée du village : quarante habitants se rencontrent dans quatre lieux publics et dans dix maisons ; le lecteur est marqué L."></svg>
+      </div>
+      <div class="panel">
+        <div class="row"><button class="btn primary" id="v-play" type="button" aria-pressed="false">Lancer</button><button class="btn" id="v-next" type="button">Créneau suivant</button></div>
+        <label for="v-day" style="display:grid;gap:4px"><span class="muted small">Aller à la journée</span><input id="v-day" type="range" min="1" max="15" value="1"></label>
+        <fieldset><legend>Ordonnanceur</legend>
+          <label><input type="radio" name="v-ordo" id="v-ordo-ale" value="ale" checked> Rencontres au hasard (O-ALÉ)</label>
+          <label><input type="radio" name="v-ordo" id="v-ordo-hom" value="hom"> Chambres d'écho (O-HOM)</label>
+        </fieldset>
+        <label for="v-gaz" style="display:grid;gap:4px"><span class="muted small">Gazette</span>
+          <select id="v-gaz"><option value="g0">Pas de gazette (G0)</option><option value="geq">Gazette neutre (G=)</option><option value="gp">Gazette favorable (G+)</option><option value="gm">Gazette critique (G−)</option></select></label>
+        <dl class="counts">
+          <dt>Moment</dt><dd id="c-day"></dd>
+          <dt>Habitants informés</dt><dd id="c-inf"></dd>
+          <dt>Scènes publiques</dt><dd id="c-pub"></dd>
+          <dt>Tête-à-tête</dt><dd id="c-priv"></dd>
+          <dt>Sollicitations cumulées</dt><dd id="c-soll"></dd>
+          <dt>dont position (tirage)</dt><dd id="c-dit"></dd>
+          <dt>dont taire (tirage)</dt><dd id="c-tait"></dd>
+        </dl>
+        <div class="key">
+          <span><i style="background:var(--surface);border:1.5px solid var(--muted)"></i>ne connaît pas le livre</span>
+          <span><i style="background:var(--teal-soft);border:1.5px solid var(--teal)"></i>en a entendu parler</span>
+          <span><i style="background:var(--amber)"></i>dernière réponse : une position</span>
+          <span><i style="background:var(--slate)"></i>dernière réponse : taire</span>
+          <span><i style="background:var(--surface);border:2.5px solid var(--violet)"></i>le lecteur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="micro">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Échelle micro</div>
+      <h2>Le trajet d'une réplique</h2>
+      <p>Chaque habitant reste un appel séparé au modèle, avec sa fiche et sa mémoire. Voici ce qui se passe entre le moment où l'ordonnanceur forme une scène et celui où la réplique devient une donnée.</p>
+    </div>
+    <figure>
+      <div class="fig">
+        <svg class="wide" viewBox="0 0 760 300" role="img" aria-label="Trajet d'une réplique : ordonnanceur, narrateur, orchestrateur, passe-plat, modèle, réplique ; puis mémoire, juges, indicateurs.">
+          <defs><marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 z" class="f-m"/></marker></defs>
+          <g>
+            <rect x="10" y="30" width="118" height="74" rx="8" class="box-v"/><text x="69" y="54" text-anchor="middle" class="t-m" font-weight="600">Ordonnanceur</text><text x="69" y="72" text-anchor="middle" class="t-s">forme la scène,</text><text x="69" y="86" text-anchor="middle" class="t-s">pose la question</text>
+            <rect x="158" y="30" width="118" height="74" rx="8" class="box-v"/><text x="217" y="54" text-anchor="middle" class="t-m" font-weight="600">Narrateur</text><text x="217" y="72" text-anchor="middle" class="t-s">décrit le lieu</text><text x="217" y="86" text-anchor="middle" class="t-s">et le moment</text>
+            <rect x="306" y="30" width="138" height="74" rx="8" class="box-v"/><text x="375" y="54" text-anchor="middle" class="t-m" font-weight="600">Orchestrateur</text><text x="375" y="72" text-anchor="middle" class="t-s">fiche + souvenirs</text><text x="375" y="86" text-anchor="middle" class="t-s">+ scène + échanges</text>
+            <rect x="474" y="30" width="118" height="74" rx="8" class="box"/><text x="533" y="54" text-anchor="middle" class="t-m" font-weight="600">Passe-plat</text><text x="533" y="72" text-anchor="middle" class="t-s">LiteLLM : trace</text><text x="533" y="86" text-anchor="middle" class="t-s">chaque appel</text>
+            <rect x="622" y="30" width="128" height="74" rx="8" class="box-v"/><text x="686" y="54" text-anchor="middle" class="t-m" font-weight="600">Modèle</text><text x="686" y="72" text-anchor="middle" class="t-s">Le Chonk écrit</text><text x="686" y="86" text-anchor="middle" class="t-s">la réplique</text>
+          </g>
+          <g class="edge" marker-end="url(#ar4)"><path d="M128 67 L 156 67"/><path d="M276 67 L 304 67"/><path d="M444 67 L 472 67"/><path d="M592 67 L 620 67"/></g>
+          <rect x="560" y="146" width="190" height="50" rx="10" class="box-a"/><text x="655" y="168" text-anchor="middle" class="t-m" font-weight="600">La réplique</text><text x="655" y="185" text-anchor="middle" class="t-s">« Chacun pense ce qu'il veut. »</text>
+          <path d="M686 104 L 686 144" class="edge-a" marker-end="url(#ar4)"/>
+          <rect x="306" y="220" width="210" height="62" rx="8" class="box-v"/><text x="411" y="244" text-anchor="middle" class="t-m" font-weight="600">Mémoire de l'habitant</text><text x="411" y="262" text-anchor="middle" class="t-s">souvenir résumé par le modèle,</text><text x="411" y="275" text-anchor="middle" class="t-s">relu à la prochaine rencontre</text>
+          <rect x="10" y="146" width="250" height="62" rx="8" class="box-t"/><text x="135" y="170" text-anchor="middle" class="t-m" font-weight="600">Deux modèles juges</text><text x="135" y="188" text-anchor="middle" class="t-s">position de −2 à +2, ou forme du silence :</text><text x="135" y="201" text-anchor="middle" class="t-s">ici, neutralisation (NEU)</text>
+          <rect x="10" y="236" width="250" height="46" rx="8" class="box"/><text x="135" y="257" text-anchor="middle" class="t-m" font-weight="600">Indicateurs</text><text x="135" y="273" text-anchor="middle" class="t-s">taux de taire, de neutralisation…</text>
+          <path d="M560 171 L 262 171" class="edge-t" marker-end="url(#ar4)"/><text x="478" y="164" text-anchor="middle" class="t-s muted">codée, à l'aveugle de la condition</text>
+          <path d="M620 196 C 600 240, 560 250, 518 250" class="edge-v" marker-end="url(#ar4)"/>
+          <path d="M135 208 L 135 234" class="edge" marker-end="url(#ar4)"/>
+          <path d="M375 218 L 375 106" class="edge-v dash" marker-end="url(#ar4)"/>
+          <text x="383" y="210" class="t-s muted">rencontre suivante</text>
+        </svg>
+      </div>
+      <figcaption>Le même trajet vaut pour tous les habitants et toutes les conditions. Un juge ne code jamais une réplique écrite par un modèle de sa famille ; chacun est validé contre 300 répliques codées par le chercheur.</figcaption>
+    </figure>
+    <div class="table">
+      <table>
+        <thead><tr><th>Code</th><th>Forme du silence</th><th>Exemple de forme</th></tr></thead>
+        <tbody>
+          <tr><td class="code">TAC</td><td>Silence pur</td><td>Aucune réponse au fond alors que la question est directe</td></tr>
+          <tr><td class="code">EVI</td><td>Évitement</td><td>Changement de sujet quand le livre est évoqué</td></tr>
+          <tr><td class="code">NEU</td><td>Neutralisation</td><td>« Chacun pense ce qu'il veut »</td></tr>
+          <tr><td class="code">EUP</td><td>Euphémisation</td><td>Position atténuée jusqu'à l'insignifiance</td></tr>
+          <tr><td class="code">DEL</td><td>Délégation</td><td>« Il faudrait demander à quelqu'un qui l'a lu »</td></tr>
+          <tr><td class="code">ALI</td><td>Alignement apparent</td><td>Position exprimée contraire à la position déclarée (n'entre pas dans le taux de taire)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="mesures">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Ce que l'on mesure</div>
+      <h2>Des indicateurs reliés aux hypothèses</h2>
+    </div>
+    <div class="table">
+      <table>
+        <thead><tr><th>Indicateur</th><th>Définition</th><th>Sert à</th></tr></thead>
+        <tbody>
+          <tr><td><b>Taux de taire</b></td><td>Part des sollicitations sans position exprimée (TAC, EVI, NEU, EUP, DEL), chez les habitants informés</td><td>HT1, variable principale</td></tr>
+          <tr><td><b>Part des formes dans le taire</b></td><td>Neutralisation, euphémisation et délégation rapportées à l'ensemble du taire</td><td>HT2</td></tr>
+          <tr><td><b>Diversité des versions</b></td><td>Chaque soir, distance entre les versions de la thèse recueillies, mesurée deux fois : par le sens (plongements) et par les mots (trigrammes)</td><td>HT3</td></tr>
+          <tr><td><b>Sensibilité à l'interlocuteur et au climat</b></td><td>Poids de la position entendue juste avant, et du climat perçu le matin, sur la position exprimée</td><td>HT4</td></tr>
+          <tr><td><b>Taux de conservation</b></td><td>Part des propositions du livre encore présentes dans une version, à même distance du lecteur, dans le village et dans des chaînes linéaires</td><td>Trivialité (HO8)</td></tr>
+          <tr><td><b>Écart entre cadres</b></td><td>Position déclarée en enquête contre position exprimée en scène</td><td>Hypothèses secondaires</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="prealables">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Avant les simulations</div>
+      <h2>Les étapes préalables</h2>
+    </div>
+    <ol class="timeline">
+      <li><time>Étape −1</time><p><b>Accès et débit.</b> Une journée simulée pour relever l'identifiant exact du modèle et mesurer tokens et durée.</p></li>
+      <li><time>Étape 0a</time><p><b>Profil des modèles.</b> Réponses sans persona à des items d'enquête publics, test de connaissance préalable des livres, test sans public de la neutralité, trois paraphrases des consignes.</p></li>
+      <li><time>Étape 0b</time><p><b>Dyades contrôlées.</b> Chaque persona face à un interlocuteur favorable puis critique : environ 480 courts dialogues, pour mesurer la complaisance.</p></li>
+      <li><time>Étape 1</time><p><b>Cohérence des personas.</b> Et contrôle que la consigne d'autocensure change bien le comportement.</p></li>
+      <li><time>Étapes 2 à 5</time><p><b>Matériaux.</b> Grille des propositions du livre, livres de codes, textes de gazette appariés, chaînes linéaires de dix agents.</p></li>
+      <li><time>Étape 6</time><p><b>Pilote.</b> Trois simulations hors analyse : variance entre graines, puissance, saturation sur quinze journées.</p></li>
+    </ol>
+    <div class="next"><a class="btn" href="cadre.html">Retour au cadre</a><a class="btn primary" href="technique.html">Continuer : la technique</a></div>
+  </div>
+</section>
+</main>
+<script>
+/* Carrés du plan d'expérience et frise des quinze journées */
+document.querySelectorAll(".units .sq").forEach(function(el){var n=+el.dataset.n;for(var i=0;i<n;i++)el.appendChild(document.createElement("i"))});
+(function(){
+  var NS="http://www.w3.org/2000/svg";
+  function mk(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+  var meet=document.getElementById("meet"),enq=document.getElementById("enq");
+  for(var d=0;d<15;d++){var x=121+d*42;
+    for(var s=0;s<3;s++){mk("rect",{x:x-15+s*10.5,y:86,width:8,height:20,rx:2,class:s===1?"box-t":"box-v"},meet)}
+    mk("circle",{cx:x-8,cy:132,r:4,class:"f-t"},enq);mk("circle",{cx:x+8,cy:132,r:4,class:"f-t"},enq);
+  }
+})();
+</script>
+<script src="assets/village.js"></script>

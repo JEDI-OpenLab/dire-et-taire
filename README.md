@@ -32,6 +32,7 @@ Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.m
 | `docs/revues/` | Revues adversariales successives des documents de conception |
 | `docs/technique/` | Socle technique : station Ubuntu, passe-plat LiteLLM, traces Langfuse, agents, bureau des agents |
 | `docs/visualisations/` | Carte des concepts du C4 : traçabilité des concepts jusqu'aux mesures et aux règles de décision |
+| `site/` | Mini-site de présentation du projet (publié par GitHub Pages) ; `site-src/` contient ses fragments et le script qui l'assemble (`python3 site-src/build.py`) |
 | `analyses/puissance/` | Simulations de puissance des règles de décision (issues de la revue n° 2), à rejouer avec les variances du pilote |
 | `presentation/` | Présentation d'ensemble du projet (antérieure aux hypothèses de travail : à mettre à jour) |
 

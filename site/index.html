@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dire et taire</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dire et taire : un village de 40 agents génératifs pour étudier la circulation d'un savoir savant, le dire et le taire. Recherche en sciences de l'information et de la communication, JEDI-OpenLab, Centrale Lille.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<nav class="site-nav" aria-label="Sections du site"><div class="in">
+<a class="brand" href="index.html">Dire et taire <span>· village simulé</span></a>
+<ul><li><a href="index.html" aria-current="page">Accueil</a></li><li><a href="cadre.html">Cadre scientifique</a></li><li><a href="scenario.html">Le scénario C4</a></li><li><a href="technique.html">Technique</a></li><li><a href="feuille-de-route.html">Feuille de route</a></li></ul></div></nav>
+<main>
+<section class="band">
+  <div class="wrap" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));align-items:center;gap:28px">
+    <div style="display:grid;gap:16px;min-width:0">
+      <div class="eyebrow">Recherche en SIC · village simulé · scénario C4</div>
+      <h1>Dire et taire</h1>
+      <p class="lead">Un village de quarante agents génératifs, une thèse d'historien qui y circule, et une question simple à poser, difficile à trancher : quand un agent se tait, qui se tait ?</p>
+      <p class="small muted">Phase de conception, octobre 2026. Le protocole est écrit, relu et prêt à être préenregistré ; aucune simulation n'a encore été jouée.</p>
+      <div class="row" style="display:flex;flex-wrap:wrap;gap:10px">
+        <a class="btn primary" href="scenario.html">Voir comment le village fonctionne</a>
+        <a class="btn" href="cadre.html">Lire le cadre scientifique</a>
+      </div>
+    </div>
+    <figure>
+      <div class="fig" style="padding:8px">
+        <svg viewBox="0 0 460 330" role="img" aria-label="Une scène au café : trois réponses à la même question, une position, une phrase neutre, un silence ; six instances convergent vers la phrase neutre.">
+          <g class="t-s mono muted">
+            <text x="20" y="22">modèle</text><text x="88" y="22">fiche</text><text x="140" y="22">orchestrateur</text>
+            <text x="250" y="22">ordonnanceur</text><text x="352" y="22">cadres</text><text x="404" y="22">concepteur</text>
+          </g>
+          <g class="edge-v" stroke-opacity=".6">
+            <path d="M42 28 C 120 80, 300 70, 352 128"/><path d="M103 28 C 160 80, 300 80, 356 128"/><path d="M180 28 C 230 80, 320 90, 360 128"/>
+            <path d="M285 28 C 300 70, 350 90, 364 128"/><path d="M372 28 C 372 70, 368 100, 368 128"/><path d="M430 28 C 420 70, 380 100, 372 128"/>
+          </g>
+          <rect x="272" y="128" width="176" height="34" rx="8" class="box-s"/>
+          <text x="360" y="150" text-anchor="middle" class="t-m">Chacun pense ce qu'il veut.</text>
+          <path d="M350 162 L 344 182 L 362 162" class="box-s"/>
+          <rect x="14" y="128" width="190" height="34" rx="8" class="box-a"/>
+          <text x="109" y="150" text-anchor="middle" class="t-m">Ce livre dit quelque chose.</text>
+          <path d="M100 162 L 112 186 L 118 162" class="box-a"/>
+          <rect x="196" y="186" width="48" height="28" rx="8" class="box-s dash"/>
+          <text x="220" y="204" text-anchor="middle" class="t-m">…</text>
+          <ellipse cx="230" cy="285" rx="150" ry="22" class="box"/>
+          <g>
+            <circle cx="112" cy="222" r="15" class="f-a"/><circle cx="214" cy="244" r="15" class="f-s"/>
+            <circle cx="300" cy="244" r="15" class="f-line"/><circle cx="350" cy="218" r="15" class="f-s"/>
+          </g>
+          <text x="230" y="322" text-anchor="middle" class="t-s muted">Au café, la même question : « Et vous, vous en pensez quoi ? »</text>
+        </svg>
+      </div>
+      <figcaption>Trois réponses possibles : une position (ambre), une phrase qui ne dit rien (ardoise), un silence (pointillés). La phrase neutre n'est pas l'acte d'un seul agent : six instances y prennent part.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="band alt" id="projet">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Le projet en bref</div>
+      <h2>Un laboratoire pour observer ce qui ne circule pas</h2>
+      <p>Saint-Aubert-sur-Lys est un village fictif de quarante habitants. Chacun est joué par un modèle de langage, avec une fiche (âge, métier, valeurs, disposition à s'autocensurer), une mémoire et des proches. Un habitant a lu un livre d'histoire récent, <i>Les irresponsables</i> de Johann Chapoutot (Gallimard, 2025), qui retrace comment des élites libérales et conservatrices ont porté Hitler au pouvoir. On le laisse en parler, et l'on observe ce que le village en dit, en déforme ou en tait.</p>
+      <p>La théorie de la spirale du silence (Elisabeth Noelle-Neumann) sert d'instrument : elle oblige à regarder ce qui ne se dit pas, et elle fournit des mesures éprouvées. Mais le projet ne demande pas si des machines « reproduisent » la spirale. Il pose une autre question, qui vient des sciences de l'information et de la communication : <b>quand une phrase sort de la bouche d'un agent, qui parle vraiment ?</b> Le modèle et son fournisseur, la fiche écrite par le concepteur, le programme qui assemble la mémoire, celui qui organise les rencontres, le cadre de la scène, le chercheur lui-même. Le projet appelle cette production conjointe la <b>co-agentivité</b>, et cherche à mesurer la part de chacun.</p>
+      <p>L'enjeu dépasse le village. Les simulations sociales génératives se multiplient, en sciences sociales comme dans l'industrie. Savoir d'où viennent leurs silences et leurs consensus, c'est savoir ce qu'elles montrent du monde et ce qu'elles montrent d'elles-mêmes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="histoire">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">L'histoire</div>
+      <h2>D'un nouveau modèle à un protocole de recherche</h2>
+    </div>
+    <ol class="timeline">
+      <li><time>Octobre 2026</time><p><b>Un nouveau modèle à expérimenter.</b> Mistral publie en préversion son modèle Large 4, surnommé « Le Chonk ». L'AMUE, qui fédère les établissements d'enseignement supérieur, en ouvre l'expérimentation à un petit groupe de testeurs, dont l'ingénieur pédagogique de Centrale Lille qui porte ce projet.</p></li>
+      <li><time>Octobre 2026</time><p><b>Un village plutôt qu'un agent.</b> Parmi les prototypes envisagés, le village simulé s'impose : six expériences (C0 à C5) pour étudier la circulation des énoncés, des chaînes de transmission à la rumeur, de la convention au savoir savant.</p></li>
+      <li><time>Octobre 2026</time><p><b>Le scénario C4.</b> Faire circuler une thèse d'historien moralement chargée, et la comparer à un livre sans enjeu. La spirale du silence devient l'instrument, la co-agentivité la clef de lecture.</p></li>
+      <li><time>15 octobre 2026</time><p><b>Revue adversariale n° 1.</b> Le protocole est relu avec la consigne de le réfuter : statut des énoncés, contrastes de référence, règles de décision à trois issues.</p></li>
+      <li><time>16 octobre 2026</time><p><b>Revue adversariale n° 2.</b> Un second modèle, sans rien connaître du projet, relève 46 objections, dont 5 bloquantes. Dix-sept décisions sont prises ; le scénario passe en version 11 et le cadre en version 6.2.</p></li>
+      <li><time>Ensuite</time><p><b>La station, le pilote, le préenregistrement.</b> Installation d'une station dédiée, mesure du débit sur une journée simulée, dépôt daté des hypothèses, puis les simulations. Voir la <a href="feuille-de-route.html">feuille de route</a>.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band alt" id="problematique">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">La problématique</div>
+      <h2>Des agents qui n'ont rien à craindre</h2>
+    </div>
+    <blockquote class="thesis">
+      <p>Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ?</p>
+      <footer>Problématique du scénario C4</footer>
+    </blockquote>
+    <div class="xy">
+      <div class="prose"><p><b>X</b>, ce qu'on observe. Un dispositif met en scène du dire et du taire. Rien n'oblige le silence à apparaître : si tout le monde parle, c'est aussi une réponse.</p></div>
+      <div class="prose y"><p><b>Y</b>, la tension. Chez les humains, on se tait par peur de l'isolement. Un modèle de langage n'a ni réputation ni corps social ; il est réglé pour répondre, et aussi pour ne pas prendre parti. S'il se tait, ce n'est pas par peur. Alors d'où vient le silence ?</p></div>
+    </div>
+    <p class="note">La clef de lecture lève la tension : si l'agentivité est distribuée, des agents qui n'ont rien à craindre peuvent produire du taire, parce qu'ils ne parlent jamais seuls. La fiche, les cadres, l'ordonnanceur, le concepteur et, derrière le modèle, son fournisseur y prennent part.</p>
+  </div>
+</section>
+
+<section class="band" id="hypotheses">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Les hypothèses</div>
+      <h2>Quatre réponses possibles, chacune réfutable</h2>
+      <p>Chaque hypothèse de travail est assortie d'une règle de décision déposée avant toute simulation. Elle aboutit à l'une de trois issues : <b>soutenue</b>, <b>réfutée</b> ou <b>indéterminée</b>. Une issue indéterminée est un résultat, rapporté comme tel.</p>
+    </div>
+    <div class="ht">
+      <article><span class="num">HT1</span><div>
+        <h3>Le taire est co-produit par l'agencement <span class="tag">hypothèse centrale</span></h3>
+        <p>Le dire et le taire varient davantage avec au moins une instance non individuelle (la scène publique ou privée d'abord, puis la gazette, l'ordonnancement des rencontres, le modèle) qu'avec la disposition à s'autocensurer écrite dans la fiche des agents.</p>
+        <dl><dt>Ce qui la soutiendrait</dt><dd>Sur le taux de taire, l'effet de la scène, ou d'un autre contraste, dépasse d'au moins 5 points celui de la fiche, même quand la fiche reçoit son étendue maximale.</dd>
+        <dt>Ce qui la réfuterait</dt><dd>La fiche pèse plus que toutes les autres instances.</dd></dl>
+      </div></article>
+      <article><span class="num">HT2</span><div>
+        <h3>Le taire prend la forme d'un dire vide</h3>
+        <p>Des agents conçus pour toujours répondre ne se taisent pas : ils neutralisent, euphémisent, renvoient à d'autres. Le silence se loge dans la parole.</p>
+        <dl><dt>Ce qui la soutiendrait</dt><dd>Ces formes font plus de la moitié du taire, et elles sont plus fréquentes pour la thèse moralement chargée que pour un livre sans enjeu.</dd>
+        <dt>Ce qui la réfuterait</dt><dd>Les silences purs dominent, ou la neutralisation est la même pour les deux livres.</dd></dl>
+      </div></article>
+      <article><span class="num">HT3</span><div>
+        <h3>La thèse converge vers le lieu commun</h3>
+        <p>Parce que les mêmes instances écrivent toutes les voix, les versions de la thèse perdent leurs aspérités et se rapprochent d'une formule consensuelle.</p>
+        <dl><dt>Ce qui la soutiendrait</dt><dd>La diversité des versions baisse plus vite dans le village que dans une simple chaîne de transmission, et plus vite avec un seul modèle qu'avec plusieurs.</dd>
+        <dt>Ce qui la réfuterait</dt><dd>La diversité ne baisse pas plus vite que par la seule transmission.</dd></dl>
+      </div></article>
+      <article><span class="num">HT4</span><div>
+        <h3>Une socialité sans climat</h3>
+        <p>Ce qui ressemble à du conformisme serait un alignement sur l'interlocuteur du moment, et non une lecture du climat d'opinion. Une suite de face-à-face plutôt qu'une spirale.</p>
+        <dl><dt>Ce qui la soutiendrait</dt><dd>La position exprimée suit celle de l'interlocuteur ; l'effet du climat perçu reste sous un seuil (0,05) inférieur à l'effet moyen mesuré chez les humains (0,10).</dd>
+        <dt>Ce qui la réfuterait</dt><dd>Le climat perçu pèse au-delà de ce seuil, à interlocuteur constant.</dd></dl>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="demarche">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Ce qu'on va faire</div>
+      <h2>Faire varier une instance à la fois</h2>
+      <p>Pour mesurer la part de chaque instance, on la fait varier en gardant le reste identique : un autre modèle pour tout le village, des rencontres organisées en chambres d'écho, une gazette favorable ou critique, des scènes publiques ou privées, des fiches sans consigne d'autocensure. On compare ensuite les effets dans une même unité.</p>
+    </div>
+    <div class="cards five">
+      <div class="card"><span class="code">1 · Préparer</span><h3>Station et mesures préalables</h3><p>Installer la station, mesurer le débit sur une journée simulée, profiler les modèles, tester ce qu'ils savent déjà du livre.</p></div>
+      <div class="card"><span class="code">2 · Déposer</span><h3>Préenregistrement en deux temps</h3><p>Hypothèses et règles de décision avant toute génération ; paramètres techniques après un pilote qui n'entre pas dans l'analyse.</p></div>
+      <div class="card"><span class="code">3 · Jouer</span><h3>109 simulations à priorités</h3><p>70 garanties pour trancher l'hypothèse centrale, 27 comparaisons, 12 explorations. Quinze journées chacune.</p></div>
+      <div class="card"><span class="code">4 · Coder</span><h3>Deux juges et un chercheur</h3><p>Chaque réplique est codée par deux modèles d'autres familles, validés contre un codage humain et un recodage à l'aveugle.</p></div>
+      <div class="card"><span class="code">5 · Publier</span><h3>Billets, puis articles</h3><p>Méthode et dispositif d'abord, sur le carnet de recherche ; résultats sur le contenu après l'élection présidentielle de 2027.</p></div>
+    </div>
+    <div class="next"><span class="muted small">Le site suit l'ordre de lecture des documents du projet.</span><a class="btn primary" href="cadre.html">Continuer : le cadre scientifique</a></div>
+  </div>
+</section>
+</main>
+<footer class="site-foot"><div class="in">
+<span>JEDI-OpenLab, Centrale Lille. Projet de recherche en sciences de l'information et de la communication mené par Jean Debaecker.</span>
+<span><a href="https://jediopenlab.hypotheses.org/">Carnet de recherche</a> · <a href="https://github.com/JEDI-OpenLab/dire-et-taire/">Documents et code</a></span>
+</div></footer>
+</body>
+</html>
