@@ -196,3 +196,18 @@ td.n{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 
 @media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
 .cards.five{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
+
+/* Glossaire */
+.glo-tools{display:grid;gap:6px;max-width:70ch}
+.glo-tools input{font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.glo-toc{font-size:.9rem;line-height:1.9}
+.glo{margin:0;display:grid;gap:0}
+.glo-entry{padding:14px 0;border-top:1px solid var(--line);display:grid;gap:4px;max-width:80ch}
+.glo-entry dt{font-family:var(--f-display);font-weight:650;font-size:1.08rem}
+.glo-entry dt a{color:var(--ink);text-decoration:none}
+.glo-entry dt a:hover{text-decoration:underline}
+.glo-entry dd{margin:0}
+.glo-entry .meta{font-size:.88rem;color:var(--muted)}
+.glo-entry .meta span{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--violet);margin-right:4px}
+.glo-entry dt:target,.glo-entry:has(dt:target){background:var(--violet-soft);border-radius:6px;padding-inline:8px}
+.glo-sec:nth-of-type(even){background:var(--surface);border-block:1px solid var(--line)}

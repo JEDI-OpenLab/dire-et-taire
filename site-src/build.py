@@ -1,7 +1,7 @@
 """Assemble les pages du site à partir des fragments : en-tête, navigation, pied de page.
 Produit site/*.html (documents complets, pour GitHub Pages). Avec --artefact, produit aussi
 site-artefact/index.html (sans doctype, pour un aperçu en artefact). Usage : python3 build.py"""
-import pathlib, sys
+import pathlib, sys, re, html, unicodedata
 
 SRC = pathlib.Path(__file__).parent
 OUT = SRC.parent / "site"
@@ -11,8 +11,9 @@ GITHUB = "https://github.com/JEDI-OpenLab/dire-et-taire/blob/main/"
 PAGES = [
     ("index.html", "Accueil", "Dire et taire"),
     ("cadre.html", "Cadre scientifique", "Cadre scientifique · Dire et taire"),
-    ("scenario.html", "Le scénario C4", "Le scénario C4 · Dire et taire"),
+    ("scenario.html", "Le scénario", "Le scénario · Dire et taire"),
     ("technique.html", "Technique", "Technique · Dire et taire"),
+    ("glossaire.html", "Glossaire", "Glossaire · Dire et taire"),
     ("feuille-de-route.html", "Feuille de route", "Feuille de route · Dire et taire"),
 ]
 
@@ -24,6 +25,55 @@ HEAD = """<title>{title}</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
 <link rel="stylesheet" href="assets/site.css">
 """
+
+
+GLOSSAIRE_MD = SRC.parent / "docs" / "glossaire.md"
+
+def slug(t):
+    t = unicodedata.normalize("NFD", t.lower())
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+def inline(t):
+    t = html.escape(t, quote=False)
+    t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
+    t = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<i>\1</i>", t)
+    t = re.sub(r"`(.+?)`", r"<code>\1</code>", t)
+    return t
+
+def glossaire():
+    """Transforme les tableaux de docs/glossaire.md en fiches, rubrique par rubrique."""
+    lines = GLOSSAIRE_MD.read_text(encoding="utf-8").splitlines()
+    secs, cur, head, seen = [], None, None, set()
+    for l in lines:
+        m = re.match(r"^## (\d+)\. (.+)", l)
+        if m:
+            if m.group(2).startswith("Références"): cur = None; continue
+            cur = {"t": m.group(2), "rows": []}; secs.append(cur); head = None; continue
+        if cur is None or not l.startswith("|") or l.startswith("|---"): continue
+        cells = [c.strip() for c in l.strip().strip("|").split("|")]
+        if head is None: head = cells; continue
+        cur["rows"].append(dict(zip(head, cells)))
+    toc, body = [], []
+    for sec in secs:
+        sid = slug(sec["t"]); toc.append(f'<a href="#{sid}">{html.escape(sec["t"])}</a>')
+        items = []
+        for r in sec["rows"]:
+            vals = list(r.values()); term = vals[0].strip("*")
+            eid = slug(term)
+            while eid in seen: eid += "-2"
+            seen.add(eid)
+            parts = [f'<dt id="{eid}"><a href="#{eid}">{inline(term)}</a></dt>', f'<dd class="def">{inline(vals[1])}</dd>']
+            for k, v in list(r.items())[2:]:
+                if v: parts.append(f'<dd class="meta"><span>{html.escape(k)}</span> {inline(v)}</dd>')
+            items.append('<div class="glo-entry">' + "".join(parts) + "</div>")
+        body.append(f'<section class="band glo-sec" id="{sid}"><div class="wrap"><h2>{html.escape(sec["t"])}</h2><dl class="glo">' + "".join(items) + "</dl></div></section>")
+    out = "\n".join(body)
+    # Le site ne présente qu'un scénario : les renvois « C4 » deviennent « scénario »
+    out = re.sub(r'<div class="glo-entry"><dt id="experiences-c0-a-c5">.*?</div>', "", out)
+    out = re.sub(r"\bdu C4\b", "du scénario", out)
+    out = re.sub(r"\bC4\b", "scénario", out)
+    return " · ".join(toc), out
 
 def nav(current):
     cur = ' aria-current="page"'
@@ -47,6 +97,9 @@ def build():
     if art: ART.mkdir(exist_ok=True)
     for f, label, title in PAGES:
         body = (SRC / f).read_text(encoding="utf-8").replace("{GH}", GITHUB)
+        if "{GLOSSAIRE}" in body:
+            toc, gl = glossaire()
+            body = body.replace("{TOC}", toc).replace("{GLOSSAIRE}", gl)
         inner = HEAD.format(title=title) + nav(f) + body + FOOT
         full = '<!doctype html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + inner.replace(nav(f), "</head>\n<body>\n" + nav(f), 1) + "</body>\n</html>\n"
         (OUT / f).write_text(full, encoding="utf-8")

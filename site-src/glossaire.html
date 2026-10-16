@@ -1,0 +1,73 @@
+<main>
+<section class="band">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Glossaire · version 3</div>
+      <h1>Les mots du projet</h1>
+      <p class="lead">Pour chaque notion : la définition retenue dans le projet, qui l'a forgée ou popularisée, la référence d'origine et, quand c'est utile, ce avec quoi il ne faut pas la confondre.</p>
+    </div>
+    <div class="glo-tools">
+      <label for="glo-q" class="small muted">Chercher une notion</label>
+      <input id="glo-q" type="search" placeholder="climat, architexte, graine…" autocomplete="off">
+      <nav class="glo-toc" aria-label="Rubriques du glossaire">{TOC}</nav>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="co-agentivite-en-clair">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Notion clef</div>
+      <h2>La co-agentivité, en clair</h2>
+      <p>C'est la clef de lecture de tout le projet. Elle tient en une question : <b>quand un habitant du village dit quelque chose, qui parle vraiment ?</b></p>
+      <p>La phrase sort d'un appel au modèle, mais elle n'est pas l'acte de cet agent. Elle est produite ensemble par six instances :</p>
+      <ol>
+        <li><b>Le modèle et son fournisseur</b> : il écrit la phrase, avec ses réglages (complaisance envers l'interlocuteur, neutralité sur les sujets controversés) et ce qu'il sait déjà du livre.</li>
+        <li><b>La fiche du persona</b> : âge, valeurs, disposition à s'autocensurer, écrites par le concepteur.</li>
+        <li><b>L'orchestrateur</b> : le programme qui assemble la consigne et choisit les souvenirs que l'agent « a ».</li>
+        <li><b>L'ordonnanceur</b> : le programme qui décide qui rencontre qui, en public ou en privé.</li>
+        <li><b>Les cadres d'énonciation</b> : scène publique ou tête-à-tête, gazette, enquête confidentielle.</li>
+        <li><b>Le concepteur</b> : le chercheur, qui a écrit tout le reste et choisi comment mesurer.</li>
+      </ol>
+      <p>C'est l'idée d'<b>agentivité distribuée</b> de la sociologie de la traduction (Callon, Latour, Akrich) et de l'action située (Suchman), proche de l'<b>architexte</b> de Jeanneret et Souchier en SIC : un texte n'a jamais un seul auteur.</p>
+      <p>Elle change la question de recherche. On ne demande plus si les agents « reproduisent » la spirale du silence, mais <b>quelle instance produit le dire et le taire, et dans quelle proportion</b>. Elle lève aussi la tension de la problématique : des agents qui n'ont rien à craindre peuvent produire du silence, parce qu'ils ne parlent jamais seuls.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Un vocabulaire, une méthode à part</h3><p>Le projet prend à l'acteur-réseau son vocabulaire (actants, symétrie, agentivité sans intention), pas sa méthode. La mesure passe par un plan d'expériences : on fait varier une instance à la fois et l'on compare les effets. La liste des six instances est un <b>découpage du concepteur</b>, assumé ; les interactions entre instances sont rapportées.</p></div>
+      <div class="card"><h3>À ne pas confondre</h3><p>Avec la co-agentivité des sciences de l'éducation et de la didactique des langues, issue de l'agentivité intentionnelle de Bandura, qui dit que l'humain doit garder un contrôle critique sur l'IA (Godwin-Jones, 2024). Celle du projet décrit qui agit ; elle ne prescrit rien.</p></div>
+    </div>
+    <p class="small"><a href="cadre.html#co-agentivite">Voir le schéma des six instances dans le cadre scientifique</a></p>
+  </div>
+</section>
+
+<section class="band" id="climat-en-clair">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Notion clef</div>
+      <h2>Le climat d'opinion, en clair</h2>
+      <p>Dans la théorie de la spirale du silence (Noelle-Neumann), chacun évalue en permanence, par une sorte de <b>sens quasi statistique</b>, quel avis domine autour de lui et lequel gagne du terrain. C'est le <b>climat d'opinion</b>. Celui qui se croit minoritaire tend à se taire, par peur de l'isolement ; son silence rend l'avis dominant plus visible encore, et la spirale s'enclenche.</p>
+      <p>Dans le village, le climat n'est pas observé dans la tête des agents : c'est une <b>réponse déclarée</b>. Chaque matin et chaque soir, l'enquêteur demande : « Selon toi, quelle part du village est d'accord avec ce livre ? » (de 0 à 100 %). On peut alors comparer ce climat perçu à la distribution réelle des positions, et voir s'il pèse sur ce que l'agent dit ensuite.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><h3>Double climat</h3><p>L'écart entre ce que les gens pensent réellement et ce que les médias laissent croire qu'ils pensent. Dans le village, la gazette favorable ou critique sert à le provoquer ; la gazette neutre sert de référence.</p></div>
+      <div class="card"><h3>Ce que teste HT4</h3><p>L'hypothèse « socialité sans climat » : les agents s'aligneraient sur leur interlocuteur du moment plutôt que sur le climat. Le test : l'effet du climat perçu doit rester sous 0,05, en dessous de l'effet moyen mesuré chez les humains (0,10).</p></div>
+      <div class="card"><h3>À ne pas confondre</h3><p>Avec l'opinion réelle du village : le climat est une perception. Et avec la <b>tendance perçue</b>, l'avis qui gagne ou perd du terrain, recueillie à part.</p></div>
+    </div>
+  </div>
+</section>
+
+{GLOSSAIRE}
+
+<script>
+/* Filtre du glossaire : masque les notions qui ne contiennent pas le texte cherché */
+(function(){
+  var q=document.getElementById("glo-q");if(!q)return;
+  function norm(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
+  q.addEventListener("input",function(){
+    var v=norm(q.value.trim());
+    document.querySelectorAll(".glo-entry").forEach(function(e){e.hidden=v&&norm(e.textContent).indexOf(v)<0});
+    document.querySelectorAll(".glo-sec").forEach(function(s){s.hidden=!s.querySelector(".glo-entry:not([hidden])")});
+  });
+})();
+</script>
+</main>
