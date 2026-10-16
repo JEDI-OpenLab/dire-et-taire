@@ -6,14 +6,18 @@ Un village d'agents génératifs pour étudier la circulation d'un savoir savant
 
 Projet de recherche en sciences de l'information et de la communication, mené dans le cadre de JEDI-OpenLab (Centrale Lille).
 
+## Clef de lecture : la co-agentivité
+
+Dans le village, une réplique n'est jamais l'acte d'un seul agent. Elle est co-produite par un agencement : le modèle de langage (et, derrière lui, son fournisseur), la fiche du persona, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur. Le projet cherche à savoir quelle instance produit le dire et le taire, sous quelles formes et dans quelles proportions.
+
 ## Hypothèses de travail
 
 | Code | Hypothèse |
 |---|---|
-| HT1 | Le taire comme dire vide : les agents ne se taisent pas, ils neutralisent |
-| HT2 | Le taire est écrit par le dispositif : les cadres d'énonciation comptent plus que les attributs des personas |
-| HT3 | La trivialité converge vers le lieu commun : la thèse savante devient formule consensuelle |
-| HT4 | Une socialité sans climat : alignement sur l'interlocuteur plutôt que lecture du climat d'opinion |
+| HT1 | Le taire est co-produit par l'agencement : cadres, ordonnancement et modèle pèsent plus que les dispositions attribuées aux agents *(hypothèse centrale)* |
+| HT2 | Le taire prend la forme d'un dire vide : les agents ne se taisent pas, ils neutralisent |
+| HT3 | La trivialité co-produite converge vers le lieu commun : la thèse savante devient formule consensuelle |
+| HT4 | Une socialité sans climat : alignement local sur l'interlocuteur plutôt que lecture du climat d'opinion |
 
 ## Contenu du dépôt
 

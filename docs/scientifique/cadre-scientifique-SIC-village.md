@@ -1,172 +1,189 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Complète « prototypes-agentiques-le-chonk.md », « scenario-C4-circulation-savoir-savant.md » et « projet-spirale-du-silence-formalisation.md ». Version 4 du 16 octobre 2026, révisée après la revue adversariale n° 1 (« revue-adversariale-1-cadre-et-C4.md ») et complétée par la notion d'agentivité distribuée.*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 5 du 16 octobre 2026 : réécriture autour de la co-agentivité, clef de lecture de l'ensemble du projet. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
 
 ---
 
-## 1. Construire l'objet
+## 1. La clef de lecture : la co-agentivité
 
-### 1.1 De l'objet concret à l'objet de recherche
+### 1.1 Qui parle quand un agent parle ?
 
-En reprenant la distinction de Jean Davallon (2004) entre objet concret, objet scientifique et objet de recherche :
+Le village de Saint-Aubert-sur-Lys est peuplé d'« agents ». Le mot est trompeur. Quand un habitant dit quelque chose au café, la phrase n'est pas l'acte d'un individu : elle est **co-produite** par un agencement d'instances, humaines et non humaines.
+
+| Instance | Ce qu'elle fait à l'énoncé | Ce qui la porte |
+|---|---|---|
+| **Le modèle de langage** | Il écrit la phrase, avec ses régularités, ses préférences et ses réglages (complaisance, neutralité apprise) | Ses données d'entraînement et, derrière lui, son **fournisseur** et les règles de conduite qu'il lui impose |
+| **La fiche du persona** | Elle oriente le ton, les valeurs, les dispositions attribuées | Le concepteur, qui l'a écrite |
+| **L'orchestrateur** | Il assemble la consigne et choisit les souvenirs qui y figurent, donc ce que l'agent « sait » | Le code, et le modèle qui résume les souvenirs |
+| **L'ordonnanceur** | Il décide de la rencontre : qui parle à qui, où, dans quel type de scène | Le code, et les règles fixées par le concepteur |
+| **Le concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations | Le chercheur lui-même |
+
+L'énoncé est l'acte d'un **agencement**. On appelle **co-agentivité** cette production conjointe des énoncés par le modèle, le dispositif et le concepteur.
+
+### 1.2 Agent et agentivité : une distinction à tenir
+
+- Un **agent** (sens informatique) est un programme qui produit des actions ou des énoncés : ici, un habitant du village.
+- L'**agentivité** (sens des sciences sociales) est la capacité d'agir, de faire une différence dans le cours des choses.
+
+Que le village soit peuplé d'agents ne dit rien de l'endroit où se loge l'agentivité. **C'est précisément la question de recherche.**
+
+### 1.3 Ancrage théorique
+
+Le projet adopte une conception **distribuée** de l'agentivité, issue de la sociologie des sciences et des techniques et largement reprise en SIC :
+- l'action est le fait de réseaux d'**actants** humains et non humains, qui se traduisent les uns les autres (Callon, 1986 ; Latour, 2006) ;
+- les objets techniques portent des **scripts** inscrits par leurs concepteurs, qui prescrivent des rôles à leurs utilisateurs (Akrich, 1987 ; Akrich et Latour, 1992) ;
+- l'action humaine avec les machines est **située** et se reconfigure dans la relation (Suchman, 2007) ;
+- en SIC, l'**architexte** désigne l'outil qui régit en amont l'écriture et en préfigure les formes (Jeanneret et Souchier, 1999 ; Souchier, Jeanneret et Le Marec, 2003), et l'**énonciation éditoriale** tout ce qui donne forme à un texte au-delà de son auteur apparent (Souchier, 1998).
+
+Ces notions convergent : un texte n'a jamais un seul auteur. Le village pousse cette idée à sa limite, puisque **chaque réplique est écrite par une machine, à partir d'une consigne écrite par un humain, dans une situation organisée par du code**.
+
+### 1.4 Ce que la clef de lecture change
+
+| Sans la clef de lecture | Avec la clef de lecture |
+|---|---|
+| On demande si les agents « reproduisent » des comportements humains | On demande **quelle instance de l'agencement** produit ce que l'on observe |
+| Un écart aux humains est un défaut du simulateur | Un écart aux humains révèle **la part d'une instance** (le modèle, le fournisseur, le dispositif) |
+| Le concepteur est extérieur à l'expérience | Le concepteur est **une instance parmi d'autres**, dont la part est documentée |
+| Les conditions expérimentales sont des variantes techniques | Chaque condition **fait varier une instance** pour estimer sa part |
+
+**Garde-fou** : si tout est agencement, rien n'est expliqué. La co-agentivité n'est utile que si l'on peut **décomposer** les parts. C'est le rôle du plan expérimental (section 6.4).
+
+---
+
+## 2. Construire l'objet
+
+### 2.1 De l'objet concret à l'objet de recherche
+
+En reprenant la distinction de Davallon (2004) :
 
 | Niveau | Dans ce projet |
 |---|---|
-| **Objet concret** | Un village simulé : des agents génératifs, un ordonnanceur, un narrateur, des consignes, un réseau, des traces d'échanges |
-| **Objet scientifique** | La **trivialité** produite par des dispositifs génératifs : la manière dont des énoncés (une rumeur, un démenti, une convention, un savoir savant) circulent et se transforment quand la circulation est entièrement écrite par des modèles de langage |
-| **Objet de recherche** | Les **écarts** entre cette trivialité générée et les phénomènes de circulation documentés chez les humains, mesurés par réplication procédurale, et ce que ces écarts révèlent des conceptions de la communication inscrites dans les architextes et dans le dispositif |
+| **Objet concret** | Un village simulé : modèles, fiches, orchestrateur, ordonnanceur, narrateur, consignes, traces |
+| **Objet scientifique** | La **trivialité co-produite** : la manière dont des énoncés (rumeur, démenti, convention, savoir savant) circulent et se transforment quand chaque reprise est écrite par un agencement de modèles, de code et de consignes |
+| **Objet de recherche** | La **répartition de l'agentivité** dans cette trivialité : quelle instance produit quelles transformations, quels dires et quels silences, et ce que les écarts aux phénomènes humains documentés révèlent de chacune |
 
-### 1.2 Posture épistémologique
+### 2.2 Posture épistémologique
 
 1. **Le village n'est pas un modèle de la société.** Il ne sert ni à prédire ni à expliquer des comportements humains. Aucun résultat n'est généralisé à des personnes réelles.
-2. **Le village est un dispositif à étudier en tant que tel.** Il produit des représentations de la communication ; ce sont ces représentations, et ce qui les produit, que l'on analyse.
-3. **Les écarts sont le résultat, pas un défaut.** Quand les agents s'écartent de ce que la littérature documente chez les humains, l'écart renseigne sur l'architexte et sur le dispositif, à condition que la comparaison repose sur une procédure équivalente (section 5.5).
-4. **Le chercheur fait partie du dispositif.** Les consignes, les personas, les réglages et les choix de conception sont des inscriptions au sens d'Akrich (1987). Ils sont documentés dans un carnet de conception et intégrés au corpus.
-5. **La simulation est un instrument d'observation.** Au sens de la philosophie des simulations (Varenne, 2007, 2018), on distingue la simulation qui représente un système cible de celle qui sert d'expérience sur un artefact. Ce projet relève de la seconde.
-6. **Reproduire n'est pas expliquer.** Qu'un dispositif génératif produise une forme qui ressemble à un phénomène humain (suffisance générative, au sens d'Epstein, 1999) ne prouve pas qu'il le produit par le même mécanisme. La plausibilité des mécanismes doit être examinée à part (Zhao, Pham et Vincent, 2026). La validation est le défi central de la simulation sociale générative (Larooij et Törnberg, 2025).
+2. **Le village est un agencement à étudier en tant que tel.** Ce sont ses productions, et la part de chaque instance dans ces productions, que l'on analyse.
+3. **Les écarts sont des résultats.** Quand l'agencement s'écarte de ce que la littérature documente chez les humains, l'écart renseigne sur l'instance qui le produit, à condition que la comparaison repose sur une procédure équivalente (section 6.5).
+4. **Le chercheur est une instance de l'agencement.** Ses choix sont documentés dans un carnet de conception, intégré au corpus.
+5. **La simulation est un instrument d'observation**, au sens où la philosophie des simulations distingue la simulation qui représente un système cible de celle qui sert d'expérience sur un artefact (Varenne, 2007, 2018). Ce projet relève de la seconde.
+6. **Reproduire n'est pas expliquer.** Qu'un agencement produise une forme qui ressemble à un phénomène humain (suffisance générative, Epstein, 1999) ne dit pas par quelle instance ni par quel mécanisme (Zhao, Pham et Vincent, 2026). La validation est le défi central de la simulation sociale générative (Larooij et Törnberg, 2025).
 
-### 1.3 Statut des énoncés générés
+### 2.3 Statut des énoncés générés
 
-Un agent n'a pas d'intériorité. Il ne « pense » rien, ne « croit » rien, ne « craint » rien. Il produit des énoncés en réponse à un **cadre d'énonciation** : une consigne, une fiche, une mémoire, une scène, une question.
-
-Conséquences pour tout le projet :
+Aucune instance de l'agencement n'a d'intériorité. Les énoncés sont produits en réponse à des **cadres d'énonciation** : une consigne, une fiche, une mémoire, une scène, une question (Goffman, 1974, pour la notion de cadre).
 
 | Terme courant | Terme retenu | Statut |
 |---|---|---|
-| Opinion privée | **Position déclarée en enquête** | Énoncé produit en réponse à l'enquêteur, dans un cadre présenté comme confidentiel |
-| Expression publique | **Position exprimée en scène** | Énoncé produit dans une scène (publique ou privée) face à d'autres agents |
-| Écart entre ce que l'on pense et ce que l'on dit | **Écart entre cadres d'énonciation** | Différence entre énoncés produits par le même agent dans deux cadres |
-| Croyance, peur, intention | **Disposition attribuée** | Attribut inscrit dans la fiche du persona par les concepteurs |
+| Opinion privée | **Position déclarée en enquête** | Énoncé produit face à l'enquêteur, dans un cadre présenté comme confidentiel |
+| Expression publique | **Position exprimée en scène** | Énoncé produit dans une scène face à d'autres agents |
+| Écart entre ce qu'on pense et ce qu'on dit | **Écart entre cadres d'énonciation** | Différence entre énoncés produits par le même agencement dans deux cadres |
+| Croyance, peur, intention | **Disposition attribuée** | Attribut écrit dans la fiche par le concepteur |
 
-Les termes psychologiques peuvent être employés par commodité dans la rédaction, mais toujours entre guillemets ou avec cette convention rappelée. **Test de stabilité** : chaque position déclarée est demandée sous deux formulations différentes ; un agent dont les deux réponses divergent fortement est signalé, et la part d'agents instables est un résultat.
+**Test de stabilité** : chaque position déclarée est demandée sous deux formulations ; la part d'agents instables est un résultat.
 
-Ce déplacement n'est pas une précaution de forme. Il fait de l'écart entre cadres d'énonciation un objet pleinement SIC : la manière dont un même architexte produit des énoncés différents selon la situation de communication qu'on lui fait jouer.
+### 2.4 Le modèle télégraphique : instrument, pas hypothèse
 
-### 1.4 Le modèle télégraphique : instrument, pas hypothèse
+Certaines mesures (fidélité au message source, relais, diffusion) empruntent au modèle émetteur-message-récepteur (Shannon et Weaver, 1949), que les SIC ont largement critiqué (Winkin, 1981). Il est ici un **instrument de mesure** aux limites connues, et un **objet d'enquête** : l'agencement génératif produit-il une communication-transport ?
 
-Certaines mesures du protocole (fidélité au message source, relais, diffusion) empruntent au modèle émetteur-message-récepteur issu de Shannon et Weaver (1949). Les SIC ont largement critiqué ce modèle (Winkin, 1981) : la communication n'y est que transport, alors qu'elle est construction de sens, situation, relation, médiation.
+### 2.5 Trivialité et attracteurs culturels
 
-Dans ce projet, le modèle télégraphique n'est **pas une hypothèse sur la communication**. C'est un **instrument de mesure** aux limites connues, et un **objet d'enquête** : les modèles de langage reproduisent-ils spontanément une communication-transport ?
-
-### 1.5 Trivialité et attracteurs culturels
-
-Deux traditions pensent la transformation d'un énoncé qui circule :
-
-| | Trivialité (Jeanneret, 2008, 2014) | Épidémiologie des représentations, attracteurs culturels (Sperber, 1996) |
+| | Trivialité (Jeanneret, 2008, 2014) | Attracteurs culturels (Sperber, 1996) |
 |---|---|---|
-| Ce qui circule | Des « êtres culturels », toujours réécrits à travers des médiations (supports, dispositifs, institutions) | Des représentations, transformées par la cognition de chaque transmetteur |
-| Ce qui explique la transformation | Les médiations, les dispositifs, les rapports de pouvoir | Des biais cognitifs qui font converger les versions vers des formes stables (attracteurs) |
-| Ce qu'on regarde | Les réécritures et leurs conditions | Les formes vers lesquelles les versions convergent |
+| Ce qui circule | Des « êtres culturels », réécrits à travers des médiations | Des représentations, transformées par la cognition des transmetteurs |
+| Ce qui explique la transformation | Les médiations, les dispositifs, les rapports de pouvoir | Des biais qui font converger les versions vers des formes stables |
 
-Les travaux récents sur les chaînes de transmission entre modèles de langage parlent en termes d'attracteurs (Perez et al., 2025) et de biais de contenu (Acerbi et Stubbersfield, 2023). Le projet les mobilise pour **décrire** les convergences, et s'appuie sur la trivialité pour **interpréter** : dans le village, les « biais cognitifs » d'un agent sont ceux de son architexte, et les médiations sont inscrites dans le dispositif. Le dialogue entre les deux traditions fait partie de la contribution.
-
-### 1.6 Qui agit quand un agent parle ? L'agentivité distribuée
-
-**Distinction terminologique préalable.** Le projet emploie deux mots proches qu'il ne faut pas confondre :
-- un **agent** (sens informatique) est un programme qui produit des actions ou des énoncés : ici, un habitant du village ;
-- l'**agentivité** (sens des sciences sociales) est la capacité d'agir, c'est-à-dire de faire une différence dans le cours des choses.
-
-Que le village soit peuplé d'« agents » ne dit rien de l'endroit où se situe l'agentivité. C'est précisément la question.
-
-**Une réplique est co-produite.** Quand un habitant dit quelque chose au café, au moins cinq instances concourent à cet énoncé :
-
-| Instance | Ce qu'elle fait à l'énoncé |
-|---|---|
-| Le **modèle de langage** (architexte) | Il écrit la phrase, avec ses régularités, ses préférences et ses réglages (complaisance, neutralité apprise) |
-| La **fiche du persona** | Elle oriente le ton, les valeurs et les dispositions attribuées (écrite par le concepteur) |
-| L'**orchestrateur** | Il assemble la consigne et choisit quels souvenirs y figurent, donc ce que l'agent « sait » |
-| L'**ordonnanceur** | Il décide de la rencontre : qui parle à qui, où, dans quel type de scène |
-| Le **concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations |
-
-L'énoncé n'est donc pas l'acte d'un agent mais celui d'un **agencement**. Le projet adopte une conception **distribuée** de l'agentivité, issue de la sociologie des sciences et des techniques : l'action est le fait de réseaux d'actants humains et non humains (Callon, 1986 ; Latour, 2006), les objets techniques portent des scripts inscrits par leurs concepteurs (Akrich, 1987 ; Akrich et Latour, 1992), et l'action située se reconfigure dans la relation entre humains et machines (Suchman, 2007). On parlera de **co-agentivité** pour désigner cette production conjointe des énoncés par le modèle, le dispositif et le concepteur.
-
-**Conséquences pour le projet**
-1. **Pour la problématique** : des agents qui « n'ont rien à craindre de la parole » peuvent produire du silence, parce qu'ils ne sont pas seuls à parler ou à se taire. Le taire, s'il apparaît, est une production de l'agencement.
-2. **Pour l'analyse** : chaque résultat est rapporté aux instances qui le produisent. Les conditions expérimentales (modèle, ordonnanceur, cadre d'énonciation, attributs des personas) servent justement à faire varier une instance à la fois, pour estimer sa part.
-3. **Pour la réflexivité** : le concepteur est l'une des instances. Le carnet de conception n'est pas une précaution annexe, c'est la trace de sa part d'agentivité.
+Les travaux sur les chaînes de transmission entre modèles de langage parlent d'attracteurs (Perez et al., 2025) et de biais de contenu (Acerbi et Stubbersfield, 2023). Le projet les mobilise pour **décrire** les convergences, et la co-agentivité pour **interpréter** : les « biais » d'un agent sont ceux de son modèle et de son fournisseur, et les médiations sont inscrites dans le dispositif par le concepteur.
 
 ---
 
-## 2. Problématique et questions de recherche
+## 3. Problématique et questions de recherche
 
-### 2.1 Problématique générale
+### 3.1 Problématique générale
 
-> **Comment une simulation sociale générative fait-elle circuler et se transformer des énoncés, alors que toutes les voix qui la peuplent sont écrites par un même architexte ?**
+> **Comment une simulation sociale générative fait-elle circuler et se transformer des énoncés, alors qu'aucune des voix qui la peuplent ne parle seule ?**
 
 | Terme | Contenu | Pourquoi |
 |---|---|---|
-| **X** | Une simulation sociale générative fait circuler et se transformer des énoncés (rumeur, démenti, convention, savoir savant) | C'est l'objet scientifique : une trivialité générée |
-| **Y** | Toutes les voix sont écrites par un même architexte | La trivialité suppose des médiations et des acteurs hétérogènes. Ici, une seule machine (ou quelques-unes) écrit toutes les voix. D'où vient alors la diversité des réécritures, si elle existe ? Et sinon, que reste-t-il de la circulation ? |
+| **X** | Une simulation sociale générative fait circuler et se transformer des énoncés | C'est l'objet scientifique : une trivialité générée |
+| **Y** | Aucune voix ne parle seule : chaque énoncé est co-produit par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur et le concepteur, et toutes les voix passent par un petit nombre d'architextes | La circulation suppose des locuteurs distincts qui se transmettent des énoncés. Si chaque locuteur est lui-même un agencement, et si les mêmes instances écrivent toutes les voix, qu'est-ce qui circule, et entre qui ? |
 
-### 2.2 Questions de recherche
+### 3.2 Questions de recherche
 
 | Code | Question | Lien à X/Y | Expériences |
 |---|---|---|---|
-| **QR1** | Quelles transformations les énoncés subissent-ils en circulant entre agents, et en quoi diffèrent-elles des transformations documentées chez les humains par des procédures équivalentes ? | X | C0, C1, C4 |
-| **QR2** | Quelle part de ces transformations relève de l'architexte (le modèle de langage), quelle part de la configuration du dispositif (réseau, ordonnanceur, consignes, mode d'écriture) ? | Y | C3, C4, C5 |
-| **QR3** | Quelle conception implicite de la communication ces simulations portent-elles : transport, interaction, médiation ? | X et Y | Toutes |
-| **QR4** | Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? (Problématique du C4.) | X et Y appliqués au C4 | C4 |
+| **QR1. Les transformations** | Quelles transformations les énoncés subissent-ils en circulant, et en quoi diffèrent-elles de celles documentées chez les humains par des procédures équivalentes ? | X | C0, C1, C4 |
+| **QR2. La part des instances** | Quelle part de ces transformations revient à chaque instance : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, concepteur ? | Y, question centrale | C3, C4, C5 |
+| **QR3. La communication inscrite** | Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ? | X et Y | Toutes |
+| **QR4. Le dire et le taire** | Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? (Problématique du C4.) | X et Y appliqués au C4 | C4 |
 
-Les hypothèses chiffrées des documents de protocole (H1, S1…) sont des **hypothèses opérationnelles** au service de ces questions.
+Les hypothèses de travail et les hypothèses opérationnelles sont propres à chaque expérience (voir le document du C4).
 
 ---
 
-## 3. Concepts mobilisés
+## 4. Concepts mobilisés
 
-### 3.1 Noyau théorique
+### 4.1 Noyau théorique : l'agencement et ses instances
 
-| Concept | Références | Définition retenue | Ce qu'on observe dans le village |
-|---|---|---|---|
-| **Trivialité** | Jeanneret (2008, 2014) | Circulation créative des êtres culturels, qui se transforment à chaque reprise à travers des médiations | L'arbre complet des reprises d'un énoncé ; ce qui se conserve, se transforme, s'invente |
-| **Architexte** | Jeanneret et Souchier (1999) ; Souchier, Jeanneret et Le Marec (2003) | Outil qui régit en amont l'écriture et en préfigure les formes | Les modèles de langage qui écrivent les répliques, le narrateur qui écrit les scènes, le modèle qui résume la mémoire des agents |
-| **Énonciation éditoriale** | Souchier (1998) | Ce qui donne forme à un texte au-delà de son auteur apparent | Ce que les consignes, les fiches, le format des réponses et les cadres d'énonciation imposent aux énoncés |
-| **Dispositif** | Foucault ; Agamben (2007) ; Jacquinot-Delaunay et Monnoyer (1999) | Agencement hétérogène (technique, discursif, normatif) qui oriente les conduites | Le village entier : réseau, ordonnanceur, routines, pare-feu de la connaissance, enquêteur |
-| **Médiation** | Jeanneret (2014) ; Davallon | Ce qui s'interpose et transforme dans toute communication | La gazette, l'affiche du démenti, le compte rendu journalistique, le narrateur |
-| **Script, inscription** | Akrich (1987) | Les usages et représentations que les concepteurs inscrivent dans un objet technique | Les choix consignés dans le carnet de conception |
-| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | L'action est le fait d'un agencement d'actants humains et non humains | La part de chaque instance (modèle, fiche, orchestrateur, ordonnanceur, concepteur) dans la production des énoncés |
-
-### 3.2 Concepts opératoires empruntés, et conditions d'emprunt
-
-| Concept | Références | Usage dans le projet | Ce qui est adapté | Ce qui est perdu ou à discuter |
+| Concept | Références | Définition retenue | Instance concernée | Ce qu'on observe |
 |---|---|---|---|---|
-| **Reproduction en série : réduction, accentuation, assimilation** | Bartlett (1932) ; Allport et Postman (1947) | Décrire les transformations par relais | Les catégories servent de description, sans jugement de perte | Protocole de laboratoire, sujets humains, mémoire biologique ; comparaison légitime seulement par réplication procédurale (C0) |
-| **Chaînes de transmission, biais de contenu, attracteurs** | Mesoudi et Whiten (2008) ; Acerbi et Stubbersfield (2023) ; Perez et al. (2025) ; Sperber (1996) | Mesurer les convergences ; protocole de l'expérience C0 | Protocole directement transposable | Le cadre cognitiviste de Sperber diffère de la trivialité : voir 1.5 |
-| **Rumeur** | Morin (1969) ; Kapferer (1987) ; Froissart (2002) | Rumeur de la boulangerie | Définition descriptive | Les fonctions sociales de la rumeur (anxiété collective, identité) n'ont pas d'équivalent chez les agents |
-| **Rumeur et anxiété** | Rosnow (1991) | Lien entre stabilité émotionnelle attribuée et transmission | Disposition attribuée, non ressentie | Le mécanisme affectif est absent ; on teste seulement si l'attribut a un effet |
-| **Correction et influence continue** | Lewandowsky et al. (2012) | Survie de la rumeur après démenti | Mesure de la persistance après démenti | Mécanismes mnésiques humains sans équivalent direct |
-| **Flux à deux étages** | Katz et Lazarsfeld (1955) | Rôle des habitants très connectés | Position dans le réseau | Leadership d'opinion fondé sur la compétence reconnue : non modélisé |
-| **Convention et masse critique** | Centola et al. (2018) | Expérience C2 | Protocole partiellement transposable (jeu de dénomination) | Incitations du protocole humain (gains) absentes |
-| **Lectures dominante, négociée, oppositionnelle** | Hall (1973) | Coder les appropriations | Rapportées au **sens proposé par la source**, et non à un code hégémonique | La position sociale qui fonde la lecture chez Hall n'existe ici que comme attribut écrit dans une fiche |
-| **Formule** | Krieg-Planque (2009) | Expressions figées qui résument l'énoncé | Repérage direct | Le caractère polémique et public de la formule suppose un espace public réel |
+| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | L'action est le fait d'un agencement d'actants humains et non humains | Toutes | La part de chaque instance dans les énoncés |
+| **Architexte** | Jeanneret et Souchier (1999) ; Souchier, Jeanneret et Le Marec (2003) | Outil qui régit en amont l'écriture et en préfigure les formes | Modèle de langage, narrateur, modèle qui résume la mémoire | Les régularités propres à chaque modèle |
+| **Script, inscription** | Akrich (1987) | Les usages et rôles que les concepteurs inscrivent dans un objet technique | Fiche, consignes, concepteur | Les choix consignés dans le carnet de conception |
+| **Énonciation éditoriale** | Souchier (1998) | Ce qui donne forme à un texte au-delà de son auteur apparent | Orchestrateur, format des consignes | Ce que la consigne et la mémoire imposent aux énoncés |
+| **Cadres de l'expérience** | Goffman (1974) | Les schèmes qui organisent ce qui se passe et ce qui peut se dire dans une situation | Ordonnanceur, enquêteur, gazette | Les effets du type de scène sur les énoncés |
+| **Dispositif** | Foucault ; Agamben (2007) ; Jacquinot-Delaunay et Monnoyer (1999) | Agencement hétérogène qui oriente les conduites | Le village entier | L'ensemble des règles, du réseau, des routines |
+| **Trivialité** | Jeanneret (2008, 2014) | Circulation créative des êtres culturels, réécrits à travers des médiations | Ce qui résulte de l'agencement | L'arbre complet des reprises d'un énoncé |
+| **Médiation** | Jeanneret (2014) ; Davallon | Ce qui s'interpose et transforme dans toute communication | Gazette, démenti, compte rendu, narrateur | Les transformations attribuables à un intermédiaire |
+
+### 4.2 Concepts opératoires empruntés, et conditions d'emprunt
+
+| Concept | Références | Usage | Ce qui est adapté | Ce qui est perdu ou à discuter |
+|---|---|---|---|---|
+| **Reproduction en série : réduction, accentuation, assimilation** | Bartlett (1932) ; Allport et Postman (1947) | Décrire les transformations par relais | Catégories descriptives, sans jugement de perte | Protocole de laboratoire et mémoire humaine ; comparaison par réplication procédurale (C0) |
+| **Chaînes de transmission, biais de contenu, attracteurs** | Mesoudi et Whiten (2008) ; Acerbi et Stubbersfield (2023) ; Perez et al. (2025) ; Sperber (1996) | Mesurer les convergences ; protocole de C0 | Protocole transposable | Cadre cognitiviste distinct de la trivialité (2.5) |
+| **Rumeur** | Morin (1969) ; Kapferer (1987) ; Froissart (2002) | Rumeur de la boulangerie | Définition descriptive | Fonctions sociales (anxiété collective, identité) sans équivalent |
+| **Rumeur et anxiété** | Rosnow (1991) | Lien entre stabilité émotionnelle attribuée et transmission | Disposition attribuée, non ressentie | Mécanisme affectif absent |
+| **Correction et influence continue** | Lewandowsky et al. (2012) | Survie de la rumeur après démenti | Persistance mesurée | Mécanismes mnésiques sans équivalent direct |
+| **Flux à deux étages** | Katz et Lazarsfeld (1955) | Rôle des habitants très connectés | Position dans le réseau | Leadership fondé sur la compétence reconnue : non modélisé |
+| **Convention et masse critique** | Centola et al. (2018) | Expérience C2 | Jeu de dénomination | Incitations du protocole humain absentes |
+| **Spirale du silence** | Noelle-Neumann (1974, 1993) | Expérience C4 | Questions d'enquête, formalisations comme étalons | La peur de l'isolement n'existe que comme disposition écrite |
+| **Lectures conforme, négociée, oppositionnelle** | Hall (1973) | Coder les appropriations | Rapportées au sens proposé par la source | La position sociale n'existe que comme attribut écrit |
+| **Formule** | Krieg-Planque (2009) | Expressions figées qui résument l'énoncé | Repérage direct | Suppose un espace public réel |
 | **Mise en scène de la communication** | Authier-Revuz (1982) | Marqueurs de reprise | Repérage direct | Aucun |
-| **Mémoire interdiscursive** | Moirand (2007) | Analogies spontanées | Repérage des discours convoqués | La mémoire convoquée est celle des données d'entraînement de l'architexte |
-| **Vulgarisation, continuum de la communication scientifique** | Jacobi (1999) ; Jurdant (2009) | Situer les sources ; comparer savoir savant et médiation journalistique | Classement des sources sur le continuum | Aucun |
+| **Mémoire interdiscursive** | Moirand (2007) | Analogies spontanées | Repérage des discours convoqués | La mémoire convoquée est celle des données d'entraînement |
+| **Vulgarisation, continuum de la communication scientifique** | Jacobi (1999) ; Jurdant (2009) | Situer les sources | Classement sur le continuum | Aucun |
 
-### 3.3 Concepts critiques sur les modèles de langage et la simulation
+### 4.3 Concepts critiques sur les modèles de langage et la simulation
 
-| Concept | Références | Usage dans le projet |
+| Concept | Références | Usage |
 |---|---|---|
 | **Simulacres** | Park et al. (2023) | Le terme choisi par les promoteurs des agents génératifs, à interroger |
 | **Perroquets stochastiques** | Bender et al. (2021) | Les modèles produisent des formes plausibles sans référence au sens ni à la situation |
 | **Échantillons de silicium** | Argyle et al. (2023) | Promesse de simuler des sous-groupes humains, et ses limites |
-| **Aplatissement des identités** | Wang, Morgenstern et Dickerson (2025) | Les modèles qui remplacent des participants humains écrasent la diversité des groupes |
-| **Suffisance générative et plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Reproduire une forme n'est pas en expliquer le mécanisme |
-| **Validation des simulations génératives** | Larooij et Törnberg (2025) | La validation est le défi central ; elle structure les critères de la section 6 |
+| **Aplatissement des identités** | Wang, Morgenstern et Dickerson (2025) | Les modèles écrasent la diversité des groupes |
+| **Suffisance générative, plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Reproduire une forme n'est pas en expliquer le mécanisme |
+| **Validation des simulations génératives** | Larooij et Törnberg (2025) | Structure les critères de la section 7 |
+| **Règles de conduite des fournisseurs** | OpenAI (2025) | Le fournisseur comme actant : neutralité exigée sur les sujets controversés |
 | **Préférence des juges automatiques pour leurs propres textes** | Panickssery et al. (2024) | Justifie la séparation entre modèles générateurs et modèle juge |
 
 ---
 
-## 4. Grille de lecture
+## 5. Grille de lecture
 
-| Niveau | Question | Corpus | Concepts | Méthode | Indicateurs |
+La grille articule cinq niveaux d'analyse. À chaque niveau, la question transversale est la même : **quelle instance de l'agencement produit ce que l'on observe ?**
+
+| Niveau | Question | Corpus | Concepts | Méthode | Instances principalement interrogées |
 |---|---|---|---|---|---|
-| **1. Dispositif** | Qu'est-ce qui est inscrit dans le village avant toute circulation ? | Code, consignes, fiches des personas, mécanisme de mémoire, carnet de conception | Dispositif, architexte, script, énonciation éditoriale, agentivité distribuée | Analyse sociotechnique et sémiotique des consignes et des cadres d'énonciation | Inventaire commenté des choix ; ce que chaque choix rend possible ou impossible |
-| **2. Circulation** | Par où les énoncés passent-ils ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rumeur, masse critique | Analyse de réseau, courbes de diffusion | Portée, vitesse, profondeur des arbres de relais, rôle des nœuds centraux |
-| **3. Énoncés** | Comment les énoncés se transforment-ils ? | Chaînes de reformulation reconstituées | Trivialité, reproduction en série, attracteurs, formule, mise en scène de la communication | Analyse de discours, codage | Fréquence des transformations par relais ; convergences ; formules ; marqueurs de reprise |
-| **4. Appropriations simulées** | Quelles positions les agents produisent-ils, selon les cadres d'énonciation ? | Réponses en enquête, répliques en scène | Lectures selon Hall (adaptées), mémoire interdiscursive | Codage des appropriations, analyse qualitative | Répartition des lectures selon les attributs ; analogies ; écarts entre cadres d'énonciation |
-| **5. Écarts** | Que révèle la comparaison avec les phénomènes humains (par procédures équivalentes) et entre dispositifs ? | Résultats des niveaux 2 à 4, expérience C0, conditions comparées (C3, C5) | Architexte, suffisance générative, plausibilité des mécanismes, aplatissement | Comparaison systématique, interprétation critique | Écarts aux références humaines ; part de variance due au modèle, à la configuration, au mode d'écriture |
+| **1. Agencement** | Qu'est-ce qui est inscrit dans le village avant toute circulation, et par qui ? | Code, consignes, fiches, mécanisme de mémoire, carnet de conception | Co-agentivité, script, architexte, énonciation éditoriale, dispositif | Analyse sociotechnique et sémiotique | Concepteur, orchestrateur, ordonnanceur |
+| **2. Circulation** | Par où passent les énoncés ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rumeur, masse critique | Analyse de réseau, courbes de diffusion | Ordonnanceur, réseau |
+| **3. Énoncés** | Comment les énoncés se transforment-ils ? | Chaînes de reformulation | Trivialité, reproduction en série, attracteurs, formule | Analyse de discours, codage | Modèle et fournisseur, orchestrateur (mémoire) |
+| **4. Positions** | Quelles positions l'agencement produit-il selon les cadres d'énonciation ? | Réponses en enquête, répliques en scène | Cadres, lectures selon Hall, mémoire interdiscursive | Codage, analyse qualitative | Fiche, cadres, modèle |
+| **5. Parts et écarts** | Quelle est la part de chaque instance, et que révèlent les écarts aux phénomènes humains ? | Résultats des niveaux 2 à 4, C0, conditions comparées | Co-agentivité, suffisance générative, aplatissement | Décomposition des effets par instance, interprétation critique | Toutes |
 
-### 4.1 Livre de codes unifié (niveaux 3 et 4)
+### 5.1 Livre de codes unifié (niveaux 3 et 4)
 
 Les codes sont **descriptifs** : ils nomment une transformation, ils ne jugent pas une perte.
 
@@ -174,7 +191,7 @@ Les codes sont **descriptifs** : ils nomment une transformation, ils ne jugent p
 |---|---|---|---|
 | RED | Réduction | Allport et Postman | La reprise est plus courte que la version reçue |
 | ACC | Accentuation | Allport et Postman | Un élément prend une place plus grande que dans la version reçue |
-| ASS | Assimilation | Allport et Postman | La reprise se rapproche des attributs (valeurs, sensibilité) de l'agent qui la produit |
+| ASS | Assimilation | Allport et Postman | La reprise se rapproche des attributs (valeurs, sensibilité) de la fiche de l'agent |
 | CTX | Contextualisation | Projet | La reprise situe l'énoncé dans une situation, une époque, un lieu |
 | EXE | Exemplification | Projet | La reprise ajoute un exemple ou un cas |
 | REC | Recadrage | Projet | La reprise change la question à laquelle l'énoncé répond |
@@ -191,118 +208,116 @@ Les codes sont **descriptifs** : ils nomment une transformation, ils ne jugent p
 | L-NEG | Lecture négociée | Hall (adapté) | Reprise aménagée, partiellement acceptée |
 | L-OPP | Lecture oppositionnelle | Hall (adapté) | Reprise qui retourne ou rejette le sens proposé |
 
-Un même énoncé peut recevoir plusieurs codes. La **fidélité** à la source (part des propositions de la source conservées) est calculée à part : c'est une lentille parmi d'autres, distincte de l'analyse de la trivialité. Le livre de codes est testé sur le mini-village, relu par un regard extérieur (5.9), révisé, puis figé et préenregistré.
+Un même énoncé peut recevoir plusieurs codes. La **fidélité** à la source est calculée à part : c'est une lentille parmi d'autres. Le livre de codes est testé sur le mini-village, relu par un regard extérieur, révisé, puis figé et préenregistré.
 
 ---
 
-## 5. Méthodologie
+## 6. Méthodologie
 
-### 5.1 Une démarche mixte
+### 6.1 Une démarche mixte
 
-- **Quantitative** : diffusion, fidélité, fréquences des codes, comparaison des conditions, décomposition de la variance.
-- **Qualitative** : analyse de discours de chaînes de reformulation complètes, choisies selon des critères préenregistrés (chaînes les plus longues, chaînes typiques, cas extrêmes).
-- **Réflexive** : analyse du dispositif lui-même à partir du carnet de conception.
+- **Quantitative** : diffusion, fidélité, fréquences des codes, décomposition des effets par instance.
+- **Qualitative** : analyse de discours de chaînes de reformulation complètes, choisies selon des critères préenregistrés.
+- **Réflexive** : analyse de la part du concepteur, à partir du carnet de conception.
 
-Les trois volets sont confrontés : **convergences et divergences sont documentées**, et une divergence entre volets est traitée comme un résultat, non comme un motif d'exclusion.
+Convergences et divergences entre volets sont documentées ; une divergence est un résultat.
 
-### 5.2 Le carnet de conception
+### 6.2 Le carnet de conception
 
-Document daté, tenu par l'ingénieur pédagogique, qui consigne pour chaque choix de conception : le choix, sa justification au moment où il est fait, les alternatives écartées, ses effets observés ensuite. Il fait partie du corpus du niveau 1 de la grille.
+Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix, sa justification au moment où il est fait, les alternatives écartées, ses effets observés ensuite. C'est la **trace de la part d'agentivité du concepteur**, et il fait partie du corpus du niveau 1.
 
-### 5.3 Fiabilité du codage
+### 6.3 Fiabilité du codage
 
-- Préenregistrement des questions, des hypothèses opérationnelles, du livre de codes et des critères de sélection qualitative.
-- Formation des codeurs humains sur un jeu d'exemples ; double codage à l'aveugle sur 15 % du corpus ; accord mesuré par le kappa de Cohen (seuil de 0,7).
-- **Le modèle juge est toujours différent des modèles qui ont généré la simulation codée**, pour éviter la préférence d'un modèle pour ses propres textes (Panickssery et al., 2024). Il est validé contre le codage humain.
+- Préenregistrement des questions, des hypothèses, des livres de codes et des critères de sélection qualitative.
+- Formation des codeurs humains ; double codage à l'aveugle sur 15 % du corpus, par une personne extérieure au projet ; kappa de Cohen (seuil de 0,7).
+- **Le modèle juge est toujours différent des modèles qui ont généré la simulation codée** (Panickssery et al., 2024). Il est validé contre le codage humain.
 - Plusieurs graines par condition ; résultats retenus seulement s'ils sont stables.
 
-### 5.4 Dispositifs comparés (QR2)
+### 6.4 Décomposer l'agentivité : faire varier une instance à la fois
+
+C'est la traduction méthodologique de la clef de lecture. Chaque instance a sa ou ses conditions expérimentales :
+
+| Instance | Condition qui la fait varier | Expériences |
+|---|---|---|
+| **Modèle de langage et fournisseur** | Changer le modèle des habitants, du narrateur, ou de tous les rôles (Le Chonk, Qwen, Gemma) ; test sans public des modèles seuls | C3, C4, C5 |
+| **Fiche du persona** | Faire varier les attributs (disposition à l'autocensure, sensibilité) ; permutations des prénoms et du genre ; condition sans autocensure | C3, C4 |
+| **Orchestrateur** | Mode de lecture (intégral ou annoté) ; mécanisme de résumé de la mémoire | C4 |
+| **Ordonnanceur** | Rencontres au hasard ou homophiles ; position du premier émetteur | C1, C4 |
+| **Cadres d'énonciation** | Scène publique ou privée ; enquêteur ; gazette ; compères | C4 |
+| **Mode d'écriture** | Polyphonie mixte, polyphonie homogène, autre modèle, auteur unique | C5 |
+| **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) | C3, tous |
+
+Les **modes d'écriture** comparés (C5) :
 
 | Mode | Fonctionnement | Ce qu'il isole |
 |---|---|---|
-| **Polyphonie mixte** | Habitants joués par des modèles ILaaS ; narrateur et lecteur par Le Chonk | Condition principale |
-| **Polyphonie homogène** | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa propre mémoire | L'effet d'un architexte unique sous des voix multiples (au cœur de Y) |
-| **Polyphonie d'un autre architexte** | Tous les rôles joués par un autre modèle (Qwen ou Gemma) | L'effet du modèle à configuration égale |
-| **Auteur unique** | Le Chonk écrit d'un seul tenant la vie du village, comme un romancier, sans séparation des connaissances | Polyphonie contre narration omnisciente |
+| Polyphonie mixte | Habitants sur ILaaS ; narrateur et lecteur sur Le Chonk | Condition principale |
+| Polyphonie homogène | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa mémoire | Un architexte unique sous des voix multiples |
+| Polyphonie d'un autre architexte | Tous les rôles joués par Qwen ou Gemma | L'effet du modèle à configuration égale |
+| Auteur unique | Le Chonk écrit d'un seul tenant la vie du village, sans séparation des connaissances | Ce que change la distribution de l'écriture entre agents |
 
-Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algorithmique** (du code), et non par un modèle de langage : cela sépare l'organisation de l'exposition (le dispositif) de l'écriture des scènes (l'architexte).
+Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algorithmique** (du code), séparé du **narrateur** (un modèle), pour distinguer l'organisation de l'exposition de l'écriture des scènes.
 
-### 5.5 Réplication procédurale des références humaines
+### 6.5 Réplication procédurale des références humaines
 
-Comparer nos indicateurs aux chiffres d'études humaines n'a de sens que si la procédure est équivalente. Principe : **pour chaque référence humaine mobilisée, on reproduit son protocole dans le dispositif**, ou l'on déclare la comparaison qualitative.
+Pour chaque référence humaine mobilisée, on reproduit son protocole dans le dispositif, ou l'on déclare la comparaison qualitative.
 
 | Référence humaine | Procédure reproduite | Expérience |
 |---|---|---|
-| Reproduction en série (Bartlett, 1932 ; Allport et Postman, 1947) ; chaînes de transmission (Mesoudi et Whiten, 2008) | Chaînes linéaires de 10 agents qui se transmettent un récit, mêmes consignes que les études humaines | **C0** |
-| Biais de contenu dans les chaînes (Acerbi et Stubbersfield, 2023) | Mêmes matériaux, pour calibrer nos modèles par rapport à leurs résultats | **C0** |
-| Masse critique d'une convention (Centola et al., 2018) | Jeu de dénomination entre agents appariés | C2 |
-| Influence continue après correction (Lewandowsky et al., 2012) | Comparaison qualitative : protocoles humains trop variés | C1 |
+| Reproduction en série (Bartlett, 1932 ; Allport et Postman, 1947) ; chaînes de transmission (Mesoudi et Whiten, 2008) | Chaînes linéaires de 10 agents | **C0** |
+| Biais de contenu (Acerbi et Stubbersfield, 2023) | Mêmes matériaux | **C0** |
+| Masse critique d'une convention (Centola et al., 2018) | Jeu de dénomination | C2 |
+| Influence continue (Lewandowsky et al., 2012) | Comparaison qualitative | C1 |
 | Spirale du silence (méta-analyses ; test du train) | Questions d'enquête reprises des études ; formalisations comme étalons | C4 |
 
-**Expérience C0 (chaînes de transmission)**, préalable à tout le village : peu coûteuse, elle donne une ligne de base. Elle permet aussi de mesurer ce que le **village** (réseau, scènes, mémoire) ajoute à une transmission linéaire.
+L'expérience **C0** donne aussi la ligne de base qui permet de mesurer ce que l'**agencement social** (réseau, scènes, mémoire) ajoute à une transmission linéaire.
 
-### 5.6 Unités d'analyse et puissance
+### 6.6 Unités d'analyse et puissance
 
-- Pour les indicateurs collectifs (diffusion, climat, polarisation), **l'unité est la simulation**. Pour les indicateurs individuels, l'unité est l'agent, emboîté dans la simulation (modèles à effets mixtes).
-- Une **simulation pilote** estime la variance entre graines. Le nombre de graines est fixé par calcul de puissance, avec **au moins 5 graines** pour les contrastes centraux.
-- Les plans d'expérience sont **à priorités** : un bloc prioritaire garanti, des blocs secondaires exécutés selon le budget.
+Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateurs individuels, l'agent emboîté dans la simulation (modèles à effets mixtes). Un pilote estime la variance entre graines ; le nombre de graines est fixé par calcul de puissance, au moins 5 pour les contrastes centraux. Plans d'expérience à priorités.
 
-### 5.7 Reproductibilité
+### 6.7 Reproductibilité, données, sobriété
 
-- **Reproductibilité des analyses** : garantie. Toutes les générations sont archivées avec leurs métadonnées (modèle, version, date, réglages, graine), et toutes les analyses repartent de ces archives.
-- **Réplicabilité des générations** : limitée. Les modèles par API ne sont pas déterministes et changent de version. Elle est documentée, et un lot témoin est rejoué à chaque changement de version.
-
-### 5.8 Plan de gestion des données
-
-Rédigé dès le départ (outil DMP OPIDoR) : nature des données (journaux de simulation, codages, fiches), formats ouverts, stockage, durée de conservation, licences (code sous licence libre, données sous licence ouverte), dépôt (Recherche Data Gouv ou Zenodo), exclusions (extraits longs d'ouvrages protégés, contenus discriminatoires bruts).
-
-### 5.9 Regards extérieurs et revues
-
-- Revue croisée des documents par un modèle différent de celui qui les a rédigés, avec pour consigne de les réfuter.
-- Relecture du cadre et du livre de codes par un ou une collègue de SIC.
-- Pour le C4, validation de la grille des propositions par un ou une historienne.
-- Chaque revue est consignée (objections, décisions, modifications) et versionnée.
-
-### 5.10 Sobriété
-
-Les tokens consommés sont journalisés pour chaque simulation, avec une estimation énergétique. Le coût environnemental de l'expérimentation est rapporté avec les résultats.
+- **Reproductibilité des analyses** garantie (toutes les générations archivées avec leurs métadonnées) ; **réplicabilité des générations** limitée et documentée.
+- **Plan de gestion des données** (DMP OPIDoR) : formats ouverts, licences, dépôt, exclusions (extraits longs d'ouvrages protégés, contenus discriminatoires bruts).
+- **Revues** : chaque révision importante des documents passe par une revue consignée (auto-revue, revue croisée par un autre modèle, relecture par un ou une collègue de SIC).
+- **Sobriété** : tokens et estimation énergétique journalisés et rapportés.
 
 ---
 
-## 6. Critères de scientificité et limites
+## 7. Critères de scientificité et limites
 
 | Critère | Comment il est satisfait |
 |---|---|
-| Construction explicite de l'objet | Section 1 : objet concret, scientifique, de recherche ; statut des énoncés |
-| Cohérence théorie, méthode, corpus | Noyau théorique, concepts empruntés avec conditions d'emprunt, grille à cinq niveaux, livre de codes descriptif |
+| Construction explicite de l'objet | Objet concret, scientifique, de recherche ; clef de lecture explicitée |
+| Cohérence théorie, méthode, corpus | Noyau théorique centré sur l'agencement ; décomposition des instances ; livre de codes descriptif |
 | Validité des comparaisons | Réplication procédurale ; expérience C0 |
-| Distinction entre forme reproduite et mécanisme | Tests de mécanismes concurrents (voir C4) ; prudence sur la suffisance générative |
-| Réflexivité | Carnet de conception intégré au corpus ; regards extérieurs |
+| Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
+| Réflexivité | Le concepteur traité comme une instance ; carnet de conception |
 | Fiabilité | Préenregistrement, double codage, juge indépendant, puissance, répétitions |
 | Prudence interprétative | Aucune généralisation aux humains ; vocabulaire des cadres d'énonciation |
-| Transparence | Code, consignes, livres de codes, fiches des personas, archives publiés selon le plan de gestion des données |
+| Transparence | Code, consignes, livres de codes, fiches, archives publiés selon le plan de gestion des données |
 
 **Limites assumées**
-- Les références humaines viennent de dispositifs expérimentaux différents ; seules certaines sont reproductibles procéduralement, les autres sont comparées qualitativement.
+- **Le risque de dilution** : affirmer que tout est agencement n'explique rien. La co-agentivité n'a de valeur que par la décomposition expérimentale des parts ; une part qui ne peut être isolée est déclarée comme telle.
+- **L'agentivité n'est pas l'intentionnalité** : dire qu'une instance « agit » signifie qu'elle fait une différence mesurable, non qu'elle veut quelque chose.
+- Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
-- Le codage automatique introduit un architexte de plus ; d'où la séparation des modèles et la validation humaine.
-- Les attributs des personas (dispositions, sensibilités) sont des écritures de concepteurs, non des propriétés psychologiques.
+- Le codage automatique ajoute une instance à l'analyse elle-même ; d'où la séparation des modèles et la validation humaine.
 
 ---
 
-## 7. Valorisation envisageable
+## 8. Valorisation envisageable
 
 **Revues de SIC** : *Communication & langages*, *Questions de communication*, *Les Enjeux de l'information et de la communication*, *Hermès*, *Réseaux*, *tic&société*, *Revue française des sciences de l'information et de la communication*.
 
-**Simulation et méthodes** : *Journal of Artificial Societies and Social Simulation* (volet C0 et validation).
+**Simulation et méthodes** : *Journal of Artificial Societies and Social Simulation*.
 
 **Événements** : congrès de la SFSIC ; journées d'étude sur les écritures numériques et l'IA générative.
 
-**Diffusion large** : billets sur le carnet de recherche ; démonstration du tableau de bord et de l'arbre de circulation.
-
 ---
 
-## 8. Bibliographie
+## 9. Bibliographie
 
 ### Communication, trivialité, dispositifs
 - Agamben, G. (2007). *Qu'est-ce qu'un dispositif ?* Paris : Rivages.
@@ -310,13 +325,14 @@ Les tokens consommés sont journalisés pour chaque simulation, avec une estimat
 - Akrich, M., & Latour, B. (1992). A Summary of a Convenient Vocabulary for the Semiotics of Human and Nonhuman Assemblies. In W. E. Bijker & J. Law (dir.), *Shaping Technology/Building Society* (p. 259-264). Cambridge, MA : MIT Press.
 - Callon, M. (1986). Éléments pour une sociologie de la traduction. La domestication des coquilles Saint-Jacques et des marins-pêcheurs dans la baie de Saint-Brieuc. *L'Année sociologique*, 36, 169-208.
 - Davallon, J. (2004). Objet concret, objet scientifique, objet de recherche. *Hermès*, 38, 30-37.
+- Goffman, E. (1974). *Frame Analysis: An Essay on the Organization of Experience*. New York : Harper & Row. Trad. fr. *Les cadres de l'expérience*, Paris : Minuit, 1991.
 - Jacquinot-Delaunay, G., & Monnoyer, L. (dir.) (1999). Le dispositif. Entre usage et concept. *Hermès*, 25.
 - Jeanneret, Y. (2008). *Penser la trivialité. Volume 1 : La vie triviale des êtres culturels*. Paris : Hermès-Lavoisier.
 - Jeanneret, Y. (2014). *Critique de la trivialité. Les médiations de la communication, enjeu de pouvoir*. Paris : Éditions Non Standard.
 - Jeanneret, Y., & Souchier, E. (1999). Pour une poétique de l'écrit d'écran. *Xoana*, 6-7, 97-107.
+- Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte. (Éd. originale : *Reassembling the Social*, Oxford University Press, 2005.)
 - Shannon, C. E., & Weaver, W. (1949). *The Mathematical Theory of Communication*. Urbana : University of Illinois Press.
 - Souchier, E. (1998). L'image du texte. Pour une théorie de l'énonciation éditoriale. *Les Cahiers de médiologie*, 6, 137-145.
-- Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte. (Éd. originale : *Reassembling the Social*, Oxford University Press, 2005.)
 - Souchier, E., Jeanneret, Y., & Le Marec, J. (dir.) (2003). *Lire, écrire, récrire. Objets, signes et pratiques des médias informatisés*. Paris : Bibliothèque publique d'information.
 - Suchman, L. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions* (2e éd.). Cambridge : Cambridge University Press.
 - Winkin, Y. (dir.) (1981). *La nouvelle communication*. Paris : Seuil.
@@ -350,6 +366,9 @@ Les tokens consommés sont journalisés pour chaque simulation, avec une estimat
 - Epstein, J. M. (1999). Agent-based computational models and generative social science. *Complexity*, 4(5), 41-60.
 - Gebru, T., et al. (2021). Datasheets for Datasets. *Communications of the ACM*, 64(12), 86-92.
 - Larooij, M., & Törnberg, P. (2025). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*. *arXiv:2504.03274*.
+- Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. *Journal of Communication*, 24(2), 43-51.
+- Noelle-Neumann, E. (1993). *The Spiral of Silence: Public Opinion, Our Social Skin* (2e éd.). Chicago : University of Chicago Press.
+- OpenAI (2025). *Model Spec*. Spécification publique du comportement attendu des modèles.
 - Panickssery, A., Bowman, S. R., & Feng, S. (2024). LLM Evaluators Recognize and Favor Their Own Generations. *Advances in Neural Information Processing Systems 37 (NeurIPS 2024)*.
 - Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative Agents: Interactive Simulacra of Human Behavior. *Proceedings of UIST '23*.
 - Varenne, F. (2007). *Du modèle à la simulation informatique*. Paris : Vrin.

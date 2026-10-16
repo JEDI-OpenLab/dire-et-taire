@@ -1,6 +1,6 @@
 # Scénario C4 : dire et taire un savoir savant
 
-*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 7 du 16 octobre 2026, révisée après la revue adversariale n° 1 et complétée par les hypothèses de travail et l'agentivité distribuée (« revue-adversariale-1-cadre-et-C4.md »).*
+*Expérience C4 du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 8 du 16 octobre 2026 : réécriture autour de la co-agentivité, clef de lecture du projet (« revue-adversariale-1-cadre-et-C4.md »).*
 
 *Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « prototypes-agentiques-le-chonk.md » (cadrage d'ensemble).*
 
@@ -10,114 +10,125 @@
 
 ## 1. Problématique
 
-### 1.1 Du « ce qui circule » au « ce qui se dit et ce qui se tait »
+### 1.1 La clef de lecture : qui se tait quand un agent se tait ?
 
-La théorie de la spirale du silence (Noelle-Neumann, 1974, 1993) oblige à regarder ce qui **ne circule pas** : qui parle d'un sujet, qui se tait, où, et pourquoi. Elle vaut d'abord pour les enjeux à forte composante morale. Une thèse d'historien sur la responsabilité des élites dans l'arrivée d'un régime autoritaire en est un exemple type.
+Le C4 met en circulation dans le village une thèse d'historien moralement chargée, et observe ce qui s'en dit et ce qui s'en tait. La théorie de la spirale du silence (Noelle-Neumann, 1974, 1993) sert d'instrument : elle oblige à regarder ce qui **ne circule pas**, et elle fournit des mesures (climat perçu, test du train, écart entre ce qui est déclaré et ce qui est exprimé).
 
-L'opinion publique d'une société n'est pas la somme des opinions individuelles (Bourdieu, 1973 ; Champagne, 1990) : ce qui s'entend dépend de qui parle, où et comment. Le village permet d'observer, pour chaque agent, ce qu'il produit dans plusieurs **cadres d'énonciation** : face à un enquêteur qui promet la confidentialité, en tête-à-tête, en public.
+Mais la question du C4 n'est pas de savoir si des machines « reproduisent » la spirale du silence. Elle découle de la clef de lecture de tout le projet, la **co-agentivité** (cadre scientifique, section 1) : une réplique n'est jamais l'acte d'un seul agent, elle est co-produite par un agencement.
+
+| Instance | Comment elle peut produire du dire ou du taire |
+|---|---|
+| **Le modèle de langage et son fournisseur** | Neutralité apprise sur les sujets controversés ; complaisance envers l'interlocuteur ; régularités de formulation |
+| **La fiche du persona** | Disposition attribuée à l'autocensure, sensibilité, rapport à l'histoire |
+| **L'orchestrateur** | Ce que l'agent « sait » du livre et de ce qu'en pensent les autres (mémoire, notes de lecture) |
+| **L'ordonnanceur** | Qui rencontre qui, en public ou en privé ; chambres d'écho |
+| **Les cadres d'énonciation** | Scène publique, tête-à-tête, enquête confidentielle, gazette |
+| **Le concepteur** | Tout ce qui précède, et les sollicitations elles-mêmes |
+
+Le silence, s'il apparaît, n'est donc pas « celui d'un habitant » : c'est **une production de l'agencement**. La question devient : **quelles instances produisent le dire et le taire, sous quelles formes, et dans quelles proportions ?**
 
 ### 1.2 Posture
 
-Le village n'est pas un modèle de la société française. C'est un **dispositif génératif** étudié en tant que tel. Ses agents n'ont pas d'intériorité : ils produisent des énoncés selon le cadre d'énonciation qu'on leur fait jouer (voir le cadre scientifique, section 1.3). On parle donc de **position déclarée en enquête** (et non d'« opinion privée ») et de **position exprimée en scène** (et non d'« expression publique »). Le « silence » désigne l'absence, ou la neutralisation, de position exprimée face à une sollicitation.
-
-Enfin, une réplique n'est jamais l'acte d'un seul agent : elle est **co-produite** par le modèle de langage, la fiche du persona, l'orchestrateur, l'ordonnanceur et le concepteur (**agentivité distribuée**, voir le cadre scientifique, section 1.6). Le dire et le taire sont donc des productions de l'agencement, et chaque condition expérimentale fait varier une de ces instances pour en estimer la part.
+- Le village n'est pas un modèle de la société française ; aucun résultat n'est généralisé à des personnes réelles.
+- Aucune instance n'a d'intériorité : on parle de **position déclarée en enquête** et de **position exprimée en scène** ; le « silence » désigne l'absence, ou la neutralisation, de position exprimée face à une sollicitation.
+- Le concepteur est une instance de l'agencement ; sa part est documentée par le carnet de conception.
+- Le livre étudié ne sert pas à juger une thèse historique, mais à observer ce qu'un agencement génératif fait d'un savoir savant moralement chargé. Aucune lecture du présent n'est injectée ; les analogies sont observées, jamais suggérées.
 
 ### 1.3 Problématique
 
 > **Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ?**
-
-La problématique suit la forme « Comment [X] alors que [Y] », qui met en tension l'objet étudié et une contradiction apparente.
 
 | Terme | Contenu | Pourquoi |
 |---|---|---|
 | **X** | Un dispositif génératif met en scène le dire et le taire autour d'un savoir savant | X ne présuppose pas que le silence apparaîtra : si tous les agents parlent, le résultat répond aussi à la question |
 | **Y** | Ses agents sont conçus pour toujours répondre et n'ont rien à craindre de la parole | Un modèle de langage est entraîné à produire du texte et à ne laisser aucune question sans réponse ; il n'a ni corps social, ni réputation, ni peur de l'isolement, ressort central de la spirale du silence (Noelle-Neumann, 1993), absence que reconnaissent Zhong et al. (2025) |
 
-**Nuance apportée par la revue n° 1** : la première moitié de Y est en partie discutable. Les modèles sont aussi réglés pour **rester neutres sur les sujets controversés**, comme le prévoient les règles de conduite publiées par leurs fournisseurs (par exemple OpenAI, 2025). Cette neutralité apprise peut produire des énoncés qui ressemblent à du silence (« chacun pense ce qu'il veut »). Loin d'affaiblir la problématique, cette nuance la précise : la contradiction apparente entre « toujours répondre » et « se taire » est exactement ce que QR-C cherche à démêler.
-
-Correspondance avec les questions de recherche :
-- **QR-A** et **QR-B** décrivent **X** : ce qui se dit, ce qui se tait, le climat perçu ;
-- **QR-C** affronte **Y** : quels mécanismes produisent les silences observés, ou leur absence ;
-- **QR-D** et **QR-E** en tirent les conséquences : ce que devient le savoir dans l'espace du village, et quelle version de la théorie le dispositif réalise.
-
-**Architecture du raisonnement** : problématique → questions de recherche (1.4) → hypothèses de travail (1.5), qui répondent à la problématique → hypothèses opérationnelles (1.6), qui traduisent les hypothèses de travail en mesures → dispositif (3) et mesures (4).
+**Comment la clef de lecture résout la tension.** Y n'est contradictoire que si l'on cherche le silence dans les agents. Si l'agentivité est distribuée, des agents qui n'ont rien à craindre peuvent quand même produire du taire, parce que **ce ne sont pas eux seuls qui parlent ou se taisent** : la fiche, les cadres, l'ordonnanceur, le concepteur et, derrière le modèle, son fournisseur et ses règles de neutralité, y prennent part. La première moitié de Y (« conçus pour toujours répondre ») contient d'ailleurs sa propre tension : les modèles sont aussi réglés pour rester neutres sur les sujets controversés (OpenAI, 2025). C'est une instance de plus, le fournisseur, qui entre dans l'agencement.
 
 ### 1.4 Questions de recherche
 
-| Code | Question |
-|---|---|
-| **QR-A. Le silence** | Face à des sollicitations standardisées, les agents expriment-ils moins de positions sur une thèse moralement chargée que sur un savoir non chargé, et moins en public qu'en privé, lorsque leur position déclarée en enquête s'écarte du climat qu'ils déclarent percevoir ? |
-| **QR-B. Le climat** | Comment se forme le climat d'opinion déclaré perçu : par l'entourage, par la gazette, par l'organisation des rencontres ? Observe-t-on un double climat d'opinion et de l'ignorance pluraliste ? |
-| **QR-C. L'origine du silence** | Quels mécanismes produisent les silences observés, ou leur absence : le mécanisme social inscrit dans les fiches (disposition à s'autocensurer), la complaisance envers l'interlocuteur, ou la neutralité apprise sur les sujets controversés ? |
-| **QR-D. La trivialité sous contrainte** | Quelles versions de la thèse dominent l'espace public du village ? Se déforment-elles vers ce que les locuteurs déclarent percevoir comme l'avis majoritaire ? Que change la structure sociale du village par rapport à une transmission linéaire ? |
-| **QR-E. L'étalonnage théorique** | De quelle formalisation de la spirale du silence la dynamique du village se rapproche-t-elle le plus ? |
+| Code | Question | Lien |
+|---|---|---|
+| **QR-A. Les formes du dire et du taire** | Face à des sollicitations standardisées, quelles positions l'agencement exprime-t-il sur une thèse moralement chargée, par rapport à un savoir sans enjeu, en public et en privé ? Sous quelles formes le taire se manifeste-t-il ? | X |
+| **QR-B. Le climat** | Comment se forme le climat d'opinion déclaré perçu, et quelles instances le façonnent (entourage, gazette, ordonnancement) ? | X |
+| **QR-C. La part des instances** | Quelle part du dire et du taire revient à chaque instance : modèle et fournisseur (neutralité apprise, complaisance), fiche (disposition attribuée), cadres d'énonciation, ordonnanceur, concepteur ? | Y, question centrale |
+| **QR-D. La trivialité co-produite** | Quelles versions de la thèse dominent ce qui s'entend dans le village, et que change l'agencement social (réseau, scènes, mémoire) par rapport à une transmission linéaire ? | Conséquence |
+| **QR-E. L'étalonnage théorique** | De quelle formalisation de la spirale du silence la dynamique de l'agencement se rapproche-t-elle le plus ? | Conséquence |
+
+**Architecture du raisonnement** : problématique (1.3) → questions de recherche (1.4) → hypothèses de travail (1.5), qui proposent des réponses → hypothèses opérationnelles (1.6), qui les traduisent en mesures → instances et conditions (3.1) → dispositif (3) et mesures (4).
 
 ### 1.5 Hypothèses de travail
 
-Les hypothèses de travail répondent directement à la problématique : elles proposent des réponses au « Comment X alors que Y ». Elles relèvent des SIC (énonciation, formes discursives, dispositif, trivialité) et ne se réduisent pas à un test de la théorie de la spirale du silence, qui sert d'instrument et d'étalon.
-
 | Code | Hypothèse de travail | Réponse proposée à Y | Signature observable | Ce qui la réfuterait |
 |---|---|---|---|---|
-| **HT1. Le taire comme dire vide** | Le dispositif ne produit pas de silence au sens strict, mais de la **neutralisation** : les agents parlent toujours, pour ne rien dire | Des agents conçus pour toujours répondre ne peuvent pas se taire ; le taire se déplace dans la parole elle-même | Formes NEU, EUP et DEL bien plus fréquentes que TAC ; plus fréquentes pour S1 et S3 que pour S0, y compris sans public | Silences purs (TAC) dominants, ou neutralisation identique pour S0 |
-| **HT2. Le taire est écrit par le dispositif** | Ce qui fait varier le dire et le taire, ce sont les **cadres d'énonciation** (scène publique, enquêteur, gazette), donc les choix du concepteur, plus que les attributs des personas. L'agentivité du silence est **distribuée** dans l'agencement plutôt que logée dans les agents | Si les agents n'ont rien à craindre, c'est l'agencement (cadre, ordonnanceur, concepteur) qui fait le travail que la peur fait chez les humains | Effets du type de scène et de la gazette supérieurs à celui de la disposition attribuée à l'autocensure | Effet dominant de la disposition attribuée (S5a confirmée seule) |
-| **HT3. La trivialité converge vers le lieu commun** | En circulant, la thèse savante perd ses aspérités et converge vers une **formule consensuelle**, attracteur propre à l'architexte | Si toutes les voix sont écrites par un même architexte, leurs réécritures tendent vers les mêmes formes | Baisse de la diversité des versions au fil des relais ; formules récurrentes ; convergence plus forte en « tout Le Chonk » qu'en polyphonie mixte | Diversité maintenue ou croissante ; aucune différence entre modes d'écriture |
-| **HT4. Une socialité sans climat** | Ce qui ressemble à du conformisme est un **alignement local** sur l'interlocuteur du moment, non une lecture du climat d'opinion du village : le « sens quasi statistique » n'opère pas | Sans peur de l'isolement, il reste la complaisance conversationnelle, dyadique et non collective | Position exprimée prédite par celle de l'interlocuteur (dyades), mais pas par le climat perçu déclaré | Climat perçu prédictif de l'expression, à interlocuteur constant |
+| **HT1. Le taire est co-produit par l'agencement** *(hypothèse centrale)* | Le dire et le taire varient d'abord avec les **instances non individuelles** de l'agencement (cadres d'énonciation, ordonnancement, modèle et fournisseur) plus qu'avec les dispositions attribuées aux agents | Des agents qui n'ont rien à craindre produisent du taire parce que d'autres instances le produisent avec eux | Effets du type de scène, de la gazette, de l'ordonnanceur et du modèle supérieurs à celui de la disposition attribuée à l'autocensure | Effet dominant de la disposition attribuée, les autres instances n'ayant qu'un effet marginal |
+| **HT2. Le taire prend la forme d'un dire vide** | L'agencement produit moins de silence pur que de **neutralisation** : les agents parlent toujours, pour ne rien dire | Des agents conçus pour toujours répondre ne se taisent pas ; le taire se loge dans la parole elle-même | Formes NEU, EUP et DEL bien plus fréquentes que TAC ; plus fréquentes pour S1 et S3 que pour S0, y compris sans public | Silences purs (TAC) dominants, ou neutralisation identique pour S0 |
+| **HT3. La trivialité co-produite converge vers le lieu commun** | Parce que les mêmes instances écrivent toutes les voix, les reprises de la thèse perdent leurs aspérités et convergent vers une **formule consensuelle** | Un agencement qui écrit toutes les voix tend à leur donner les mêmes formes | Baisse de la diversité des versions au fil des relais ; formules récurrentes ; convergence plus forte en « tout Le Chonk » qu'en polyphonie mixte | Diversité maintenue ou croissante ; aucune différence entre modes d'écriture |
+| **HT4. Une socialité sans climat** | Ce qui ressemble à du conformisme est un **alignement local** entre le modèle et l'interlocuteur du moment, non une lecture du climat d'opinion : le « sens quasi statistique » n'opère pas | Sans peur de l'isolement, il reste la complaisance conversationnelle, dyadique et non collective | Position exprimée prédite par celle de l'interlocuteur (dyades), mais pas par le climat perçu déclaré | Climat perçu prédictif de l'expression, à interlocuteur constant |
 
-Ces hypothèses sont **en partie concurrentes**. HT2 et HT4 peuvent coexister ; HT4 contredit en revanche la lecture « spirale » du village. Le dispositif est conçu pour les départager. HT1 constitue l'apport central attendu pour les SIC : un silence qui prend la forme d'une parole vide.
+**Articulation.** HT1 est l'hypothèse centrale, qui découle directement de la clef de lecture. HT2 décrit la **forme** du taire, HT3 la **forme** de ce qui circule, HT4 le **mécanisme** relationnel. HT1 et HT4 sont compatibles (la complaisance est une part du modèle dans l'agencement) ; HT4 contredit en revanche une lecture « spirale » du village. Le dispositif est conçu pour départager.
 
 ### 1.6 Hypothèses opérationnelles préenregistrées
 
-Les hypothèses opérationnelles traduisent les hypothèses de travail en relations mesurables.
-
-| Hypothèse de travail | Hypothèses opérationnelles mobilisées |
-|---|---|
-| HT1. Le taire comme dire vide | S1, S5c, formes du silence (4.4) |
-| HT2. Le taire est écrit par le dispositif | S1, S2, S5a, condition sans autocensure |
-| HT3. La trivialité converge vers le lieu commun | S6, S8, comparaison des modes d'écriture (C5) |
-| HT4. Une socialité sans climat | S3, S5b, étalonnage théorique (QR-E) |
-
-- **S1. Silence différentiel.** Pour la thèse moralement chargée (S1) davantage que pour le savoir non chargé (S0), les agents dont la position déclarée en enquête s'écarte du climat qu'ils déclarent percevoir expriment moins de positions face aux sollicitations en scène publique qu'en scène privée.
-- **S2. Double climat.** Une gazette consonante déplace davantage le climat perçu déclaré que les positions déclarées en enquête.
-- **S3. Ignorance pluraliste.** Dans certaines conditions, une majorité d'agents déclarent percevoir leur position comme minoritaire.
-- **S4. Noyau dur.** Les agents à faible disposition attribuée à l'autocensure continuent d'exprimer des positions qu'ils perçoivent comme minoritaires.
-- **S5. Trois mécanismes (QR-C).**
-  - **S5a. Mécanisme social simulé** : l'effet décrit en S1 croît avec la disposition attribuée à l'autocensure, et disparaît dans la condition sans autocensure.
-  - **S5b. Complaisance** : en tête-à-tête, la position exprimée se rapproche de celle de l'interlocuteur, indépendamment de la disposition attribuée.
-  - **S5c. Neutralité apprise** : les énoncés neutralisés apparaissent même sans public ni interlocuteur, et sont plus fréquents pour les thèses controversées (S1, S3) que pour S0.
-- **S6. Assimilation publique.** Les versions de la thèse exprimées en public se rapprochent davantage de l'avis perçu comme majoritaire que celles exprimées en privé.
-- **S7. Ordonnancement homophile.** Des rencontres organisées entre agents de positions proches réduisent le silence local mais accroissent la polarisation du village.
-- **S8. Structure sociale.** Les transformations de la thèse dans le village diffèrent de celles observées dans des chaînes de transmission linéaires (hypothèse exploratoire, sans direction prédite).
+| Code | Hypothèse opérationnelle | Hypothèse de travail servie |
+|---|---|---|
+| **S1. Silence différentiel** | Pour la thèse moralement chargée (S1) davantage que pour le savoir sans enjeu (S0), les agents dont la position déclarée en enquête s'écarte du climat qu'ils déclarent percevoir expriment moins de positions face aux sollicitations en scène publique qu'en scène privée | HT1, HT2 |
+| **S2. Double climat** | Une gazette consonante déplace davantage le climat perçu déclaré que les positions déclarées en enquête | HT1 |
+| **S3. Ignorance pluraliste** | Dans certaines conditions, une majorité d'agents déclarent percevoir leur position comme minoritaire | HT4 |
+| **S4. Noyau dur** | Les agents à faible disposition attribuée à l'autocensure continuent d'exprimer des positions perçues comme minoritaires | HT1 (part de la fiche) |
+| **S5a. Part de la fiche** | L'effet décrit en S1 croît avec la disposition attribuée à l'autocensure et disparaît dans la condition sans autocensure | HT1 (si confirmée seule, HT1 est réfutée) |
+| **S5b. Part du modèle en interaction** | En tête-à-tête, la position exprimée se rapproche de celle de l'interlocuteur, indépendamment de la disposition attribuée | HT1, HT4 |
+| **S5c. Part du modèle et du fournisseur** | Les énoncés neutralisés apparaissent même sans public ni interlocuteur, et plus pour S1 et S3 que pour S0 | HT1, HT2 |
+| **S6. Assimilation publique** | Les versions de la thèse exprimées en public se rapprochent davantage de l'avis perçu comme majoritaire que celles exprimées en privé | HT3 |
+| **S7. Part de l'ordonnanceur** | Des rencontres homophiles réduisent le silence local mais accroissent la polarisation | HT1 |
+| **S8. Part de l'agencement social** | Les transformations de la thèse dans le village diffèrent de celles des chaînes linéaires (exploratoire) | HT3 |
 
 ---
 
 ## 2. Cadre conceptuel spécifique
 
-En complément du cadre scientifique général :
+En complément du cadre scientifique général, dont le noyau est l'agentivité distribuée :
 
-| Concept | Références | Ce qu'on observe |
+| Concept | Références | Rôle dans le C4 |
 |---|---|---|
-| **Spirale du silence** | Noelle-Neumann (1974, 1993) ; Scheufele et Moy (2000) ; Matthes, Knoll et von Sikorski (2018) | Dynamique des positions exprimées selon le climat perçu |
+| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | Clef de lecture : la part de chaque instance dans le dire et le taire (HT1) |
+| **Cadres de l'expérience et de l'interaction** | Goffman (1974) | Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre (HT1) |
+| **Formes discursives du silence** | Projet (livre de codes 4.4) | Neutralisation, euphémisation, délégation (HT2) |
+| **Attracteurs culturels** | Sperber (1996) ; Perez et al. (2025) | Convergence des reprises vers des formes stables (HT3) |
+| **Complaisance des modèles de langage** | Sharma et al. (2024) | Part du modèle en interaction (HT4, S5b) |
+| **Modèle et fournisseur** : neutralité apprise | Règles de conduite des fournisseurs (OpenAI, 2025) | Part du fournisseur (S5c) |
+| **Spirale du silence** | Noelle-Neumann (1974, 1993) ; Scheufele et Moy (2000) ; Matthes, Knoll et von Sikorski (2018) | Instrument et étalon : dynamique des positions exprimées selon le climat perçu |
 | **Sens quasi statistique, climat et tendance perçus** | Noelle-Neumann (1993) | Estimations déclarées de l'avis majoritaire et de son évolution |
-| **Double climat d'opinion** | Noelle-Neumann (1993) | Écart entre la distribution des positions déclarées et le climat que la gazette laisse percevoir |
-| **Deux sources du climat : médias et entourage** | Noelle-Neumann (1993) | Gazette (médias) et compères (entourage) |
+| **Double climat d'opinion** | Noelle-Neumann (1993) | Écart entre positions déclarées et climat que la gazette laisse percevoir |
+| **Deux sources du climat : médias et entourage** | Noelle-Neumann (1993) | Gazette et compères |
 | **Noyau dur, avant-garde** | Noelle-Neumann (1993) | Agents qui expriment durablement des positions perçues comme minoritaires |
-| **Disposition à s'autocensurer** | Hayes, Glynn et Shanahan (2005) | Attribut écrit dans les fiches ; son effet sur le comportement en scène est testé |
+| **Disposition à s'autocensurer** | Hayes, Glynn et Shanahan (2005) | Attribut écrit dans les fiches |
 | **Ignorance pluraliste** | Prentice et Miller (1993) | Majorité qui se déclare minoritaire |
-| **Falsification des préférences** | Kuran (1995) | Positions exprimées contraires aux positions déclarées en enquête |
+| **Falsification des préférences** | Kuran (1995) | Positions exprimées contraires aux positions déclarées |
 | **Conformité face à une majorité unanime** | Asch (1956) | Principe des compères |
-| **L'opinion publique comme construction** | Bourdieu (1973) ; Champagne (1990) | Écart entre ce qui s'entend dans le village et la distribution des positions déclarées |
-| **Complaisance des modèles de langage** | Sharma et al. (2024) | Mécanisme concurrent S5b |
-| **Neutralité apprise** | Règles de conduite des fournisseurs (OpenAI, 2025) | Mécanisme concurrent S5c |
+| **L'opinion publique comme construction** | Bourdieu (1973) ; Champagne (1990) | Écart entre ce qui s'entend et la distribution des positions déclarées |
 | **Spirale du silence chez des agents génératifs** | Zhong et al. (2025) ; Yang et al. (2026) | Travaux les plus proches |
-| **Suffisance générative et plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Une spirale reproduite n'est pas une spirale expliquée : d'où QR-C |
-| **Cadres de l'expérience et de l'interaction** | Goffman (1974) | Les cadres (scène publique, tête-à-tête, enquête) qui organisent ce qui peut se dire : HT2 |
-| **Attracteurs culturels** | Sperber (1996) ; Perez et al. (2025) | Convergence des réécritures vers des formes stables : HT3 |
-| **Formes discursives du silence** | Projet (livre de codes 4.4) | Neutralisation, euphémisation, délégation : HT1 |
-| **Agentivité distribuée, co-agentivité** | Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007) | Part de chaque instance (modèle, fiche, orchestrateur, ordonnanceur, concepteur) dans le dire et le taire : HT2 |
+| **Suffisance générative et plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Une spirale reproduite n'est pas une spirale expliquée |
 
 ---
 
 ## 3. Dispositif expérimental
+
+### 3.0 Faire varier une instance à la fois
+
+Le dispositif traduit la clef de lecture : chaque instance de l'agencement a ses conditions, pour que sa part puisse être estimée (cadre scientifique, section 6.4).
+
+| Instance | Conditions qui la font varier | Section | Hypothèses |
+|---|---|---|---|
+| Modèle de langage et fournisseur | Narrateurs N1 à N3 ; test sans public (étape 0a) ; « tout Le Chonk » et auteur unique | 3.5, 5 | HT1, HT2, HT3, S5c |
+| Modèle en interaction | Dyades contrôlées (étape 0b) | 3.9, 5 | HT4, S5b |
+| Fiche du persona | Disposition attribuée continue ; condition sans autocensure ; permutations | 3.4, 3.9 | HT1, S4, S5a |
+| Orchestrateur | Lecture intégrale ou annotée | 3.3 | HT3 |
+| Ordonnanceur | O-ALÉ ou O-HOM | 3.5 | HT1, S7 |
+| Cadres d'énonciation | Scène publique ou privée ; gazette G0, G+, G− ; compères | 3.6, 3.8 | HT1, S1, S2 |
+| Source | S0, S1, S2, S3 | 3.2 | HT2, S1, S5c |
+| Agencement social | Village contre chaînes linéaires | 3.10 | HT3, S8 |
+| Concepteur | Carnet de conception ; paraphrases de consignes | Cadre 6.2 | Réflexivité |
 
 ### 3.1 Le village
 
@@ -185,12 +196,12 @@ Les textes sont **rédigés par le pilote**, **appariés** (même longueur, mêm
 
 **Les compères (entourage)**, bloc exploratoire : quatre habitants programmés expriment une position fixe en scène publique, sur le principe des expériences d'Asch (1956). Conditions **K+** (compères favorables) et **K−** (compères critiques). Leur adhésion à la position fixée est contrôlée ; ils sont exclus des analyses.
 
-### 3.9 Trois mécanismes concurrents et leurs tests (QR-C)
+### 3.9 Trois parts de l'agencement et leurs tests (QR-C)
 
 | Mécanisme | Signature attendue | Test | Où |
 |---|---|---|---|
-| **Social simulé** (disposition à s'autocensurer) | Silence croissant avec la disposition attribuée ; plus fort en public ; absent sans autocensure | Variation continue de la disposition ; **condition sans autocensure** (disposition minimale pour tous, aucune consigne évoquant le risque social) | Village |
-| **Complaisance** | Position exprimée qui suit celle de l'interlocuteur | **Dyades contrôlées** : chaque persona, avec sa position déclarée, rencontre en tête-à-tête un interlocuteur favorable puis critique ; on mesure le déplacement | Étape préalable 0b |
+| **Fiche du persona** : mécanisme social simulé (disposition à s'autocensurer) | Silence croissant avec la disposition attribuée ; plus fort en public ; absent sans autocensure | Variation continue de la disposition ; **condition sans autocensure** (disposition minimale pour tous, aucune consigne évoquant le risque social) | Village |
+| **Modèle en interaction** : complaisance | Position exprimée qui suit celle de l'interlocuteur | **Dyades contrôlées** : chaque persona, avec sa position déclarée, rencontre en tête-à-tête un interlocuteur favorable puis critique ; on mesure le déplacement | Étape préalable 0b |
 | **Neutralité apprise** | Neutralisation sans public ni interlocuteur, plus forte pour les thèses controversées | **Test sans public** : chaque modèle, sans persona puis avec persona, répond seul à des questions sur S0, S1, S3 | Étape préalable 0a |
 
 Les trois tests peuvent donner des résultats compatibles entre eux : plusieurs mécanismes peuvent coexister. L'analyse estime la contribution de chacun.
@@ -319,7 +330,7 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 ## 7. Analyse
 
 1. **Quantitative** : modèles à effets mixtes (silence, écart entre cadres, climat perçu, positions exprimées) expliqués par la source, la gazette, la condition d'autocensure, le type de scène, l'ordonnanceur, le narrateur et l'écart entre position déclarée et climat perçu, avec effets aléatoires par simulation et par agent. Pour les indicateurs collectifs, l'unité est la simulation.
-2. **Décomposition des mécanismes (QR-C)** : contribution respective du mécanisme social simulé (village, condition sans autocensure), de la complaisance (dyades) et de la neutralité apprise (test sans public), en comparant systématiquement S1 à S0.
+2. **Décomposition par instance (QR-C, HT1)** : c'est l'analyse principale. On estime la part de chaque instance dans le dire et le taire (fiche, modèle et fournisseur, modèle en interaction, cadres d'énonciation, ordonnanceur, source), en s'appuyant sur les conditions de la section 3.0 et en comparant systématiquement S1 à S0. Une part qui ne peut pas être isolée est déclarée comme telle.
 3. **Étalonnage théorique (QR-E)** : les trajectoires du village sont confrontées aux familles de formalisations du projet sur la spirale du silence ; on compare la qualité d'ajustement de chaque famille. Un bon ajustement indique une ressemblance de forme, non une identité de mécanisme (suffisance générative).
 4. **Structure sociale (S8)** : comparaison des transformations dans le village et dans les chaînes linéaires.
 5. **Qualitative** : analyse de discours d'une sélection préenregistrée de chaînes de reformulation, publiques et privées, et des formes du silence.
@@ -327,7 +338,7 @@ Le nombre de graines est confirmé ou ajusté après le pilote (étape 6). Toute
 
 **Fiabilité** : double codage humain à l'aveugle de 15 % du corpus (kappa ≥ 0,7) ; modèle juge distinct des générateurs ; résultats retenus seulement s'ils sont stables entre graines ; tests de permutation des prénoms et du genre.
 
-**Critères de réussite** : accord de codage atteint ; résultats de priorité 1 stables entre graines ; contribution des trois mécanismes estimée. Quel que soit le sens des résultats sur S1 à S8, une expérience qui satisfait ces critères est publiable.
+**Critères de réussite** : accord de codage atteint ; résultats de priorité 1 stables entre graines ; part de chaque instance estimée. Quel que soit le sens des résultats sur S1 à S8, une expérience qui satisfait ces critères est publiable.
 
 ---
 

@@ -14,24 +14,28 @@
 ## Architecture du raisonnement scientifique
 
 ```
-Problématique générale du village (cadre, 2.1)
-  « Comment une simulation sociale générative fait-elle circuler et se transformer
-    des énoncés, alors que toutes les voix qui la peuplent sont écrites par un même architexte ? »
+Clef de lecture : la co-agentivité (cadre, section 1)
+  Chaque énoncé est co-produit par un agencement : modèle et fournisseur, fiche,
+  orchestrateur, ordonnanceur, cadres d'énonciation, concepteur.
         |
-        +-- Questions de recherche générales QR1 à QR4 (cadre, 2.2)
+Problématique générale du village (cadre, 3.1)
+  « Comment une simulation sociale générative fait-elle circuler et se transformer
+    des énoncés, alors qu'aucune des voix qui la peuplent ne parle seule ? »
+        |
+        +-- Questions de recherche QR1 à QR4 (cadre, 3.2) ; QR2 = la part des instances
                 |
                 +-- QR4 = problématique du C4 (C4, 1.3)
                       « Comment un dispositif génératif met-il en scène le dire et le taire
                         autour d'un savoir savant, alors que ses agents, conçus pour toujours
                         répondre, n'ont rien à craindre de la parole ? »
                         |
-                        +-- Questions de recherche du C4 : QR-A à QR-E (C4, 1.4)
-                        +-- Hypothèses de travail : HT1 à HT4 (C4, 1.5)
-                        |     réponses proposées à la problématique
-                        +-- Hypothèses opérationnelles : S1 à S8 (C4, 1.6)
-                              traductions mesurables des hypothèses de travail
+                        +-- Questions de recherche QR-A à QR-E (C4, 1.4)
+                        +-- Hypothèses de travail HT1 à HT4 (C4, 1.5)
+                        |     HT1, centrale : le taire est co-produit par l'agencement
+                        +-- Hypothèses opérationnelles S1 à S8 (C4, 1.6)
                               |
-                              +-- Dispositif (C4, 3) et mesures (C4, 4)
+                              +-- Une condition par instance (C4, 3.0 ; cadre, 6.4)
+                              +-- Dispositif (C4, 3), mesures (C4, 4), analyse par instance (C4, 7)
 ```
 
 ## Conventions de rédaction
