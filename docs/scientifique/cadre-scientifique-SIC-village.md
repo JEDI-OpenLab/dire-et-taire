@@ -1,6 +1,6 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6.2 du 16 octobre 2026 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
+*Le village simulé comme objet de recherche en SIC. Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
 *Documents associés : « scenario-C4-circulation-savoir-savant.md » (version 11), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md », « ../revues/revue-adversariale-2-cadre-et-C4.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
@@ -73,7 +73,7 @@ En reprenant la distinction de Davallon (2004) :
 | Niveau | Dans ce projet |
 |---|---|
 | **Objet concret** | Un village simulé : modèles, fiches, orchestrateur, ordonnanceur, narrateur, consignes, traces |
-| **Objet scientifique** | La **trivialité co-produite** : la manière dont des énoncés (rumeur, démenti, convention, savoir savant) circulent et se transforment quand chaque reprise est écrite par un agencement de modèles, de code et de consignes |
+| **Objet scientifique** | La **trivialité co-produite** : la manière dont des énoncés, ici un savoir savant, circulent et se transforment quand chaque reprise est écrite par un agencement de modèles, de code et de consignes |
 | **Objet de recherche** | La **répartition de l'agentivité** dans cette trivialité : quelle instance produit quelles transformations, quels dires et quels silences, et ce que les écarts aux phénomènes humains documentés révèlent de chacune |
 
 ### 2.2 Posture épistémologique
@@ -128,14 +128,14 @@ Dans le village, toutes les médiations (gazette, mémoire, scènes) sont écrit
 
 ### 3.2 Questions de recherche
 
-| Code | Question | Lien à X/Y | Expériences |
-|---|---|---|---|
-| **QR1. Les transformations** | Quelles transformations les énoncés subissent-ils en circulant, et en quoi diffèrent-elles de celles documentées chez les humains par des procédures équivalentes ? | X | C0, C1, C4 |
-| **QR2. La part des instances** | Quelle part de ces transformations revient à chaque instance : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, cadres d'énonciation, concepteur ? | Y, question centrale | C3, C4, C5 |
-| **QR3. La communication inscrite** | Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ? | X et Y | Toutes |
-| **QR4. Le dire et le taire** | Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? (Problématique du C4.) | X et Y appliqués au C4 | C4 |
+| Code | Question | Lien à X/Y |
+|---|---|---|
+| **QR1. Les transformations** | Quelles transformations les énoncés subissent-ils en circulant, et en quoi diffèrent-elles de celles documentées chez les humains par des procédures équivalentes ? | X |
+| **QR2. La part des instances** | Quelle part de ces transformations revient à chaque instance : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, cadres d'énonciation, concepteur ? | Y, question centrale |
+| **QR3. La communication inscrite** | Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ? | X et Y |
+| **QR4. Le dire et le taire** | Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? (Problématique du scénario.) | X et Y appliqués au scénario |
 
-Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont propres à chaque expérience (voir le document du C4). Chaque hypothèse de travail est assortie d'une règle de décision préenregistrée à trois issues : soutenue, réfutée, indéterminée.
+Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont détaillées dans le document du scénario. Chaque hypothèse de travail est assortie d'une règle de décision préenregistrée à trois issues : soutenue, réfutée, indéterminée.
 
 ---
 
@@ -159,13 +159,12 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont pr
 | Concept | Références | Usage | Ce qui est adapté | Ce qui est perdu ou à discuter |
 |---|---|---|---|---|
 | **Reproduction en série : réduction, accentuation, assimilation** | Bartlett (1932) ; Allport et Postman (1947) | Décrire les transformations par relais | Catégories descriptives, sans jugement de perte | Protocole de laboratoire et mémoire humaine ; comparaison par réplication procédurale (C0) |
-| **Chaînes de transmission, biais de contenu, attracteurs** | Mesoudi et Whiten (2008) ; Acerbi et Stubbersfield (2023) ; Perez et al. (2025) ; Sperber (1996) | Mesurer les convergences ; protocole de C0 | Protocole transposable | Cadre cognitiviste distinct de la trivialité (2.5) |
-| **Rumeur** | Morin (1969) ; Kapferer (1987) ; Froissart (2002) | Rumeur de la boulangerie | Définition descriptive | Fonctions sociales (anxiété collective, identité) sans équivalent |
+| **Chaînes de transmission, biais de contenu, attracteurs** | Mesoudi et Whiten (2008) ; Acerbi et Stubbersfield (2023) ; Perez et al. (2025) ; Sperber (1996) | Mesurer les convergences ; protocole des chaînes linéaires (modèle nul) | Protocole transposable | Cadre cognitiviste distinct de la trivialité (2.5) |
+| **Rumeur** | Morin (1969) ; Kapferer (1987) ; Froissart (2002) | Prolongement possible : rumeur de la boulangerie (section 7) | Définition descriptive | Fonctions sociales (anxiété collective, identité) sans équivalent |
 | **Rumeur et anxiété** | Rosnow (1991) | Lien entre stabilité émotionnelle attribuée et transmission | Disposition attribuée, non ressentie | Mécanisme affectif absent |
-| **Correction et influence continue** | Lewandowsky et al. (2012) | Survie de la rumeur après démenti | Persistance mesurée | Mécanismes mnésiques sans équivalent direct |
+| **Correction et influence continue** | Lewandowsky et al. (2012) | Prolongement possible : survie de la rumeur après démenti (section 7) | Persistance mesurée | Mécanismes mnésiques sans équivalent direct |
 | **Flux à deux étages** | Katz et Lazarsfeld (1955) | Rôle des habitants très connectés | Position dans le réseau | Leadership fondé sur la compétence reconnue : non modélisé |
-| **Convention et masse critique** | Centola et al. (2018) | Expérience C2 | Jeu de dénomination | Incitations du protocole humain absentes |
-| **Spirale du silence** | Noelle-Neumann (1974, 1993) | Expérience C4 | Questions d'enquête, formalisations comme étalons | La peur de l'isolement n'existe que comme disposition écrite |
+| **Spirale du silence** | Noelle-Neumann (1974, 1993) | Scénario « Dire et taire » | Questions d'enquête, formalisations comme étalons | La peur de l'isolement n'existe que comme disposition écrite |
 | **Lectures conforme, négociée, oppositionnelle** | Hall (1973) | Coder les appropriations | Rapportées au sens proposé par la source | La position sociale n'existe que comme attribut écrit |
 | **Formule** | Krieg-Planque (2009) | Expressions figées qui résument l'énoncé | Repérage direct | Suppose un espace public réel |
 | **Mise en scène de la communication** | Authier-Revuz (1982) | Marqueurs de reprise | Repérage direct | Aucun |
@@ -198,7 +197,7 @@ La grille articule cinq niveaux d'analyse. À chaque niveau, la question transve
 | **2. Circulation** | Par où passent les énoncés ? | Traces des rencontres, réseau, traçabilité des relais | Flux à deux étages, rumeur, masse critique | Analyse de réseau, courbes de diffusion | Ordonnanceur, réseau |
 | **3. Énoncés** | Comment les énoncés se transforment-ils ? | Chaînes de reformulation | Trivialité, reproduction en série, attracteurs, formule | Analyse de discours, codage | Modèle et fournisseur, orchestrateur (mémoire) |
 | **4. Positions** | Quelles positions l'agencement produit-il selon les cadres d'énonciation ? | Réponses en enquête, répliques en scène | Cadres, lectures selon Hall, mémoire interdiscursive | Codage, analyse qualitative | Fiche, cadres, modèle |
-| **5. Parts et écarts** | Quelle est la part de chaque instance, et que révèlent les écarts aux phénomènes humains ? | Résultats des niveaux 2 à 4, C0, conditions comparées | Co-agentivité, suffisance générative, aplatissement | Décomposition des effets par instance, interprétation critique | Toutes |
+| **5. Parts et écarts** | Quelle est la part de chaque instance, et que révèlent les écarts aux phénomènes humains ? | Résultats des niveaux 2 à 4, chaînes linéaires, conditions comparées | Co-agentivité, suffisance générative, aplatissement | Décomposition des effets par instance, interprétation critique | Toutes |
 
 ### 5.1 Livre de codes unifié (niveaux 3 et 4)
 
@@ -255,17 +254,17 @@ Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix
 
 C'est la traduction méthodologique de la clef de lecture. Chaque instance a sa ou ses conditions expérimentales :
 
-| Instance | Condition qui la fait varier | Expériences |
-|---|---|---|
-| **Modèle de langage et fournisseur** | Village entier joué par un autre modèle ; narrateur seul changé ; habitants répartis entre plusieurs modèles ; test sans public des modèles seuls | C3, C4, C5 |
-| **Fiche du persona** | Faire varier les attributs (disposition à l'autocensure, sensibilité) ; permutations des prénoms et du genre ; condition sans autocensure | C3, C4 |
-| **Orchestrateur** | Mode de lecture (intégral ou annoté) ; mécanisme de résumé de la mémoire | C4 |
-| **Ordonnanceur** | Rencontres au hasard ou homophiles ; position du premier émetteur | C1, C4 |
-| **Cadres d'énonciation** | Scène publique ou privée ; gazette ; compères ; sollicitations | C4 |
-| **Modèle et fournisseur : mode d'écriture** | Polyphonie homogène (référence), autre architexte, habitants pluri-modèles, auteur unique | C4, C5 |
-| **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) ; choix des contrastes de référence | C3, tous |
+| Instance | Condition qui la fait varier |
+|---|---|
+| **Modèle de langage et fournisseur** | Village entier joué par un autre modèle ; narrateur seul changé ; habitants répartis entre plusieurs modèles ; test sans public des modèles seuls |
+| **Fiche du persona** | Faire varier les attributs (disposition à l'autocensure, sensibilité) ; permutations des prénoms et du genre ; condition sans autocensure |
+| **Orchestrateur** | Mode de lecture (intégral ou annoté) ; mécanisme de résumé de la mémoire |
+| **Ordonnanceur** | Rencontres au hasard ou homophiles |
+| **Cadres d'énonciation** | Scène publique ou privée ; gazette ; compères ; sollicitations |
+| **Modèle et fournisseur : mode d'écriture** | Polyphonie homogène (référence), autre architexte, habitants pluri-modèles, auteur unique |
+| **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) ; choix des contrastes de référence |
 
-Les **modes d'écriture** comparés (C5) :
+Les **modes d'écriture** comparés dans le scénario :
 
 | Mode | Fonctionnement | Ce qu'il isole |
 |---|---|---|
@@ -284,15 +283,13 @@ Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algor
 
 Pour chaque référence humaine mobilisée, on reproduit son protocole dans le dispositif, ou l'on déclare la comparaison qualitative.
 
-| Référence humaine | Procédure reproduite | Expérience |
-|---|---|---|
-| Reproduction en série (Bartlett, 1932 ; Allport et Postman, 1947) ; chaînes de transmission (Mesoudi et Whiten, 2008) | Chaînes linéaires de 10 agents | **C0** |
-| Biais de contenu (Acerbi et Stubbersfield, 2023) | Mêmes matériaux | **C0** |
-| Masse critique d'une convention (Centola et al., 2018) | Jeu de dénomination | C2 |
-| Influence continue (Lewandowsky et al., 2012) | Comparaison qualitative | C1 |
-| Spirale du silence (méta-analyses ; test du train) | Questions d'enquête reprises des études ; formalisations comme étalons | C4 |
+| Référence humaine | Procédure reproduite |
+|---|---|
+| Reproduction en série (Bartlett, 1932 ; Allport et Postman, 1947) ; chaînes de transmission (Mesoudi et Whiten, 2008) | Chaînes linéaires de 10 agents (étape 5 du scénario) |
+| Biais de contenu (Acerbi et Stubbersfield, 2023) | Comparaison qualitative des transformations dans les chaînes |
+| Spirale du silence (méta-analyses ; test du train) | Questions d'enquête reprises des études ; formalisations comme étalons |
 
-L'expérience **C0** donne aussi la ligne de base qui permet de mesurer ce que l'**agencement social** (réseau, scènes, mémoire) ajoute à une transmission linéaire.
+Les **chaînes linéaires** donnent aussi la ligne de base qui permet de mesurer ce que l'**agencement social** (réseau, scènes, mémoire) ajoute à une transmission linéaire.
 
 ### 6.6 Unités d'analyse et puissance
 
@@ -313,7 +310,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 |---|---|
 | Construction explicite de l'objet | Objet concret, scientifique, de recherche ; clef de lecture explicitée |
 | Cohérence théorie, méthode, corpus | Noyau théorique centré sur l'agencement ; décomposition des instances ; livre de codes descriptif |
-| Validité des comparaisons | Réplication procédurale ; expérience C0 |
+| Validité des comparaisons | Réplication procédurale ; chaînes linéaires comme modèle nul |
 | Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
 | Réflexivité | Le concepteur traité comme une instance ; carnet de conception |
 | Fiabilité | Préenregistrement en deux temps, règles de décision à trois issues, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
@@ -331,6 +328,15 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
 - Le codage automatique ajoute une instance à l'analyse elle-même ; d'où la séparation des modèles et la validation humaine.
+
+### Prolongements possibles
+
+Le projet ne compte qu'un scénario. Un second est gardé en réserve, sans protocole : **la rumeur de la boulangerie qui ferme, puis son démenti** (Morin, 1969 ; Kapferer, 1987 ; Froissart, 2002 ; Lewandowsky et al., 2012). C'est un énoncé banal, sans enjeu moral, à l'opposé d'une thèse d'historien. Il serait joué dans le même village, avec les mêmes juges et la même méthode de décomposition, seulement si les résultats de « Dire et taire » le rendent informatif :
+- si le **dire vide** (HT2) est soutenu : la neutralisation disparaît-elle face à un énoncé banal, ou les agents neutralisent-ils tout ?
+- si la **convergence** (HT3) est établie : une rumeur converge-t-elle aussi vite qu'une thèse savante ? Si oui, la convergence tient à l'architexte plutôt qu'à la charge morale ;
+- si le **climat ne pèse pas** (HT4) : un village qui ne lit pas le climat corrige-t-il une rumeur démentie, ou la garde-t-il (effet d'influence continue) ?
+
+Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 
 ---
 

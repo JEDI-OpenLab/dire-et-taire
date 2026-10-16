@@ -130,7 +130,7 @@
 | **Diversité des versions** | Dispersion des versions d'une même journée, mesurée de deux façons : sémantique (distance entre plongements) et lexicale (part de trigrammes partagés) |
 | **Formes du silence** | Évitement (EVI), neutralisation (NEU), euphémisation (EUP), délégation (DEL), alignement apparent (ALI), silence pur (TAC) |
 | **Mode d'écriture** | Polyphonie homogène (« tout Le Chonk », référence), autre architexte, habitants pluri-modèles, auteur unique |
-| **Expériences C0 à C5** | C0 : chaînes de transmission ; C1 : rumeur et démenti ; C2 : convention ; C3 : contrôles d'artefacts ; C4 : dire et taire ; C5 : modes d'écriture |
+| **Expériences C0 à C5** | Découpage initial du projet, retiré en octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » (ancienne C4). Les chaînes de transmission (C0) sont devenues les chaînes linéaires du scénario ; les contrôles d'artefacts (C3) et les modes d'écriture (C5) sont intégrés à ses conditions ; la rumeur et son démenti (C1) sont un prolongement possible ; la convention (C2) est abandonnée |
 
 ---
 
