@@ -1,6 +1,6 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 5 du 16 octobre 2026 : réécriture autour de la co-agentivité, clef de lecture de l'ensemble du projet. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6 du 16 octobre 2026 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence et règles de décision à trois issues, modèle des habitants comme condition. La version 5 avait réécrit le cadre autour de la co-agentivité. Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ».*
 
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
@@ -18,9 +18,18 @@ Le village de Saint-Aubert-sur-Lys est peuplé d'« agents ». Le mot est trompe
 | **La fiche du persona** | Elle oriente le ton, les valeurs, les dispositions attribuées | Le concepteur, qui l'a écrite |
 | **L'orchestrateur** | Il assemble la consigne et choisit les souvenirs qui y figurent, donc ce que l'agent « sait » | Le code, et le modèle qui résume les souvenirs |
 | **L'ordonnanceur** | Il décide de la rencontre : qui parle à qui, où, dans quel type de scène | Le code, et les règles fixées par le concepteur |
-| **Le concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations | Le chercheur lui-même |
+| **Les cadres d'énonciation** | Ils définissent la situation de parole : scène publique ou privée, enquête, gazette, sollicitations | Le concepteur, qui les écrit, et l'ordonnanceur, qui les distribue |
+| **Le concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations, et les contrastes qui servent à mesurer les parts | Le chercheur lui-même |
 
 L'énoncé est l'acte d'un **agencement**. On appelle **co-agentivité** cette production conjointe des énoncés par le modèle, le dispositif et le concepteur.
+
+**Inventaire canonique.** Tous les documents du projet renvoient à cet inventaire, qui distingue trois statuts. Seules les instances de production entrent dans la décomposition des parts.
+
+| Statut | Éléments | Rôle dans l'analyse |
+|---|---|---|
+| **Instances de production** (elles font l'énoncé) | Les six instances ci-dessus. Le modèle et son fournisseur tiennent plusieurs rôles (habitants, narrateur, lecteur, résumé de mémoire) et portent plusieurs mécanismes (écriture, complaisance, neutralité apprise) | Leur part est estimée en les faisant varier une à une (section 6.4) |
+| **Stimuli et structure** (ce qui circule, et la forme du collectif) | Les textes sources mis en circulation ; la structure sociale (village ou chaînes linéaires) | Conditions expérimentales qui ne sont pas des instances de l'agencement |
+| **Instruments** (ce qui produit les données) | L'enquêteur, les modèles juges, les outils de mesure automatique, le chercheur qui code | Ils sont eux aussi des agencements ; chacun a ses garde-fous (section 6.3) |
 
 ### 1.2 Agent et agentivité : une distinction à tenir
 
@@ -110,18 +119,18 @@ Les travaux sur les chaînes de transmission entre modèles de langage parlent d
 | Terme | Contenu | Pourquoi |
 |---|---|---|
 | **X** | Une simulation sociale générative fait circuler et se transformer des énoncés | C'est l'objet scientifique : une trivialité générée |
-| **Y** | Aucune voix ne parle seule : chaque énoncé est co-produit par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur et le concepteur, et toutes les voix passent par un petit nombre d'architextes | La circulation suppose des locuteurs distincts qui se transmettent des énoncés. Si chaque locuteur est lui-même un agencement, et si les mêmes instances écrivent toutes les voix, qu'est-ce qui circule, et entre qui ? |
+| **Y** | Aucune voix ne parle seule : chaque énoncé est co-produit par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur, et toutes les voix passent par un petit nombre d'architextes | La circulation suppose des locuteurs distincts qui se transmettent des énoncés. Si chaque locuteur est lui-même un agencement, et si les mêmes instances écrivent toutes les voix, qu'est-ce qui circule, et entre qui ? |
 
 ### 3.2 Questions de recherche
 
 | Code | Question | Lien à X/Y | Expériences |
 |---|---|---|---|
 | **QR1. Les transformations** | Quelles transformations les énoncés subissent-ils en circulant, et en quoi diffèrent-elles de celles documentées chez les humains par des procédures équivalentes ? | X | C0, C1, C4 |
-| **QR2. La part des instances** | Quelle part de ces transformations revient à chaque instance : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, concepteur ? | Y, question centrale | C3, C4, C5 |
+| **QR2. La part des instances** | Quelle part de ces transformations revient à chaque instance : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, cadres d'énonciation, concepteur ? | Y, question centrale | C3, C4, C5 |
 | **QR3. La communication inscrite** | Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ? | X et Y | Toutes |
 | **QR4. Le dire et le taire** | Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? (Problématique du C4.) | X et Y appliqués au C4 | C4 |
 
-Les hypothèses de travail et les hypothèses opérationnelles sont propres à chaque expérience (voir le document du C4).
+Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont propres à chaque expérience (voir le document du C4). Chaque hypothèse de travail est assortie d'une règle de décision préenregistrée à trois issues : soutenue, réfutée, indéterminée.
 
 ---
 
@@ -230,9 +239,10 @@ Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix
 
 ### 6.3 Fiabilité du codage
 
-- Préenregistrement des questions, des hypothèses, des livres de codes et des critères de sélection qualitative.
+- Préenregistrement en deux temps : questions, hypothèses, règles de décision et contrastes de référence avant toute génération ; livres de codes figés, nombre de graines et seuils techniques après le pilote, par un avenant daté. Le pilote n'entre pas dans l'analyse.
 - Codage humain par le chercheur seul : fiabilité intra-codeur (recodage à l'aveugle de 15 % du corpus après au moins trois semaines ; kappa de Cohen, seuil de 0,7) ; accord entre ce codage et deux modèles juges distincts ; livres de codes et extraits codés publiés, pour que la vérification par les pairs reste possible.
-- **Le modèle juge est toujours différent des modèles qui ont généré la simulation codée** (Panickssery et al., 2024). Il est validé contre le codage humain.
+- **Les modèles juges sont toujours différents des modèles qui ont généré la simulation codée** (Panickssery et al., 2024). Deux juges codent chaque énoncé ; leur accord est mesuré, et ils sont validés contre le codage humain.
+- **Les autres instruments** (enquêteur, outils de mesure automatique comme un modèle de plongement) sont déclarés comme tels ; toute mesure qui dépend d'un modèle est doublée d'une mesure qui n'en dépend pas, quand c'est possible.
 - Plusieurs graines par condition ; résultats retenus seulement s'ils sont stables.
 
 ### 6.4 Décomposer l'agentivité : faire varier une instance à la fois
@@ -241,24 +251,29 @@ C'est la traduction méthodologique de la clef de lecture. Chaque instance a sa 
 
 | Instance | Condition qui la fait varier | Expériences |
 |---|---|---|
-| **Modèle de langage et fournisseur** | Changer le modèle des habitants, du narrateur, ou de tous les rôles (Le Chonk, Qwen, Gemma) ; test sans public des modèles seuls | C3, C4, C5 |
+| **Modèle de langage et fournisseur** | Habitants joués par un seul modèle ou répartis entre plusieurs modèles ; changer le narrateur, ou tous les rôles (Le Chonk, Qwen, Gemma) ; test sans public des modèles seuls | C3, C4, C5 |
 | **Fiche du persona** | Faire varier les attributs (disposition à l'autocensure, sensibilité) ; permutations des prénoms et du genre ; condition sans autocensure | C3, C4 |
 | **Orchestrateur** | Mode de lecture (intégral ou annoté) ; mécanisme de résumé de la mémoire | C4 |
 | **Ordonnanceur** | Rencontres au hasard ou homophiles ; position du premier émetteur | C1, C4 |
-| **Cadres d'énonciation** | Scène publique ou privée ; enquêteur ; gazette ; compères | C4 |
-| **Mode d'écriture** | Polyphonie mixte, polyphonie homogène, autre modèle, auteur unique | C5 |
-| **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) | C3, tous |
+| **Cadres d'énonciation** | Scène publique ou privée ; gazette ; compères ; sollicitations | C4 |
+| **Modèle et fournisseur : mode d'écriture** | Habitants mono-modèle ou pluri-modèles, polyphonie homogène, autre architexte, auteur unique | C4, C5 |
+| **Concepteur** | Carnet de conception ; variations de consignes censées être neutres (paraphrases) ; choix des contrastes de référence | C3, tous |
 
 Les **modes d'écriture** comparés (C5) :
 
 | Mode | Fonctionnement | Ce qu'il isole |
 |---|---|---|
-| Polyphonie mixte | Habitants sur ILaaS ; narrateur et lecteur sur Le Chonk | Condition principale |
+| Polyphonie mixte, habitants mono-modèle | Les habitants sont joués par un seul modèle ILaaS ; narrateur et lecteur sur Le Chonk | Condition principale |
+| Polyphonie mixte, habitants pluri-modèles | Les habitants sont répartis entre quatre modèles ILaaS de familles différentes ; narrateur et lecteur sur Le Chonk | Ce que change la pluralité des architextes parmi les voix |
 | Polyphonie homogène | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa mémoire | Un architexte unique sous des voix multiples |
 | Polyphonie d'un autre architexte | Tous les rôles joués par Qwen ou Gemma | L'effet du modèle à configuration égale |
 | Auteur unique | Le Chonk écrit d'un seul tenant la vie du village, sans séparation des connaissances | Ce que change la distribution de l'écriture entre agents |
 
 Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algorithmique** (du code), séparé du **narrateur** (un modèle), pour distinguer l'organisation de l'exposition de l'écriture des scènes.
+
+**Contrastes de référence.** Pour comparer des parts, il faut une unité commune. Chaque instance reçoit un contraste de référence fixé avant toute génération (par exemple disposition faible contre forte, scène privée contre publique, un modèle contre plusieurs), et l'effet de chaque contraste est exprimé dans la même unité (en points de pourcentage pour une proportion). La part ainsi mesurée dépend du contraste choisi : ce choix est la part du concepteur dans la mesure elle-même, et il est justifié dans le préenregistrement. Les parts mesurées hors du village (test d'un modèle seul, dyades) sont rapportées à part et ne sont pas comparées directement aux contrastes mesurés dans le village.
+
+**Règles de décision.** Chaque hypothèse de travail a une issue préenregistrée parmi trois : soutenue, réfutée, indéterminée. Quand une hypothèse affirme l'absence d'un effet, l'absence est établie par un test d'équivalence (Lakens, 2017), et non par un simple résultat non significatif.
 
 ### 6.5 Réplication procédurale des références humaines
 
@@ -296,12 +311,15 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 | Validité des comparaisons | Réplication procédurale ; expérience C0 |
 | Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
 | Réflexivité | Le concepteur traité comme une instance ; carnet de conception |
-| Fiabilité | Préenregistrement, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
+| Fiabilité | Préenregistrement en deux temps, règles de décision à trois issues, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
 | Prudence interprétative | Aucune généralisation aux humains ; vocabulaire des cadres d'énonciation |
 | Transparence | Code, consignes, livres de codes, fiches, archives publiés selon le plan de gestion des données |
 
 **Limites assumées**
 - **Le risque de dilution** : affirmer que tout est agencement n'explique rien. La co-agentivité n'a de valeur que par la décomposition expérimentale des parts ; une part qui ne peut être isolée est déclarée comme telle.
+- **La part dépend du contraste** : la part d'une instance est mesurée relativement au contraste de référence choisi ; un autre contraste donnerait une autre part. Les contrastes sont donc fixés et justifiés avant toute génération.
+- **Modèle et fournisseur ne se séparent pas** : changer de modèle change aussi de fournisseur, de données d'entraînement et de règles de conduite ; leurs parts sont rapportées ensemble.
+- **Les instruments sont des agencements** : enquêteur, juges et outils de mesure produisent eux aussi des énoncés ou des scores ; d'où leurs garde-fous (section 6.3).
 - **L'agentivité n'est pas l'intentionnalité** : dire qu'une instance « agit » signifie qu'elle fait une différence mesurable, non qu'elle veut quelque chose.
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
@@ -368,6 +386,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Epstein, J. M. (1999). Agent-based computational models and generative social science. *Complexity*, 4(5), 41-60.
 - Gebru, T., et al. (2021). Datasheets for Datasets. *Communications of the ACM*, 64(12), 86-92.
 - Larooij, M., & Törnberg, P. (2025). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*. *arXiv:2504.03274*.
+- Lakens, D. (2017). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. *Social Psychological and Personality Science*, 8(4), 355-362.
 - Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. *Journal of Communication*, 24(2), 43-51.
 - Noelle-Neumann, E. (1993). *The Spiral of Silence: Public Opinion, Our Social Skin* (2e éd.). Chicago : University of Chicago Press.
 - OpenAI (2025). *Model Spec*. Spécification publique du comportement attendu des modèles.

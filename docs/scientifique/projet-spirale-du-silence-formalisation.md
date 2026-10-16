@@ -173,12 +173,12 @@ Le carnet de conception consigne chaque traduction du texte vers le code, chaque
 
 | Semaine | Étape |
 |---|---|
-| S1 et S2 | Corpus, extraction des propositions, vérification des citations, validation |
-| S3 | Points de décision, revue adverse, espace des formalisations |
-| S4 et S5 | Implémentation, tests de conformité |
-| S6 et S7 | Exploration, sensibilité, classification |
-| S8 | Confrontation empirique, prédictions discriminantes |
-| S9 | Rédaction ; volet réflexif |
+| Semaines 1 et 2 | Corpus, extraction des propositions, vérification des citations, validation |
+| Semaine 3 | Points de décision, revue adverse, espace des formalisations |
+| Semaines 4 et 5 | Implémentation, tests de conformité |
+| Semaines 6 et 7 | Exploration, sensibilité, classification |
+| Semaine 8 | Confrontation empirique, prédictions discriminantes |
+| Semaine 9 | Rédaction ; volet réflexif |
 
 ---
 

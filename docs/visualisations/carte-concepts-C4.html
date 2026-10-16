@@ -48,6 +48,8 @@ h2{font-size:1.25rem}
 .sev.b{background:color-mix(in srgb,var(--crit) 16%,transparent);color:var(--crit)}
 .sev.i{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
 .sev.n{background:color-mix(in srgb,var(--slate) 18%,transparent);color:var(--slate)}
+.sev.b,.sev.i,.sev.n{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.sev.w{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
 .bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between}
 .legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted)}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
@@ -88,13 +90,13 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · scénario C4 « Dire et taire »</div>
     <h1>Carte des concepts du C4</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. Un chemin qui s'arrête en route est un point à consolider avant le préenregistrement. Cliquez sur un nœud pour suivre sa filiation, ou sur un point à consolider pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au C4 version 9 et au cadre version 6 : les quatre points bloquants de la première carte sont levés. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
 
   <section>
-    <div class="bar" style="margin-bottom:12px"><h2>Points à consolider</h2></div>
+    <div class="bar" style="margin-bottom:12px"><h2>Points relevés et suite donnée</h2></div>
     <div class="gaps" id="gaps"></div>
   </section>
 
@@ -105,145 +107,156 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v5 (sections 1, 3, 4, 6) et scénario C4 v8 (sections 1.5, 1.6, 2, 3.0, 4, 6). Les nœuds en pointillés rouges n'existent pas encore dans les documents : ce sont les pièces qui manquent. Les liens en pointillés partent des instruments de mesure (enquêteur, modèle juge), qui sont eux aussi des agencements.</p>
+    <p class="note">Sources : cadre scientifique v6 (sections 1, 3, 4, 6, 7) et scénario C4 v9 (sections 1.5, 1.6, 2, 3.0, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signalerait une pièce manquante ; il n'en reste aucune.</p>
   </section>
 </div>
 
 <aside class="drawer" id="drawer" hidden aria-live="polite"></aside>
 
 <script>
-const COLS=["Concepts","Instances et instruments","Questions de recherche","Hypothèses de travail","Hypothèses opérationnelles","Indicateurs"];
+const COLS=["Concepts","Instances, stimuli, instruments","Questions de recherche","Hypothèses de travail","Hypothèses opérationnelles","Indicateurs"];
 const FAM={
   agencement:{l:"Agencement et SIC",v:"--violet"},
   discours:{l:"Circulation et discours",v:"--teal"},
   opinion:{l:"Spirale et opinion",v:"--amber"},
   llm:{l:"Modèles de langage",v:"--rose"},
+  methode:{l:"Méthode",v:"--ink"},
   posture:{l:"Posture critique",v:"--slate"}
 };
 const N=[
 /* Concepts */
-{id:"coag",c:0,fam:"agencement",l:"Co-agentivité (agentivité distribuée)",r:"Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007)",d:"Clef de lecture : chaque énoncé est co-produit par un agencement d'instances. Sert à estimer la part de chacune."},
-{id:"archi",c:0,fam:"agencement",l:"Architexte",r:"Jeanneret et Souchier (1999)",d:"Le modèle comme outil qui préfigure les formes de l'écriture ; derrière la convergence attendue en « tout Le Chonk »."},
-{id:"script",c:0,fam:"agencement",l:"Script, inscription",r:"Akrich (1987)",d:"Ce que le concepteur inscrit dans les fiches et les consignes."},
-{id:"enoned",c:0,fam:"agencement",l:"Énonciation éditoriale",r:"Souchier (1998)",d:"Ce que la consigne et la mémoire assemblées par l'orchestrateur imposent aux énoncés."},
+{id:"coag",c:0,fam:"agencement",l:"Co-agentivité (agentivité distribuée)",r:"Callon (1986) ; Latour (2006) ; Akrich et Latour (1992) ; Suchman (2007)",d:"Clef de lecture : chaque énoncé est co-produit par un agencement de six instances. Sert à estimer la part de chacune (HO11)."},
+{id:"archi",c:0,fam:"agencement",l:"Architexte",r:"Jeanneret et Souchier (1999)",d:"Le modèle qui écrit toutes les voix ; contraste M-UN contre M-PLU (HT3, HO10)."},
+{id:"script",c:0,fam:"agencement",l:"Script, inscription",r:"Akrich (1987)",d:"Ce que le concepteur inscrit dans les fiches et les consignes ; analyse qualitative du niveau 1."},
+{id:"enoned",c:0,fam:"agencement",l:"Énonciation éditoriale",r:"Souchier (1998)",d:"Ce que la consigne et la mémoire assemblées par l'orchestrateur imposent aux énoncés ; analyse qualitative du niveau 1."},
 {id:"goff",c:0,fam:"agencement",l:"Cadres de l'expérience",r:"Goffman (1974)",d:"Scène publique, tête-à-tête, enquête : ce qui peut se dire selon le cadre."},
-{id:"dispo",c:0,fam:"agencement",l:"Dispositif",r:"Foucault ; Agamben (2007)",d:"Le village comme agencement hétérogène qui oriente les conduites."},
+{id:"dispo",c:0,fam:"agencement",l:"Dispositif",r:"Foucault ; Agamben (2007)",d:"Le village comme agencement hétérogène qui oriente les conduites ; analyse qualitative du niveau 1 et QR3."},
 {id:"trivia",c:0,fam:"agencement",l:"Trivialité",r:"Jeanneret (2008, 2014)",d:"Circulation créative des êtres culturels, réécrits à travers des médiations."},
-{id:"media",c:0,fam:"agencement",l:"Médiation",r:"Jeanneret (2014) ; Davallon",d:"Ce qui s'interpose et transforme ; dans le C4, le compte rendu journalistique (source S2) et la gazette."},
-{id:"tele",c:0,fam:"agencement",l:"Modèle télégraphique (instrument)",r:"Shannon et Weaver (1949) ; Winkin (1981)",d:"Instrument de mesure de la fidélité, et objet d'enquête (QR3)."},
+{id:"media",c:0,fam:"agencement",l:"Médiation",r:"Jeanneret (2014) ; Davallon",d:"Compte rendu journalistique T2 (bloc exploratoire) et gazette."},
+{id:"tele",c:0,fam:"agencement",l:"Modèle télégraphique (instrument)",r:"Shannon et Weaver (1949) ; Winkin (1981)",d:"Instrument de mesure de la fidélité, et indice d'une communication-transport (QR3)."},
 {id:"bartlett",c:0,fam:"discours",l:"Reproduction en série",r:"Bartlett (1932) ; Allport et Postman (1947)",d:"Réduction, accentuation, assimilation ; protocole des chaînes linéaires."},
-{id:"attr",c:0,fam:"discours",l:"Attracteurs culturels",r:"Sperber (1996) ; Perez et al. (2025)",d:"Convergence des reprises vers des formes stables."},
+{id:"attr",c:0,fam:"discours",l:"Attracteurs culturels",r:"Sperber (1996) ; Perez et al. (2025)",d:"Convergence des versions vers des formes stables (HO10)."},
 {id:"hall",c:0,fam:"discours",l:"Lectures selon Hall",r:"Hall (1973)",d:"Lectures conforme, négociée, oppositionnelle (codes L-CON, L-NEG, L-OPP)."},
-{id:"formule",c:0,fam:"discours",l:"Formule",r:"Krieg-Planque (2009)",d:"Expression figée qui résume la thèse et se répète (code FOR)."},
+{id:"formule",c:0,fam:"discours",l:"Formule",r:"Krieg-Planque (2009)",d:"Expression figée qui résume la thèse et se répète (code FOR ; indicateur des formules récurrentes)."},
 {id:"moirand",c:0,fam:"discours",l:"Mémoire interdiscursive",r:"Moirand (2007)",d:"Analogies avec le présent (code ANA)."},
 {id:"authier",c:0,fam:"discours",l:"Mise en scène de la reprise",r:"Authier-Revuz (1982)",d:"Marqueurs de reformulation (code MSC)."},
-{id:"jacobi",c:0,fam:"discours",l:"Continuum de la communication scientifique",r:"Jacobi (1999)",d:"Situe les sources S0 à S3."},
+{id:"jacobi",c:0,fam:"discours",l:"Continuum de la communication scientifique",r:"Jacobi (1999)",d:"Situe les textes sources T0 à T3."},
 {id:"spirale",c:0,fam:"opinion",l:"Spirale du silence",r:"Noelle-Neumann (1974, 1993)",d:"Instrument et étalon : dynamique des positions exprimées selon le climat perçu."},
-{id:"climat",c:0,fam:"opinion",l:"Climat perçu, sens quasi statistique",r:"Noelle-Neumann (1993)",d:"Estimations déclarées de l'avis majoritaire et de sa tendance."},
-{id:"dbl",c:0,fam:"opinion",l:"Double climat d'opinion",r:"Noelle-Neumann (1993)",d:"Écart entre positions déclarées et climat que la gazette laisse percevoir."},
+{id:"climat",c:0,fam:"opinion",l:"Climat perçu, sens quasi statistique",r:"Noelle-Neumann (1993)",d:"Estimations déclarées de l'avis majoritaire ; prédicteur testé dans HO9."},
+{id:"dbl",c:0,fam:"opinion",l:"Double climat d'opinion",r:"Noelle-Neumann (1993)",d:"Écart entre positions déclarées et climat que la gazette laisse percevoir (HO2)."},
 {id:"deuxsrc",c:0,fam:"opinion",l:"Deux sources du climat",r:"Noelle-Neumann (1993)",d:"Médias (la gazette) et entourage (les compères)."},
-{id:"noyau",c:0,fam:"opinion",l:"Noyau dur, avant-garde",r:"Noelle-Neumann (1993)",d:"Agents qui expriment durablement une position perçue comme minoritaire."},
-{id:"wtsc",c:0,fam:"opinion",l:"Disposition à s'autocensurer",r:"Hayes, Glynn et Shanahan (2005)",d:"Attribut écrit dans les fiches ; son effet est une hypothèse (S5a)."},
-{id:"ignor",c:0,fam:"opinion",l:"Ignorance pluraliste",r:"Prentice et Miller (1993)",d:"Une majorité qui se déclare minoritaire."},
+{id:"noyau",c:0,fam:"opinion",l:"Noyau dur, avant-garde",r:"Noelle-Neumann (1993)",d:"Agents qui expriment durablement une position perçue comme minoritaire (HO4)."},
+{id:"wtsc",c:0,fam:"opinion",l:"Disposition à s'autocensurer",r:"Hayes, Glynn et Shanahan (2005)",d:"Attribut écrit dans les fiches ; contraste de référence de la fiche (HO11)."},
+{id:"ignor",c:0,fam:"opinion",l:"Ignorance pluraliste",r:"Prentice et Miller (1993)",d:"Une majorité qui se déclare minoritaire (HO3, descriptif)."},
 {id:"kuran",c:0,fam:"opinion",l:"Falsification des préférences",r:"Kuran (1995)",d:"Positions exprimées contraires aux positions déclarées (code ALI)."},
-{id:"asch",c:0,fam:"opinion",l:"Conformité face à une majorité unanime",r:"Asch (1956)",d:"Principe des compères K+ et K−."},
+{id:"asch",c:0,fam:"opinion",l:"Conformité face à une majorité unanime",r:"Asch (1956)",d:"Principe des compères K+ et K− (bloc exploratoire)."},
 {id:"bourdieu",c:0,fam:"opinion",l:"L'opinion publique comme construction",r:"Bourdieu (1973) ; Champagne (1990)",d:"Écart entre ce qui s'entend et la distribution des positions déclarées."},
-{id:"compl",c:0,fam:"llm",l:"Complaisance",r:"Sharma et al. (2024)",d:"Part du modèle en interaction : la position suit celle de l'interlocuteur."},
-{id:"neutre",c:0,fam:"llm",l:"Neutralité apprise",r:"OpenAI (2025), Model Spec",d:"Part du fournisseur : neutralisation sans public ni interlocuteur."},
-{id:"silences",c:0,fam:"llm",l:"Formes discursives du silence",r:"Projet (livre de codes 4.4)",d:"Évitement, neutralisation, euphémisation, délégation, alignement apparent, silence pur."},
-{id:"panick",c:0,fam:"llm",l:"Préférence des juges pour leurs textes",r:"Panickssery et al. (2024)",d:"Justifie un modèle juge distinct des générateurs."},
+{id:"compl",c:0,fam:"llm",l:"Complaisance",r:"Sharma et al. (2024)",d:"Mécanisme du modèle : la position suit celle de l'interlocuteur (HO5b, HO9)."},
+{id:"neutre",c:0,fam:"llm",l:"Neutralité apprise",r:"OpenAI (2025), Model Spec",d:"Mécanisme du modèle et du fournisseur : neutralisation sans public (HO5c)."},
+{id:"silences",c:0,fam:"llm",l:"Formes discursives du silence",r:"Projet (livre de codes 4.4)",d:"Évitement, neutralisation, euphémisation, délégation, alignement apparent, silence pur ; base du taux de taire."},
+{id:"panick",c:0,fam:"llm",l:"Préférence des juges pour leurs textes",r:"Panickssery et al. (2024)",d:"Justifie deux modèles juges distincts des générateurs."},
+{id:"contraste",c:0,fam:"methode",l:"Contrastes de référence",r:"Projet (cadre 6.4)",d:"Une variation fixée à l'avance par instance, effets exprimés en points de pourcentage. Leur choix est la part du concepteur dans la mesure."},
+{id:"equiv",c:0,fam:"methode",l:"Test d'équivalence",r:"Lakens (2017) ; Lakens, Scheel et Isager (2018)",d:"Établit qu'un effet est négligeable (climat perçu dans HO9), et non seulement non significatif."},
 {id:"suff",c:0,fam:"posture",l:"Suffisance générative",r:"Epstein (1999) ; Zhao, Pham et Vincent (2026)",d:"Une spirale reproduite n'est pas une spirale expliquée."},
 {id:"critique",c:0,fam:"posture",l:"Simulacres, perroquets, silicium",r:"Park et al. (2023) ; Bender et al. (2021) ; Argyle et al. (2023) ; Wang et al. (2025)",d:"Concepts critiques sur les agents génératifs ; ils cadrent l'interprétation."},
-/* Instances */
-{id:"modele",c:1,k:"prod",l:"Modèle et fournisseur",d:"Écrit les répliques, avec ses régularités et les règles de son fournisseur.",cd:"Narrateurs N1 à N3 (priorité 2, 3 graines) ; test sans public (étape 0a) ; auteur unique (priorité 3) ; polyphonie homogène « tout Le Chonk » : absente du plan."},
-{id:"modint",c:1,k:"prod",l:"Modèle en interaction",d:"La complaisance envers l'interlocuteur du moment.",cd:"Dyades contrôlées (étape 0b)."},
-{id:"fiche",c:1,k:"prod",l:"Fiche du persona",d:"Oriente le ton, les valeurs, la disposition à s'autocensurer.",cd:"Disposition continue ; condition sans autocensure (priorité 1) ; permutations des prénoms et du genre."},
-{id:"orch",c:1,k:"prod",l:"Orchestrateur",d:"Assemble la consigne et la mémoire ; mode de lecture du lecteur.",cd:"Lecture annotée ou intégrale (priorité 2, 5 graines)."},
-{id:"ordo",c:1,k:"prod",l:"Ordonnanceur",d:"Décide qui rencontre qui, où, dans quel type de scène.",cd:"O-ALÉ ou O-HOM (priorité 2, 3 graines)."},
-{id:"cadres",c:1,k:"prod",l:"Cadres d'énonciation",d:"Scène publique ou privée, gazette, compères.",cd:"Public ou privé (dans chaque simulation) ; gazette G0, G+, G− (priorité 1) ; compères K+, K− (priorité 3)."},
-{id:"concepteur",c:1,k:"prod",l:"Concepteur",d:"A fixé consignes, règles, cadres, sollicitations.",cd:"Carnet de conception ; paraphrases de consignes (prévues au cadre, absentes du plan du C4)."},
-{id:"source",c:1,k:"stim",l:"Source (stimulus)",d:"Ce qui est mis en circulation. Ce n'est pas une instance de l'agencement.",cd:"S0 et S1 (priorité 1) ; S3 (priorité 2) ; S2, compte rendu journalistique (priorité 2, 3 graines)."},
-{id:"social",c:1,k:"stim",l:"Agencement social (structure)",d:"Réseau, scènes, mémoire, par opposition à la transmission linéaire.",cd:"Village contre chaînes linéaires de 10 agents (étape préalable)."},
-{id:"enq",c:1,k:"instr",l:"Enquêteur du soir",d:"Recueille positions déclarées et climat perçu, hors mémoire des agents. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Neuf questions ; formulations A et B (test de stabilité)."},
-{id:"juge",c:1,k:"instr",l:"Modèle juge",d:"Code les répliques ; il ajoute une instance à l'analyse elle-même.",cd:"Distinct des générateurs ; deux juges ; validé contre le codage du chercheur."},
+/* Instances, stimuli, instruments */
+{id:"modele",c:1,k:"prod",l:"Modèle et fournisseur",d:"Écrit les répliques. Rôles : habitants, narrateur, lecteur, résumé de mémoire. Mécanismes : écriture, complaisance, neutralité apprise. Modèle et fournisseur ne se séparent pas.",cd:"M-UN ou M-PLU (priorité 1, contraste de référence) ; narrateurs N1 à N3 (priorité 2) ; test sans public (étape 0a) ; dyades contrôlées (étape 0b) ; polyphonie homogène et auteur unique (priorité 3)."},
+{id:"fiche",c:1,k:"prod",l:"Fiche du persona",d:"Oriente le ton, les valeurs, la disposition à s'autocensurer.",cd:"Disposition continue (contraste : 10e contre 90e centile) ; condition sans autocensure (priorité 1) ; permutations des prénoms et du genre."},
+{id:"orch",c:1,k:"ctrl",l:"Orchestrateur",d:"Assemble la consigne et la mémoire ; mode de lecture du lecteur.",cd:"Lecture annotée ou intégrale (priorité 2) : contrôle de validité de la lecture annotée, sans hypothèse."},
+{id:"ordo",c:1,k:"prod",l:"Ordonnanceur",d:"Décide qui rencontre qui, où, dans quel type de scène ; consigne l'ordre des prises de parole.",cd:"O-ALÉ ou O-HOM (priorité 1, 5 graines, contraste de référence)."},
+{id:"cadres",c:1,k:"prod",l:"Cadres d'énonciation",d:"Scène publique ou privée, gazette, compères, sollicitations.",cd:"Scène privée contre publique (dans chaque simulation) ; gazette G+ contre G− (priorité 1) ; compères K+, K− (priorité 3, exploratoire)."},
+{id:"concepteur",c:1,k:"doc",l:"Concepteur",d:"A fixé consignes, règles, cadres, sollicitations, et les contrastes de référence.",cd:"Carnet de conception ; trois paraphrases de la consigne des habitants (étape 0a) ; choix des contrastes justifié au préenregistrement."},
+{id:"source",c:1,k:"stim",l:"Textes sources T0 à T3",d:"Ce qui est mis en circulation. Stimulus, pas instance.",cd:"T0 et T1 (priorité 1) ; T3 (priorité 2) ; T2, compte rendu journalistique (priorité 2, exploratoire)."},
+{id:"social",c:1,k:"stim",l:"Structure sociale",d:"Réseau, scènes, mémoire, par opposition à la transmission linéaire. Structure, pas instance.",cd:"Village contre chaînes linéaires de 10 agents (étape 5)."},
+{id:"enq",c:1,k:"instr",l:"Enquêteur du soir",d:"Positions déclarées, climat perçu, versions de la thèse. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Neuf questions ; formulations A et B (test de stabilité)."},
+{id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"Distincts des générateurs ; accord entre eux mesuré ; validés contre le codage du chercheur."},
+{id:"plong",c:1,k:"instr",l:"Modèle de plongement",d:"Mesure sémantique de la diversité des versions.",cd:"Doublé d'une mesure lexicale qui ne dépend d'aucun modèle."},
 /* QR */
 {id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
 {id:"QR2",c:2,code:"QR2",l:"La part des instances",d:"Quelle part de ces transformations revient à chaque instance ? (question centrale)"},
-{id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il : transport, interaction, médiation ?"},
+{id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il ? Dans le C4 : analyse qualitative du niveau 1 de la grille."},
 {id:"QR4",c:2,code:"QR4",l:"Le dire et le taire",d:"Problématique du C4."},
 /* HT */
-{id:"HT1",c:3,code:"HT1",l:"Le taire est co-produit",d:"Le dire et le taire varient d'abord avec les instances non individuelles plus qu'avec les dispositions attribuées. Hypothèse centrale."},
+{id:"HT1",c:3,code:"HT1",l:"Le taire est co-produit",d:"Les instances non individuelles pèsent plus que la fiche sur le taux de taire. Hypothèse centrale ; décidée par HO11."},
 {id:"HT2",c:3,code:"HT2",l:"Un dire vide",d:"Moins de silence pur que de neutralisation : les agents parlent pour ne rien dire."},
-{id:"HT3",c:3,code:"HT3",l:"Convergence vers le lieu commun",d:"Les reprises perdent leurs aspérités et convergent vers une formule consensuelle, plus fortement en « tout Le Chonk »."},
-{id:"HT4",c:3,code:"HT4",l:"Une socialité sans climat",d:"Alignement local sur l'interlocuteur, non lecture du climat : le climat perçu ne prédit pas l'expression à interlocuteur constant."},
-/* S */
-{id:"S1",c:4,code:"S1",l:"Silence différentiel",d:"Plus de silence en public qu'en privé pour S1 que pour S0, chez les agents en écart avec le climat perçu."},
-{id:"S2",c:4,code:"S2",l:"Double climat",d:"La gazette déplace plus le climat perçu que les positions déclarées."},
-{id:"S3",c:4,code:"S3",l:"Ignorance pluraliste",d:"Une majorité d'agents se déclare minoritaire."},
-{id:"S4",c:4,code:"S4",l:"Noyau dur",d:"Les agents à faible disposition continuent d'exprimer une position minoritaire."},
-{id:"S5a",c:4,code:"S5a",l:"Part de la fiche",d:"L'effet S1 croît avec la disposition et disparaît sans autocensure."},
-{id:"S5b",c:4,code:"S5b",l:"Part du modèle en interaction",d:"En tête-à-tête, la position exprimée se rapproche de celle de l'interlocuteur."},
-{id:"S5c",c:4,code:"S5c",l:"Part du modèle et du fournisseur",d:"Neutralisation même sans public, plus pour S1 et S3 que pour S0."},
-{id:"S6",c:4,code:"S6",l:"Assimilation publique",d:"Les versions publiques se rapprochent de l'avis perçu comme majoritaire."},
-{id:"S7",c:4,code:"S7",l:"Part de l'ordonnanceur",d:"Les rencontres homophiles réduisent le silence local et accroissent la polarisation."},
-{id:"S8",c:4,code:"S8",l:"Part de l'agencement social",d:"Les transformations diffèrent entre village et chaînes linéaires (exploratoire)."},
-{id:"gS9",c:4,ghost:1,code:"S9 ?",l:"Climat contre interlocuteur",d:"À créer : à interlocuteur constant, le climat perçu ne prédit pas la position exprimée. C'est le test direct de HT4."},
-{id:"gS10",c:4,ghost:1,code:"S10 ?",l:"Effet du mode d'écriture",d:"À créer : convergence plus forte en polyphonie homogène qu'en polyphonie mixte. C'est le test direct de HT3, et la condition doit entrer dans le plan."},
+{id:"HT3",c:3,code:"HT3",l:"Convergence vers le lieu commun",d:"La diversité des versions décroît, plus vite quand un seul modèle joue tous les habitants (HO10)."},
+{id:"HT4",c:3,code:"HT4",l:"Une socialité sans climat",d:"Alignement sur l'interlocuteur ; effet du climat perçu équivalent à zéro (HO9)."},
+/* HO */
+{id:"S1",c:4,code:"HO1",l:"Silence différentiel",d:"Plus de taire en public qu'en privé pour T1 que pour T0, chez les agents en écart avec le climat perçu."},
+{id:"S2",c:4,code:"HO2",l:"Double climat",d:"La gazette déplace plus le climat perçu que les positions déclarées."},
+{id:"S3",c:4,code:"HO3",l:"Ignorance pluraliste",d:"Une majorité d'agents se déclare minoritaire. Résultat descriptif rattaché à l'étalonnage (QR-E)."},
+{id:"S4",c:4,code:"HO4",l:"Noyau dur",d:"Les agents à faible disposition continuent d'exprimer une position minoritaire."},
+{id:"S5a",c:4,code:"HO5a",l:"Part de la fiche",d:"L'effet HO1 croît avec la disposition et disparaît sans autocensure."},
+{id:"S5b",c:4,code:"HO5b",l:"Part du modèle en interaction",d:"En dyades contrôlées, la position exprimée se rapproche de celle de l'interlocuteur."},
+{id:"S5c",c:4,code:"HO5c",l:"Part du modèle et du fournisseur",d:"Neutralisation même sans public, plus pour T1 et T3 que pour T0."},
+{id:"S6",c:4,code:"HO6",l:"Assimilation publique",d:"Les versions publiques se rapprochent de l'avis perçu comme majoritaire."},
+{id:"S7",c:4,code:"HO7",l:"Part de l'ordonnanceur",d:"Les rencontres homophiles réduisent le taire local et accroissent la polarisation."},
+{id:"S8",c:4,code:"HO8",l:"Part de l'agencement social",d:"Les transformations diffèrent entre village et chaînes linéaires (exploratoire)."},
+{id:"S9",c:4,code:"HO9",l:"Climat contre interlocuteur",d:"La position exprimée suit l'interlocuteur ; l'effet du climat perçu est équivalent à zéro (borne ±0,10 en coefficient standardisé)."},
+{id:"S10",c:4,code:"HO10",l:"Convergence selon le modèle",d:"La pente de diversité des versions est plus négative en M-UN qu'en M-PLU, pour les deux mesures."},
+{id:"S11",c:4,code:"HO11",l:"Hiérarchie des parts",d:"Au moins un contraste non individuel dépasse celui de la fiche d'au moins 5 points de taux de taire. Règle à trois issues."},
 /* Indicateurs */
-{id:"silence",c:5,l:"Taux de silence",d:"Part des sollicitations sans position exprimée, chez les agents informés."},
+{id:"taire",c:5,l:"Taux de taire",d:"Sollicitations sans position exprimée (TAC, EVI, NEU, EUP, DEL). Variable principale de HO11."},
+{id:"silence",c:5,l:"Taux de silence",d:"Sollicitations sans aucune réponse au fond (TAC)."},
 {id:"ecart",c:5,l:"Écart entre cadres d'énonciation",d:"Position déclarée en enquête contre position exprimée en scène."},
 {id:"falsif",c:5,l:"Falsification des préférences",d:"Positions exprimées contraires aux positions déclarées."},
 {id:"double",c:5,l:"Double climat",d:"Climat perçu moyen contre distribution réelle des positions déclarées."},
 {id:"ignorI",c:5,l:"Ignorance pluraliste",d:"Part des agents majoritaires qui se déclarent minoritaires."},
 {id:"noyauI",c:5,l:"Noyau dur",d:"Position minoritaire exprimée en public sur au moins 3 journées."},
 {id:"dyade",c:5,l:"Déplacement en dyade",d:"Écart de position exprimée entre interlocuteur favorable et critique."},
-{id:"neutr",c:5,l:"Neutralisation sans public",d:"Part des réponses neutralisées en test sans public, par source."},
+{id:"sensib",c:5,l:"Sensibilité interlocuteur et climat",d:"Coefficients de la position de l'interlocuteur et du climat perçu (modèle de HO9)."},
+{id:"neutr",c:5,l:"Neutralisation sans public",d:"Part des réponses neutralisées en test sans public, par texte source."},
 {id:"formes",c:5,l:"Formes du silence (EVI à TAC)",d:"Livre de codes 4.4."},
 {id:"transfo",c:5,l:"Transformations de la thèse",d:"Livre de codes unifié, versions publiques, privées et chaînes."},
+{id:"divers",c:5,l:"Diversité des versions",d:"Mesures sémantique et lexicale sur les versions recueillies chaque soir ; une pente par simulation."},
+{id:"formI",c:5,l:"Formules récurrentes",d:"Expressions figées présentes dans au moins 20 % des versions d'une journée."},
 {id:"polar",c:5,l:"Polarisation",d:"Dispersion des positions déclarées et exprimées."},
+{id:"niv1",c:5,k:"qual",l:"Analyse qualitative du niveau 1",d:"Consignes, code et carnet de conception, lus avec script, énonciation éditoriale et dispositif ; répond à QR3."},
 {id:"entend",c:5,k:"gen",l:"Ce qui s'entend",d:"Distribution des positions exprimées en public contre positions déclarées."},
-{id:"stab",c:5,k:"ctrl",l:"Stabilité A / B",d:"Part d'agents dont les deux formulations divergent de plus de 20 points."},
-{id:"gDiv",c:5,ghost:1,l:"Diversité des versions",d:"À créer : mesure de la dispersion des versions de la thèse au fil des relais (HT3)."},
-{id:"gMet",c:5,ghost:1,l:"Métrique commune des parts",d:"À préenregistrer : comment comparer l'effet d'une variable binaire (scène), continue (disposition) et catégorielle (modèle). Sans elle, « supérieur » dans HT1 n'est pas décidable."}
+{id:"stab",c:5,k:"ctrl",l:"Stabilité A / B",d:"Part d'agents dont les deux formulations divergent de plus de 20 points."}
 ];
-const PROD=["modele","modint","fiche","orch","ordo","cadres","concepteur"];
+const PROD=["modele","fiche","orch","ordo","cadres","concepteur"];
 const E=[
 ...PROD.map(p=>["coag",p]),["coag","HT1"],["coag","QR2"],
-["archi","modele"],["archi","HT3"],["script","fiche"],["script","concepteur"],["enoned","orch"],
-["goff","cadres"],["goff","ordo"],["goff","enq"],["goff","HT1"],["dispo","ordo"],["dispo","concepteur"],["dispo","QR3"],
+["archi","modele"],["archi","HT3"],["archi","S10"],["script","fiche"],["script","concepteur"],["script","niv1"],["enoned","orch"],["enoned","niv1"],
+["goff","cadres"],["goff","ordo"],["goff","enq"],["goff","HT1"],["dispo","ordo"],["dispo","concepteur"],["dispo","QR3"],["dispo","niv1"],
 ["trivia","QR1"],["trivia","HT3"],["media","source"],["tele","QR3"],["tele","transfo"],
-["bartlett","social"],["bartlett","S8"],["bartlett","transfo"],["attr","HT3"],["attr","S8"],
-["hall","transfo"],["formule","HT3"],["formule","transfo"],["moirand","transfo"],["authier","transfo"],["jacobi","source"],
-["spirale","QR4"],["spirale","S1"],["spirale","HT4"],["climat","S1"],["climat","S3"],["climat","HT4"],["climat","double"],
+["bartlett","social"],["bartlett","S8"],["bartlett","transfo"],["attr","HT3"],["attr","S8"],["attr","S10"],
+["hall","transfo"],["formule","HT3"],["formule","formI"],["moirand","transfo"],["authier","transfo"],["jacobi","source"],
+["spirale","QR4"],["spirale","S1"],["spirale","S3"],["spirale","HT4"],["climat","S1"],["climat","S3"],["climat","S9"],["climat","HT4"],["climat","double"],
 ["dbl","S2"],["dbl","double"],["deuxsrc","cadres"],["deuxsrc","S2"],["noyau","S4"],["noyau","noyauI"],
-["wtsc","fiche"],["wtsc","S4"],["wtsc","S5a"],["ignor","S3"],["ignor","ignorI"],["kuran","falsif"],["asch","cadres"],["bourdieu","entend"],
-["compl","modint"],["compl","S5b"],["compl","HT4"],["neutre","modele"],["neutre","S5c"],["neutre","HT2"],
-["silences","HT2"],["silences","formes"],["panick","juge"],
-["modele","HT1"],["modele","HT2"],["modele","HT3"],["modele","S5c"],["modint","HT4"],["modint","S5b"],
-["fiche","HT1"],["fiche","S4"],["fiche","S5a"],["orch","HT3"],["ordo","HT1"],["ordo","S7"],
-["cadres","HT1"],["cadres","S1"],["cadres","S2"],["source","HT2"],["source","S1"],["source","S5c"],["social","HT3"],["social","S8"],
-["enq","ecart"],["enq","double"],["enq","ignorI"],["enq","stab"],["enq","falsif"],["enq","noyauI"],
-["juge","silence"],["juge","formes"],["juge","transfo"],["juge","ecart"],["juge","falsif"],["juge","neutr"],["juge","dyade"],
-["QR1","S6"],["QR1","S8"],["QR2","HT1"],["QR4","HT1"],["QR4","HT2"],["QR4","HT3"],["QR4","HT4"],
-["HT1","S1"],["HT1","S2"],["HT1","S4"],["HT1","S5a"],["HT1","S5b"],["HT1","S5c"],["HT1","S7"],["HT1","gMet"],
-["HT2","S1"],["HT2","S5c"],["HT2","formes"],
-["HT3","S6"],["HT3","S8"],["HT3","transfo"],["HT3","gDiv"],["HT3","gS10"],
-["HT4","S3"],["HT4","S5b"],["HT4","gS9"],
-["S1","silence"],["S1","ecart"],["S1","falsif"],["S2","double"],["S3","ignorI"],["S4","noyauI"],
-["S5a","silence"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
-["S6","ecart"],["S6","transfo"],["S7","polar"],["S8","transfo"],["gS9","dyade"],["gS10","gDiv"]
+["wtsc","fiche"],["wtsc","S4"],["wtsc","S5a"],["wtsc","S11"],["ignor","S3"],["ignor","ignorI"],["kuran","falsif"],["asch","cadres"],["bourdieu","entend"],
+["compl","modele"],["compl","S5b"],["compl","S9"],["compl","HT4"],["neutre","modele"],["neutre","S5c"],["neutre","HT2"],
+["silences","HT2"],["silences","formes"],["silences","taire"],["panick","juge"],
+["contraste","S11"],["contraste","concepteur"],["equiv","S9"],
+["modele","HT1"],["modele","HT2"],["modele","HT3"],["modele","HT4"],["modele","S5b"],["modele","S5c"],["modele","S9"],["modele","S10"],["modele","S11"],
+["fiche","HT1"],["fiche","S4"],["fiche","S5a"],["fiche","S11"],["orch","HT3"],["orch","transfo"],["ordo","HT1"],["ordo","S7"],["ordo","S11"],
+["cadres","HT1"],["cadres","HT4"],["cadres","S1"],["cadres","S2"],["cadres","S9"],["cadres","S11"],["concepteur","niv1"],
+["source","HT2"],["source","S1"],["source","S5c"],["social","HT3"],["social","S8"],
+["enq","ecart"],["enq","double"],["enq","ignorI"],["enq","stab"],["enq","falsif"],["enq","noyauI"],["enq","divers"],["enq","sensib"],
+["juge","taire"],["juge","silence"],["juge","formes"],["juge","transfo"],["juge","ecart"],["juge","falsif"],["juge","neutr"],["juge","dyade"],["juge","sensib"],["plong","divers"],
+["QR1","S6"],["QR1","S8"],["QR2","HT1"],["QR3","niv1"],["QR4","HT1"],["QR4","HT2"],["QR4","HT3"],["QR4","HT4"],
+["HT1","S1"],["HT1","S2"],["HT1","S4"],["HT1","S5a"],["HT1","S5b"],["HT1","S5c"],["HT1","S7"],["HT1","S11"],
+["HT2","S1"],["HT2","S5c"],["HT2","formes"],["HT2","silence"],
+["HT3","S6"],["HT3","S8"],["HT3","S10"],["HT3","formI"],
+["HT4","S5b"],["HT4","S9"],
+["S1","taire"],["S1","silence"],["S1","ecart"],["S1","falsif"],["S2","double"],["S3","ignorI"],["S4","noyauI"],
+["S5a","taire"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
+["S6","ecart"],["S6","transfo"],["S7","taire"],["S7","polar"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S11","taire"]
 ];
 const GAPS=[
-{s:"b",t:"HT1 n'est pas encore décidable",p:"HT1 dit que les instances non individuelles pèsent « plus » que la fiche, mais rien ne dit comment comparer une variable binaire (scène), continue (disposition) et catégorielle (modèle).",f:"Préenregistrer une métrique commune (par exemple la part de variance attribuable à chaque instance dans un modèle mixte) et le seuil qui tranche.",n:["HT1","gMet","fiche","cadres","ordo","modele","S5a"]},
-{s:"b",t:"HT4 n'a pas de test direct",p:"Sa signature (le climat perçu ne prédit pas l'expression à interlocuteur constant) n'est portée par aucune hypothèse opérationnelle. S3 mesure l'ignorance pluraliste, qui ne départage pas HT4 d'une lecture spirale.",f:"Ajouter une hypothèse S9 et son modèle d'analyse ; revoir le rattachement de S3.",n:["HT4","S3","S5b","gS9","climat","spirale","dyade"]},
-{s:"b",t:"HT3 manque d'une mesure et d'une condition",p:"Aucun indicateur de diversité des versions, et la comparaison polyphonie mixte contre « tout Le Chonk » n'a ni hypothèse opérationnelle ni place dans le plan.",f:"Créer l'indicateur de diversité, une hypothèse S10, et un bloc de polyphonie homogène dans le plan.",n:["HT3","gDiv","gS10","modele","archi","attr","formule"]},
-{s:"b",t:"L'inventaire des instances varie selon les documents",p:"Cinq instances dans la problématique, sept dans le cadre (6.4), neuf lignes dans le C4 (3.0). La source et l'agencement social n'en sont pas ; narrateur, lecteur, enquêteur et juge ne sont pas situés.",f:"Fixer une liste canonique en trois statuts : instances de production, stimuli, instruments de mesure.",n:["modele","modint","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","coag"]},
-{s:"i",t:"La priorité 1 ne teste pas toutes les parts",p:"Seules la fiche et les cadres varient dans le bloc garanti. L'ordonnanceur et les narrateurs n'arrivent qu'en priorité 2, avec 3 graines. Les étapes 0a et 0b couvrent le modèle, pas l'ordonnanceur.",f:"Remonter O-HOM en priorité 1, ou restreindre HT1 aux parts testées dans le bloc garanti.",n:["HT1","ordo","modele","S7","fiche","cadres"]},
-{s:"i",t:"Des conditions sans hypothèse",p:"La source S2 (médiation journalistique), les compères K+ et K−, la lecture intégrale et les paraphrases du concepteur sont prévues, mais aucune hypothèse ni aucun indicateur ne dit ce qu'on en attend.",f:"Pour chacune : une hypothèse, ou le statut exploratoire déclaré avec un indicateur, ou le retrait.",n:["source","media","asch","cadres","orch","concepteur"]},
-{s:"i",t:"QR3 n'a pas de traduction dans le C4",p:"La question de la communication inscrite (transport, interaction, médiation) ne mène à aucune hypothèse du C4.",f:"La traiter qualitativement au niveau 1 de la grille, ou la renvoyer à d'autres expériences.",n:["QR3","tele","dispo"]},
-{s:"i",t:"Les mesures sont aussi co-produites",p:"L'enquêteur et le modèle juge sont des agencements : une position déclarée est un énoncé produit dans un cadre. Le cadre le dit (2.3, 7), le C4 doit en tirer les conséquences.",f:"Faire apparaître enquêteur et juge comme instruments dans la liste des instances, avec leurs garde-fous.",n:["enq","juge","goff","panick"]},
-{s:"n",t:"Certains concepts restent des lentilles",p:"Script, énonciation éditoriale et dispositif ne passent que par les instances, sans mesure propre (le dispositif mène à QR3, qui n'est pas traduite). C'est légitime en SIC, à condition de le dire.",f:"Préciser dans le C4 qu'ils relèvent de l'analyse qualitative du niveau 1 (carnet de conception).",n:["script","enoned","dispo","fiche","orch","concepteur","ordo"]},
-{s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur et de règles de conduite : les deux parts ne peuvent pas être séparées.",f:"Le déclarer comme part non isolable, comme le prévoit le cadre (section 7).",n:["modele","neutre","S5c"]}
+{s:"b",t:"HT1 n'était pas décidable",p:"Rien ne disait comment comparer une variable binaire, continue et catégorielle.",f:"Contrastes de référence en points de pourcentage de taux de taire ; règle à trois issues (HO11, C4 section 7).",n:["HT1","S11","taire","contraste","fiche","cadres","ordo","modele"]},
+{s:"b",t:"HT4 n'avait pas de test direct",p:"Aucune hypothèse ne testait l'absence d'effet du climat à interlocuteur constant.",f:"HO9 avec test d'équivalence ; HO3 devient un résultat descriptif rattaché à l'étalonnage.",n:["HT4","S9","sensib","climat","equiv","compl","S3"]},
+{s:"b",t:"HT3 manquait d'une mesure et d'une condition",p:"Pas d'indicateur de diversité ; une « polyphonie mixte » où un seul modèle jouait déjà tous les habitants.",f:"Diversité des versions (sémantique et lexicale) ; bloc M-PLU en priorité 1 ; HO10 compare des pentes.",n:["HT3","S10","divers","plong","modele","archi","attr"]},
+{s:"b",t:"L'inventaire des instances variait",p:"Cinq, sept ou neuf instances selon les documents.",f:"Inventaire canonique en trois statuts : six instances de production, stimuli et structure, instruments (cadre 1.1, C4 3.0).",n:["modele","fiche","orch","ordo","cadres","concepteur","source","social","enq","juge","plong"]},
+{s:"i",t:"La priorité 1 ne testait pas toutes les parts",p:"L'ordonnanceur et le modèle n'arrivaient qu'en priorité 2.",f:"O-HOM et M-PLU en priorité 1 à 5 graines : 35 simulations garanties.",n:["S11","ordo","modele","S7"]},
+{s:"i",t:"Des conditions sans hypothèse",p:"T2, compères, lecture intégrale, paraphrases du concepteur.",f:"T2 et compères déclarés exploratoires avec indicateurs ; lecture intégrale comme contrôle de validité ; paraphrases dans l'étape 0a.",n:["source","media","asch","cadres","orch","concepteur"]},
+{s:"i",t:"QR3 n'avait pas de traduction",p:"Aucune hypothèse du C4 ne menait à QR3.",f:"Analyse qualitative du niveau 1 de la grille, avec la fidélité comme indice d'une communication-transport.",n:["QR3","niv1","tele","dispo"]},
+{s:"i",t:"Les mesures sont aussi co-produites",p:"Enquêteur et juges n'étaient pas situés.",f:"Statut d'instrument avec garde-fous : deux juges, mesure lexicale à côté du plongement, test de stabilité.",n:["enq","juge","plong","panick"]},
+{s:"n",t:"Certains concepts restaient des lentilles",p:"Script, énonciation éditoriale, dispositif sans mesure.",f:"Rattachés à l'analyse qualitative du niveau 1.",n:["script","enoned","dispo","niv1"]},
+{s:"n",t:"Modèle et fournisseur sont indissociables",p:"Changer de modèle change aussi de fournisseur.",f:"Part déclarée non isolable, rapportée ensemble (cadre 7, C4 3.0).",n:["modele","neutre","S5c"]},
+{s:"w",t:"À surveiller : qualité inégale des modèles en M-PLU",p:"Llama 8b est bien plus petit que les trois autres.",f:"HO10 compare des pentes ; qualité de chaque modèle rapportée à l'étape 1 ; remplacement prévu en cas d'échec.",n:["modele","S10","divers"]},
+{s:"w",t:"À surveiller : seuils et bornes",p:"5 points pour HO11, ±0,10 pour HO9.",f:"Déposés au premier temps du préenregistrement ; révisables au second temps au vu du seul pilote, avec justification.",n:["S11","S9","contraste","equiv"]}
 ];
 
 /* index */
@@ -261,12 +274,14 @@ function status(n){
       if(o.length)return["lens","Lentille d'interprétation : passe seulement par les instances"];
       return["warn","Non relié"];
     case 1: if(n.k==="instr")return["lens","Instrument de mesure, lui aussi co-produit"];
+      if(n.k==="ctrl")return["muted","Contrôle de validité, sans hypothèse propre"];
+      if(n.k==="doc")return["muted","Part documentée (carnet, paraphrases en 0a), non comparée"];
       if(o.some(t=>t.c===4&&!t.ghost))return["ok","Sa part est testée par au moins une hypothèse opérationnelle"];
       return["warn","Aucune hypothèse opérationnelle ne teste sa part"];
     case 2: return o.length?["ok","Traduite en hypothèses"]:["warn","Sans traduction dans le C4"];
     case 3: return o.some(t=>t.ghost)?["warn","Incomplète : il manque une mesure ou une hypothèse opérationnelle"]:["ok","Traduite en hypothèses opérationnelles mesurables"];
     case 4: return o.some(t=>t.c===5&&!t.ghost)?["ok","Reliée à au moins un indicateur"]:["warn","Sans indicateur"];
-    case 5: if(n.k==="ctrl")return["muted","Indicateur de contrôle"]; if(n.k==="gen")return["muted","Indicateur descriptif général"];
+    case 5: if(n.k==="qual")return["ok","Analyse qualitative"]; if(n.k==="ctrl")return["muted","Indicateur de contrôle"]; if(n.k==="gen")return["muted","Indicateur descriptif général"];
       return ii.some(s=>s.c>=3)?["ok","Sert au moins une hypothèse"]:["warn","Sans hypothèse"];
   }
 }
@@ -276,17 +291,17 @@ const cssv=v=>`var(${v})`;
 /* bilan */
 (function(){
   const cs=N.filter(n=>n.c===0&&n.fam!=="posture"),m=cs.filter(n=>status(n)[0]==="ok").length;
-  const ip=N.filter(n=>n.c===1&&n.k==="prod"),it=ip.filter(n=>status(n)[0]==="ok").length;
+  const ip=N.filter(n=>n.c===1&&["prod","ctrl","doc"].includes(n.k)),it=ip.filter(n=>status(n)[0]==="ok").length;
   const ht=N.filter(n=>n.c===3),hc=ht.filter(n=>status(n)[0]==="ok").length;
-  const b=GAPS.filter(g=>g.s==="b").length;
-  const items=[[`${m} / ${cs.length}`,"concepts opératoires reliés à une mesure"],[`${it} / ${ip.length}`,"instances dont la part est testée"],[`${hc} / ${ht.length}`,"hypothèses de travail complètes"],[N.filter(n=>n.ghost).length,"pièces manquantes"],[b,"points bloquants avant préenregistrement","crit"]];
+  const lev=GAPS.filter(g=>g.s!=="w").length,w=GAPS.filter(g=>g.s==="w").length;
+  const items=[[`${m} / ${cs.length}`,"concepts opératoires reliés à une mesure"],[`${it} / ${ip.length}`,"instances dont la part est testée (les autres sont documentées)"],[`${hc} / ${ht.length}`,"hypothèses de travail complètes"],[N.filter(n=>n.ghost).length,"pièces manquantes"],[`${lev} / ${lev}`,"points relevés levés en v9"],[w,"points à surveiller"]];
   document.getElementById("stats").innerHTML=items.map(([v,l,c])=>`<div class="stat ${c||""}"><b>${v}</b><span>${l}</span></div>`).join("");
 })();
 
 /* points */
 const gapsEl=document.getElementById("gaps");
-const SEV={b:"Bloquant",i:"Important",n:"À noter"};
-gapsEl.innerHTML=GAPS.map((g,i)=>`<button class="gap" type="button" id="gap${i}" data-g="${i}" aria-pressed="false"><span class="sev ${g.s}">${SEV[g.s]}</span><h3>${g.t}</h3><p>${g.p}</p><p class="fix">${g.f}</p></button>`).join("");
+const SEV={b:"Bloquant · levé",i:"Important · levé",n:"À noter · levé",w:"À surveiller"};
+gapsEl.innerHTML=GAPS.map((g,i)=>`<button class="gap" type="button" id="gap${i}" data-g="${i}" aria-pressed="false"><span class="sev ${g.s}">${SEV[g.s]}</span><h3>${g.t}</h3><p>${g.p}</p><p class="fix"><b>Suite :</b> ${g.f}</p></button>`).join("");
 
 /* légende */
 document.getElementById("legend").innerHTML=Object.values(FAM).map(f=>`<span><i style="background:${cssv(f.v)}"></i>${f.l}</span>`).join("")+
@@ -320,7 +335,7 @@ const edgeEls=E.map(([a,b])=>{const s=byId[a],t=byId[b];const x1=s.x+W,y1=s.y+s.
 const nodeEls={};
 N.forEach(n=>{const g=mk("g",{class:"node"+(n.ghost?" ghost":""),transform:`translate(${n.x},${n.y})`,tabindex:"0",role:"button","aria-label":(n.code?n.code+" ":"")+n.l});
   g.appendChild(mk("rect",{class:"box",width:W,height:n.h,rx:5}));
-  const famc=n.c===0?cssv(FAM[n.fam].v):n.c===1?(n.k==="prod"?"var(--violet)":n.k==="stim"?"var(--teal)":"var(--slate)"):n.c===2?"var(--ink)":n.c===3?"var(--amber)":n.c===4?"var(--rose)":"var(--teal)";
+  const famc=n.c===0?cssv(FAM[n.fam].v):n.c===1?(["prod","ctrl","doc"].includes(n.k)?"var(--violet)":n.k==="stim"?"var(--teal)":"var(--slate)"):n.c===2?"var(--ink)":n.c===3?"var(--amber)":n.c===4?"var(--rose)":"var(--teal)";
   g.appendChild(mk("rect",{width:4,height:n.h-8,x:0,y:4,rx:2,fill:famc}));
   const st=status(n);g.appendChild(mk("circle",{cx:W-9,cy:9,r:4,fill:cssv(SV[st[0]])}));
   let y=17;if(n.code){const t=mk("text",{x:11,y,class:"code"});t.textContent=n.code;g.appendChild(t);y+=LH}
@@ -340,7 +355,7 @@ function clearAll(){svg.classList.remove("focus");N.forEach(n=>nodeEls[n.id].cla
 const drawer=document.getElementById("drawer");
 function select(id){const n=byId[id];paint(lineage(id),id);document.querySelectorAll(".gap").forEach(b=>b.setAttribute("aria-pressed","false"));
   const st=status(n);const chip=x=>`<button type="button" data-n="${x}">${byId[x].code?byId[x].code+" ":""}${byId[x].l}</button>`;
-  const famL=n.c===0?FAM[n.fam].l:n.c===1?({prod:"Instance de production",stim:"Stimulus ou structure",instr:"Instrument de mesure"})[n.k]:COLS[n.c];
+  const famL=n.c===0?FAM[n.fam].l:n.c===1?({prod:"Instance de production",ctrl:"Instance de production",doc:"Instance de production",stim:"Stimulus ou structure",instr:"Instrument de mesure"})[n.k]:COLS[n.c];
   drawer.innerHTML=`<button class="close" type="button" aria-label="Fermer">Fermer</button>
   <div class="eyebrow">${famL}</div><h2>${n.code?n.code+" · ":""}${n.l}</h2>
   <span class="status"><i style="background:${cssv(SV[st[0]])}"></i>${st[1]}</span>

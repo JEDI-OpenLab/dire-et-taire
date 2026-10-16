@@ -33,7 +33,7 @@ Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.m
 
 ## État
 
-Phase de conception (octobre 2026). Prochaines étapes : revue adversariale n° 2, choix des sources S0 et S3, mise en place de la station.
+Phase de conception (octobre 2026). Prochaines étapes : revue adversariale n° 2, choix des textes sources T0, T2 et T3, préenregistrement (premier temps), mise en place de la station. La carte des concepts (`docs/visualisations/carte-concepts-C4.html`) montre l'état de la traçabilité entre concepts et mesures.
 
 ## Conventions
 

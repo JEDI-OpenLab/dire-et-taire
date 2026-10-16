@@ -33,9 +33,10 @@ Problématique générale du village (cadre, 3.1)
                         +-- Questions de recherche QR-A à QR-E (C4, 1.4)
                         +-- Hypothèses de travail HT1 à HT4 (C4, 1.5)
                         |     HT1, centrale : le taire est co-produit par l'agencement
-                        +-- Hypothèses opérationnelles S1 à S8 (C4, 1.6)
+                        +-- Hypothèses opérationnelles HO1 à HO11 (C4, 1.6)
                               |
-                              +-- Une condition par instance (C4, 3.0 ; cadre, 6.4)
+                              +-- Inventaire : instances, stimuli, instruments (cadre, 1.1 ; C4, 3.0)
+                              +-- Un contraste de référence par instance (C4, 3.0 ; cadre, 6.4)
                               +-- Dispositif (C4, 3), mesures (C4, 4), analyse par instance (C4, 7)
 ```
 

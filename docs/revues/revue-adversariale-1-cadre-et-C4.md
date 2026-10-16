@@ -104,3 +104,17 @@ Le projet est mené et relu par une seule personne ; les pairs interviennent ens
 - **R13** : la validation par une seconde personne est remplacée par la confrontation des notes de lecture et de la grille aux comptes rendus publiés de l'ouvrage et aux entretiens de l'auteur, avec écarts consignés.
 - **Fiabilité du codage** : le double codage par une personne extérieure est remplacé par la fiabilité intra-codeur (recodage à l'aveugle après trois semaines au moins), l'accord avec deux modèles juges distincts et la publication des livres de codes et des extraits codés.
 - Points ouverts 2 et 4 : la relecture par un ou une collègue et la recherche d'un ou une historienne sont abandonnées ; un billet de présentation du dispositif, publié avant le préenregistrement, sollicite les remarques des pairs.
+
+---
+
+## 6. Addendum : levée des points bloquants (C4 v9, cadre v6)
+
+La carte des concepts du C4 a fait apparaître quatre points bloquants, levés le 16 octobre 2026 :
+
+- **HT1 n'était pas décidable** : contrastes de référence exprimés en points de pourcentage de taux de taire, et règle de décision à trois issues (HO11).
+- **HT4 n'avait pas de test direct** : hypothèse HO9 (effet du climat perçu équivalent à zéro à interlocuteur constant, test d'équivalence) ; l'ignorance pluraliste (HO3) devient un résultat descriptif rattaché à l'étalonnage.
+- **HT3 manquait d'une mesure et d'une condition** : diversité des versions (sémantique et lexicale) et bloc « habitants pluri-modèles » (M-PLU) en priorité 1 (HO10). Le même bloc fournit le contraste « modèle » de HO11.
+- **L'inventaire des instances variait** : inventaire canonique en trois statuts (instances de production, stimuli et structure, instruments).
+
+**Correspondance des codes.** Dans cette revue, les textes sources S0 à S3 correspondent aujourd'hui à T0 à T3, et les hypothèses opérationnelles S1 à S8 à HO1 à HO8.
+

@@ -1,6 +1,6 @@
 # Glossaire
 
-*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 1 du 16 octobre 2026.*
+*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 2 du 16 octobre 2026 : inventaire en trois statuts, nouveaux codes (T0 à T3, HO1 à HO11), termes de méthode des règles de décision.*
 
 **Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du C4.
 
@@ -18,7 +18,9 @@
 | **Co-agentivité** | Production conjointe d'un énoncé par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur | Terme du projet, pris au sens de l'agentivité distribuée de la théorie de l'acteur-réseau : descriptif, sans intentionnalité prêtée aux instances | Cadre scientifique, section 1 | Avec la co-agentivité (ou agentivité partagée) des sciences de l'éducation et de la didactique des langues, qui part de l'agentivité intentionnelle de Bandura et des travaux sur l'agence partagée, et vise une visée normative : l'humain doit garder un contrôle critique sur l'IA (Godwin-Jones, 2024). Le projet ne retient pas cette visée normative |
 | **Actant** | Toute entité, humaine ou non, qui fait une différence dans une action | Sémiotique d'Algirdas Julien Greimas, reprise par Latour et Akrich | Akrich et Latour (1992) | Avec « acteur » au sens d'une personne |
 | **Agencement** | Ensemble hétérogène d'instances dont l'action conjointe produit un effet | Usage proche de la théorie de l'acteur-réseau | Latour (2006) | |
-| **Instance** | Chacune des composantes de l'agencement dont le projet cherche à estimer la part | Terme du projet | Cadre scientifique, section 1.1 | |
+| **Instance (de production)** | Chacune des six composantes de l'agencement qui font l'énoncé, et dont le projet estime la part : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, cadres d'énonciation, concepteur | Terme du projet | Cadre scientifique, section 1.1 | Avec les stimuli et les instruments, qui ne sont pas des instances |
+| **Stimulus, structure** | Ce qui est mis en circulation (les textes sources) et la forme du collectif (village ou chaînes linéaires) | Terme du projet | Cadre scientifique, section 1.1 | Avec une instance : un stimulus est une condition, pas une part de l'agencement |
+| **Instrument** | Ce qui produit les données : enquêteur, modèles juges, modèle de plongement, chercheur qui code. Les instruments sont eux aussi des agencements | Terme du projet | Cadre scientifique, sections 1.1 et 6.3 | |
 
 ---
 
@@ -112,12 +114,16 @@
 | **Scène publique, scène privée** | Rencontre à au moins trois personnes dont des non-proches ; tête-à-tête avec un proche |
 | **Sollicitation standardisée** | Question ouverte posée à heures fixes, identique dans toutes les conditions, qui permet de mesurer le silence |
 | **Gazette** | Média local fictif aux textes écrits à l'avance : absente (G0), favorable (G+), critique (G−) |
-| **Sources S0 à S3** | S0 : livre sans enjeu moral (ligne de base) ; S1 : *Les irresponsables* ; S2 : compte rendu journalistique ; S3 : autre historien (contrôle symétrique) |
+| **Textes sources T0 à T3** | T0 : livre sans enjeu moral (ligne de base) ; T1 : *Les irresponsables* ; T2 : compte rendu journalistique (exploratoire) ; T3 : autre historien (contrôle symétrique) |
+| **Modèle des habitants : M-UN, M-PLU** | M-UN : les 40 habitants joués par un seul modèle ; M-PLU : les habitants répartis entre quatre modèles de familles différentes |
 | **Position déclarée en enquête** | Énoncé produit face à l'enquêteur, dans un cadre présenté comme confidentiel |
 | **Position exprimée en scène** | Énoncé produit dans une scène face à d'autres agents |
-| **Silence, taire** | Absence ou neutralisation de position exprimée face à une sollicitation |
+| **Silence (taux de)** | Part des sollicitations sans aucune réponse au fond (silence pur, TAC) |
+| **Taire (taux de)** | Part des sollicitations sans position exprimée : silence pur, évitement, neutralisation, euphémisation, délégation. Variable principale de la décomposition des parts |
+| **Version de la thèse** | Ce qu'un habitant raconte du livre à l'enquêteur du soir ; matériau de la diversité des versions |
+| **Diversité des versions** | Dispersion des versions d'une même journée, mesurée de deux façons : sémantique (distance entre plongements) et lexicale (part de trigrammes partagés) |
 | **Formes du silence** | Évitement (EVI), neutralisation (NEU), euphémisation (EUP), délégation (DEL), alignement apparent (ALI), silence pur (TAC) |
-| **Mode d'écriture** | Polyphonie mixte, polyphonie homogène (« tout Le Chonk »), autre architexte, auteur unique |
+| **Mode d'écriture** | Polyphonie mixte avec habitants mono-modèle ou pluri-modèles, polyphonie homogène (« tout Le Chonk »), autre architexte, auteur unique |
 | **Expériences C0 à C5** | C0 : chaînes de transmission ; C1 : rumeur et démenti ; C2 : convention ; C3 : contrôles d'artefacts ; C4 : dire et taire ; C5 : modes d'écriture |
 
 ---
@@ -128,8 +134,11 @@
 |---|---|---|
 | **Problématique « Comment X alors que Y »** | Forme qui met en tension l'objet étudié (X) et une contradiction apparente (Y) | Convention de rédaction du projet |
 | **Hypothèse de travail** | Réponse proposée à la problématique, interprétable en SIC (HT1 à HT4) | C4, section 1.5 |
-| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (S1 à S8) | C4, section 1.6 |
-| **Préenregistrement** | Dépôt daté des hypothèses, mesures et critères avant toute expérience | Nosek et al. (2018) |
+| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11) | C4, section 1.6 |
+| **Règle de décision à trois issues** | Critère préenregistré qui classe chaque hypothèse de travail comme soutenue, réfutée ou indéterminée | Cadre scientifique, section 6.4 |
+| **Contraste de référence** | Variation fixée à l'avance pour chaque instance (par exemple scène privée contre publique), dont l'effet est exprimé dans une unité commune pour comparer les parts. Son choix est la part du concepteur dans la mesure | Terme du projet ; cadre scientifique, section 6.4 |
+| **Test d'équivalence** | Test qui établit qu'un effet est plus petit qu'une borne fixée à l'avance, au lieu de conclure à l'absence d'effet sur un résultat non significatif | Lakens (2017) |
+| **Préenregistrement** | Dépôt daté des hypothèses, mesures et critères avant toute expérience. Ici en deux temps : hypothèses et règles avant toute génération, paramètres techniques après le pilote | Nosek et al. (2018) |
 | **Réplication procédurale** | Reproduire dans le dispositif le protocole d'une étude humaine avant d'y comparer les résultats | Terme du projet |
 | **Graine** | Valeur qui fixe le hasard d'une simulation ; plusieurs graines par condition mesurent la variabilité | Usage technique |
 | **Kappa de Cohen** | Mesure de l'accord entre deux codages d'un même échantillon, au-delà du hasard | Cohen (1960) |
