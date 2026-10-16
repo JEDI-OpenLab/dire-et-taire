@@ -229,3 +229,102 @@ Priorité aux références de 2024 à 2026 demandées par la consigne, puis cont
 - **Statistique.** Les objections R2-05, R2-07 et R2-08 ont été appuyées par des simulations (`propositions-correction/09-scripts/simulations-puissance.py`, résultats dans `resultats-simulations.md`), avec des paramètres hypothétiques (taux de taire de base 0,40 ; écart-type entre simulations de 3 à 8 points ; 40 agents ; 10 sollicitations par agent ; bruit des positions de 1,2) : elles donnent des ordres de grandeur, pas des puissances définitives, et doivent être rejouées avec les variances du pilote. R2-21 (colinéarité) reste argumentée, non calculée. Une de mes affirmations a été corrigée par la simulation : la diversité des versions ne décroît pas « mécaniquement » par diffusion depuis une source unique ; son sens dépend du caractère contractant de chaque reprise (R2-08, reformulée).
 - **Bibliographie.** Les références hors du premier cercle (2024 à 2026 et noms de modèles) n'ont pas toutes été vérifiées en ligne ; elles sont classées « non vérifiées ici » et non « fausses ».
 - **Droit.** La note sur le droit d'auteur (R2-23) est celle d'un relecteur, pas d'un juriste ; elle indique le point à documenter, pas la réponse.
+
+---
+
+## 9. Addendum : avis de l'auteur des documents (16 octobre 2026)
+
+*Rédigé par l'assistant qui a écrit les documents revus et mené la revue n° 1. La revue ci-dessus n'est pas modifiée. Chaque objection reçoit un avis : **acceptée** (la correction proposée est reprise), **nuancée** (le constat tient, la correction est amendée) ou **contestée** (le constat ne tient pas, avec la raison). Ces avis ne sont pas des décisions : les décisions reviennent au chercheur et sont consignées en section 10.*
+
+### 9.1 Bilan
+
+| Avis | Nombre | Objections |
+|---|---|---|
+| Acceptée | 37 | R2-02, R2-05 à R2-07, R2-09 à R2-21, R2-24, R2-26, R2-28 à R2-36, R2-38 à R2-46 |
+| Nuancée | 9 | R2-01, R2-03, R2-04, R2-08, R2-22, R2-23, R2-25, R2-27, R2-37 |
+| Contestée | 0 | |
+
+Aucune objection n'est contestée sur le fond. Les nuances portent sur la manière de corriger, pas sur l'existence du problème. La revue n° 2 corrige aussi trois décisions de la revue n° 1 (contrastes de HT1 à égalité, composition de M-PLU, absence de règle pour HT2) : ces corrections sont acceptées.
+
+### 9.2 Objections bloquantes
+
+| N° | Avis | Raison |
+|---|---|---|
+| R2-01 | Nuancée | Le relecteur a lu l'offre générale « Mistral ESR » (Mistral Medium 3.1, février 2026). La clé du chercheur vient d'une expérimentation de Mistral Large 4 menée par l'AMUE avec un petit groupe de testeurs, postérieure à la sortie de Large 4 : le constat « aucune source ne lie l'AMUE à Large 4 » vaut pour les sources publiques, pas pour le projet. La correction reste juste : consigner par écrit l'identifiant daté, le quota, la durée et l'hébergement, et mesurer tokens et débit sur une journée simulée avant le dépôt. Préenregistrer le plan B ne coûte rien et protège contre un retrait de la préversion. |
+| R2-02 | Acceptée | HT2 était la seule hypothèse de travail sans point d'analyse ; c'est un oubli de la version 9. La règle proposée, limitée à T1 en priorité 1, est reprise. |
+| R2-03 | Nuancée | Le constat est juste : l'issue de HT1 dépend de la calibration des contrastes. Les quatre corrections sont reprises, avec une précision pour (a) : « étendue maximale » s'entend comme les bornes de la disposition **telles que le plan les attribue** aux personas (minimum et maximum de conception), et non comme les extrêmes observés, qui changeraient d'une simulation à l'autre. Le contrôle de manipulation (b) est la correction la plus importante : sans lui, une fiche sans effet ne prouve rien. |
+| R2-04 | Nuancée | Le test de connaissance préalable et le critère de choix de T0 et T3 sont repris. Le masquage du titre et de l'auteur modifie l'objet : le C4 étudie la circulation d'un savoir savant **attribué**, et « Chapoutot dit que » fait partie de l'énoncé qui circule. Le masquage reste donc une branche conditionnelle, déclenchée par le test, et non le choix par défaut. La « mémoire d'entraînement » est ajoutée comme mécanisme de l'instance modèle. |
+| R2-05 | Acceptée | La borne égale à l'effet humain moyen rendait HT4 indiscernable d'un climat à l'échelle humaine. L'option A (±0,05, écart-type intra-agent déclaré) est la plus lisible ; la simulation du relecteur la montre réalisable. |
+
+### 9.3 Objections majeures
+
+| N° | Avis | Raison |
+|---|---|---|
+| R2-06 | Acceptée | Critères ou reclassement explicite ; HO7 scindée en deux règles. |
+| R2-07 | Acceptée | Intervalles issus du modèle mixte, rééchantillonnage en contrôle ; scène comme contraste principal, correction de Holm sur les contrastes secondaires. |
+| R2-08 | Nuancée | La reformulation du relecteur est reprise (le modèle nul des chaînes linéaires est nécessaire). Une précision : la « distance au lecteur » ne doit pas venir de la question 3 de l'enquête, qui mesure un récit (voir R2-04), mais des traces de l'orchestrateur, qui enregistrent qui a parlé à qui et quand. La profondeur de transmission est donc connue sans dépendre de ce que l'agent en dit. |
+| R2-09 | Acceptée | L'information et le climat étaient confondus dans G0 contre G±. Le choix entre ajout et remplacement de G= est la décision 7. |
+| R2-10 | Acceptée | Contradiction réelle entre le calendrier et la précaution électorale. |
+| R2-11 | Acceptée | La neutralité apprise devient un mécanisme à mesurer pour Mistral, et non un fait attesté par les règles d'un autre fournisseur. |
+| R2-12 | Acceptée | Identifiants datés, champ `model` enregistré, vérification au début et à la fin de chaque bloc. |
+| R2-13 | Acceptée | Définition de la graine et de la température. Le déterminisme d'un modèle à mélange d'experts servi par lots n'est pas garanti même à graine fixée : le pilote le vérifie et le document le dit. |
+| R2-14 | Acceptée | Le résumé de mémoire est attribué à l'instance modèle ; l'orchestrateur ne fait que l'appeler. Le contrôle « mémoire sans résumé » en priorité 2 est repris. |
+| R2-15 | Acceptée | Le garde-fou était violé pour un quart de M-PLU. |
+| R2-16 | Acceptée | Étalons publiés comme plancher, formalisations du projet comme complément. |
+| R2-17 | Acceptée | Les ordres de grandeur du relecteur sont des hypothèses, mais ils suffisent à montrer qu'il faut mesurer avant le dépôt. Codage par les juges au fil des simulations. |
+| R2-18 | Acceptée | La carte rassurait plus qu'elle ne vérifiait. |
+| R2-19 | Acceptée | Tendance perçue et test du train deviennent des variables secondaires, avec contrôle de plafond. |
+| R2-20 | Acceptée | Source du codage et seuils juge-humain préenregistrés. |
+| R2-21 | Acceptée | Centrage intra-agent et facteur d'inflation de variance préenregistrés. |
+| R2-22 | Nuancée | L'enquête du matin est reprise. Elle ne fixe pas une direction causale absolue : le matin, l'agent garde en mémoire les scènes des jours précédents. Elle sépare la déclaration des scènes **du jour**, ce qui suffit pour HO9 et pour l'écart entre cadres au jour près ; le document le dira dans ces termes. |
+| R2-23 | Nuancée | Le chercheur indique que l'usage du PDF de T1 par une clé du ministère est réglé sur le plan des droits. Il reste à l'écrire : fondement (exception de fouille ou accord), exemplaire licite, conditions d'hébergement de chaque point d'accès, aucune redistribution. T3 doit être traité de la même façon avant son choix. |
+| R2-24 | Acceptée | Seuil d'écart fixé, HO1 secondaire. |
+| R2-25 | Nuancée | Le constat tient : « un gros plus trois petits » mêle pluralité et qualité. Retirer Le Chonk de M-PLU déplace toutefois le problème si la pente de M-PLU reste comparée à celle de M-LC. Correction amendée : HO10b compare M-PLU (modèles de taille moyenne, sans Le Chonk ni Gemma) au village **M-AUT** (`mistral-medium`, seul), déjà joué en priorité 1. Pluralité et qualité sont alors séparées autant que le budget le permet. |
+| R2-26 | Acceptée | C'est l'objection qui protège le mieux le projet devant des relecteurs SIC. L'acteur-réseau fournit le vocabulaire ; la décomposition relève des plans d'expériences ; l'inventaire est un découpage du concepteur ; une part non additive (interactions entre contrastes) est un résultat qui va dans le sens de l'agencement. |
+| R2-27 | Nuancée | Les deux voies sont défendables. La seconde (trivialité comme lentille d'interprétation du niveau 3) est plus honnête avec le budget ; la première (HO8 avec règle) devient possible si les chaînes linéaires servent déjà de modèle nul pour HO10a (R2-08), car le même contraste sert alors deux fois. Décision ajoutée (n° 17). |
+
+### 9.4 Objections mineures
+
+| N° | Avis | Raison |
+|---|---|---|
+| R2-28 à R2-36 | Acceptées | Corrections de cohérence, sans débat. Pour R2-32, l'identifiant ILaaS sera relevé sur la plateforme. |
+| R2-37 | Nuancée | La granularité est réelle ; l'échelle 0 à 100 est gardée pour la comparabilité avec C1 à C3, la distribution des valeurs est rapportée, et le seuil de stabilité est exprimé en écart d'au moins deux paliers effectivement utilisés. |
+| R2-38 à R2-46 | Acceptées | Accord brut et AC1 de Gwet à côté du kappa ; publication des gazettes avec en-tête fictionnel ; règle en cas de silence de l'auteur ; numérotation du document de formalisation ; usage de chaque modèle du socle ; découpage de la condition « auteur unique » ; Y gardée avec ses deux moitiés explicites (sous réserve de la décision 15) ; bibliographie corrigée. |
+
+### 9.5 Ce qui change dans le plan
+
+Selon les décisions 7 et 16 (chiffres arrêtés en section 10) : priorité 1 à 35, 40 ou 60 simulations ; priorité 2 à 27 (24 plus 3 « mémoire sans résumé ») ; priorité 3 à 12. Étapes ajoutées avant le préenregistrement : journée simulée de mesure (débit, tokens), test de connaissance préalable (étape 0a), contrôle de manipulation de la fiche (étape 1), dyade étiquetée publique (étape 0b).
+
+---
+
+## 10. Décisions du chercheur (16 octobre 2026)
+
+Les seize décisions proposées par le relecteur, plus une décision ajoutée par l'auteur des documents (n° 17), ont été présentées au chercheur, qui les a toutes validées le 16 octobre 2026, avec les recommandations de la section 9. Elles sont appliquées dans le scénario C4 (version 11), le cadre scientifique (6.2), le glossaire (3), le socle technique (4), le projet de formalisation (1.1), la carte des concepts et l'ébauche de préenregistrement (« ../scientifique/preenregistrement-C4-premier-temps.md »).
+
+| N° | Décision | Choix retenu | Où |
+|---|---|---|---|
+| 1 | Accès au modèle (R2-01) | La clé donne accès à Mistral Large 4 (expérimentation AMUE). Identifiant exact relevé dans la première réponse de l'API, débit mesuré sur une journée simulée (étape −1), conditions consignées ; plan B court en cas de retrait de la préversion | C4, 3.1, 5, 6 ; socle, 10 |
+| 2 | HT1 (R2-03) | Fiche à étendue maximale (bornes de conception), contrôle de manipulation, scène comme contraste principal, Holm sur les trois contrastes secondaires, HT1 « relative aux contrastes déclarés » | C4, 1.5, 1.6, 3.4, 7.2 ; cadre, 6.4 |
+| 3 | HT4 (R2-05) | Borne d'équivalence ±0,05, hypothèse inchangée ; différence interlocuteur moins climat rapportée | C4, 1.5, 1.6, 7.4 |
+| 4 | Connaissance préalable (R2-04) | Mémoire d'entraînement traitée comme la culture commune du village et mesurée (étape 0a) ; critère de choix de T0 et T3 ; masquage du titre et de l'auteur seulement si plus de 50 % de la grille est restituée à partir du seul titre | C4, 1.2, 3.2, 5 ; cadre, 4.3 ; glossaire |
+| 5 | HT2 (R2-02) | Règle de la revue (part des formes supérieure à 0,5 ; écart T1 moins T0 d'au moins 5 points, en scène et sans public) ; HO1b ajoutée | C4, 1.5, 1.6, 7.3 |
+| 6 | Hypothèses sans règle (R2-06) | Critères pour HO1, HO2, HO4, HO5a, HO6, HO7a ; HO7b descriptive ; colonne « Statut » | C4, 1.6, 7.8 |
+| 7 | Gazette neutre (R2-09) | G= ajoutée en priorité 1, référence de HO2 | C4, 3.8, 6 |
+| 8 | Résumé de mémoire en M-PLU (R2-14) | Chaque habitant résume avec son propre modèle ; contrôle « mémoire sans résumé » en priorité 2 | C4, 3.0, 3.1, 3.3 |
+| 9 | M-PLU et juges (R2-15, R2-25) | M-PLU sans Le Chonk ni Gemma, **comparé à M-AUT** (amendement de l'auteur) ; règle des juges par réplique | C4, 1.6, 3.0, 3.1, 7.5 |
+| 10 | Publication (R2-10) | Billets de méthode seulement avant la fin de l'élection présidentielle de 2027 | C4, 8, 9 |
+| 11 | Graine et température (R2-13) | Température unique, graine transmise au modèle ; valeurs au second temps | C4, 5 ; cadre, 6.6 ; socle, étape 8 |
+| 12 | Étalonnage (R2-16) | Modèles publiés comme plancher, formalisations du projet en complément | C4, 1.4, 7.7 ; formalisation, en-tête |
+| 13 | Codage de référence (R2-20) | 300 répliques de validation, kappa ≥ 0,7 par juge, analyses sur les codes concordants, arbitrage à l'aveugle | C4, 3.0, 7 ; cadre, 6.3 |
+| 14 | Enquête du matin (R2-22) | Questions 4 et 5 le matin, prédicteurs de HO1 et HO9 | C4, 4.1, 7.4 ; glossaire |
+| 15 | Formulation de Y (R2-44, R23 de la revue n° 1) | Y gardée, ses deux moitiés explicitées | C4, 1.3 |
+| 16 | Graines des contrastes secondaires (R2-07) | 10 graines pour les bras joués entre simulations ; l'auteur étend la règle au bras de référence (cœur G0) et à la ligne de base T0, qui servent aux contrastes principaux. Priorité 1 à 70 simulations, replis à 40 et 35 selon le débit mesuré | C4, 6 ; analyses de puissance |
+| 17 | Trivialité (R2-27, ajoutée) | HO8 devient secondaire avec critère (taux de conservation, village contre chaînes, à profondeur égale) : mesure circonscrite de la trivialité co-produite | C4, 1.6, 3.10, 7.6 ; cadre, 2.5 |
+
+**Comptes du plan.** Priorité 1 : 70 simulations (repli à 40 ou 35) ; priorité 2 : 27 ; priorité 3 : 12 ; total 109 (repli : 79 ou 74). Simulation de puissance rejouée à 10 graines par bras : « ../../analyses/puissance/resultats-simulations.md », section A1 bis.
+
+**Points ouverts de la revue n° 1 fermés.** R23 (formulation de Y) est tranché par la décision 15 ; la correspondance des anciens codes S0 et S3 avec T0 et T3 est notée dans l'addendum 6 de la revue n° 1.
+
+**Fichiers cités par la revue.** Le répertoire `propositions-correction/` du relecteur n'est pas conservé dans le dépôt : ses propositions sont appliquées dans les documents, son ébauche de préenregistrement est reprise dans « ../scientifique/preenregistrement-C4-premier-temps.md », et ses scripts de simulation (`09-scripts/`) sont conservés dans « ../../analyses/puissance/ ».
+
+**Reste à faire.** Relecture des documents par un modèle d'un autre fournisseur (C4, 5) ; rejeu des simulations de puissance avec les variances du pilote ; relevé des identifiants datés des modèles et de l'identifiant ILaaS du juge Qwen.

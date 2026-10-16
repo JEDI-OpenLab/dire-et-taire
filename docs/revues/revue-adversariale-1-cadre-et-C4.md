@@ -119,3 +119,9 @@ La carte des concepts du C4 a fait apparaître quatre points bloquants, levés l
 **Correspondance des codes.** Dans cette revue, les textes sources S0 à S3 correspondent aujourd'hui à T0 à T3, et les hypothèses opérationnelles S1 à S8 à HO1 à HO8.
 
 **Révision du même jour (C4 v10).** La condition de référence devient « tout Le Chonk » (M-LC). Le contraste « modèle » de HO11 oppose deux villages entiers (M-LC contre M-AUT), ce qui retire de l'hypothèse centrale le problème de qualité inégale des modèles. Le bloc pluri-modèles (M-PLU) passe en priorité 2, avec des modèles de qualité comparable, et ne sert plus qu'à HO10b.
+
+---
+
+## 7. Addendum : clôture des points ouverts (revue n° 2)
+
+La revue n° 2 (« revue-adversariale-2-cadre-et-C4.md ») a repris les points ouverts de cette revue. R23 (formulation de Y) est tranché : Y est gardée, et ses deux moitiés sont explicitées dans le C4, section 1.3 (décision 15 de la revue n° 2). Plusieurs décisions de cette revue sont révisées par la revue n° 2, sans effacer leur trace ici : les contrastes de HT1 ne sont plus à égalité (la scène devient le contraste principal), le bloc pluri-modèles ne contient plus Le Chonk et se compare au village M-AUT, et HT2 reçoit une règle de décision.

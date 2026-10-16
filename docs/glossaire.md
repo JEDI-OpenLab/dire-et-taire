@@ -1,6 +1,6 @@
 # Glossaire
 
-*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 2 du 16 octobre 2026 : inventaire en trois statuts, nouveaux codes (T0 à T3, HO1 à HO11), termes de méthode des règles de décision.*
+*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
 
 **Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du C4.
 
@@ -15,12 +15,13 @@
 | **Agent** | Programme qui produit des actions ou des énoncés ; ici, un habitant du village | Informatique et intelligence artificielle | Usage courant | Avec l'agentivité : un agent n'est pas nécessairement le siège de l'action |
 | **Agentivité** | Capacité d'agir, c'est-à-dire de faire une différence mesurable dans le cours des choses | Sciences sociales (*agency*) | Usage courant en sociologie | Avec l'intentionnalité : agir n'implique pas de vouloir |
 | **Agentivité distribuée** | L'action est le fait d'un agencement d'actants humains et non humains, non d'un individu isolé | Sociologie de la traduction, théorie de l'acteur-réseau (Michel Callon, Bruno Latour, Madeleine Akrich) ; action située (Lucy Suchman) | Callon (1986) ; Latour (2006) ; Suchman (2007) | |
-| **Co-agentivité** | Production conjointe d'un énoncé par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur | Terme du projet, pris au sens de l'agentivité distribuée de la théorie de l'acteur-réseau : descriptif, sans intentionnalité prêtée aux instances | Cadre scientifique, section 1 | Avec la co-agentivité (ou agentivité partagée) des sciences de l'éducation et de la didactique des langues, qui part de l'agentivité intentionnelle de Bandura et des travaux sur l'agence partagée, et poursuit une visée normative : l'humain doit garder un contrôle critique sur l'IA (Godwin-Jones, 2024). Le projet ne retient pas cette visée normative |
+| **Co-agentivité** | Production conjointe d'un énoncé par le modèle (et son fournisseur), la fiche, l'orchestrateur, l'ordonnanceur, les cadres d'énonciation et le concepteur | Terme du projet. Le vocabulaire (actants, symétrie, absence d'intentionnalité) vient de la théorie de l'acteur-réseau ; la décomposition des parts par contrastes vient des plans d'expériences, et c'est un découpage du concepteur, assumé (cadre, 1.3) | Cadre scientifique, section 1 | Avec la co-agentivité (ou agentivité partagée) des sciences de l'éducation et de la didactique des langues, qui part de l'agentivité intentionnelle de Bandura et des travaux sur l'agence partagée, et poursuit une visée normative : l'humain doit garder un contrôle critique sur l'IA (Godwin-Jones, 2024). Le projet ne retient pas cette visée normative |
 | **Actant** | Toute entité, humaine ou non, qui fait une différence dans une action | Sémiotique d'Algirdas Julien Greimas, reprise par Latour et Akrich | Akrich et Latour (1992) | Avec « acteur » au sens d'une personne |
 | **Agencement** | Ensemble hétérogène d'instances dont l'action conjointe produit un effet | Usage proche de la théorie de l'acteur-réseau | Latour (2006) | |
 | **Instance (de production)** | Chacune des six composantes de l'agencement qui font l'énoncé, et dont le projet estime la part : modèle et fournisseur, fiche, orchestrateur, ordonnanceur, cadres d'énonciation, concepteur | Terme du projet | Cadre scientifique, section 1.1 | Avec les stimuli et les instruments, qui ne sont pas des instances |
 | **Stimulus, structure** | Ce qui est mis en circulation (les textes sources) et la forme du collectif (village ou chaînes linéaires) | Terme du projet | Cadre scientifique, section 1.1 | Avec une instance : un stimulus est une condition, pas une part de l'agencement |
 | **Instrument** | Ce qui produit les données : enquêteur, modèles juges, modèle de plongement, chercheur qui code. Les instruments sont eux aussi des agencements | Terme du projet | Cadre scientifique, sections 1.1 et 6.3 | |
+| **Découpage du concepteur** | L'inventaire des six instances et le choix des contrastes de référence, fixés avant toute génération ; ils déterminent ce que « part » veut dire dans le projet | Terme du projet | Cadre scientifique, sections 1.3 et 6.4 | Avec un fait de l'agencement : un autre découpage donnerait d'autres parts |
 
 ---
 
@@ -87,12 +88,13 @@
 | **Échantillons de silicium** | Usage de modèles pour simuler des sous-groupes de répondants humains | Lisa Argyle et ses collègues, science politique | Argyle et al. (2023) | |
 | **Aplatissement des identités** | Les modèles qui remplacent des participants humains écrasent la diversité interne des groupes | Angelina Wang, Jamie Morgenstern et John Dickerson | Wang et al. (2025) | |
 | **Complaisance** (*sycophancy*) | Tendance d'un modèle à s'aligner sur les opinions ou attentes de son interlocuteur | Mise en évidence et analysée par Mrinank Sharma et ses collègues | Sharma et al. (2024) | Avec la politesse |
-| **Neutralité apprise** | Tendance d'un modèle à ne pas prendre parti sur les sujets controversés, imposée par les règles de conduite de son fournisseur | Terme du projet ; règles publiées par les fournisseurs | OpenAI (2025) | Avec le silence : la neutralité est une parole |
+| **Neutralité apprise** | Tendance d'un modèle à ne pas prendre parti sur les sujets controversés, attribuée aux réglages de son fournisseur | Terme du projet ; principe de neutralité de la politique d'usage de Mistral AI, fournisseur du village ; spécification publiée par OpenAI à titre d'exemple | Mistral AI (s. d.) ; OpenAI (2026) | Avec le silence : la neutralité est une parole. Mesurée (C4, étape 0a), non attestée |
+| **Mémoire d'entraînement** | Ce que le modèle sait déjà d'un texte source et de sa réception avant toute circulation dans le village ; traitée comme la culture commune du village, identique chez tous les habitants joués par un même modèle ; mesurée par un test de connaissance préalable | Terme du projet | C4, sections 1.2, 3.2 et 5 | Avec la mémoire des habitants (souvenirs datés), qui est un dispositif du village |
 | **Fournisseur** | Entreprise qui entraîne, règle et distribue le modèle ; instance de l'agencement par ses données et ses règles | Terme du projet | | |
 | **Suffisance générative** | Reproduire un phénomène par simulation montre qu'un mécanisme peut le produire, sans prouver que c'est le bon | Joshua Epstein, sciences sociales computationnelles (« si vous ne l'avez pas fait croître, vous ne l'avez pas expliqué ») | Epstein (1999) | |
 | **Plausibilité des mécanismes** | Examen de la vraisemblance des mécanismes qui produisent un phénomène dans une simulation | Patrick Zhao, David Huu Pham et Nicholas Vincent | Zhao, Pham et Vincent (2026) | |
 | **Simulation comme expérience sur un artefact** | Distinction entre la simulation qui représente un système cible et celle qui sert d'expérience sur un artefact | Franck Varenne, philosophie des modèles | Varenne (2007, 2018) | |
-| **Validation** | Démonstration qu'une simulation est adéquate à ce qu'elle prétend représenter | Défi central selon Maik Larooij et Petter Törnberg | Larooij et Törnberg (2025) | |
+| **Validation** | Démonstration qu'une simulation est adéquate à ce qu'elle prétend représenter | Défi central selon Maik Larooij et Petter Törnberg | Larooij et Törnberg (2026) | |
 
 ---
 
@@ -104,23 +106,27 @@
 | **Habitant** | Agent joué par un modèle de langage, doté d'une fiche, d'une mémoire et de relations |
 | **Fiche (persona)** | Attributs écrits par le concepteur : âge, métier, traits OCEAN, dispositions, sensibilité |
 | **OCEAN (Big Five)** | Modèle de la personnalité en cinq dimensions : ouverture, conscienciosité, extraversion, agréabilité, stabilité émotionnelle. Tradition lexicale : Ernest Tupes et Raymond Christal (1961), Lewis Goldberg (1990), Paul Costa et Robert McCrae (1992) |
-| **Mémoire** | Souvenirs datés de chaque habitant, écrits après chaque rencontre ; seul canal de circulation entre habitants |
+| **Mémoire** | Souvenirs datés de chaque habitant, résumés par le modèle qui le joue après chaque rencontre ; seul canal de circulation entre habitants. Le résumé est un rôle du modèle, appelé par l'orchestrateur |
 | **Orchestrateur** | Programme qui assemble chaque consigne (fiche, souvenirs, scène, conversation) et fait passer la parole |
 | **Ordonnanceur** | Programme (du code, pas un modèle) qui organise les rencontres et fait respecter le pare-feu de la connaissance |
 | **Narrateur** | Modèle de langage qui écrit uniquement la description des scènes |
 | **Lecteur** | Habitant qui a lu le texte source et en parle si la conversation s'y prête |
-| **Enquêteur du soir** | Questionnaire posé chaque soir à chaque habitant ; ses réponses n'entrent jamais dans la mémoire |
+| **Enquêteur** | Questionnaire posé à chaque habitant : réduit le matin, avant toute scène (position déclarée, climat perçu), complet le soir ; ses réponses n'entrent jamais dans la mémoire |
+| **Test du train** | Question de l'enquête du soir : accepterait-on de discuter du livre, pendant un long trajet, avec un inconnu d'avis contraire ? Instrument de Noelle-Neumann (1993) |
 | **Pare-feu de la connaissance** | Règle de code : un agent ne sait que ce qui figure dans sa consigne |
 | **Scène publique, scène privée** | Rencontre à au moins trois personnes dont des non-proches ; tête-à-tête avec un proche |
 | **Sollicitation standardisée** | Question ouverte posée à heures fixes, identique dans toutes les conditions, qui permet de mesurer le silence et le taire |
-| **Gazette** | Média local fictif aux textes écrits à l'avance : absente (G0), favorable (G+), critique (G−) |
+| **Gazette** | Média local fictif aux textes écrits à l'avance : absente (G0), neutre (G=, annonce sans position), favorable (G+), critique (G−) |
 | **Textes sources T0 à T3** | T0 : livre sans enjeu moral (ligne de base) ; T1 : *Les irresponsables* ; T2 : compte rendu journalistique (exploratoire) ; T3 : autre historien (contrôle symétrique) |
-| **Modèle du village : M-LC, M-AUT, M-PLU** | M-LC : tout le village joué par Le Chonk (référence) ; M-AUT : la même configuration jouée par un autre modèle (contraste de HO11) ; M-PLU : les habitants répartis entre quatre modèles de qualité comparable (HO10b) |
+| **Modèle du village : M-LC, M-AUT, M-PLU** | M-LC : tout le village joué par Le Chonk (référence) ; M-AUT : la même configuration jouée par un autre modèle (contraste de HO11, référence de HO10b) ; M-PLU : les habitants répartis entre plusieurs modèles de taille moyenne, sans Le Chonk ni Gemma (HO10b) |
+| **Profondeur de transmission** | Nombre d'intermédiaires entre le lecteur et l'agent qui rapporte une version, reconstitué à partir des traces de l'orchestrateur ; sert à comparer le village et les chaînes linéaires |
+| **Taux de conservation** | Part des propositions de la grille présentes dans une version ; mesure de la trivialité co-produite (HO8) |
 | **Position déclarée en enquête** | Énoncé produit face à l'enquêteur, dans un cadre présenté comme confidentiel |
 | **Position exprimée en scène** | Énoncé produit dans une scène face à d'autres agents |
 | **Silence (taux de)** | Part des sollicitations sans aucune réponse au fond (silence pur, TAC) |
 | **Taire (taux de)** | Part des sollicitations sans position exprimée : silence pur, évitement, neutralisation, euphémisation, délégation. Variable principale de la décomposition des parts |
 | **Version de la thèse** | Ce qu'un habitant raconte du livre à l'enquêteur du soir ; matériau de la diversité des versions |
+| **Taux de neutralisation** | Part des sollicitations codées NEU ou EUP ; en scène (HO1b) ou sans public (HO5c) |
 | **Diversité des versions** | Dispersion des versions d'une même journée, mesurée de deux façons : sémantique (distance entre plongements) et lexicale (part de trigrammes partagés) |
 | **Formes du silence** | Évitement (EVI), neutralisation (NEU), euphémisation (EUP), délégation (DEL), alignement apparent (ALI), silence pur (TAC) |
 | **Mode d'écriture** | Polyphonie homogène (« tout Le Chonk », référence), autre architexte, habitants pluri-modèles, auteur unique |
@@ -134,16 +140,18 @@
 |---|---|---|
 | **Problématique « Comment X alors que Y »** | Forme qui met en tension l'objet étudié (X) et une contradiction apparente (Y) | Convention de rédaction du projet |
 | **Hypothèse de travail** | Réponse proposée à la problématique, interprétable en SIC (HT1 à HT4) | C4, section 1.5 |
-| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11) | C4, section 1.6 |
+| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11, avec HO1b, HO7a, HO7b, HO9b, HO10a, HO10b, HO10c). Statut **principal** (entre dans une règle de décision), **secondaire** (critère propre, sans effet sur l'issue des hypothèses de travail), **descriptif** ou **exploratoire** (rapporté sans test) | C4, section 1.6 |
 | **Règle de décision à trois issues** | Critère préenregistré qui classe chaque hypothèse de travail comme soutenue, réfutée ou indéterminée | Cadre scientifique, section 6.4 |
-| **Contraste de référence** | Variation fixée à l'avance pour chaque instance (par exemple scène privée contre publique), dont l'effet est exprimé dans une unité commune pour comparer les parts. Son choix est la part du concepteur dans la mesure | Terme du projet ; cadre scientifique, section 6.4 |
+| **Contraste de référence** | Variation fixée à l'avance pour chaque instance (par exemple scène privée contre publique), dont l'effet est exprimé dans une unité commune pour comparer les parts. Son choix est la part du concepteur dans la mesure. Pour l'instance dont l'hypothèse centrale prédit la moindre part, le contraste reçoit son étendue maximale | Terme du projet ; cadre scientifique, section 6.4 |
+| **Contrôle de manipulation** | Vérification préalable qu'une condition produit bien la différence qu'elle est censée produire (par exemple, que la consigne d'autocensure rend l'agent plus réservé) | Usage méthodologique courant en psychologie expérimentale |
+| **Modèle nul** | Référence qui donne ce que l'on observerait sans le mécanisme étudié ; ici, les chaînes linéaires pour la convergence et la trivialité (HO8, HO10a) | Usage méthodologique courant |
 | **Test d'équivalence** | Test qui établit qu'un effet est plus petit qu'une borne fixée à l'avance, au lieu de conclure à l'absence d'effet sur un résultat non significatif | Lakens (2017) |
 | **Préenregistrement** | Dépôt daté des hypothèses, mesures et critères avant toute expérience. Ici en deux temps : hypothèses et règles avant toute génération, paramètres techniques après le pilote | Nosek et al. (2018) |
 | **Réplication procédurale** | Reproduire dans le dispositif le protocole d'une étude humaine avant d'y comparer les résultats | Terme du projet |
-| **Graine** | Valeur qui fixe le hasard d'une simulation ; plusieurs graines par condition mesurent la variabilité | Usage technique |
-| **Kappa de Cohen** | Mesure de l'accord entre deux codages d'un même échantillon, au-delà du hasard | Cohen (1960) |
+| **Graine** | Couple de valeurs qui fixe le hasard de l'ordonnanceur et le paramètre d'échantillonnage du modèle, à température fixée ; plusieurs graines par condition mesurent la variabilité | Usage technique |
+| **Kappa de Cohen** | Mesure de l'accord entre deux codages d'un même échantillon, au-delà du hasard ; sensible au paradoxe de prévalence quand des catégories sont rares, d'où l'AC1 de Gwet rapporté à côté | Cohen (1960) ; Gwet (2008) |
 | **Fiabilité intra-codeur** | Le même codeur recode à l'aveugle un échantillon après un délai (ici trois semaines au moins) ; c'est la solution retenue par un projet mené seul, complétée par l'accord avec deux modèles juges et la publication des codages | Usage méthodologique courant en analyse de contenu |
-| **Modèle juge** | Modèle de langage qui code automatiquement les énoncés ; toujours différent des modèles générateurs, et de préférence d'une autre famille ; deux juges par énoncé | Panickssery et al. (2024) |
+| **Modèle juge** | Modèle de langage qui code automatiquement les énoncés ; jamais de la famille du modèle qui a écrit l'énoncé codé ; deux juges par énoncé, chacun validé contre un échantillon codé par le chercheur ; analyses sur les codes concordants | Panickssery et al. (2024) |
 | **Carnet de conception** | Trace datée des choix du concepteur ; trace de sa part d'agentivité | Cadre scientifique, section 6.2 |
 | **Modèles à effets mixtes** | Modèles statistiques qui tiennent compte de l'emboîtement des données (agents dans des simulations) | Usage statistique |
 | **Revue adversariale** | Relecture dont la consigne est de réfuter le dispositif, consignée avec les décisions prises | Dossier `docs/revues/` |
@@ -160,7 +168,7 @@ Les références ci-dessous ne figurent pas dans les bibliographies du cadre et 
 - Costa, P. T., & McCrae, R. R. (1992). *Revised NEO Personality Inventory (NEO PI-R) and NEO Five-Factor Inventory (NEO-FFI) professional manual*. Odessa, FL : Psychological Assessment Resources.
 - Davallon, J. (2003). La médiation : la communication en procès ? *MEI Médiation et information*, 19, 37-59.
 - Genette, G. (1979). *Introduction à l'architexte*. Paris : Seuil.
-- Godwin-Jones, R. (2024). Distributed agency in language learning and teaching through generative AI. *Language Learning & Technology*, 28(2), 5-31.
+- Godwin-Jones, R. (2024). Distributed agency in second language learning and teaching through generative AI. *Language Learning & Technology*, 28(2), 5-31 (pagination à confirmer sur le PDF de la revue).
 - Goldberg, L. R. (1990). An alternative "description of personality": The Big-Five factor structure. *Journal of Personality and Social Psychology*, 59(6), 1216-1229.
 - Granovetter, M. (1978). Threshold models of collective behavior. *American Journal of Sociology*, 83(6), 1420-1443.
 - Jacobs, R. A., Jordan, M. I., Nowlan, S. J., & Hinton, G. E. (1991). Adaptive mixtures of local experts. *Neural Computation*, 3(1), 79-87.

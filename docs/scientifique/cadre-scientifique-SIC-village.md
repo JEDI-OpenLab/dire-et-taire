@@ -1,8 +1,8 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6.1 du 16 octobre 2026. Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
+*Le village simulé (expériences C0 à C5) comme objet de recherche en SIC. Version 6.2 du 16 octobre 2026 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
-*Documents associés : « scenario-C4-circulation-savoir-savant.md », « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
+*Documents associés : « scenario-C4-circulation-savoir-savant.md » (version 11), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-C4.md », « ../revues/revue-adversariale-2-cadre-et-C4.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
 ---
 
@@ -14,9 +14,9 @@ Le village de Saint-Aubert-sur-Lys est peuplé d'« agents ». Le mot est trompe
 
 | Instance | Ce qu'elle fait à l'énoncé | Ce qui la porte |
 |---|---|---|
-| **Le modèle de langage** | Il écrit la phrase, avec ses régularités, ses préférences et ses réglages (complaisance, neutralité apprise) | Ses données d'entraînement et, derrière lui, son **fournisseur** et les règles de conduite qu'il lui impose |
+| **Le modèle de langage** | Il écrit la phrase, résume les souvenirs, joue le lecteur et le narrateur, avec ses régularités, ses réglages (complaisance, neutralité apprise) et ce qu'il sait déjà par ses données d'entraînement (mémoire d'entraînement) | Ses données d'entraînement et, derrière lui, son **fournisseur** et les règles de conduite qu'il lui impose |
 | **La fiche du persona** | Elle oriente le ton, les valeurs, les dispositions attribuées | Le concepteur, qui l'a écrite |
-| **L'orchestrateur** | Il assemble la consigne et choisit les souvenirs qui y figurent, donc ce que l'agent « sait » | Le code, et le modèle qui résume les souvenirs |
+| **L'orchestrateur** | Il assemble la consigne et choisit les souvenirs qui y figurent, donc ce que l'agent « sait » | Le code ; le résumé des souvenirs est un rôle du modèle, que l'orchestrateur appelle et dont il choisit les sorties à insérer |
 | **L'ordonnanceur** | Il décide de la rencontre : qui parle à qui, où, dans quel type de scène | Le code, et les règles fixées par le concepteur |
 | **Les cadres d'énonciation** | Ils définissent la situation de parole : scène publique ou privée, enquête, gazette, sollicitations | Le concepteur, qui les écrit, et l'ordonnanceur, qui les distribue |
 | **Le concepteur** | Il a fixé tout ce qui précède : consignes, règles, cadres d'énonciation, sollicitations, et les contrastes qui servent à mesurer les parts | Le chercheur lui-même |
@@ -48,6 +48,8 @@ Le projet adopte une conception **distribuée** de l'agentivité, issue de la so
 
 Ces notions convergent : un texte n'a jamais un seul auteur. Le village pousse cette idée à sa limite, puisque **chaque réplique est écrite par une machine, à partir d'une consigne écrite par un humain, dans une situation organisée par du code**.
 
+**Ce que le projet prend à l'acteur-réseau, et ce qu'il ne lui prend pas.** Il lui prend le vocabulaire (actants humains et non humains, symétrie, agentivité sans intentionnalité) et le refus d'attribuer l'énoncé à un auteur unique. Il ne lui prend pas la méthode : l'acteur-réseau suit les associations sans fixer d'avance la liste des actants ni additionner leurs contributions, alors que le village fixe six instances avant toute observation, les fait varier une à une et exprime leurs parts dans une unité commune. Cette décomposition relève des plans d'expériences et de la sociologie expérimentale, et le projet l'assume : l'inventaire des six instances est un **découpage du concepteur**, rapporté comme tel. Deux garde-fous rendent la décomposition compatible avec l'idée d'agencement : les interactions entre contrastes sont estimées et rapportées, une part non additive étant un résultat qui va dans le sens de l'agencement (6.4) ; et une part qui ne peut pas être isolée est déclarée comme telle (7).
+
 ### 1.4 Ce que la clef de lecture change
 
 | Sans la clef de lecture | Avec la clef de lecture |
@@ -56,6 +58,7 @@ Ces notions convergent : un texte n'a jamais un seul auteur. Le village pousse c
 | Un écart aux humains est un défaut du simulateur | Un écart aux humains révèle **la part d'une instance** (le modèle, le fournisseur, le dispositif) |
 | Le concepteur est extérieur à l'expérience | Le concepteur est **une instance parmi d'autres**, dont la part est documentée |
 | Les conditions expérimentales sont des variantes techniques | Chaque condition **fait varier une instance** pour estimer sa part |
+| Les parts des instances s'additionnent | Les parts sont mesurées relativement à des contrastes déclarés, et leurs **interactions** sont rapportées |
 
 **Garde-fou** : si tout est agencement, rien n'est expliqué. La co-agentivité n'est utile que si l'on peut **décomposer** les parts. C'est le rôle du plan expérimental (section 6.4).
 
@@ -107,6 +110,8 @@ Certaines mesures (fidélité au message source, relais, diffusion) empruntent a
 | Ce qui explique la transformation | Les médiations, les dispositifs, les rapports de pouvoir | Des biais qui font converger les versions vers des formes stables |
 
 Les travaux sur les chaînes de transmission entre modèles de langage parlent d'attracteurs (Perez et al., 2025) et de biais de contenu (Acerbi et Stubbersfield, 2023). Le projet les mobilise pour **décrire** les convergences, et la co-agentivité pour **interpréter** : les « biais » d'un agent sont ceux de son modèle et de son fournisseur, et les médiations sont inscrites dans le dispositif par le concepteur.
+
+Dans le village, toutes les médiations (gazette, mémoire, scènes) sont écrites par le concepteur et jouées par un seul architexte : la trivialité n'y a pas l'hétérogénéité des mondes sociaux que décrit Jeanneret. Elle reçoit donc une mesure circonscrite : la différence entre ce que deviennent les versions dans le village et dans des chaînes linéaires jouées par le même modèle, à profondeur de transmission égale (C4, HO8). Cette différence est la trace des médiations sociales du dispositif ; le reste de la trivialité sert de lentille d'interprétation.
 
 ---
 
@@ -176,8 +181,9 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont pr
 | **Échantillons de silicium** | Argyle et al. (2023) | Promesse de simuler des sous-groupes humains, et ses limites |
 | **Aplatissement des identités** | Wang, Morgenstern et Dickerson (2025) | Les modèles écrasent la diversité des groupes |
 | **Suffisance générative, plausibilité des mécanismes** | Epstein (1999) ; Zhao, Pham et Vincent (2026) | Reproduire une forme n'est pas en expliquer le mécanisme |
-| **Validation des simulations génératives** | Larooij et Törnberg (2025) | Structure les critères de la section 7 |
-| **Règles de conduite des fournisseurs** | OpenAI (2025) | Le fournisseur comme actant : neutralité exigée sur les sujets controversés |
+| **Validation des simulations génératives** | Larooij et Törnberg (2026) | Structure les critères de la section 7 |
+| **Règles de conduite des fournisseurs** | Mistral AI (politique d'usage, s. d.) ; OpenAI (2026) | Le fournisseur comme actant. Le fournisseur du village est Mistral, dont la politique d'usage pose un principe général de neutralité sans spécification comportementale publique ; la spécification d'OpenAI sert d'exemple de ce qu'un fournisseur peut prescrire. La neutralité apprise est mesurée (C4, étape 0a), non attestée |
+| **Mémoire d'entraînement** | Terme du projet | Ce que le modèle sait déjà des textes sources et de leur réception, traité comme la culture commune du village, identique chez tous les habitants ; mesuré avant toute circulation (C4, étape 0a) ; conditionne l'interprétation des transformations, des analogies avec le présent et de la convergence |
 | **Préférence des juges automatiques pour leurs propres textes** | Panickssery et al. (2024) | Justifie la séparation entre modèles générateurs et modèles juges |
 
 ---
@@ -241,7 +247,7 @@ Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix
 
 - Préenregistrement en deux temps : questions, hypothèses, règles de décision et contrastes de référence avant toute génération ; livres de codes figés, nombre de graines et seuils techniques après le pilote, par un avenant daté. Le pilote n'entre pas dans l'analyse.
 - Codage humain par le chercheur seul : fiabilité intra-codeur (recodage à l'aveugle de 15 % du corpus après au moins trois semaines ; kappa de Cohen, seuil de 0,7) ; accord entre ce codage et deux modèles juges distincts ; livres de codes et extraits codés publiés, pour que la vérification par les pairs reste possible.
-- **Les modèles juges sont toujours différents des modèles qui ont généré la simulation codée, et de préférence d'autres familles** (Panickssery et al., 2024). Deux juges codent chaque énoncé ; leur accord est mesuré, et ils sont validés contre le codage humain.
+- **Un juge ne code jamais un énoncé écrit par un modèle de sa famille** (Panickssery et al., 2024). Deux juges codent chaque énoncé ; leur accord est mesuré ; chacun est validé contre un échantillon codé par le chercheur, et remplacé s'il n'atteint pas le seuil ; les analyses portent sur les codes concordants, les désaccords étant arbitrés par le chercheur à l'aveugle de la condition.
 - **Les autres instruments** (enquêteur, outils de mesure automatique comme un modèle de plongement) sont déclarés comme tels ; toute mesure qui dépend d'un modèle est doublée d'une mesure qui n'en dépend pas, quand c'est possible.
 - Plusieurs graines par condition ; résultats retenus seulement s'ils sont stables.
 
@@ -265,12 +271,12 @@ Les **modes d'écriture** comparés (C5) :
 |---|---|---|
 | Polyphonie homogène (« tout Le Chonk ») | Tous les rôles joués par Le Chonk, chaque habitant restant un appel séparé avec sa fiche et sa mémoire | **Condition de référence** : un architexte unique sous des voix multiples |
 | Polyphonie d'un autre architexte | La même configuration, entièrement jouée par un autre modèle de bonne qualité (de préférence du même fournisseur) | L'effet du modèle à configuration égale, sans mélange de modèles |
-| Habitants pluri-modèles | Les habitants sont répartis entre quatre modèles de qualité comparable ; lecteur et narrateur sur Le Chonk | Ce que change la pluralité des architextes parmi les voix |
-| Auteur unique | Le Chonk écrit d'un seul tenant la vie du village, sans séparation des connaissances | Ce que change la distribution de l'écriture entre agents |
+| Habitants pluri-modèles | Les habitants sont répartis entre plusieurs modèles de taille moyenne, sans Le Chonk ; chacun résume sa mémoire avec son modèle ; lecteur et narrateur sur Le Chonk | Ce que change la pluralité des architextes parmi les voix, par comparaison avec un village joué par un seul modèle de taille comparable |
+| Auteur unique | Le Chonk écrit seul toute la vie du village, une génération par journée, sans séparation des connaissances | Ce que change la distribution de l'écriture entre agents |
 
 Dans tous les modes, les rencontres sont organisées par un **ordonnanceur algorithmique** (du code), séparé du **narrateur** (un modèle), pour distinguer l'organisation de l'exposition de l'écriture des scènes.
 
-**Contrastes de référence.** Pour comparer des parts, il faut une unité commune. Chaque instance reçoit un contraste de référence fixé avant toute génération (par exemple disposition faible contre forte, scène privée contre publique, un modèle contre plusieurs), et l'effet de chaque contraste est exprimé dans la même unité (en points de pourcentage pour une proportion). La part ainsi mesurée dépend du contraste choisi : ce choix est la part du concepteur dans la mesure elle-même, et il est justifié dans le préenregistrement. Les parts mesurées hors du village (test d'un modèle seul, dyades) sont rapportées à part et ne sont pas comparées directement aux contrastes mesurés dans le village.
+**Contrastes de référence.** Pour comparer des parts, il faut une unité commune. Chaque instance reçoit un contraste de référence fixé avant toute génération (par exemple disposition faible contre forte, scène privée contre publique, un modèle contre plusieurs), et l'effet de chaque contraste est exprimé dans la même unité (en points de pourcentage pour une proportion). La part ainsi mesurée dépend du contraste choisi : ce choix est la part du concepteur dans la mesure elle-même, et il est justifié dans le préenregistrement. L'amplitude d'un contraste est justifiée avant toute génération. Pour l'instance dont l'hypothèse centrale prédit la moindre part (la fiche, dans le C4), le contraste reçoit son **étendue maximale**, afin que l'hypothèse ne puisse pas être soutenue par une manipulation faible ; un contrôle de manipulation vérifie que le contraste produit bien ce qu'il est censé produire. Les interactions entre contrastes sont estimées dans le même modèle et rapportées. Les parts mesurées hors du village (test d'un modèle seul, dyades) sont rapportées à part et ne sont pas comparées directement aux contrastes mesurés dans le village.
 
 **Règles de décision.** Chaque hypothèse de travail a une issue préenregistrée parmi trois : soutenue, réfutée, indéterminée. Quand une hypothèse affirme l'absence d'un effet, l'absence est établie par un test d'équivalence (Lakens, 2017), et non par un simple résultat non significatif.
 
@@ -290,7 +296,7 @@ L'expérience **C0** donne aussi la ligne de base qui permet de mesurer ce que l
 
 ### 6.6 Unités d'analyse et puissance
 
-Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateurs individuels, l'agent emboîté dans la simulation (modèles à effets mixtes). Un pilote estime la variance entre graines ; le nombre de graines est fixé par calcul de puissance, au moins 5 pour les contrastes centraux. Plans d'expérience à priorités.
+Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateurs individuels, l'agent emboîté dans la simulation (modèles à effets mixtes). Une **graine** fixe à la fois le hasard de l'ordonnanceur et le paramètre d'échantillonnage du modèle, à température unique et déclarée ; le pilote vérifie si une même graine reproduit les sorties. Un pilote estime la variance entre graines ; le nombre de graines est fixé par calcul de puissance pour l'écart entre contrastes que la règle de décision exige, au moins 5 par condition. Les intervalles des contrastes entre simulations sont issus des modèles mixtes (avec correction pour petits effectifs de simulations) ; le rééchantillonnage des simulations ne sert que de contrôle. Les comparaisons multiples qu'une règle de décision autorise sont corrigées (Holm). Plans d'expérience à priorités.
 
 ### 6.7 Reproductibilité, données, sobriété
 
@@ -320,6 +326,8 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - **Modèle et fournisseur se séparent mal** : changer de modèle change en général aussi de fournisseur, de données d'entraînement et de règles de conduite, et leurs parts sont alors rapportées ensemble. Un contraste entre deux modèles du même fournisseur approche la part du modèle à fournisseur constant (C4, section 3.1) ; la part du fournisseur n'est approchée qu'hors du village, en comparant des modèles de fournisseurs différents.
 - **Les instruments sont des agencements** : enquêteur, juges et outils de mesure produisent eux aussi des énoncés ou des scores ; d'où leurs garde-fous (section 6.3).
 - **L'agentivité n'est pas l'intentionnalité** : dire qu'une instance « agit » signifie qu'elle fait une différence mesurable, non qu'elle veut quelque chose.
+- **Décomposer n'est pas suivre les associations** : la mesure des parts est un découpage du concepteur, compatible avec l'agencement par le rapport des interactions et des parts non isolables (1.3).
+- **Les modèles savent déjà** : ce qu'un modèle sait des textes sources par ses données d'entraînement entre dans le village avant toute circulation ; cette mémoire d'entraînement est mesurée et rapportée comme part du modèle et du fournisseur.
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
 - Le codage automatique ajoute une instance à l'analyse elle-même ; d'où la séparation des modèles et la validation humaine.
@@ -348,7 +356,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Jacquinot-Delaunay, G., & Monnoyer, L. (dir.) (1999). Le dispositif. Entre usage et concept. *Hermès*, 25.
 - Jeanneret, Y. (2008). *Penser la trivialité. Volume 1 : La vie triviale des êtres culturels*. Paris : Hermès-Lavoisier.
 - Jeanneret, Y. (2014). *Critique de la trivialité. Les médiations de la communication, enjeu de pouvoir*. Paris : Éditions Non Standard.
-- Jeanneret, Y., & Souchier, E. (1999). Pour une poétique de l'écrit d'écran. *Xoana*, 6-7, 97-107.
+- Jeanneret, Y., & Souchier, E. (1999). Pour une poétique de l'écrit d'écran. *Xoana*, 6, 97-107.
 - Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte. (Éd. originale : *Reassembling the Social*, Oxford University Press, 2005.)
 - Shannon, C. E., & Weaver, W. (1949). *The Mathematical Theory of Communication*. Urbana : University of Illinois Press.
 - Souchier, E. (1998). L'image du texte. Pour une théorie de l'énonciation éditoriale. *Les Cahiers de médiologie*, 6, 137-145.
@@ -385,16 +393,17 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Epstein, J. M. (1999). Agent-based computational models and generative social science. *Complexity*, 4(5), 41-60.
 - Gebru, T., et al. (2021). Datasheets for Datasets. *Communications of the ACM*, 64(12), 86-92.
 - Lakens, D. (2017). Equivalence tests: A practical primer for t tests, correlations, and meta-analyses. *Social Psychological and Personality Science*, 8(4), 355-362.
-- Larooij, M., & Törnberg, P. (2025). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*. *arXiv:2504.03274*.
+- Larooij, M., & Törnberg, P. (2026). Validation is the central challenge for generative social simulation: a critical review of LLMs in agent-based modeling. *Artificial Intelligence Review*, 59(1), article 15. https://doi.org/10.1007/s10462-025-11412-6 (préprint : *arXiv:2504.03274*, sous un autre titre).
+- Mistral AI (s. d.). *Usage Policy*. https://legal.mistral.ai/terms/usage-policy/ (consulté le 16 octobre 2026).
 - Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. *Journal of Communication*, 24(2), 43-51.
 - Noelle-Neumann, E. (1993). *The Spiral of Silence: Public Opinion, Our Social Skin* (2e éd.). Chicago : University of Chicago Press.
-- OpenAI (2025). *Model Spec*. Spécification publique du comportement attendu des modèles.
-- Panickssery, A., Bowman, S. R., & Feng, S. (2024). LLM Evaluators Recognize and Favor Their Own Generations. *Advances in Neural Information Processing Systems 37 (NeurIPS 2024)*.
+- OpenAI (2026). *Model Spec*, version du 18 août 2026. https://model-spec.openai.com/2026-08-18.html (consulté le 16 octobre 2026).
+- Panickssery, A., Bowman, S. R., & Feng, S. (2024). LLM Evaluators Recognize and Favor Their Own Generations. *Advances in Neural Information Processing Systems 37 (NeurIPS 2024)*. *arXiv:2404.13076*.
 - Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative Agents: Interactive Simulacra of Human Behavior. *Proceedings of UIST '23*.
 - Varenne, F. (2007). *Du modèle à la simulation informatique*. Paris : Vrin.
 - Varenne, F. (2018). *From Models to Simulations*. Londres : Routledge.
 - Vezhnevets, A. S., et al. (2023). Generative agent-based modeling with actions grounded in physical, social, or digital space using Concordia. *arXiv:2312.03664*.
-- Wang, A., Morgenstern, J., & Dickerson, J. P. (2025). Large language models that replace human participants can harmfully misportray and flatten identity groups. *Nature Machine Intelligence*.
-- Zhao, P., Pham, D. H., & Vincent, N. (2026). Mechanism Plausibility in Generative Agent-Based Modeling. *Proceedings of ACM FAccT '26*. *arXiv:2605.12824*.
+- Wang, A., Morgenstern, J., & Dickerson, J. P. (2025). Large language models that replace human participants can harmfully misportray and flatten identity groups. *Nature Machine Intelligence*, 7(3), 400-411.
+- Zhao, P., Pham, D. H., & Vincent, N. (2026). Mechanism Plausibility in Generative Agent-Based Modeling. *Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT '26)*, 5915-5940. https://doi.org/10.1145/3805689.3812388
 
-*Références à vérifier une à une (pagination, éditions) avant toute publication. La version publiée de Larooij et Törnberg (2025) n'a pas pu être consultée ; référence établie d'après la version arXiv.*
+*Les références de 2024 à 2026 ont été vérifiées par la revue n° 2 (section 6) et corrigées dans cette version. Les autres restent à vérifier une à une (pagination, éditions) avant toute publication.*

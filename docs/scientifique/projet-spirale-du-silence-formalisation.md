@@ -1,6 +1,6 @@
 # Formaliser une théorie verbale : la spirale du silence
 
-*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version du 16 octobre 2026. Sert d'étalon théorique au scénario C4 (QR-E et HO3 ; contrepoint de HT4).*
+*Projet de recherche agentique avec Mistral Large 4 (« Le Chonk »). Domaine : sciences de l'information et de la communication. Projet mené par l'ingénieur pédagogique (SIC). Version 1.1 du 16 octobre 2026 (suites de la revue n° 2 : numéro de version, nom du scénario, références corrigées). Sert d'étalon théorique au scénario C4 (QR-E et HO3 ; contrepoint de HT4). Le calendrier de ce projet n'est pas articulé à celui du C4 : l'étalonnage du C4 s'appuie d'abord sur des modèles publiés (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), et sur les formalisations de ce projet seulement si elles existent au moment de l'analyse.*
 
 ---
 
@@ -116,7 +116,7 @@ Puis **classification** des formalisations selon leurs comportements : lesquelle
 
 ### 4.6 Étape 6 (option) : retour au village génératif
 
-On place les mêmes points de décision dans le village simulé (agents fondés sur des modèles de langage) et on compare la dynamique obtenue aux formalisations mathématiques. **De quelle formalisation le village génératif se rapproche-t-il le plus ?** Et, si une spirale apparaît chez des agents qui n'ont pas de peur de l'isolement, d'où vient-elle ? Ce pont relie ce projet au scénario C.
+On place les mêmes points de décision dans le village simulé (agents fondés sur des modèles de langage) et on compare la dynamique obtenue aux formalisations mathématiques. **De quelle formalisation le village génératif se rapproche-t-il le plus ?** Et, si une spirale apparaît chez des agents qui n'ont pas de peur de l'isolement, d'où vient-elle ? Ce pont relie ce projet au scénario C4 (QR-E).
 
 ### 4.7 Volet réflexif (QR5)
 
@@ -148,7 +148,7 @@ Le carnet de conception consigne chaque traduction du texte vers le code, chaque
 | Formalisations passant tous les tests de conformité | Toutes celles retenues |
 | Prédictions discriminantes formulées | Au moins 3, chacune avec un dispositif d'enquête proposé |
 
-**Comparaison entre modèles** : l'étape 2 est rejouée avec `mistral-medium-latest` et `qwen-3.8-27b` à la place de Le Chonk. Trouvent-ils les mêmes points de décision ? C'est aussi une mesure de ce que chaque architexte « lit » dans une théorie.
+**Comparaison entre modèles** : l'étape 2 est rejouée avec `mistral-medium` (version datée) et `qwen-3.8-27b` à la place de Le Chonk. Trouvent-ils les mêmes points de décision ? C'est aussi une mesure de ce que chaque architexte « lit » dans une théorie.
 
 **Critère de réussite** : le projet est réussi s'il démontre, de façon vérifiable, que les textes fondateurs autorisent des formalisations aux comportements collectifs qualitativement différents, et s'il formule au moins trois prédictions discriminantes testables. Si toutes les formalisations se comportent de la même façon, le résultat est aussi publiable : la théorie serait plus robuste à sa propre imprécision qu'on ne le pense.
 
@@ -228,9 +228,9 @@ Le carnet de conception consigne chaque traduction du texte vers le code, chaque
 - Cabrera, B., Ross, B., Röchert, D., Brünker, F., & Stieglitz, S. (2021). The influence of community structure on opinion expression: An agent-based model. *Journal of Business Economics*, 91(9). https://doi.org/10.1007/s11573-021-01064-7
 - Ross, B., Pilz, L., Cabrera, B., Brachten, F., Neubaum, G., & Stieglitz, S. (2019). Are social bots a real threat? An agent-based model of the spiral of silence to analyse the impact of manipulative actors in social networks. *European Journal of Information Systems*, 28(4), 394-412.
 - Sohn, D. (2022). Spiral of silence in the social media era: A simulation approach to the interplay between social networks and mass media. *Communication Research*, 49(1), 139-166.
-- Sohn, D., & Geidner, N. (2016). Collective dynamics of the spiral of silence: The role of ego-network size. *International Journal of Public Opinion Research*, 28(1). https://doi.org/10.1093/ijpor/edv005
-- Yang, K., Lee, S., Peng, T.-Q., & Liu, H. (2026). Think-Before-Speak: From Internal Evaluation to Public Expression in Multi-Agent Social Simulation. *arXiv:2606.03137*.
-- Zhong, M., Fang, M., Shi, Z., Huang, Y., Zheng, S., Du, Y., Chen, L., & Wang, J. (2025). Spiral of Silence in Large Language Model Agents. *Findings of the Association for Computational Linguistics: EMNLP 2025*. *arXiv:2510.02360*.
+- Sohn, D., & Geidner, N. (2016). Collective dynamics of the spiral of silence: The role of ego-network size. *International Journal of Public Opinion Research*, 28(1), 25-45. https://doi.org/10.1093/ijpor/edv005
+- Yang, K., Peng, T.-Q., Lee, S., & Liu, H. (2026). Think-Before-Speak: From Internal Evaluation to Public Expression in Multi-Agent Social Simulation. *arXiv:2606.03137* (v2 du 1er juillet 2026 ; communication à l'atelier SciSoc Agents & LLMs de KDD 2026).
+- Zhong, M., Fang, M., Shi, Z., Huang, Y., Zheng, S., Du, Y., Chen, L., & Wang, J. (2025). Spiral of Silence in Large Language Model Agents. *Findings of the Association for Computational Linguistics: EMNLP 2025*, 23238-23253. *arXiv:2510.02360*.
 
 ### Formalisation des théories et modélisation
 - Epstein, J. M. (2008). Why model? *Journal of Artificial Societies and Social Simulation*, 11(4), 12.
@@ -248,4 +248,4 @@ Le carnet de conception consigne chaque traduction du texte vers le code, chaque
 - MacIver, D. R., Hatfield-Dodds, Z., et al. (2019). Hypothesis: A new approach to property-based testing. *Journal of Open Source Software*, 4(43), 1891.
 - Saltelli, A., Ratto, M., Andres, T., et al. (2008). *Global Sensitivity Analysis: The Primer*. Chichester : Wiley.
 
-*Toutes les références sont à contrôler (pagination, numéros) au moment de la rédaction de l'article. Celles de Sohn et Geidner (2016) et de Cabrera et al. (2021) sont données avec leur DOI, sans pagination.*
+*Toutes les références sont à contrôler (pagination, numéros) au moment de la rédaction de l'article. Celle de Cabrera et al. (2021) est donnée avec son DOI, sans pagination ; les références de 2024 à 2026 ont été vérifiées par la revue n° 2.*

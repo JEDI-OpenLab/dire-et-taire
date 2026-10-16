@@ -7,11 +7,13 @@
 | 0 | `glossaire.md` | Définitions, paternité des notions, références d'origine | Que veut dire ce terme, et d'où vient-il ? (à consulter en continu) |
 | 1 | `scientifique/cadre-scientifique-SIC-village.md` | Cadre théorique général du village | Quel est l'objet de recherche, et avec quels concepts l'étudie-t-on ? |
 | 2 | `scientifique/scenario-C4-circulation-savoir-savant.md` | Protocole du scénario C4 « Dire et taire » | Que cherche-t-on précisément, comment, avec quelles mesures ? |
-| 3 | `scientifique/projet-spirale-du-silence-formalisation.md` | Formalisations de la spirale du silence | Quelles versions de la théorie servent d'étalon au C4 ? |
-| 4 | `revues/revue-adversariale-1-cadre-et-C4.md` | Revue critique n° 1 et décisions prises | Quelles faiblesses ont été repérées, et comment ont-elles été corrigées ? |
-| 5 | `technique/socle-technique-le-chonk.md` | Station, passe-plat, traces, agents, bureau des agents | Comment fait-on tourner tout cela ? |
-| 6 | `visualisations/carte-concepts-C4.html` | Carte des concepts du C4 (page à ouvrir dans un navigateur) | Chaque concept mène-t-il à une mesure ? |
-| 7 | `../presentation/dire-et-taire-le-chonk.pptx` | Présentation d'ensemble, antérieure aux hypothèses de travail et à la clef de lecture : à mettre à jour | Comment présenter le projet en 20 minutes ? |
+| 3 | `scientifique/preenregistrement-C4-premier-temps.md` | Ébauche du premier temps du préenregistrement | Qu'est-ce qui sera déposé avant toute génération ? |
+| 4 | `scientifique/projet-spirale-du-silence-formalisation.md` | Formalisations de la spirale du silence | Quelles versions de la théorie servent d'étalon au C4 ? |
+| 5 | `revues/revue-adversariale-1-cadre-et-C4.md` et `revues/revue-adversariale-2-cadre-et-C4.md` | Revues critiques n° 1 et n° 2, avec les décisions prises | Quelles faiblesses ont été repérées, et comment ont-elles été corrigées ? |
+| 6 | `technique/socle-technique-le-chonk.md` | Station, passe-plat, traces, agents, bureau des agents | Comment fait-on tourner tout cela ? |
+| 7 | `visualisations/carte-concepts-C4.html` | Carte des concepts du C4 (page à ouvrir dans un navigateur) | Chaque concept mène-t-il à une mesure, et chaque hypothèse à une règle de décision ? |
+| 8 | `../analyses/puissance/` | Simulations de puissance des règles de décision | Le plan a-t-il une chance de trancher ? |
+| 9 | `../presentation/dire-et-taire-le-chonk.pptx` | Présentation d'ensemble, antérieure aux hypothèses de travail et à la clef de lecture : à mettre à jour | Comment présenter le projet en 20 minutes ? |
 
 ## Architecture du raisonnement scientifique
 
@@ -34,7 +36,9 @@ Problématique générale du village (cadre, 3.1)
                         +-- Questions de recherche QR-A à QR-E (C4, 1.4)
                         +-- Hypothèses de travail HT1 à HT4 (C4, 1.5)
                         |     HT1, centrale : le taire est co-produit par l'agencement
-                        +-- Hypothèses opérationnelles HO1 à HO11 (C4, 1.6)
+                        +-- Hypothèses opérationnelles HO1 à HO11 (C4, 1.6), principales,
+                        |     secondaires, descriptives ou exploratoires
+                        +-- Règles de décision à trois issues (C4, 7)
                               |
                               +-- Inventaire : instances, stimuli, instruments (cadre, 1.1 ; C4, 3.0)
                               +-- Un contraste de référence par instance (C4, 3.0 ; cadre, 6.4)
@@ -47,3 +51,4 @@ Problématique générale du village (cadre, 3.1)
 - Vocabulaire des cadres d'énonciation : « position déclarée en enquête », « position exprimée en scène » ; aucune intériorité prêtée aux agents.
 - « Agent » au sens informatique (un programme) ; « agentivité » au sens des sciences sociales (capacité d'agir), conçue comme distribuée entre modèle, dispositif et concepteur (cadre, 1.2 et 1.3).
 - Chaque document indique sa version et sa date en en-tête ; chaque révision importante passe par une revue consignée dans `revues/`.
+- Jamais de tiret cadratin ni de tiret demi-cadratin comme ponctuation ; les signes « − » des codes G−, K− et −2 sont des signes moins.
