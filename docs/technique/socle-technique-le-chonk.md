@@ -1,6 +1,6 @@
 # Socle technique de l'expérimentation Le Chonk
 
-*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4.1 du 17 octobre 2026 : un seul scénario, codes « C4 » retirés, identifiants d'essai en « DT- ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le scénario (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
+*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4.2 du 19 octobre 2026 : relecture avant installation ; Langfuse joint par le réseau Docker et non par `host.docker.internal` (étapes 5 et 10) ; versions de LiteLLM et de Langfuse figées (étapes 4 et 5) ; chargement de la clé maîtresse (étape 6) ; ports Docker et pare-feu (étape 4, recette n° 7) ; section 12, journal des corrections et de l'installation. Version 4.1 du 17 octobre 2026 : un seul scénario, codes « C4 » retirés, identifiants d'essai en « DT- ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le scénario (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
 
 *Contexte : la station est un ordinateur dédié, administré entièrement par le pilote, qui mène seul ce projet et détient lui-même les clés d'API (Le Chonk et ILaaS). Le travail avec les collègues (scénarios B, A et volet D) relève d'un autre projet.*
 
@@ -260,7 +260,7 @@ Chaque étape comporte peu de commandes. Toutes se tapent **sur la station Ubunt
 
 ### Étape 1 : système
 
-Installer **Ubuntu Desktop LTS**. La version Desktop (plutôt que Server) est nécessaire pour l'affichage du bureau des agents sur le petit écran. Version conseillée : **24.04 LTS**, la plus éprouvée avec tous les outils de ce document ; la 26.04 LTS convient aussi. Créer le compte administrateur du pilote, brancher la station en Ethernet. Puis mettre le système à jour :
+Installer **Ubuntu Desktop LTS**. La version Desktop (plutôt que Server) est nécessaire pour l'affichage du bureau des agents sur le petit écran. Version conseillée : **24.04 LTS**, la plus éprouvée avec tous les outils de ce document ; la 26.04 LTS convient aussi. Le choix est consigné dans le journal d'installation (12.2, point ouvert n° 5 de 12.1). Créer le compte administrateur du pilote, brancher la station en Ethernet. Puis mettre le système à jour :
 
 ```
 sudo apt update
@@ -309,6 +309,13 @@ sudo chmod -R 2775 /srv/chonk
 ```
 cd /srv/chonk/langfuse
 git clone https://github.com/langfuse/langfuse.git .
+git tag --sort=-v:refname | head -5
+```
+
+Se placer sur la dernière version publiée (étiquette de la forme `vX.Y.Z`) plutôt que sur la branche principale, et noter la version dans le carnet de bord (7.3, correction n° 2 de la section 12) :
+
+```
+git checkout VERSION_LANGFUSE
 ```
 
 Avant le premier démarrage, remplacer dans `docker-compose.yml` **tous** les secrets marqués `CHANGEME` par des valeurs longues et aléatoires. Pour générer une valeur :
@@ -317,7 +324,7 @@ Avant le premier démarrage, remplacer dans `docker-compose.yml` **tous** les se
 openssl rand -hex 32
 ```
 
-Lier les ports à la seule machine locale : dans `docker-compose.yml`, remplacer `3000:3000` par `127.0.0.1:3000:3000` (et de même pour MinIO). Puis démarrer :
+Lier les ports à la seule machine locale : dans `docker-compose.yml`, toute entrée `ports:` qui ne commence pas déjà par `127.0.0.1:` reçoit ce préfixe (par exemple `3000:3000` devient `127.0.0.1:3000:3000` ; de même pour MinIO). Docker contourne le pare-feu `ufw` pour les ports qu'il publie : ce préfixe est la seule protection (correction n° 4 de la section 12). Puis démarrer :
 
 ```
 docker compose up -d
@@ -341,8 +348,10 @@ ILAAS_API_KEY=cle_ilaas
 ILAAS_BASE_URL=url_fournie_par_ilaas
 LANGFUSE_PUBLIC_KEY=cle_publique_langfuse
 LANGFUSE_SECRET_KEY=cle_secrete_langfuse
-LANGFUSE_OTEL_HOST=http://host.docker.internal:3000
+LANGFUSE_OTEL_HOST=http://langfuse-web:3000
 ```
+
+LiteLLM joint Langfuse par le réseau Docker de Langfuse, sous le nom de son service web (`langfuse-web` dans le `docker-compose.yml` de Langfuse ; à vérifier dans la version installée). L'adresse `host.docker.internal` ne convient pas : le port de Langfuse n'écoute que sur `127.0.0.1` de la station, que les conteneurs ne voient pas (correction n° 1 de la section 12).
 
 Créer `/srv/chonk/passe-plat/config.yaml` :
 
@@ -399,7 +408,7 @@ Créer `/srv/chonk/passe-plat/docker-compose.yml` :
 ```yaml
 services:
   litellm:
-    image: ghcr.io/berriai/litellm:main-stable
+    image: ghcr.io/berriai/litellm:VERSION_LITELLM
     restart: unless-stopped
     ports:
       - "127.0.0.1:4000:4000"
@@ -407,8 +416,9 @@ services:
       - ./config.yaml:/app/config.yaml:ro
     command: ["--config", "/app/config.yaml"]
     env_file: .env
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    networks:
+      - default
+      - langfuse
     depends_on:
       - litellm-db
   litellm-db:
@@ -419,17 +429,33 @@ services:
       - litellm-db:/var/lib/postgresql/data
 volumes:
   litellm-db:
+networks:
+  langfuse:
+    name: langfuse_default
+    external: true
 ```
 
-Démarrer, puis vérifier :
+`VERSION_LITELLM` est à remplacer par une étiquette stable et datée (de la forme `main-vX.Y.Z-stable`, liste sur la page des versions du dépôt GitHub de LiteLLM), jamais par l'étiquette flottante `main-stable` : la version du passe-plat doit rester figée pendant une campagne (7.3, correction n° 2 de la section 12). `langfuse_default` est le réseau que Docker Compose crée pour Langfuse à partir du nom de son dossier ; le vérifier avec `docker network ls` après l'étape 4.
+
+Démarrer, puis vérifier, y compris que LiteLLM joint Langfuse :
 
 ```
 cd /srv/chonk/passe-plat
 docker compose up -d
 curl http://localhost:4000/health/liveliness
+docker compose exec litellm python -c "import urllib.request; print(urllib.request.urlopen('http://langfuse-web:3000/api/public/health').status)"
 ```
 
+La dernière commande doit afficher `200`.
+
 ### Étape 6 : clés virtuelles par usage
+
+Les commandes de cette étape lisent la clé maîtresse dans le terminal. Elle n'y existe pas tant qu'on ne l'a pas chargée depuis le `.env` (correction n° 3 de la section 12) :
+
+```
+cd /srv/chonk/passe-plat
+export LITELLM_MASTER_KEY=$(grep '^LITELLM_MASTER_KEY=' .env | cut -d= -f2-)
+```
 
 Créer une clé par usage avec un budget (en dollars), ici pour l'agent de code :
 
@@ -548,7 +574,7 @@ Le fichier `.env` figure dans le `.gitignore` de chaque dépôt.
 
 ### Étape 10 : relais et bureau
 
-Le relais et le bureau sont développés dans `/srv/chonk/bureau` (voir section 5). Ils sont lancés par Docker Compose avec `restart: unless-stopped`, sur les ports locaux 8090 (relais) et 8080 (page). Le relais est déclaré comme fonction de rappel personnalisée dans la configuration de LiteLLM.
+Le relais et le bureau sont développés dans `/srv/chonk/bureau` (voir section 5). Ils sont lancés par Docker Compose avec `restart: unless-stopped`, sur les ports locaux 8090 (relais) et 8080 (page). Le relais est déclaré comme fonction de rappel personnalisée dans la configuration de LiteLLM. Pour la même raison que Langfuse (correction n° 1 de la section 12), LiteLLM joint le relais par un réseau Docker commun et le nom de son service, et non par `host.docker.internal`.
 
 ### Étape 11 : petit écran en mode kiosque
 
@@ -638,7 +664,7 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 | 4 | OpenCode fonctionne avec Le Chonk et avec un modèle ILaaS | EF5 |
 | 5 | Une évaluation Inspect s'exécute dans un conteneur et produit son journal | EF6 |
 | 6 | Le bureau v0 affiche les appels en direct ; il redémarre seul après un redémarrage de la station | EF7, ENF4 |
-| 7 | Aucun port n'est accessible depuis une autre machine, hormis SSH | ENF1 |
+| 7 | Aucun port n'est accessible depuis une autre machine, hormis SSH : `sudo ss -tlnp` ne montre, hors `127.0.0.1` et `::1`, que le port 22, et `docker ps --format '{{.Names}} {{.Ports}}'` ne montre que des ports liés à `127.0.0.1` (Docker contourne `ufw`, correction n° 4 de la section 12) | ENF1 |
 | 8 | Une recherche de clé dans les dépôts (gitleaks) ne trouve rien | ENF2 |
 | 9 | Une sauvegarde est restaurée avec succès sur un dossier de test | ENF6 |
 
@@ -691,3 +717,29 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 - Phaser (phaser.io) ; ressources graphiques Kenney (kenney.nl, CC0).
 
 *Les commandes et options sont celles des documentations consultées en octobre 2026 ; elles évoluent, à vérifier au moment de l'installation.*
+
+---
+
+## 12. Journal
+
+Cette section garde la trace des problèmes relevés dans ce document et de l'activité sur la station. Chaque entrée est datée ; une correction appliquée renvoie à l'étape modifiée, un point ouvert reste dans le tableau jusqu'à sa décision.
+
+### 12.1 Corrections du document
+
+Relecture du 19 octobre 2026 par Claude (Opus 5.5), avant l'installation ; corrections appliquées dans la version 4.2.
+
+| N° | Où | Problème relevé | Solution retenue | Statut |
+|---|---|---|---|---|
+| 1 | Étapes 4, 5 et 10 | **Bloquant.** Langfuse est lié à `127.0.0.1:3000` sur la station, alors que LiteLLM, depuis son conteneur, l'appelait par `host.docker.internal:3000`. Cette adresse mène à la passerelle du réseau Docker, pas à `127.0.0.1` de la station : les traces n'auraient jamais atteint Langfuse (symptôme « Rien dans Langfuse », 7.5) | LiteLLM rejoint le réseau Docker de Langfuse (`langfuse_default`, déclaré externe) et l'appelle par le nom de son service : `LANGFUSE_OTEL_HOST=http://langfuse-web:3000`. `extra_hosts` est retiré. Vérification ajoutée à l'étape 5. Même principe pour le relais du bureau (étape 10) | Appliquée (4.2) |
+| 2 | Étapes 4 et 5 | L'image `litellm:main-stable` est une étiquette flottante, et Langfuse était installé depuis sa branche principale : une mise à jour pouvait changer le passe-plat ou les traces au milieu d'une campagne, contre la règle de 7.3 | Image LiteLLM appelée par une étiquette datée (`VERSION_LITELLM`, de la forme `main-vX.Y.Z-stable`) ; Langfuse placé sur une version publiée (`git checkout VERSION_LANGFUSE`). Les deux versions sont notées dans le carnet de bord | Appliquée (4.2) ; versions à relever le jour de l'installation |
+| 3 | Étape 6 | La commande de création des clés virtuelles utilise `$LITELLM_MASTER_KEY`, qui n'existe pas dans le terminal : l'appel aurait été refusé (401) | Chargement de la seule clé maîtresse depuis le `.env` avant les commandes, sans exporter les autres secrets | Appliquée (4.2) |
+| 4 | Étape 4, recette n° 7 | Docker publie ses ports en écrivant ses propres règles de filtrage, qui passent avant celles de `ufw` : un port publié sans `127.0.0.1:` serait ouvert sur le réseau malgré le pare-feu | Préfixe `127.0.0.1:` exigé pour toute entrée `ports:` ; recette n° 7 précisée avec `ss -tlnp` et `docker ps` | Appliquée (4.2) |
+| 5 | Étape 1 | La 26.04 LTS est sortie ; le document conseille la 24.04, plus éprouvée avec ces outils | À trancher le jour de l'installation, selon ce qui est déjà installé sur le PC ; choix consigné en 12.2 | Point ouvert |
+
+### 12.2 Journal d'installation
+
+Une ligne par opération sur la station : ce qui a été fait, le résultat, les versions installées, les écarts à la procédure. Les écarts qui changent la procédure donnent une entrée en 12.1 et une nouvelle version du document.
+
+| Date | Étape | Opération | Résultat, versions, écarts |
+|---|---|---|---|
+| | | | |
