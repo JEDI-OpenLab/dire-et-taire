@@ -1,5 +1,5 @@
 """Assemble les pages du site à partir des fragments : en-tête, navigation, pied de page.
-Produit site/*.html (documents complets, pour GitHub Pages). Avec --artefact, produit aussi
+Produit site/*.html (documents complets, pour GitHub Pages), dont carte.html, copiée de docs/visualisations/. Avec --artefact, produit aussi
 site-artefact/index.html (sans doctype, pour un aperçu en artefact). Usage : python3 build.py"""
 import pathlib, sys, re, html, unicodedata
 
@@ -28,6 +28,9 @@ HEAD = """<title>{title}</title>
 
 
 GLOSSAIRE_MD = SRC.parent / "docs" / "glossaire.md"
+CARTE = SRC.parent / "docs" / "visualisations" / "carte-concepts.html"
+CARTE_TITRE = '<div class="eyebrow">Village simulé · scénario « Dire et taire »</div>'
+CARTE_TITRE_SITE = '<div class="eyebrow">Village simulé · « Dire et taire » · <a href="cadre.html" style="color:inherit">retour au site</a></div>'
 
 def slug(t):
     t = unicodedata.normalize("NFD", t.lower())
@@ -105,7 +108,12 @@ def build():
         (OUT / f).write_text(full, encoding="utf-8")
         if art and f == "index.html":
             (ART / "index.html").write_text(inner, encoding="utf-8")
-    print("pages :", ", ".join(p[0] for p in PAGES))
+    # La carte des concepts est une page autonome : copiée depuis docs/, avec un lien de retour au site
+    carte = CARTE.read_text(encoding="utf-8")
+    if CARTE_TITRE not in carte:
+        sys.exit("carte-concepts.html : en-tête attendu introuvable, lien de retour au site non posé")
+    (OUT / "carte.html").write_text(carte.replace(CARTE_TITRE, CARTE_TITRE_SITE, 1), encoding="utf-8")
+    print("pages :", ", ".join(p[0] for p in PAGES), "+ carte.html")
 
 if __name__ == "__main__":
     build()

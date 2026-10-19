@@ -1,6 +1,6 @@
 # Glossaire
 
-*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3.1 du 17 octobre 2026 : codes « C4 » retirés ; entrée « Expériences C0 à C5 » réécrite ; entrée « Masse critique » retirée (notion de l'ancienne expérience sur la convention) ; renvoi au prolongement possible dans l'entrée « Rumeur ». Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
+*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3.2 du 19 octobre 2026 : nouvelle rubrique « Termes techniques » (section 7 : station, passe-plat, clés, traces, outils), entrées « Le Chonk », « Modèle à raisonnement » et « Modèle de plongement » (section 4). Version 3.1 du 17 octobre 2026 : codes « C4 » retirés ; entrée « Expériences C0 à C5 » réécrite ; entrée « Masse critique » retirée (notion de l'ancienne expérience sur la convention) ; renvoi au prolongement possible dans l'entrée « Rumeur ». Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
 
 **Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du scénario.
 
@@ -82,6 +82,9 @@
 | **Token** | Unité de texte traitée par un modèle (fragment de mot) ; sert à mesurer la longueur et le coût | Usage technique | | |
 | **Fenêtre de contexte** | Quantité de texte qu'un modèle peut prendre en compte en une fois | Usage technique | | |
 | **Température** | Réglage du caractère plus ou moins aléatoire des réponses | Usage technique | | |
+| **Modèle à raisonnement, tokens de raisonnement** | Modèle qui produit d'abord un raisonnement, en général non montré, avant sa réponse. Les tokens de ce raisonnement comptent dans la longueur maximale demandée (`max_tokens`) : un plafond trop bas peut laisser la réponse vide. Le niveau de raisonnement se règle comme la température | Usage technique | Socle technique, section 12.1 (points n° 10 et 13) | Avec le raisonnement au sens logique : ce « raisonnement » est du texte produit, pas une garantie de rigueur |
+| **Le Chonk** | Surnom de Mistral Large 4, le grand modèle de Mistral AI en préversion (environ 1 050 milliards de paramètres, mélange d'experts) ; il joue le village de référence (M-LC). Accès par l'expérimentation menée par l'AMUE | Mistral AI | Scénario, section 3.1 ; socle technique, section 10 | Avec l'offre générale « Mistral ESR » de l'AMUE, qui donne accès à Mistral Medium |
+| **Modèle de plongement** | Modèle qui transforme un texte en une suite de nombres (un vecteur), de sorte que des textes de sens proche donnent des vecteurs proches ; sert à mesurer la diversité sémantique des versions | Usage technique | Scénario, sections 3.0 et 4.3 | Avec un modèle de langage qui produit du texte : un modèle de plongement n'écrit rien |
 | **Agents génératifs, simulacres** | Agents dotés d'une mémoire et d'une fiche, joués par un modèle de langage, censés simuler des comportements humains crédibles | Joon Sung Park et ses collègues | Park et al. (2023) | Le projet interroge le terme « simulacre » plutôt qu'il ne l'adopte |
 | **Perroquets stochastiques** | Les modèles produisent des formes plausibles sans référence au sens ni à la situation | Emily Bender, Timnit Gebru, Angelina McMillan-Major et Margaret Mitchell (signant Shmargaret Shmitchell) | Bender et al. (2021) | |
 | **Échantillons de silicium** | Usage de modèles pour simuler des sous-groupes de répondants humains | Lisa Argyle et ses collègues, science politique | Argyle et al. (2023) | |
@@ -158,7 +161,32 @@
 
 ---
 
-## 7. Références propres au glossaire
+## 7. Termes techniques
+
+Termes du socle technique, c'est-à-dire de la machine qui fait tourner le village et des outils qui l'entourent.
+
+| Terme | Définition dans le projet | Où |
+|---|---|---|
+| **Station** | Ordinateur dédié au projet, sous Ubuntu, administré par le chercheur seul : il fait tourner le village, les campagnes et l'agent de code. Les modèles, eux, tournent chez leurs fournisseurs | Socle technique, sections 1 et 3 |
+| **Passe-plat** | Point de passage unique de tous les appels aux modèles, installé sur la station (logiciel LiteLLM). Il vérifie la clé de l'usage, ajoute la vraie clé d'API du fournisseur, transmet la demande au bon modèle, et enregistre chaque appel. Le nom vient de l'ouverture entre la cuisine et la salle, par laquelle tout passe sans que les deux côtés se voient ; on dit en anglais *LLM gateway* ou *proxy* | Socle technique, sections 1.3, 4.3 et étape 5 |
+| **Clé d'API** | Code secret qui ouvre l'accès aux modèles d'un fournisseur (Le Chonk, ILaaS). Elle reste sur la station, dans le passe-plat, et n'est jamais versionnée | Socle technique, ENF2 |
+| **Clé virtuelle, clé maîtresse** | Clé virtuelle : clé propre à un usage (agent de code, campagnes, village), délivrée par le passe-plat ; elle permet de compter la consommation de chaque usage et de le couper sans toucher aux autres. Clé maîtresse : clé d'administration du passe-plat, qui crée et révoque les clés virtuelles | Socle technique, étape 6 |
+| **Trace** | Enregistrement d'un appel de modèle : qui l'a fait, avec quel modèle, combien de tokens, quelle durée. Les traces servent au suivi ; l'analyse repose sur les exports de chaque simulation | Socle technique, sections 4.3 et étape 8 bis |
+| **Langfuse** | Logiciel libre, installé sur la station, qui reçoit et affiche les traces | Socle technique, étape 4 |
+| **ILaaS** | Service d'accès à des modèles ouverts (Gemma, Qwen, Mistral) issu d'une expérimentation ministérielle ; fournit au projet les modèles autres que Le Chonk, dont les juges | Socle technique, sections 1 et 10 |
+| **Identifiant daté, alias « latest »** | Identifiant daté : nom qui désigne une version précise et figée d'un modèle. Alias « latest » : nom qui désigne la dernière version du moment, et peut donc changer sans prévenir. Le protocole exige le premier, pour la reproductibilité | Scénario, section 3.1 ; socle, 7.3 |
+| **Empreinte de comportement** | Dix questions fixes posées à un modèle au début et à la fin de chaque bloc de simulations ; si les réponses changent, le modèle a pu être mis à jour en cours de route, et le bloc est rejoué | Scénario, section 3.1 ; socle, 7.3 et 7.5 |
+| **Conteneur (Docker)** | Boîte logicielle isolée où tourne un service ou un code produit par un agent, sans accès au reste de la machine | Socle technique, étape 3 |
+| **Clé SSH, tunnel SSH** | SSH : connexion chiffrée à la station depuis un autre ordinateur. Clé SSH : paire de fichiers qui remplace le mot de passe pour se connecter. Tunnel SSH : passage chiffré qui permet d'afficher sur un autre ordinateur une page servie par la station (par exemple Langfuse), sans l'ouvrir au réseau | Socle technique, étape 2 et section 7.1 |
+| **Agent de code (OpenCode)** | Programme qui écrit et exécute du code à la demande, en s'appuyant sur un modèle de langage ; il sert à développer le village et le bureau des agents | Socle technique, étape 7 |
+| **Inspect AI** | Logiciel libre d'évaluation de modèles, qui lance des séries d'essais (campagnes) et en garde les journaux | Socle technique, étape 8 |
+| **Concordia** | Logiciel libre de Google DeepMind pour bâtir des simulations d'agents génératifs ; moteur du village | Socle technique, étape 8 ; Vezhnevets et al. (2023) |
+| **Bureau des agents, relais d'événements** | Bureau : écran qui montre en direct, en pixel art, l'activité des agents et du village. Relais : petit programme qui recueille les traces et les transmet au bureau | Socle technique, section 5 |
+| **Carnet de bord, journal du socle** | Le socle technique note dans un « carnet de bord » les versions des logiciels et des modèles et les incidents ; depuis l'installation de la station, ces notes sont tenues dans son journal (section 12). Les choix de recherche, eux, vont au carnet de conception (section 6) | Socle technique, sections 7.3 et 12 |
+
+---
+
+## 8. Références propres au glossaire
 
 Les références ci-dessous ne figurent pas dans les bibliographies du cadre et du scénario.
 
