@@ -1,6 +1,6 @@
 # Socle technique de l'expérimentation Le Chonk
 
-*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4.2 du 19 octobre 2026 : relecture avant installation ; Langfuse joint par le réseau Docker et non par `host.docker.internal` (étapes 5 et 10) ; versions de LiteLLM et de Langfuse figées (étapes 4 et 5) ; chargement de la clé maîtresse (étape 6) ; ports Docker et pare-feu (étape 4, recette n° 7) ; section 12, journal des corrections et de l'installation. Version 4.1 du 17 octobre 2026 : un seul scénario, codes « C4 » retirés, identifiants d'essai en « DT- ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le scénario (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
+*Document technico-fonctionnel : mise en place d'une station Ubuntu dédiée pour les agents, l'observation de leur activité et le « bureau des agents ». Version 4.2 du 19 octobre 2026 : relecture avant installation ; Langfuse joint par le réseau Docker et non par `host.docker.internal` (étapes 5 et 10) ; versions de LiteLLM et de Langfuse figées (étapes 4 et 5) ; chargement de la clé maîtresse (étape 6) ; ports Docker et pare-feu (étape 4, recette n° 7) ; `curl` installé dès l'étape 1 ; section 12, journal des corrections et de l'installation. Version 4.1 du 17 octobre 2026 : un seul scénario, codes « C4 » retirés, identifiants d'essai en « DT- ». Version 4 du 16 octobre 2026 : suites de la revue n° 2 ; identifiants de modèles datés et contrôle de version (étape 5, 7.3, 7.5) ; graine et température (étape 8) ; schéma d'export des générations pour l'analyse (étape 8 bis) ; exemple d'événement mis à jour (5.4) ; modèles réellement utilisés par le scénario (10). La version 3 avait précisé les conditions de la clé Le Chonk (AMUE).*
 
 *Contexte : la station est un ordinateur dédié, administré entièrement par le pilote, qui mène seul ce projet et détient lui-même les clés d'API (Le Chonk et ILaaS). Le travail avec les collègues (scénarios B, A et volet D) relève d'un autre projet.*
 
@@ -265,6 +265,7 @@ Installer **Ubuntu Desktop LTS**. La version Desktop (plutôt que Server) est n�
 ```
 sudo apt update
 sudo apt full-upgrade -y
+sudo apt install -y curl ca-certificates
 ```
 
 Activer les mises à jour de sécurité automatiques :
@@ -672,14 +673,16 @@ La station est déclarée prête quand tous les points suivants sont vérifiés 
 
 ## 9. Planning de mise en place
 
-| Jour | Contenu | Qui |
-|---|---|---|
-| J1 | Étapes 1 à 3 : système, comptes, Docker | Pilote |
-| J2 | Étapes 4 à 6 : Langfuse, LiteLLM, clés | Pilote |
-| J3 | Étapes 7 à 9 : OpenCode, Python, dépôts | Pilote |
-| J4 | Étape 12 (sauvegardes), recette points 1 à 5 et 7 à 9 | Pilote |
-| J5 | Bureau v0 et mode kiosque (étapes 10 et 11), recette point 6 | Pilote |
-| Semaines suivantes | Bureau v1 à v3 en parallèle des premières campagnes, avec OpenCode | Pilote |
+| Jour | Contenu | Qui | État au 19 octobre 2026 |
+|---|---|---|---|
+| J1 | Étapes 1 à 3 : système, comptes, Docker | Pilote | Fait |
+| J2 | Étapes 4 à 6 : Langfuse, LiteLLM, clés | Pilote | Étapes 4 et 5 faites (Le Chonk en attente de sa clé) ; étape 6 reportée |
+| J3 | Étapes 7 à 9 : OpenCode, Python, dépôts | Pilote | À faire |
+| J4 | Étape 12 (sauvegardes), recette points 1 à 5 et 7 à 9 | Pilote | À faire |
+| J5 | Bureau v0 et mode kiosque (étapes 10 et 11), recette point 6 | Pilote | À faire |
+| Semaines suivantes | Bureau v1 à v3 en parallèle des premières campagnes, avec OpenCode | Pilote | |
+
+Le détail de chaque opération est au journal (12.2) ; les points ouverts à décider avant les simulations (n° 9, 10, 11 et 13) sont en 12.1.
 
 ---
 
@@ -734,12 +737,38 @@ Relecture du 19 octobre 2026 par Claude (Opus 5.5), avant l'installation ; corre
 | 2 | Étapes 4 et 5 | L'image `litellm:main-stable` est une étiquette flottante, et Langfuse était installé depuis sa branche principale : une mise à jour pouvait changer le passe-plat ou les traces au milieu d'une campagne, contre la règle de 7.3 | Image LiteLLM appelée par une étiquette datée (`VERSION_LITELLM`, de la forme `main-vX.Y.Z-stable`) ; Langfuse placé sur une version publiée (`git checkout VERSION_LANGFUSE`). Les deux versions sont notées dans le carnet de bord | Appliquée (4.2) ; versions à relever le jour de l'installation |
 | 3 | Étape 6 | La commande de création des clés virtuelles utilise `$LITELLM_MASTER_KEY`, qui n'existe pas dans le terminal : l'appel aurait été refusé (401) | Chargement de la seule clé maîtresse depuis le `.env` avant les commandes, sans exporter les autres secrets | Appliquée (4.2) |
 | 4 | Étape 4, recette n° 7 | Docker publie ses ports en écrivant ses propres règles de filtrage, qui passent avant celles de `ufw` : un port publié sans `127.0.0.1:` serait ouvert sur le réseau malgré le pare-feu | Préfixe `127.0.0.1:` exigé pour toute entrée `ports:` ; recette n° 7 précisée avec `ss -tlnp` et `docker ps` | Appliquée (4.2) |
-| 5 | Étape 1 | La 26.04 LTS est sortie ; le document conseille la 24.04, plus éprouvée avec ces outils | À trancher le jour de l'installation, selon ce qui est déjà installé sur le PC ; choix consigné en 12.2 | Point ouvert |
+| 5 | Étape 1 | La 26.04 LTS est sortie ; le document conseille la 24.04, plus éprouvée avec ces outils | À trancher le jour de l'installation, selon ce qui est déjà installé sur le PC ; choix consigné en 12.2 | Tranché le 19 octobre 2026 : 26.04.1 LTS installée ; le dépôt Docker la prend en charge (`resolute`) |
+| 6 | Étape 1 | `curl`, dont dépendent les étapes 3 à 8, n'est pas installé par défaut sur Ubuntu Desktop 26.04 | `curl` et `ca-certificates` installés dès l'étape 1 | Appliquée (4.2) |
+| 7 | Étape 4 | Langfuse est passé en version 4. Son `docker-compose.yml` lit chaque secret dans une variable avec une valeur par défaut connue de tous (`${SALT:-mysalt}`…), et appelle ses images par l'étiquette flottante `:4` | Les secrets ne sont pas écrits dans `docker-compose.yml` mais dans un `.env` voisin (droits 600, ignoré par le dépôt Langfuse), généré par `openssl rand -hex 32` sans affichage ; `docker compose config` vérifié sans aucune valeur par défaut. Images figées sur la version installée (`:4.63.0`). Télémétrie de Langfuse coupée (`TELEMETRY_ENABLED=false`), conformément au principe « rien sur Internet » | Appliquée lors de l'installation ; texte de l'étape 4 à réécrire en conséquence |
+| 8 | Étape 5 | Les images de LiteLLM ne portent plus d'étiquette `main-vX.Y.Z-stable` : les versions publiées sont de la forme `vX.Y.Z` (les `-rc` et `-dev` étant des préversions) | `VERSION_LITELLM` = dernière version sans suffixe (`v1.106.0` le 19 octobre 2026), vérifiée par `docker manifest inspect` | Appliquée lors de l'installation ; texte de l'étape 5 à corriger |
+| 9 | Étape 5, scénario 3.1 | ILaaS n'expose Mistral Medium que sous l'alias `mistral-medium-latest`, alors que la règle impose un identifiant daté, jamais un alias `latest` | À décider par le chercheur : soit demander à ILaaS un identifiant daté, soit accepter l'alias en relevant l'identifiant renvoyé dans chaque réponse et l'empreinte de comportement (7.3), l'écart étant déclaré. En attendant, `mistral-medium` reste non configuré | Point ouvert |
+| 10 | Étape 8, 7.2 | `qwen-3.8-27b` est un modèle à raisonnement : les tokens de raisonnement comptent dans `max_tokens`. Avec `max_tokens` à 30, toute la réponse est partie en raisonnement et le texte est vide (`finish_reason: length`) | Le plafond `max_tokens` des scripts doit inclure le raisonnement ; le régler par modèle au pilote, et contrôler `finish_reason` dans chaque réponse archivée | Point ouvert (à reporter dans le module du village) |
+| 11 | Étapes 6 et 8, EF4 | Les métadonnées passées dans le champ `metadata` de la requête (par exemple `{"essai": "TEST-INSTALL"}`) ne se retrouvent pas dans la trace Langfuse | À établir : forme attendue par LiteLLM pour transmettre des métadonnées à la fonction de rappel `langfuse_otel` ; à régler avant le bureau v0 et l'étape −1 | Point ouvert |
+| 13 | Étape 5, scénario 3.0 et 3.1 | Courriel d'ILaaS (renouvellement de l'offre) : `qwen-3.6-35b-instruct` sera progressivement remplacé par `qwen-3.8-27b` ; le raisonnement de `qwen-3.8-27b` est actif par défaut, au niveau « medium », et peut être désactivé côté client ; `gemma-4-31b` et `mistral-small-4-119b` restent servis. Or `qwen-3.6-35b-a3b` est le juge 2 du scénario | À décider par le chercheur : remplaçant du juge 2 (par exemple `qwen-3.8-27b`, en gardant la règle « jamais un juge de la famille du générateur ») ; niveau de raisonnement fixé et déclaré pour chaque modèle à raisonnement, au second temps du préenregistrement (lié au point n° 10) | Point ouvert |
+| 12 | Étape 4, CU5 | En version 4, Langfuse fonctionne en mode « événements » : les anciennes routes de lecture de l'API publique (`/api/public/traces`, `/api/public/observations`) ne sont plus disponibles | Les traces se consultent dans l'interface ; l'analyse repose de toute façon sur les exports de l'étape 8 bis, et non sur Langfuse | Noté |
 
 ### 12.2 Journal d'installation
 
-Une ligne par opération sur la station : ce qui a été fait, le résultat, les versions installées, les écarts à la procédure. Les écarts qui changent la procédure donnent une entrée en 12.1 et une nouvelle version du document.
+Une ligne par opération sur la station : ce qui a été fait, le résultat, les versions installées, les écarts à la procédure. Les écarts qui changent la procédure donnent une entrée en 12.1 et une nouvelle version du document. Ce qui est propre à la machine et au poste du pilote (adresse, empreintes de clés, matériel exact) n'est pas publié : il est consigné dans un fichier local non versionné (dossier `prive/`, ignoré par git).
 
 | Date | Étape | Opération | Résultat, versions, écarts |
 |---|---|---|---|
-| | | | |
+| 19/10/2026 | 1 | Installation d'Ubuntu Desktop LTS, compte administrateur `pilote` | Ubuntu 26.04.1 LTS (dernière LTS, plutôt que la 24.04 conseillée : point n° 5 de 12.1) |
+| 19/10/2026 | 1 | `apt update`, `apt full-upgrade`, `unattended-upgrades` activé | Sans erreur ; redémarrage de la station |
+| 19/10/2026 | 2 | `openssh-server` et `ufw` installés ; `ufw allow OpenSSH`, `ufw enable` | Sans erreur |
+| 19/10/2026 | 2 | Clé SSH dédiée à la station, créée sur l'ordinateur du pilote et déposée par `ssh-copy-id` | Empreinte de la station vérifiée sur la machine avant d'accepter la connexion ; une première clé, aussitôt régénérée, a été retirée de `authorized_keys` |
+| 19/10/2026 | 2 | Machine renommée `station` (`hostnamectl set-hostname`, ligne `127.0.1.1` de `/etc/hosts`) | Le nom donné à l'installation était différent ; `station.local` ne se résout pas encore depuis l'ordinateur du pilote : connexion par l'adresse IP |
+| 19/10/2026 | 2 | Connexion par mot de passe désactivée : fichier `/etc/ssh/sshd_config.d/10-pilote.conf` (`PasswordAuthentication no`), `sshd -t` puis `systemctl reload ssh` | Vérifié à distance : la clé passe, le mot de passe est refusé (`Permission denied (publickey)`). Étape 2 terminée |
+| 19/10/2026 | 3 | Vérification préalable : le dépôt Docker publie une version pour Ubuntu 26.04 (`resolute`, amd64) | Point n° 5 de 12.1 levé |
+| 19/10/2026 | 1 | `curl` absent de l'installation de base ; `sudo apt install -y curl ca-certificates` | curl 8.18.0 installé ; correction n° 6 de 12.1 |
+| 19/10/2026 | 3 | Dépôt officiel de Docker déclaré (clé dans `/etc/apt/keyrings/docker.asc`, fichier `/etc/apt/sources.list.d/docker.sources`), puis `docker-ce`, `docker-ce-cli`, `containerd.io`, `docker-buildx-plugin`, `docker-compose-plugin` installés | Empreinte de la clé conforme à celle de Docker (`9DC8…CD88`). Docker 29.9.1, Docker Compose v5.6.0 ; service actif et lancé au démarrage |
+| 19/10/2026 | 3 | `pilote` ajouté au groupe `docker` | Vérifié après reconnexion : `docker run --rm hello-world` fonctionne sans `sudo` |
+| 19/10/2026 | 3 | Arborescence `/srv/chonk/` créée (six dossiers), propriétaire `pilote:docker`, droits 2775 | Conforme. Étape 3 terminée |
+| 19/10/2026 | 4 | Dépôt Langfuse cloné dans `/srv/chonk/langfuse` | Dernière version publiée : v4.63.0. Langfuse est passé en version 4 : le service web s'appelle toujours `langfuse-web` (correction n° 1 valable) ; les images sont appelées par l'étiquette flottante `:4` |
+| 19/10/2026 | 4 | `git checkout v4.63.0` ; dans `docker-compose.yml`, ports 3000 et 9090 liés à `127.0.0.1`, images figées en `4.63.0` ; secrets générés dans `.env` (correction n° 7) | Tous les ports de Langfuse sont liés à `127.0.0.1` ; aucun secret par défaut restant |
+| 19/10/2026 | 4 | `docker compose up -d` | Six conteneurs démarrés (web, worker, postgres, clickhouse, redis, minio) ; `/api/public/health` répond 200 ; réseau `langfuse_default` créé (nom attendu par l'étape 5) ; seul le port 22 écoute hors de la machine. Reste : création du premier compte, du projet « Le Chonk » et de sa paire de clés, par le pilote |
+| 19/10/2026 | 4 | Premier compte, organisation et projet « Le Chonk » créés par le pilote, depuis son ordinateur, par tunnel SSH (`ssh -L 3000:localhost:3000`) ; paire de clés du projet générée | Étape 4 terminée |
+| 19/10/2026 | 5 | `.env` du passe-plat créé (droits 600) : clé maîtresse et mot de passe de la base générés sur la station ; clés Langfuse saisies par le pilote ; clés et URL de Le Chonk et d'ILaaS en attente | Contrôle sans affichage des valeurs : seules les clés des fournisseurs manquent |
+| 19/10/2026 | 5 | `config.yaml` et `docker-compose.yml` écrits selon l'étape 5 (version 4.2) ; image `ghcr.io/berriai/litellm:v1.106.0` ; `docker compose up -d` | Passe-plat démarré ; `/health/liveliness` répond 200 ; LiteLLM joint Langfuse par le réseau Docker (`langfuse-web:3000` répond 200 depuis le conteneur) : correction n° 1 vérifiée. Les étiquettes LiteLLM sont désormais de la forme `vX.Y.Z` (correction n° 8). Identifiants datés des modèles encore provisoires dans `config.yaml` |
+| 19/10/2026 | 5 | Clé et URL d'ILaaS saisies par le pilote ; passe-plat redémarré ; liste des modèles ILaaS relevée | Six modèles : `gemma-4-31b`, `llama-3.1-8b`, `mistral-medium-latest`, `mistral-small-4-119b`, `qwen-3.6-35b-instruct`, `qwen-3.8-27b`. Identifiant de Qwen 3.6 reporté dans `config.yaml` ; Mistral Medium seulement en `latest` (point n° 9). Clé de Le Chonk en attente |
+| 19/10/2026 | 5 | Premier appel par le passe-plat (`qwen-3.8-27b`, clé maîtresse) | Réponse correcte ; identifiant renvoyé `qwen-3.8-27b`. À `max_tokens` 30, réponse vide car consommée par le raisonnement (point n° 10). Les deux appels apparaissent dans Langfuse (génération `litellm_request`, tokens d'entrée, de sortie et de raisonnement) ; les métadonnées de la requête n'y sont pas (point n° 11) |

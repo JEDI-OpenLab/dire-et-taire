@@ -28,7 +28,36 @@
   </div>
 </section>
 
-<section class="band alt" id="livrables">
+<section class="band alt" id="avancement">
+  <div class="wrap">
+    <div class="prose">
+      <div class="eyebrow">Avancement · 19 octobre 2026</div>
+      <h2>Ce qui est fait, ce qui reste à faire</h2>
+      <p>La conception est consolidée ; l'installation de la station a commencé. Le calendrier ci-dessus démarre avec le test d'accès et de débit, qui attend la clé de Le Chonk.</p>
+    </div>
+    <div class="table">
+      <table>
+        <thead><tr><th>État</th><th>Chantier</th><th>Détail</th></tr></thead>
+        <tbody>
+          <tr><td><span class="tag circ">fait</span></td><td>Conception</td><td>Cadre scientifique 6.3, scénario 11.1, glossaire 3.1 ; deux revues adversariales et dix-sept décisions consignées ; simulations de puissance ; carte des concepts</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Socle technique relu</td><td>Version 4.2 : relecture avant installation, douze points consignés au journal, dont une erreur bloquante corrigée (liaison entre le passe-plat et les traces)</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Station : système et accès</td><td>Ubuntu 26.04 LTS, mises à jour automatiques, accès à distance par clé SSH seulement, pare-feu</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Station : conteneurs</td><td>Docker et l'arborescence de travail</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Traces</td><td>Langfuse 4.63 en service, joignable depuis la station seule</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Passe-plat</td><td>LiteLLM 1.106 en service, relié à ILaaS : un premier appel de modèle aboutit et apparaît dans les traces</td></tr>
+          <tr><td><span class="tag dire">en attente</span></td><td>Accès à Le Chonk</td><td>Clé de l'expérimentation AMUE attendue dans les prochains jours ; nécessaire au test d'accès et de débit</td></tr>
+          <tr><td><span class="tag dire">en attente</span></td><td>Clés virtuelles par usage</td><td>Une clé et un budget pour l'agent de code, les campagnes et le village ; reportée</td></tr>
+          <tr><td><span class="tag dire">à décider</span></td><td>Modèles d'ILaaS</td><td>Remplaçant du second juge (Qwen 3.6, appelé à disparaître) ; Mistral Medium publié sans version datée ; niveau de raisonnement des modèles qui raisonnent</td></tr>
+          <tr><td><span class="tag dire">à régler</span></td><td>Étiquetage des appels</td><td>Les métadonnées d'un appel (essai, agent) n'arrivent pas encore dans les traces</td></tr>
+          <tr><td><span class="tag taire">à faire</span></td><td>Fin de l'installation</td><td>Agent de code OpenCode ; environnements Python, Concordia et Inspect AI ; protection des dépôts ; sauvegardes chiffrées ; bureau des agents v0 et petit écran ; recette</td></tr>
+          <tr><td><span class="tag taire">à faire</span></td><td>Avant les simulations</td><td>Test d'accès et de débit ; relecture par un modèle d'un autre fournisseur ; choix des textes de comparaison ; construction des quarante personas ; dépôt du préenregistrement</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="livrables">
   <div class="wrap">
     <div class="prose">
       <div class="eyebrow">Livrables attendus</div>
@@ -47,7 +76,7 @@
   </div>
 </section>
 
-<section class="band" id="precautions">
+<section class="band alt" id="precautions">
   <div class="wrap">
     <div class="prose">
       <div class="eyebrow">Précautions</div>
@@ -70,7 +99,7 @@
   </div>
 </section>
 
-<section class="band alt" id="documents">
+<section class="band" id="documents">
   <div class="wrap">
     <div class="prose">
       <div class="eyebrow">Les documents du projet</div>
@@ -92,7 +121,7 @@
         </tbody>
       </table>
     </div>
-    <div class="note"><p><b>Où en est le projet ?</b> Le cadre et le scénario sont consolidés après deux revues adversariales. Restent avant les simulations : l'installation de la station, la mesure du débit, une relecture par un modèle d'un autre fournisseur, le choix des textes de comparaison et le dépôt du préenregistrement. Les avancées sont publiées sur le <a href="https://jediopenlab.hypotheses.org/">carnet de recherche JEDI-OpenLab</a>.</p></div>
+    <div class="note"><p><b>Où en est le projet ?</b> Le cadre et le scénario sont consolidés après deux revues adversariales. L'installation de la station est en cours : système, conteneurs, traces et passe-plat sont en service (<a href="#avancement">détail</a>). Restent avant les simulations : la fin de l'installation, la mesure du débit, une relecture par un modèle d'un autre fournisseur, le choix des textes de comparaison et le dépôt du préenregistrement. Les avancées sont publiées sur le <a href="https://jediopenlab.hypotheses.org/">carnet de recherche JEDI-OpenLab</a>.</p></div>
     <div class="next"><a class="btn" href="technique.html">Retour à la technique</a><a class="btn primary" href="index.html">Retour à l'accueil</a></div>
   </div>
 </section>

@@ -15,3 +15,6 @@ node_modules/
 
 # Billets de blog : brouillons de travail (Obsidian), publiés à la main sur Hypothèses
 docs/billet-*.md
+
+# Notes privées sur la station (adresse, empreintes, matériel) : jamais versionnées
+prive/
