@@ -32,7 +32,7 @@
           <rect x="30" y="50" width="150" height="58" rx="8" class="box-v"/><text x="105" y="74" text-anchor="middle" class="t-m" font-weight="600">Village</text><text x="105" y="92" text-anchor="middle" class="t-s">moteur Concordia</text>
           <rect x="195" y="50" width="150" height="58" rx="8" class="box-v"/><text x="270" y="74" text-anchor="middle" class="t-m" font-weight="600">Campagnes</text><text x="270" y="92" text-anchor="middle" class="t-s">Inspect AI</text>
           <rect x="360" y="50" width="150" height="58" rx="8" class="box-v"/><text x="435" y="74" text-anchor="middle" class="t-m" font-weight="600">Agent de code</text><text x="435" y="92" text-anchor="middle" class="t-s">OpenCode</text>
-          <rect x="150" y="160" width="240" height="66" rx="8" class="box-a"/><text x="270" y="186" text-anchor="middle" class="t-l">Passe-plat LiteLLM</text><text x="270" y="206" text-anchor="middle" class="t-s">clé virtuelle par usage, budgets</text>
+          <rect x="150" y="160" width="240" height="66" rx="8" class="box-a"/><text x="270" y="186" text-anchor="middle" class="t-l">Passe-plat LiteLLM</text><text x="270" y="206" text-anchor="middle" class="t-s">clé virtuelle par usage, tokens comptés</text>
           <g class="edge" marker-end="url(#ar5)"><path d="M105 108 C 105 140, 200 140, 220 158"/><path d="M270 108 L 270 158"/><path d="M435 108 C 435 140, 340 140, 320 158"/></g>
           <text x="282" y="140" class="t-s muted">appels</text>
           <rect x="30" y="280" width="150" height="58" rx="8" class="box-t"/><text x="105" y="304" text-anchor="middle" class="t-m" font-weight="600">Langfuse</text><text x="105" y="322" text-anchor="middle" class="t-s">traces de chaque appel</text>
@@ -60,7 +60,7 @@
     </div>
     <ol class="timeline">
       <li><time>1 · Envoi</time><p>Un habitant du village (ou un script, ou l'agent de code) envoie sa requête au passe-plat, avec la clé virtuelle de son usage et des métadonnées : essai, journée, scène, rôle, graine.</p></li>
-      <li><time>2 · Contrôle</time><p>Le passe-plat vérifie la clé et le budget, choisit le bon fournisseur, ajoute la vraie clé d'API et transmet.</p></li>
+      <li><time>2 · Contrôle</time><p>Le passe-plat vérifie la clé de l'usage, choisit le bon fournisseur, ajoute la vraie clé d'API et transmet.</p></li>
       <li><time>3 · Trace</time><p>À la réponse, il enregistre l'appel, envoie la trace complète à Langfuse et prévient le relais. L'identifiant de version renvoyé par le modèle est conservé.</p></li>
       <li><time>4 · Écran</time><p>Le relais transforme l'appel en événement simple ; le bureau des agents anime le personnage correspondant.</p></li>
     </ol>
@@ -83,7 +83,7 @@
           <tr><td><b>Mistral Small 4</b></td><td>Village pluri-modèles</td></tr>
           <tr><td><b>Qwen 3.8 27B</b></td><td>Repli pour le village de contraste ; narrateur de comparaison ; village pluri-modèles ; relecture des documents par un autre fournisseur</td></tr>
           <tr><td><b>Gemma 4 31B</b></td><td>Juge ; narrateur de comparaison ; jamais habitant</td></tr>
-          <tr><td><b>Qwen 3.6 35B</b></td><td>Juge, jamais pour une réplique écrite par un modèle Qwen</td></tr>
+          <tr><td><b>Qwen 3.6 35B</b></td><td>Juge, jamais pour une réplique écrite par un modèle Qwen. ILaaS va le retirer : son remplaçant reste à décider</td></tr>
         </tbody>
       </table>
     </div>
