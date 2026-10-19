@@ -260,7 +260,7 @@ Chaque étape comporte peu de commandes. Toutes se tapent **sur la station Ubunt
 
 ### Étape 1 : système
 
-Installer **Ubuntu Desktop LTS**. La version Desktop (plutôt que Server) est nécessaire pour l'affichage du bureau des agents sur le petit écran. Version conseillée : **24.04 LTS**, la plus éprouvée avec tous les outils de ce document ; la 26.04 LTS convient aussi. Le choix est consigné dans le journal d'installation (12.2, point ouvert n° 5 de 12.1). Créer le compte administrateur du pilote, brancher la station en Ethernet. Puis mettre le système à jour :
+Installer **Ubuntu Desktop LTS**. La version Desktop (plutôt que Server) est nécessaire pour l'affichage du bureau des agents sur le petit écran. Version conseillée : **24.04 LTS**, la plus éprouvée avec tous les outils de ce document ; la 26.04 LTS convient aussi (c'est la 26.04.1 LTS qui a été installée le 19 octobre 2026). Le choix est consigné dans le journal d'installation (12.2, point ouvert n° 5 de 12.1). Créer le compte administrateur du pilote, brancher la station en Ethernet. Puis mettre le système à jour :
 
 ```
 sudo apt update
@@ -700,10 +700,10 @@ Le détail de chaque opération est au journal (12.2) ; les points ouverts à d�
 | Nom dans le passe-plat | Usage dans le scénario |
 |---|---|
 | `le-chonk` | Village de référence M-LC (habitants, lecteur, narrateur N1, résumé de mémoire) ; lecteur et narrateur de M-PLU ; extraction de la grille (étape 2) ; chaînes linéaires (étape 5) |
-| `mistral-medium` (daté) | Village de contraste M-AUT ; M-PLU ; chaînes linéaires de M-AUT |
+| `mistral-medium` (daté) | Village de contraste M-AUT ; M-PLU ; chaînes linéaires de M-AUT. ILaaS ne le publie que sous l'alias `mistral-medium-latest` (12.1, point n° 9) |
 | `mistral-small-4-119b` | M-PLU |
 | `qwen-3.8-27b` | Candidat de repli pour M-AUT ; narrateur N2 ; M-PLU ; relecture des documents par un modèle d'un autre fournisseur |
-| `qwen-3.6-35b-a3b` | Juge 2 (jamais pour une réplique écrite par un modèle Qwen) |
+| `qwen-3.6-35b-a3b` | Juge 2 (jamais pour une réplique écrite par un modèle Qwen) ; identifiant ILaaS `qwen-3.6-35b-instruct`, en cours de retrait : remplaçant à décider (12.1, point n° 13) |
 | `gemma-4-31b` | Juge 1 ; narrateur N3 (les juges ne codent pas le narrateur) ; jamais générateur d'habitants |
 | `llama-3.1-8b` | Aucun usage dans le scénario ; réservé à des tests rapides hors expérimentation |
 
@@ -738,7 +738,7 @@ Relecture du 19 octobre 2026 par Claude (Opus 5.5), avant l'installation ; corre
 | 3 | Étape 6 | La commande de création des clés virtuelles utilise `$LITELLM_MASTER_KEY`, qui n'existe pas dans le terminal : l'appel aurait été refusé (401) | Chargement de la seule clé maîtresse depuis le `.env` avant les commandes, sans exporter les autres secrets | Appliquée (4.2) |
 | 4 | Étape 4, recette n° 7 | Docker publie ses ports en écrivant ses propres règles de filtrage, qui passent avant celles de `ufw` : un port publié sans `127.0.0.1:` serait ouvert sur le réseau malgré le pare-feu | Préfixe `127.0.0.1:` exigé pour toute entrée `ports:` ; recette n° 7 précisée avec `ss -tlnp` et `docker ps` | Appliquée (4.2) |
 | 5 | Étape 1 | La 26.04 LTS est sortie ; le document conseille la 24.04, plus éprouvée avec ces outils | À trancher le jour de l'installation, selon ce qui est déjà installé sur le PC ; choix consigné en 12.2 | Tranché le 19 octobre 2026 : 26.04.1 LTS installée ; le dépôt Docker la prend en charge (`resolute`) |
-| 6 | Étape 1 | `curl`, dont dépendent les étapes 3 à 8, n'est pas installé par défaut sur Ubuntu Desktop 26.04 | `curl` et `ca-certificates` installés dès l'étape 1 | Appliquée (4.2) |
+| 6 | Étape 1 | `curl`, dont dépendent les étapes 3 à 8, n'est pas installé par défaut sur Ubuntu Desktop 26.04.1 | `curl` et `ca-certificates` installés dès l'étape 1 | Appliquée (4.2) |
 | 7 | Étape 4 | Langfuse est passé en version 4. Son `docker-compose.yml` lit chaque secret dans une variable avec une valeur par défaut connue de tous (`${SALT:-mysalt}`…), et appelle ses images par l'étiquette flottante `:4` | Les secrets ne sont pas écrits dans `docker-compose.yml` mais dans un `.env` voisin (droits 600, ignoré par le dépôt Langfuse), généré par `openssl rand -hex 32` sans affichage ; `docker compose config` vérifié sans aucune valeur par défaut. Images figées sur la version installée (`:4.63.0`). Télémétrie de Langfuse coupée (`TELEMETRY_ENABLED=false`), conformément au principe « rien sur Internet » | Appliquée lors de l'installation ; texte de l'étape 4 à réécrire en conséquence |
 | 8 | Étape 5 | Les images de LiteLLM ne portent plus d'étiquette `main-vX.Y.Z-stable` : les versions publiées sont de la forme `vX.Y.Z` (les `-rc` et `-dev` étant des préversions) | `VERSION_LITELLM` = dernière version sans suffixe (`v1.106.0` le 19 octobre 2026), vérifiée par `docker manifest inspect` | Appliquée lors de l'installation ; texte de l'étape 5 à corriger |
 | 9 | Étape 5, scénario 3.1 | ILaaS n'expose Mistral Medium que sous l'alias `mistral-medium-latest`, alors que la règle impose un identifiant daté, jamais un alias `latest` | À décider par le chercheur : soit demander à ILaaS un identifiant daté, soit accepter l'alias en relevant l'identifiant renvoyé dans chaque réponse et l'empreinte de comportement (7.3), l'écart étant déclaré. En attendant, `mistral-medium` reste non configuré | Point ouvert |

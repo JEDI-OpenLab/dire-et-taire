@@ -8,7 +8,7 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.1, glossaire 3.1, socle technique 4.2, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.2, glossaire 3.1, socle technique 4.2, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11.1), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.2), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 

@@ -39,15 +39,15 @@
       <table>
         <thead><tr><th>État</th><th>Chantier</th><th>Détail</th></tr></thead>
         <tbody>
-          <tr><td><span class="tag circ">fait</span></td><td>Conception</td><td>Cadre scientifique 6.3, scénario 11.1, glossaire 3.1 ; deux revues adversariales et dix-sept décisions consignées ; simulations de puissance ; carte des concepts</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Conception</td><td>Cadre scientifique 6.3, scénario 11.2, glossaire 3.1 ; deux revues adversariales et dix-sept décisions consignées ; simulations de puissance ; carte des concepts</td></tr>
           <tr><td><span class="tag circ">fait</span></td><td>Socle technique relu</td><td>Version 4.2 : relecture avant installation, douze points consignés au journal, dont une erreur bloquante corrigée (liaison entre le passe-plat et les traces)</td></tr>
-          <tr><td><span class="tag circ">fait</span></td><td>Station : système et accès</td><td>Ubuntu 26.04 LTS, mises à jour automatiques, accès à distance par clé SSH seulement, pare-feu</td></tr>
-          <tr><td><span class="tag circ">fait</span></td><td>Station : conteneurs</td><td>Docker et l'arborescence de travail</td></tr>
-          <tr><td><span class="tag circ">fait</span></td><td>Traces</td><td>Langfuse 4.63 en service, joignable depuis la station seule</td></tr>
-          <tr><td><span class="tag circ">fait</span></td><td>Passe-plat</td><td>LiteLLM 1.106 en service, relié à ILaaS : un premier appel de modèle aboutit et apparaît dans les traces</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Station : système et accès</td><td>Ubuntu 26.04.1 LTS, mises à jour automatiques, accès à distance par clé SSH seulement, pare-feu</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Station : conteneurs</td><td>Docker 29.9.1 et l'arborescence de travail</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Traces</td><td>Langfuse 4.63.0 en service, joignable depuis la station seule</td></tr>
+          <tr><td><span class="tag circ">fait</span></td><td>Passe-plat</td><td>LiteLLM 1.106.0 en service, relié à ILaaS : un premier appel de modèle aboutit et apparaît dans les traces</td></tr>
           <tr><td><span class="tag circ">fait</span></td><td>Clés virtuelles par usage</td><td>Une clé pour l'agent de code, une pour les campagnes, une pour le village ; sans budget, les modèles étant gratuits pour le projet : la consommation est suivie en tokens, par clé</td></tr>
           <tr><td><span class="tag dire">en attente</span></td><td>Accès à Le Chonk</td><td>Clé de l'expérimentation AMUE attendue dans les prochains jours ; nécessaire au test d'accès et de débit</td></tr>
-                    <tr><td><span class="tag dire">à décider</span></td><td>Modèles d'ILaaS</td><td>Remplaçant du second juge (Qwen 3.6, appelé à disparaître) ; Mistral Medium publié sans version datée ; niveau de raisonnement des modèles qui raisonnent</td></tr>
+                    <tr><td><span class="tag dire">à décider</span></td><td>Modèles d'ILaaS</td><td>ILaaS retire Qwen 3.6, second juge du scénario, au profit de Qwen 3.8 : remplaçant à choisir ; Mistral Medium publié seulement en « latest », sans version datée ; niveau de raisonnement de Qwen 3.8 (actif par défaut) à fixer</td></tr>
           <tr><td><span class="tag dire">à régler</span></td><td>Étiquetage des appels</td><td>Les métadonnées d'un appel (essai, agent) n'arrivent pas encore dans les traces</td></tr>
           <tr><td><span class="tag taire">à faire</span></td><td>Fin de l'installation</td><td>Agent de code OpenCode ; environnements Python, Concordia et Inspect AI ; protection des dépôts ; sauvegardes chiffrées ; bureau des agents v0 et petit écran ; recette</td></tr>
           <tr><td><span class="tag taire">à faire</span></td><td>Avant les simulations</td><td>Test d'accès et de débit ; relecture par un modèle d'un autre fournisseur ; choix des textes de comparaison ; construction des quarante personas ; dépôt du préenregistrement</td></tr>
@@ -111,7 +111,7 @@
         <thead><tr><th>Document</th><th>Ce qu'on y trouve</th><th>Version</th></tr></thead>
         <tbody>
           <tr><td><a href="{GH}docs/scientifique/cadre-scientifique-SIC-village.md">Cadre scientifique</a></td><td>Objet, clef de lecture, questions, concepts, grille, méthode, limites</td><td class="n">6.3</td></tr>
-          <tr><td><a href="{GH}docs/scientifique/scenario-dire-et-taire.md">Scénario « Dire et taire »</a></td><td>Hypothèses, dispositif, mesures, plan, analyses et règles de décision</td><td class="n">11.1</td></tr>
+          <tr><td><a href="{GH}docs/scientifique/scenario-dire-et-taire.md">Scénario « Dire et taire »</a></td><td>Hypothèses, dispositif, mesures, plan, analyses et règles de décision</td><td class="n">11.2</td></tr>
           <tr><td><a href="{GH}docs/scientifique/preenregistrement-premier-temps.md">Préenregistrement, premier temps</a></td><td>Ce qui sera déposé avant toute génération</td><td class="n">ébauche</td></tr>
           <tr><td><a href="{GH}docs/glossaire.md">Glossaire</a></td><td>Définitions, paternité des notions, références d'origine</td><td class="n">3.1</td></tr>
           <tr><td><a href="{GH}docs/technique/socle-technique-le-chonk.md">Socle technique</a></td><td>Station, passe-plat, traces, bureau des agents, pas à pas</td><td class="n">4.2</td></tr>

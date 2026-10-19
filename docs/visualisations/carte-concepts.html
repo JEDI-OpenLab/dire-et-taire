@@ -90,7 +90,7 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · scénario « Dire et taire »</div>
     <h1>Carte des concepts</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.1 et au cadre version 6.3, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.2 et au cadre version 6.3, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6.3 (sections 1, 2.5, 3, 4, 6, 7) et scénario v11.1 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6.3 (sections 1, 2.5, 3, 4, 6, 7) et scénario v11.2 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -171,7 +171,7 @@ const N=[
 {id:"source",c:1,k:"stim",l:"Textes sources T0 à T3",d:"Ce qui est mis en circulation. Stimulus, pas instance.",cd:"T0 et T1 (priorité 1) ; T3 (priorité 2) ; T2, compte rendu journalistique (priorité 2, exploratoire)."},
 {id:"social",c:1,k:"stim",l:"Structure sociale",d:"Réseau, scènes, mémoire, par opposition à la transmission linéaire. Structure, pas instance.",cd:"Village contre chaînes linéaires de 10 agents (étape 5), jouées par le même modèle : modèle nul de HO8 et HO10a, à profondeur de transmission égale."},
 {id:"enq",c:1,k:"instr",l:"Enquêteur (matin et soir)",d:"Positions déclarées, climat et tendance perçus, test du train, versions de la thèse. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Matin : questions 4 et 5, prédicteurs de HO1 et HO9. Soir : neuf questions ; formulations A et B (test de stabilité)."},
-{id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"gemma-4-31b et qwen-3.6-35b-a3b ; un juge ne code jamais une réplique écrite par un modèle de sa famille ; chacun validé contre 300 répliques codées par le chercheur (kappa ≥ 0,7) ; analyses sur les codes concordants."},
+{id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"gemma-4-31b et qwen-3.6-35b-a3b (en cours de retrait par ILaaS, remplaçant à décider) ; un juge ne code jamais une réplique écrite par un modèle de sa famille ; chacun validé contre 300 répliques codées par le chercheur (kappa ≥ 0,7) ; analyses sur les codes concordants."},
 {id:"plong",c:1,k:"instr",l:"Modèle de plongement",d:"Mesure sémantique de la diversité des versions.",cd:"Modèle multilingue ouvert, version figée au second temps du préenregistrement ; doublé d'une mesure lexicale qui ne dépend d'aucun modèle."},
 /* QR */
 {id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
