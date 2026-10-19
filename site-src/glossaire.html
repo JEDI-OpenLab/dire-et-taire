@@ -1,19 +1,45 @@
 <main>
-<section class="band">
+<section class="band glo-head">
   <div class="wrap">
     <div class="prose">
       <div class="eyebrow">Glossaire · version 3.2</div>
       <h1>Les mots du projet</h1>
       <p class="lead">Pour chaque notion : la définition retenue dans le projet, qui l'a forgée ou popularisée, la référence d'origine et, quand c'est utile, ce avec quoi il ne faut pas la confondre.</p>
     </div>
-    <div class="glo-tools">
-      <label for="glo-q" class="small muted">Chercher une notion</label>
-      <input id="glo-q" type="search" placeholder="climat, architexte, graine…" autocomplete="off">
-      <nav class="glo-toc" aria-label="Rubriques du glossaire">{TOC}</nav>
-    </div>
   </div>
 </section>
 
+<div class="glo-bar" id="glo-bar">
+  <div class="in">
+    <label for="glo-q" class="sr">Chercher une notion</label>
+    <input id="glo-q" type="search" placeholder="Chercher : climat, passe-plat, graine…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+    <div class="glo-view" role="group" aria-label="Présentation">
+      <button type="button" data-vue="rubriques" aria-pressed="true">Par rubrique</button>
+      <button type="button" data-vue="az" aria-pressed="false">De A à Z</button>
+    </div>
+    <p id="glo-count" class="small muted" aria-live="polite"></p>
+  </div>
+</div>
+
+<section class="band glo-toc-band" id="glo-toc-band">
+  <div class="wrap">
+    <nav class="glo-toc" aria-label="Rubriques du glossaire">{TOC} · <a href="#co-agentivite-en-clair">Notions clefs en clair</a></nav>
+  </div>
+</section>
+
+<section class="band" id="glo-flat" hidden>
+  <div class="wrap">
+    <nav class="glo-letters" id="glo-letters" aria-label="Lettres"></nav>
+    <div id="glo-list"></div>
+    <p id="glo-none" class="glo-none" hidden></p>
+  </div>
+</section>
+
+<div id="glo-rubriques">
+{GLOSSAIRE}
+</div>
+
+<div id="glo-clefs">
 <section class="band alt" id="co-agentivite-en-clair">
   <div class="wrap">
     <div class="prose">
@@ -55,19 +81,130 @@
     </div>
   </div>
 </section>
-
-{GLOSSAIRE}
+</div>
 
 <script>
-/* Filtre du glossaire : masque les notions qui ne contiennent pas le texte cherché */
+/* Glossaire : recherche immédiate sous la barre, vue par rubrique ou de A à Z */
 (function(){
-  var q=document.getElementById("glo-q");if(!q)return;
-  function norm(s){return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"")}
-  q.addEventListener("input",function(){
-    var v=norm(q.value.trim());
-    document.querySelectorAll(".glo-entry").forEach(function(e){e.hidden=v&&norm(e.textContent).indexOf(v)<0});
-    document.querySelectorAll(".glo-sec").forEach(function(s){s.hidden=!s.querySelector(".glo-entry:not([hidden])")});
+  var q=document.getElementById("glo-q"); if(!q) return;
+  var bar=document.getElementById("glo-bar"), nav=document.querySelector(".site-nav");
+  var flat=document.getElementById("glo-flat"), list=document.getElementById("glo-list");
+  var letters=document.getElementById("glo-letters"), none=document.getElementById("glo-none");
+  var count=document.getElementById("glo-count"), rub=document.getElementById("glo-rubriques");
+  var clefs=document.getElementById("glo-clefs"), toc=document.getElementById("glo-toc-band");
+  var btns=document.querySelectorAll(".glo-view button");
+  function norm(s){return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"")}
+
+  /* La barre de recherche reste collée sous le menu du site */
+  function navH(){document.documentElement.style.setProperty("--nav-h",(nav?nav.offsetHeight:0)+"px")}
+  navH(); if(window.ResizeObserver&&nav) new ResizeObserver(navH).observe(nav); else window.addEventListener("resize",navH);
+
+  /* Une copie de chaque notion, avec sa rubrique, pour les vues à plat */
+  var items=[];
+  document.querySelectorAll("#glo-rubriques .glo-sec").forEach(function(sec){
+    var titre=sec.querySelector("h2").textContent;
+    sec.querySelectorAll(".glo-entry").forEach(function(e){
+      var dt=e.querySelector("dt"), id=dt.id, c=e.cloneNode(true), cdt=c.querySelector("dt");
+      cdt.removeAttribute("id"); cdt.textContent=dt.textContent;
+      var r=document.createElement("dd"); r.className="meta rub";
+      r.innerHTML='<span>Rubrique</span> <a href="#'+id+'" data-vers="'+id+'"></a>';
+      r.querySelector("a").textContent=titre; c.appendChild(r);
+      items.push({el:c,base:c.innerHTML,terme:norm(dt.textContent),texte:norm(e.textContent),titre:dt.textContent});
+    });
   });
+  items.sort(function(a,b){return a.titre.localeCompare(b.titre,"fr",{sensitivity:"base"})});
+  var total=items.length;
+
+  function surligne(el,mots){
+    if(!mots.length) return;
+    var w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT,null),n,ns=[];
+    while((n=w.nextNode())) if(!n.parentNode.closest("span")) ns.push(n);
+    ns.forEach(function(t){
+      var src=t.nodeValue, low=norm(src), pos=[];
+      mots.forEach(function(m){var k=low.indexOf(m);while(k>=0){pos.push([k,k+m.length]);k=low.indexOf(m,k+m.length)}});
+      if(!pos.length) return;
+      pos.sort(function(a,b){return a[0]-b[0]});
+      var f=document.createDocumentFragment(),i=0;
+      pos.forEach(function(p){if(p[0]<i)return;f.appendChild(document.createTextNode(src.slice(i,p[0])));var mk=document.createElement("mark");mk.textContent=src.slice(p[0],p[1]);f.appendChild(mk);i=p[1]});
+      f.appendChild(document.createTextNode(src.slice(i)));
+      t.parentNode.replaceChild(f,t);
+    });
+  }
+  function score(it,mots){
+    for(var i=0;i<mots.length;i++) if(it.texte.indexOf(mots[i])<0) return -1;
+    var m=mots[0];
+    if(it.terme.indexOf(m)===0) return 0;
+    if((" "+it.terme).indexOf(" "+m)>=0) return 1;
+    if(it.terme.indexOf(m)>=0) return 2;
+    return 3;
+  }
+  function dl(){var d=document.createElement("dl");d.className="glo";return d}
+
+  var vue="rubriques";
+  try{ if(localStorage.getItem("glo-vue")==="az") vue="az"; }catch(e){}
+  if(location.hash && location.hash!=="#") vue="rubriques";
+
+  function rendre(){
+    var v=norm(q.value.trim()), mots=v.split(/\s+/).filter(Boolean);
+    btns.forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.vue===vue))});
+    list.textContent=""; letters.textContent=""; none.hidden=true;
+    if(mots.length){
+      var res=[];
+      items.forEach(function(it){var s=score(it,mots);if(s>=0)res.push([s,it])});
+      res.sort(function(a,b){return a[0]-b[0]});
+      var d=dl();
+      res.forEach(function(r){r[1].el.innerHTML=r[1].base;surligne(r[1].el,mots);d.appendChild(r[1].el)});
+      list.appendChild(d);
+      flat.hidden=false; rub.hidden=true; clefs.hidden=true; toc.hidden=true; letters.hidden=true;
+      count.textContent=res.length?(res.length+(res.length>1?" notions":" notion")+" pour « "+q.value.trim()+" »"):"";
+      if(!res.length){none.hidden=false;none.textContent="Aucune notion ne contient « "+q.value.trim()+" ». Essayez un mot plus court, ou sans accent."}
+      return;
+    }
+    count.textContent=total+" notions";
+    if(vue==="az"){
+      var cur="",grp,lst=[];
+      items.forEach(function(it){
+        it.el.innerHTML=it.base;
+        var L=norm(it.titre).replace(/[^a-z]/g,"").charAt(0).toUpperCase()||"#";
+        if(L!==cur){cur=L;grp=document.createElement("section");grp.className="glo-lettre";grp.id="lettre-"+L;
+          var h=document.createElement("h2");h.textContent=L;grp.appendChild(h);grp.appendChild(dl());list.appendChild(grp);lst.push(L)}
+        grp.querySelector("dl").appendChild(it.el);
+      });
+      lst.forEach(function(L){var a=document.createElement("a");a.href="#lettre-"+L;a.textContent=L;letters.appendChild(a)});
+      flat.hidden=false; letters.hidden=false; rub.hidden=true; clefs.hidden=false; toc.hidden=true;
+    } else {
+      flat.hidden=true; rub.hidden=false; clefs.hidden=false; toc.hidden=false;
+    }
+  }
+
+  q.addEventListener("input",function(){
+    rendre();
+    if(q.value.trim()){
+      /* Les résultats commencent juste sous la barre, quelle que soit la position de lecture */
+      var y=flat.getBoundingClientRect().top+window.scrollY-(nav?nav.offsetHeight:0)-bar.offsetHeight;
+      window.scrollTo({top:Math.max(0,y)});
+    }
+  });
+  q.addEventListener("keydown",function(e){
+    if(e.key==="Escape"){q.value="";rendre()}
+    if(e.key==="Enter"){var f=list.querySelector(".glo-entry");if(f){f.scrollIntoView({block:"center"});f.classList.add("vu");setTimeout(function(){f.classList.remove("vu")},1200)}}
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.key==="/"&&document.activeElement!==q&&!/input|textarea|select/i.test(document.activeElement.tagName)){e.preventDefault();q.focus()}
+  });
+  btns.forEach(function(b){b.addEventListener("click",function(){
+    vue=b.dataset.vue; try{localStorage.setItem("glo-vue",vue)}catch(e){}
+    q.value=""; rendre(); bar.scrollIntoView({block:"start"});
+  })});
+  /* Le lien « Rubrique » d'une notion ramène à sa place dans sa rubrique */
+  list.addEventListener("click",function(e){
+    var a=e.target.closest("a[data-vers]"); if(!a) return;
+    e.preventDefault(); q.value=""; vue="rubriques"; rendre();
+    var t=document.getElementById(a.dataset.vers);
+    if(t){history.replaceState(null,"","#"+a.dataset.vers); t.scrollIntoView({block:"center"}); t.parentNode.classList.add("vu"); setTimeout(function(){t.parentNode.classList.remove("vu")},1500)}
+  });
+  var u=new URLSearchParams(location.search).get("q"); if(u) q.value=u;
+  rendre();
 })();
 </script>
 </main>

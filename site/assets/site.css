@@ -26,6 +26,8 @@
   color-scheme:dark}
 
 *{box-sizing:border-box}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.6}
 a{color:var(--violet);text-underline-offset:2px}
@@ -198,9 +200,6 @@ td.n{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .cards.five{grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr))}
 
 /* Glossaire */
-.glo-tools{display:grid;gap:6px;max-width:70ch}
-.glo-tools input{font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
-.glo-toc{font-size:.9rem;line-height:1.9}
 .glo{margin:0;display:grid;gap:0}
 .glo-entry{padding:14px 0;border-top:1px solid var(--line);display:grid;gap:4px;max-width:80ch}
 .glo-entry dt{font-family:var(--f-display);font-weight:650;font-size:1.08rem}
@@ -211,3 +210,31 @@ td.n{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .glo-entry .meta span{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--violet);margin-right:4px}
 .glo-entry dt:target,.glo-entry:has(dt:target){background:var(--violet-soft);border-radius:6px;padding-inline:8px}
 .glo-sec:nth-of-type(even){background:var(--surface);border-block:1px solid var(--line)}
+
+/* Glossaire : barre de recherche collée sous le menu, vues par rubrique et de A à Z */
+.glo-head{padding-bottom:20px}
+.glo-bar{position:sticky;top:calc(var(--nav-h,56px) + env(safe-area-inset-top,0px));z-index:8;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px))}
+.glo-bar .in{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.glo-bar input{flex:1 1 280px;min-width:0;font:inherit;font-size:1.05rem;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.glo-bar input:focus{border-color:var(--violet)}
+.glo-view{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface)}
+.glo-view button{font:inherit;font-size:.88rem;padding:8px 12px;border:0;background:none;color:var(--muted);cursor:pointer}
+.glo-view button[aria-pressed="true"]{background:var(--violet-soft);color:var(--ink);font-weight:500}
+.glo-bar #glo-count{margin:0;flex:1 1 auto;text-align:right}
+#glo-flat{scroll-margin-top:0}
+.glo-toc-band{padding-block:16px 8px}
+.glo-toc{font-size:.9rem;line-height:1.9}
+.glo-letters{display:flex;flex-wrap:wrap;gap:4px}
+.glo-letters a{font-family:var(--f-mono);font-size:.85rem;padding:3px 9px;border:1px solid var(--line);border-radius:6px;background:var(--surface);text-decoration:none}
+.glo-lettre{scroll-margin-top:calc(var(--nav-h,56px) + 120px)}
+.glo-lettre h2{font-size:1.6rem;color:var(--violet);padding-top:14px}
+.glo-none{margin:0;color:var(--muted)}
+#glo-flat{padding-top:20px}
+.glo-entry{scroll-margin-top:calc(var(--nav-h,56px) + 120px);transition:background .4s}
+.glo-entry.vu{background:var(--amber-soft);border-radius:6px;padding-inline:8px}
+.glo-entry mark{background:var(--amber-soft);color:inherit;border-radius:2px;padding:0 1px}
+@media (min-width:820px){
+  .glo-entry{grid-template-columns:15rem minmax(0,1fr);column-gap:28px;max-width:none}
+  .glo-entry dt{grid-column:1;grid-row:1 / span 8}
+  .glo-entry dd{grid-column:2}
+}

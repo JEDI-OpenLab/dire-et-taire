@@ -1,7 +1,7 @@
 """Assemble les pages du site à partir des fragments : en-tête, navigation, pied de page.
 Produit site/*.html (documents complets, pour GitHub Pages), dont carte.html, copiée de docs/visualisations/. Avec --artefact, produit aussi
 site-artefact/index.html (sans doctype, pour un aperçu en artefact). Usage : python3 build.py"""
-import pathlib, sys, re, html, unicodedata
+import pathlib, sys, re, html, unicodedata, hashlib
 
 SRC = pathlib.Path(__file__).parent
 OUT = SRC.parent / "site"
@@ -23,7 +23,7 @@ HEAD = """<title>{title}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,650&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v={css_v}">
 """
 
 
@@ -98,12 +98,14 @@ def build():
     art = "--artefact" in sys.argv
     OUT.mkdir(exist_ok=True)
     if art: ART.mkdir(exist_ok=True)
+    # Empreinte de la feuille de style dans son adresse : un navigateur ne garde pas l'ancienne après une mise à jour
+    css_v = hashlib.sha256((OUT / "assets" / "site.css").read_bytes()).hexdigest()[:10]
     for f, label, title in PAGES:
         body = (SRC / f).read_text(encoding="utf-8").replace("{GH}", GITHUB)
         if "{GLOSSAIRE}" in body:
             toc, gl = glossaire()
             body = body.replace("{TOC}", toc).replace("{GLOSSAIRE}", gl)
-        inner = HEAD.format(title=title) + nav(f) + body + FOOT
+        inner = HEAD.format(title=title, css_v=css_v) + nav(f) + body + FOOT
         full = '<!doctype html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n' + inner.replace(nav(f), "</head>\n<body>\n" + nav(f), 1) + "</body>\n</html>\n"
         (OUT / f).write_text(full, encoding="utf-8")
         if art and f == "index.html":
