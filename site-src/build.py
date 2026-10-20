@@ -84,7 +84,8 @@ def nav(current):
         f'<li><a href="{f}"{cur if f == current else ""}>{label}</a></li>'
         for f, label, _ in PAGES)
     return f"""<nav class="site-nav" aria-label="Sections du site"><div class="in">
-<a class="brand" href="index.html">Dire et taire <span>· village simulé</span></a>
+<div class="marque"><a class="portail" href="https://jedi-openlab.github.io/jedi/" title="Portail JEDI-OpenLab"><img src="https://jedi-openlab.github.io/jedi/PIX/jedi-favicon-180-2026.png" alt="JEDI-OpenLab, retour au portail" width="40" height="40"></a>
+<a class="brand" href="index.html">Dire et taire <span>· village simulé</span></a></div>
 <ul>{items}</ul></div></nav>
 """
 
