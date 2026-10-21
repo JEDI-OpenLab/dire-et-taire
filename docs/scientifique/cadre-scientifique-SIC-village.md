@@ -124,7 +124,7 @@ Le projet se donne un second regard, réflexif, emprunté à la pensée complexe
 | Notion | Chez Morin | Dans le village |
 |---|---|---|
 | **Écologie de l'action** | Dès qu'une action entre dans un milieu d'interactions, elle échappe aux intentions de son auteur | La co-agentivité vue depuis le concepteur : il est une instance parmi six, pas l'auteur du résultat (section 1) |
-| **Boucle récursive** | Les produits et les effets d'un processus sont aussi causes de ce qui les produit | La spirale du silence : le climat perçu fait taire, le silence modifie le climat, qui fait taire davantage (scénario, HT4, HO9) |
+| **Boucle récursive** | Les produits et les effets d'un processus sont aussi causes de ce qui les produit | La spirale du silence : le climat perçu fait taire, le silence modifie le climat, qui fait taire davantage. C'est la boucle que HT4 et HO9 mettent à l'épreuve : si le climat ne pèse pas sur ce qui se dit, elle ne se ferme pas dans le village (scénario, 1.5, 1.6) |
 | **Programme et stratégie** | Le programme déroule une séquence fixée d'avance ; la stratégie se modifie selon ce qui arrive en route | Le préenregistrement est un programme ; les règles à trois issues, les replis du plan, le prolongement conditionnel (section 7) et le journal des imprévus (6.2) en font une stratégie |
 
 **Trois incertitudes dans le projet.**

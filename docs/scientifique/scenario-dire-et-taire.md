@@ -492,6 +492,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 11. **Blocs exploratoires** (T2, compères, durée longue, auteur unique) : rapportés comme descriptifs, sans test d'hypothèse.
 
 12. **Interprétation critique** : confrontation aux résultats humains (comparaison qualitative, sauf pour les questions reprises à l'identique des études) et aux travaux sur agents génératifs. Les écarts sont traités comme des résultats sur l'architexte et le dispositif.
+
 13. **Volet réflexif : complexité et incertitude (cadre, 2.6 ; HO12)** : la part du hasard est rapportée sans test, avec son intervalle, pour le taux de taire et la pente de diversité. Elle se lit avec HT3 : si les versions convergent, l'incertitude générée par les modèles est bornée par l'architexte. Le journal des imprévus du carnet de conception (cadre, 6.2) est analysé avec le niveau 1 de la grille : ce que le concepteur n'avait pas prévu, et ce que le protocole a changé en route, dans les limites du préenregistrement (programme et stratégie). Ce volet ne modifie l'issue d'aucune hypothèse de travail.
 
 **Codage de référence et fiabilité.**
