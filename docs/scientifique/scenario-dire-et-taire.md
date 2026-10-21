@@ -1,14 +1,14 @@
 # Scénario « Dire et taire » : la circulation d'un savoir savant
 
-*Scénario unique du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 11.2 du 19 octobre 2026 : état de l'offre ILaaS relevé à l'installation de la station (3.1, « Offre ILaaS ») ; le juge `qwen-3.6-35b-a3b` est en cours de retrait et son remplaçant reste à décider ; Mistral Medium n'est publié que sous un alias « latest ». Version 11.1 du 17 octobre 2026 : le projet ne compte plus qu'un scénario ; les codes « C4 » et les renvois aux anciennes expériences C0 à C3 sont retirés ; la construction des 40 habitants devient l'étape 0, avant les profils et les dyades, et le test de débit se fait sur des fiches provisoires (3.1, 5, 8). Version 11 du 16 octobre 2026 : suites de la revue n° 2 (dix-sept décisions du chercheur, consignées dans « ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Principaux changements : HT1 relative aux contrastes déclarés, contraste principal de scène, fiche à étendue maximale et contrôle de manipulation (1.5, 1.6, 7.2) ; règle de décision de HT2 (7.3) ; borne de HO9 abaissée à ±0,05 (7.4) ; modèle nul des chaînes linéaires pour la convergence (7.5) et règle pour HO8 (7.6) ; mémoire d'entraînement et test de connaissance préalable (1.2, 3.2, étape 0a) ; gazette neutre G= (3.8) ; enquête du matin (4.1) ; versions de modèles épinglées (3.1) ; M-PLU sans Le Chonk ni Gemma, comparé à M-AUT (3.1) ; 10 graines pour les bras de HO11 joués entre simulations (6) ; codage de référence et fiabilité précisés (7) ; billets de méthode seulement avant l'élection présidentielle de 2027 (8, 9). La version 10 avait fixé la condition de référence « tout Le Chonk » ; la version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts.html »).*
+*Scénario unique du village simulé, sous l'angle de la spirale du silence. Cas d'étude : Johann Chapoutot, Les irresponsables (Gallimard, 2025). Version 11.3 du 21 octobre 2026 : volet réflexif sur la complexité et l'incertitude (cadre, 2.6) ; hypothèse descriptive HO12 et indicateur « part du hasard » (1.2, 1.6, 4.3, 5, 7, 10, 11). Version 11.2 du 19 octobre 2026 : état de l'offre ILaaS relevé à l'installation de la station (3.1, « Offre ILaaS ») ; le juge `qwen-3.6-35b-a3b` est en cours de retrait et son remplaçant reste à décider ; Mistral Medium n'est publié que sous un alias « latest ». Version 11.1 du 17 octobre 2026 : le projet ne compte plus qu'un scénario ; les codes « C4 » et les renvois aux anciennes expériences C0 à C3 sont retirés ; la construction des 40 habitants devient l'étape 0, avant les profils et les dyades, et le test de débit se fait sur des fiches provisoires (3.1, 5, 8). Version 11 du 16 octobre 2026 : suites de la revue n° 2 (dix-sept décisions du chercheur, consignées dans « ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Principaux changements : HT1 relative aux contrastes déclarés, contraste principal de scène, fiche à étendue maximale et contrôle de manipulation (1.5, 1.6, 7.2) ; règle de décision de HT2 (7.3) ; borne de HO9 abaissée à ±0,05 (7.4) ; modèle nul des chaînes linéaires pour la convergence (7.5) et règle pour HO8 (7.6) ; mémoire d'entraînement et test de connaissance préalable (1.2, 3.2, étape 0a) ; gazette neutre G= (3.8) ; enquête du matin (4.1) ; versions de modèles épinglées (3.1) ; M-PLU sans Le Chonk ni Gemma, comparé à M-AUT (3.1) ; 10 graines pour les bras de HO11 joués entre simulations (6) ; codage de référence et fiabilité précisés (7) ; billets de méthode seulement avant l'élection présidentielle de 2027 (8, 9). La version 10 avait fixé la condition de référence « tout Le Chonk » ; la version 9 avait levé les points bloquants relevés par la carte des concepts (« ../visualisations/carte-concepts.html »).*
 
-*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6.3), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « preenregistrement-premier-temps.md » (ébauche du premier temps du préenregistrement), « ../revues/revue-adversariale-1-cadre-et-scenario.md » et « ../revues/revue-adversariale-2-cadre-et-scenario.md » (revues et décisions).*
+*Documents associés : « cadre-scientifique-SIC-village.md » (cadre théorique général, version 6.4), « projet-spirale-du-silence-formalisation.md » (formalisations de la théorie, qui servent ici d'étalons), « preenregistrement-premier-temps.md » (ébauche du premier temps du préenregistrement), « ../revues/revue-adversariale-1-cadre-et-scenario.md » et « ../revues/revue-adversariale-2-cadre-et-scenario.md » (revues et décisions).*
 
 *Projet mené seul par l'ingénieur pédagogique (SIC), qui assure aussi la relecture. Les pairs interviennent ensuite : publication progressive de billets sur le carnet de recherche (jediopenlab.hypotheses.org), puis soumission d'articles. La méthode compense l'absence de second codeur (section 7).*
 
 *Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
-**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO11 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du scénario. G0, G=, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-LC, M-AUT, M-PLU : modèle qui joue le village. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
+**Codes employés dans ce document.** T0 à T3 : textes sources. HT1 à HT4 : hypothèses de travail. HO1 à HO12 : hypothèses opérationnelles. QR-A à QR-E : questions de recherche du scénario. G0, G=, G+, G− : gazette. K+, K− : compères. O-ALÉ, O-HOM : ordonnanceur. M-LC, M-AUT, M-PLU : modèle qui joue le village. N1 à N3 : narrateur. Les semaines du déroulé sont écrites en toutes lettres.
 
 ---
 
@@ -38,6 +38,7 @@ Le silence, s'il apparaît, n'est donc pas « celui d'un habitant » : c'est **u
 - Le concepteur est une instance de l'agencement ; sa part est documentée par le carnet de conception.
 - Le livre étudié ne sert pas à juger une thèse historique, mais à observer ce qu'un agencement génératif fait d'un savoir savant moralement chargé. Aucune lecture du présent n'est injectée ; les analogies sont observées, jamais suggérées.
 - **Ce que le village sait déjà.** Le modèle connaît probablement le livre et sa réception par ses données d'entraînement. Le projet traite ce savoir comme la **culture commune** du village, l'équivalent d'un souvenir de cours d'histoire, à une différence près : il est identique chez les 40 habitants, puisqu'un seul modèle les joue. Cette mémoire d'entraînement est mesurée avant toute circulation (3.2, étape 0a) ; ce qu'elle apporte est rapporté comme part du modèle, et non comme circulation.
+- **Ce que le concepteur ne programme pas.** Le concepteur écrit tout le village, mais ne peut pas prévoir ce qui s'y dira : c'est l'écologie de l'action au sens de Morin. Le projet distingue l'incertitude programmée (graines, tirages), l'incertitude générée (modèles et interactions, bornée par l'architexte) et l'incertitude du chercheur, déclarée plutôt que masquée. Ce volet réflexif, sans hypothèse de travail, sert un recul pédagogique et méthodologique (cadre, 2.6 ; HO12).
 
 ### 1.3 Problématique
 
@@ -101,6 +102,7 @@ La question QR3 du cadre (la conception de la communication que l'agencement ré
 | **HO10b. Convergence et architexte unique** | La pente de diversité est plus négative en M-AUT (un seul modèle de taille moyenne) qu'en M-PLU (plusieurs modèles de taille moyenne), pour les deux mesures | HT3 | Principale, priorité 2 |
 | **HO10c. Formules récurrentes** | Le nombre de formules récurrentes (code FOR, au moins 20 % des versions d'une journée) croît au fil des journées. Critère : pente, intervalle excluant zéro | HT3 | Secondaire |
 | **HO11. Hiérarchie des parts** | Sur le taux de taire pour T1 : contraste principal, la scène (privée contre publique) dépasse le contraste de la fiche à étendue maximale d'au moins 5 points, intervalle de la différence excluant zéro ; contrastes secondaires, gazette (G+ contre G−), ordonnanceur (O-HOM contre O-ALÉ) et modèle (M-AUT contre M-LC), même critère avec correction de Holm sur les trois | HT1 | Principale (règle en 7.2) |
+| **HO12. Part du hasard** | Pour le taux de taire (T1) et la pente de diversité des versions, part de la variation entre simulations de priorité 1 due aux graines (simulations d'une même condition), rapportée à la part due aux conditions (instances que l'on fait varier). Si une même graine ne reproduit pas les sorties (étape 6), l'écart entre deux exécutions d'une même graine estime l'incertitude générée seule ; il est rapporté à part, comme le pilote. Unité : la simulation ; rapportée sans test | Volet réflexif (cadre, 2.6) ; ne départage aucune hypothèse de travail | Descriptive |
 
 **Statuts.** Une hypothèse **principale** entre dans la règle de décision d'une hypothèse de travail. Une hypothèse **secondaire** a son propre critère, rapporté, mais ne change pas l'issue des hypothèses de travail. Une hypothèse **descriptive** ou **exploratoire** est rapportée sans test.
 
@@ -362,6 +364,7 @@ L'ordonnanceur consigne l'ordre des prises de parole, ce qui permet de connaîtr
 | **Formules récurrentes** | Nombre de codes FOR présents dans au moins 20 % des versions d'une journée ; pente par simulation | HO10c |
 | **Disposition à parler** | Part de réponses « oui » au test du train, par statut perçu (majoritaire, minoritaire) | HO9b |
 | **Polarisation** | Dispersion des positions déclarées et des positions exprimées | HO7b |
+| **Part du hasard** | Part de la variance entre simulations due aux graines (même condition), rapportée à celle due aux conditions, pour le taux de taire et la pente de diversité ; écart entre deux exécutions d'une même graine si elle ne reproduit pas les sorties (étape 6) | HO12 |
 | **Connaissance préalable** | Recouvrement entre la grille des propositions et ce que le modèle restitue du titre seul (étape 0a) | Interprétation de HO8, HO10, ANA, AUT |
 | **Écart matin-soir** | Différence entre positions déclarées du matin et du soir | Contrôle |
 | **Stabilité** | Part d'agents dont les formulations A et B divergent | Contrôle |
@@ -389,7 +392,7 @@ Les formes NEU et EUP sont précisément celles que la neutralité apprise peut 
 |---|---|---|
 | **Revue n° 2** | Faite le 16 octobre 2026 par Claude Fable ; objections et décisions consignées (« ../revues/revue-adversariale-2-cadre-et-scenario.md »). Reste une relecture par un modèle d'un autre fournisseur via ILaaS (`qwen-3.8-27b`), les documents ayant été rédigés et relus par des modèles de la même famille ; billet de présentation du dispositif sur le carnet de recherche, pour recueillir les remarques des pairs | 1 semaine |
 | **Étape −1. Test d'accès et de débit** | Une journée simulée (40 habitants aux fiches provisoires, tirées par le script et de la longueur prévue ; T1, G0, M-LC) : relève l'identifiant exact du modèle renvoyé par l'API, mesure tokens par appel, durée par scène et taux d'erreurs de débit, et donne l'ordre de grandeur d'une simulation complète. Résultat consigné avant le premier temps du préenregistrement ; il décide du plan à 70 simulations ou du repli (section 6) | 2 jours |
-| **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO11 et de leurs règles de décision, des étapes préalables, des contrastes de référence et de leur justification, des deux branches de la connaissance préalable (3.2) et du plan B (3.1). Ébauche : « preenregistrement-premier-temps.md » | Avec la revue n° 2 |
+| **Préenregistrement, premier temps** | Dépôt daté des questions, des hypothèses HO1 à HO12 et de leurs règles de décision, des étapes préalables, des contrastes de référence et de leur justification, des deux branches de la connaissance préalable (3.2) et du plan B (3.1). Ébauche : « preenregistrement-premier-temps.md » | Avec la revue n° 2 |
 | **0. Construction des personas** | Les 40 habitants sont construits selon le protocole anti-biais (3.1), avec les attributs propres au scénario (3.4), puis les fiches sont auditées. Les fiches provisoires de l'étape −1 ne servent qu'à mesurer le débit | Avant 0a et 0b |
 | **0a. Profil des modèles, connaissance préalable et test sans public** | Chaque modèle (Le Chonk, `mistral-medium` daté, `mistral-small-4-119b`, `qwen-3.8-27b`, `gemma-4-31b`, les juges) répond sans persona à des items d'enquête publics (CEVIPOF, ESS), 10 fois ; restitue T0, T1, T3 et leur réception à partir du seul titre et de l'auteur (test de connaissance préalable, 10 fois) ; puis, sans persona et avec persona, seul, répond à des questions sur T0, T1, T3. Les réponses avec persona sont recueillies sous **trois paraphrases de la consigne des habitants**, pour estimer la part du concepteur dans la formulation des consignes. Dix items fixes de cette étape forment l'empreinte de comportement rejouée au début et à la fin de chaque bloc (3.1) | 1 semaine |
 | **0b. Dyades contrôlées** | 40 personas × interlocuteur favorable puis critique × T1 et T0 × 3 répétitions (environ 480 courts dialogues) ; plus une variante « étiquetée publique » à contenu identique (quelques dizaines de dialogues), qui mesure l'effet de la seule étiquette de scène | En parallèle |
@@ -480,7 +483,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 
 7. **Étalonnage théorique (QR-E, HO3)** : les trajectoires du village sont confrontées à des modèles publiés de la spirale du silence (Sohn et Geidner, 2016 ; Ross et al., 2019 ; Aranda et al., 2024), et, s'ils existent au moment de l'analyse, aux familles de formalisations du projet ; on compare la qualité d'ajustement de chaque famille. Un bon ajustement indique une ressemblance de forme, non une identité de mécanisme (suffisance générative).
 
-8. **Hypothèses secondaires, descriptives et exploratoires** : chaque hypothèse secondaire est rapportée avec son critère (1.6), satisfait ou non ; elle ne change pas l'issue des hypothèses de travail. Les hypothèses descriptives (HO3, HO7b) et exploratoires sont rapportées sans test.
+8. **Hypothèses secondaires, descriptives et exploratoires** : chaque hypothèse secondaire est rapportée avec son critère (1.6), satisfait ou non ; elle ne change pas l'issue des hypothèses de travail. Les hypothèses descriptives (HO3, HO7b, HO12) et exploratoires sont rapportées sans test.
 
 9. **Qualitative** : analyse de discours d'une sélection préenregistrée de chaînes de reformulation, publiques et privées, et des formes du silence.
 
@@ -489,6 +492,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 11. **Blocs exploratoires** (T2, compères, durée longue, auteur unique) : rapportés comme descriptifs, sans test d'hypothèse.
 
 12. **Interprétation critique** : confrontation aux résultats humains (comparaison qualitative, sauf pour les questions reprises à l'identique des études) et aux travaux sur agents génératifs. Les écarts sont traités comme des résultats sur l'architexte et le dispositif.
+13. **Volet réflexif : complexité et incertitude (cadre, 2.6 ; HO12)** : la part du hasard est rapportée sans test, avec son intervalle, pour le taux de taire et la pente de diversité. Elle se lit avec HT3 : si les versions convergent, l'incertitude générée par les modèles est bornée par l'architexte. Le journal des imprévus du carnet de conception (cadre, 6.2) est analysé avec le niveau 1 de la grille : ce que le concepteur n'avait pas prévu, et ce que le protocole a changé en route, dans les limites du préenregistrement (programme et stratégie). Ce volet ne modifie l'issue d'aucune hypothèse de travail.
 
 **Codage de référence et fiabilité.**
 - **Échantillon de validation** : 300 répliques, stratifiées par condition et par forme du silence, tirées avant tout codage automatique et codées par le chercheur.
@@ -497,7 +501,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 - **Indices** : avec six formes du silence, dont certaines rares, le kappa souffre du paradoxe de prévalence ; l'accord brut, l'AC1 de Gwet et l'accord par catégorie sont rapportés à côté.
 - **Publication et robustesse** : livres de codes, extraits codés et désaccords publiés pour la vérification par les pairs ; résultats retenus seulement s'ils sont stables entre graines ; tests de permutation des prénoms et du genre.
 
-**Critères de réussite** : accord de codage atteint ; résultats de priorité 1 stables entre graines ; issue (soutenue, réfutée, indéterminée) établie pour HT1 à HT4. Quel que soit le sens des résultats sur HO1 à HO11, une expérience qui satisfait ces critères est publiable.
+**Critères de réussite** : accord de codage atteint ; résultats de priorité 1 stables entre graines ; issue (soutenue, réfutée, indéterminée) établie pour HT1 à HT4. Quel que soit le sens des résultats sur HO1 à HO12, une expérience qui satisfait ces critères est publiable.
 
 ---
 
@@ -554,6 +558,7 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 6. La carte des concepts du scénario, tenue à jour à chaque version.
 7. Un article de recherche en SIC : dire et taire un savoir savant dans une société d'agents génératifs.
 8. Des billets sur le carnet de recherche, dont un retour d'expérience.
+9. Un billet, puis un article pour l'ingénierie pédagogique : ce qu'un dispositif entièrement écrit, mais imprévisible, apprend sur l'incertitude que l'on programme dans les scénarios pédagogiques (cadre, 2.6).
 
 ---
 
@@ -622,6 +627,10 @@ La priorité 1 contient tous les contrastes de référence de HO11, pour que l'h
 - Latour, B. (2006). *Changer de société, refaire de la sociologie*. Paris : La Découverte.
 - Sperber, D. (1996). *La contagion des idées. Théorie naturaliste de la culture*. Paris : Odile Jacob.
 - Suchman, L. (2007). *Human-Machine Reconfigurations: Plans and Situated Actions* (2e éd.). Cambridge : Cambridge University Press.
+
+### Complexité et incertitude
+- Morin, E. (1990). *Introduction à la pensée complexe*. Paris : ESF éditeur.
+- Morin, E. (1999). *Les sept savoirs nécessaires à l'éducation du futur*. Paris : UNESCO. Rééd. Paris : Seuil, 2000.
 
 ### Ouvrage étudié
 - Chapoutot, J. (2025). *Les irresponsables. Qui a porté Hitler au pouvoir ?* Paris : Gallimard.

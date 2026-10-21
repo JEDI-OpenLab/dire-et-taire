@@ -1,6 +1,6 @@
 # Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 17 octobre 2026, version 0.2 (codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 21 octobre 2026, version 0.3 (hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,7 +8,7 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.3, scénario 11.2, glossaire 3.2, socle technique 4.2, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.4, scénario 11.3, glossaire 3.3, socle technique 4.2, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11.2), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b). Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.3), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
@@ -42,7 +42,7 @@ Tableau du scénario, 1.6 (version 11.2), avec le statut de chacune : principale
 
 ## 6. Mesures et instruments
 
-Enquête du matin (questions 4 et 5) et du soir (neuf questions) ; sollicitations standardisées (au moins 5 en public et 5 en privé par agent) ; deux juges, jamais de la famille du modèle qui a écrit la réplique codée, validés contre un échantillon humain de 300 répliques (kappa ≥ 0,7 par juge) ; analyses sur les codes concordants, désaccords arbitrés à l'aveugle de la condition ; fiabilité intra-codeur sur 15 % du corpus codé par le chercheur, après trois semaines au moins ; accord brut et AC1 de Gwet rapportés ; modèle de plongement fixé au second temps, doublé d'une mesure lexicale ; test de connaissance préalable des textes sources à l'étape 0a.
+Enquête du matin (questions 4 et 5) et du soir (neuf questions) ; sollicitations standardisées (au moins 5 en public et 5 en privé par agent) ; deux juges, jamais de la famille du modèle qui a écrit la réplique codée, validés contre un échantillon humain de 300 répliques (kappa ≥ 0,7 par juge) ; analyses sur les codes concordants, désaccords arbitrés à l'aveugle de la condition ; fiabilité intra-codeur sur 15 % du corpus codé par le chercheur, après trois semaines au moins ; accord brut et AC1 de Gwet rapportés ; modèle de plongement fixé au second temps, doublé d'une mesure lexicale ; test de connaissance préalable des textes sources à l'étape 0a. Part du hasard (HO12) : variance entre graines d'une même condition rapportée à la variance entre conditions, sur les simulations de priorité 1, rapportée sans test.
 
 ## 7. Textes sources
 
@@ -66,8 +66,8 @@ Livres de codes figés ; nombre de graines ; température unique et graines ; mo
 
 ## 12. Reproductibilité et données
 
-Générations archivées avec consignes, graines, identifiants datés, métadonnées (schéma du socle, étape 8 bis) ; code du module scénario en licence libre ; plan de gestion des données ; exclusions (extraits longs des ouvrages, contenus discriminatoires bruts) ; conditions d'usage de T1 et de T3 consignées par écrit.
+Générations archivées avec consignes, graines, identifiants datés, métadonnées (schéma du socle, étape 8 bis) ; code du module scénario en licence libre ; plan de gestion des données ; exclusions (extraits longs des ouvrages, contenus discriminatoires bruts) ; conditions d'usage de T1 et de T3 consignées par écrit. Les écarts au préenregistrement et les imprévus sont consignés, datés, dans le journal des imprévus du carnet de conception (cadre, 6.2), et rapportés.
 
 ## 13. Publication
 
-Billets de méthode avant la fin de l'élection présidentielle de 2027 ; résultats sur le contenu ensuite ; aucune version déformée des thèses de T1 et T3 présentée autrement que comme production d'agents ; prise de contact avec les auteurs avant publication, réponse ou absence de réponse rapportée.
+Billets de méthode avant la fin de l'élection présidentielle de 2027 ; résultats sur le contenu ensuite ; aucune version déformée des thèses de T1 et T3 présentée autrement que comme production d'agents ; prise de contact avec les auteurs avant publication, réponse ou absence de réponse rapportée. Le volet réflexif sur la complexité et l'incertitude donne lieu à un billet, puis à un article pour l'ingénierie pédagogique.

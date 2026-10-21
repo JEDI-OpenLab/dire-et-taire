@@ -26,6 +26,8 @@ Problématique générale du village (cadre, 3.1)
   « Comment une simulation sociale générative fait-elle circuler et se transformer
     des énoncés, alors qu'aucune des voix qui la peuplent ne parle seule ? »
         |
+        +-- Volet réflexif : complexité et incertitude, d'après Morin (cadre, 2.6) ;
+        |     sans hypothèse de travail, mesuré par HO12 (descriptive)
         +-- Questions de recherche QR1 à QR4 (cadre, 3.2) ; QR2 = la part des instances
                 |
                 +-- QR4 = problématique du scénario (scénario, 1.3)
@@ -36,7 +38,7 @@ Problématique générale du village (cadre, 3.1)
                         +-- Questions de recherche QR-A à QR-E (scénario, 1.4)
                         +-- Hypothèses de travail HT1 à HT4 (scénario, 1.5)
                         |     HT1, centrale : le taire est co-produit par l'agencement
-                        +-- Hypothèses opérationnelles HO1 à HO11 (scénario, 1.6), principales,
+                        +-- Hypothèses opérationnelles HO1 à HO12 (scénario, 1.6), principales,
                         |     secondaires, descriptives ou exploratoires
                         +-- Règles de décision à trois issues (scénario, 7)
                               |

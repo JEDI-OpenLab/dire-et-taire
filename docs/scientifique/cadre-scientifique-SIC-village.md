@@ -1,8 +1,8 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé comme objet de recherche en SIC. Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
+*Le village simulé comme objet de recherche en SIC. Version 6.4 du 21 octobre 2026 : volet réflexif sur la complexité et l'incertitude au sens d'Edgar Morin, pour l'ingénierie pédagogique (2.6, 4.2, 6.2, 7, 8, 9). Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
-*Documents associés : « scenario-dire-et-taire.md » (version 11.2), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
+*Documents associés : « scenario-dire-et-taire.md » (version 11.3), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
 ---
 
@@ -113,6 +113,31 @@ Les travaux sur les chaînes de transmission entre modèles de langage parlent d
 
 Dans le village, toutes les médiations (gazette, mémoire, scènes) sont écrites par le concepteur et jouées par un seul architexte : la trivialité n'y a pas l'hétérogénéité des mondes sociaux que décrit Jeanneret. Elle reçoit donc une mesure circonscrite : la différence entre ce que deviennent les versions dans le village et dans des chaînes linéaires jouées par le même modèle, à profondeur de transmission égale (scénario, HO8). Cette différence est la trace des médiations sociales du dispositif ; le reste de la trivialité sert de lentille d'interprétation.
 
+### 2.6 Complexité et incertitude : un volet réflexif pour l'ingénierie pédagogique
+
+Le projet se donne un second regard, réflexif, emprunté à la pensée complexe d'Edgar Morin (1977-2004 ; 1990 ; 1999). Il n'ajoute pas d'hypothèse de travail : il lit le dispositif et ses résultats pour en tirer un recul pédagogique et méthodologique.
+
+**Le constat de départ.** En ingénierie pédagogique, on introduit de l'incertitude dans les scénarios : un événement imprévu dans une étude de cas, un tirage dans un jeu sérieux, des embranchements dans une simulation. Cette incertitude est écrite d'avance : le concepteur a prévu l'ensemble des possibles, et l'apprenant découvre seulement lequel se produit. Au sens de Morin, c'est du **compliqué** (beaucoup d'éléments, beaucoup de branches, que l'on peut énumérer), non du **complexe** (ce qui est « tissé ensemble » : des éléments en interactions et en rétroactions, dont le tout ne se déduit pas des parties). Le village pousse la situation à sa limite. Le concepteur écrit tout, fiches, ordonnanceur, consignes, graines, et ne peut pourtant pas prévoir ce qui sera dit.
+
+**Trois notions de Morin, et leur traduction dans le village.**
+
+| Notion | Chez Morin | Dans le village |
+|---|---|---|
+| **Écologie de l'action** | Dès qu'une action entre dans un milieu d'interactions, elle échappe aux intentions de son auteur | La co-agentivité vue depuis le concepteur : il est une instance parmi six, pas l'auteur du résultat (section 1) |
+| **Boucle récursive** | Les produits et les effets d'un processus sont aussi causes de ce qui les produit | La spirale du silence : le climat perçu fait taire, le silence modifie le climat, qui fait taire davantage (scénario, HT4, HO9) |
+| **Programme et stratégie** | Le programme déroule une séquence fixée d'avance ; la stratégie se modifie selon ce qui arrive en route | Le préenregistrement est un programme ; les règles à trois issues, les replis du plan, le prolongement conditionnel (section 7) et le journal des imprévus (6.2) en font une stratégie |
+
+**Trois incertitudes dans le projet.**
+- L'**incertitude programmée** : les graines, les tirages, l'ordonnanceur au hasard. Le concepteur en connaît tous les possibles.
+- L'**incertitude générée** : ce que produisent les modèles et les interactions entre agents. Le concepteur ne peut pas l'énumérer, mais elle reste bornée par l'architexte. Si les versions convergent vers le lieu commun (scénario, HT3), l'IA générative donne une impression d'ouverture tout en réduisant la diversité.
+- L'**incertitude du chercheur** : ce qu'il ne peut pas savoir, comme l'intériorité des agents ou les parts qui ne peuvent être isolées. Le projet la déclare au lieu de la masquer, ce que Morin appelle « affronter les incertitudes » (1999).
+
+**Mesure.** Le volet a une prise empirique sans simulation supplémentaire. La **part du hasard** (scénario, HO12, descriptive) rapporte la variation due aux graines à celle due aux conditions ; si une même graine ne reproduit pas les sorties (scénario, étape 6), l'écart entre deux exécutions d'une même graine isole l'incertitude générée. Le journal des imprévus du carnet de conception (6.2) en donne la trace qualitative.
+
+**Question réflexive.** Que montre un dispositif entièrement écrit, mais imprévisible dans ses énoncés, sur l'incertitude que l'on programme dans les scénarios pédagogiques, et sur ce qu'apporte, ou retire, une IA générative qui joue des personnages ?
+
+**Précaution.** La part aléatoire d'un modèle n'est pas l'incertitude au sens de Morin, qui est épistémologique et anthropologique. Le projet ne pose pas d'équivalence entre les deux : il montre la distinction entre aléatoire et complexe, et c'est elle qui a un intérêt pédagogique.
+
 ---
 
 ## 3. Problématique et questions de recherche
@@ -170,6 +195,7 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont d�
 | **Mise en scène de la communication** | Authier-Revuz (1982) | Marqueurs de reprise | Repérage direct | Aucun |
 | **Mémoire interdiscursive** | Moirand (2007) | Analogies spontanées | Repérage des discours convoqués | La mémoire convoquée est celle des données d'entraînement |
 | **Vulgarisation, continuum de la communication scientifique** | Jacobi (1999) ; Jurdant (2009) | Situer les sources | Classement sur le continuum | Aucun |
+| **Complexité, incertitude** | Morin (1977-2004 ; 1990 ; 1999) | Volet réflexif (2.6) : écologie de l'action, boucle récursive, programme et stratégie | Trois incertitudes distinguées : programmée, générée, du chercheur ; part du hasard (scénario, HO12) | La complexité d'un village joué par un seul architexte est bornée ; la part aléatoire d'un modèle n'est pas l'incertitude au sens de Morin |
 
 ### 4.3 Concepts critiques sur les modèles de langage et la simulation
 
@@ -242,6 +268,8 @@ Convergences et divergences entre volets sont documentées ; une divergence est 
 
 Document daté, tenu par le chercheur, qui consigne pour chaque choix : le choix, sa justification au moment où il est fait, les alternatives écartées, ses effets observés ensuite. C'est la **trace de la part d'agentivité du concepteur**, et il fait partie du corpus du niveau 1.
 
+Il comporte un **journal des imprévus** : ce que le concepteur n'avait pas prévu (un comportement des agents, une panne, un résultat du pilote) et ce qu'il a changé en conséquence, avec la date et la règle du préenregistrement concernée. C'est la trace de l'écologie de l'action et du passage du programme à la stratégie (2.6).
+
 ### 6.3 Fiabilité du codage
 
 - Préenregistrement en deux temps : questions, hypothèses, règles de décision et contrastes de référence avant toute génération ; livres de codes figés, nombre de graines et seuils techniques après le pilote, par un avenant daté. Le pilote n'entre pas dans l'analyse.
@@ -312,7 +340,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 | Cohérence théorie, méthode, corpus | Noyau théorique centré sur l'agencement ; décomposition des instances ; livre de codes descriptif |
 | Validité des comparaisons | Réplication procédurale ; chaînes linéaires comme modèle nul |
 | Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
-| Réflexivité | Le concepteur traité comme une instance ; carnet de conception |
+| Réflexivité | Le concepteur traité comme une instance ; carnet de conception et journal des imprévus ; volet réflexif sur la complexité et l'incertitude (2.6) |
 | Fiabilité | Préenregistrement en deux temps, règles de décision à trois issues, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
 | Prudence interprétative | Aucune généralisation aux humains ; vocabulaire des cadres d'énonciation |
 | Transparence | Code, consignes, livres de codes, fiches, archives publiés selon le plan de gestion des données |
@@ -327,6 +355,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - **Les modèles savent déjà** : ce qu'un modèle sait des textes sources par ses données d'entraînement entre dans le village avant toute circulation ; cette mémoire d'entraînement est mesurée et rapportée comme part du modèle et du fournisseur.
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
+- **La complexité du village est bornée** : un seul architexte écrit toutes les voix, et les médiations sont écrites par le concepteur ; l'incertitude qui y apparaît n'est pas celle d'une société (2.6).
 - Le codage automatique ajoute une instance à l'analyse elle-même ; d'où la séparation des modèles et la validation humaine.
 
 ### Prolongements possibles
@@ -345,6 +374,8 @@ Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 **Revues de SIC** : *Communication & langages*, *Questions de communication*, *Les Enjeux de l'information et de la communication*, *Hermès*, *Réseaux*, *tic&société*, *Revue française des sciences de l'information et de la communication*.
 
 **Simulation et méthodes** : *Journal of Artificial Societies and Social Simulation*.
+
+**Ingénierie pédagogique et sciences de l'éducation** (volet réflexif, 2.6) : *Distances et médiations des savoirs*, *Revue internationale des technologies en pédagogie universitaire*, *STICEF* ; billet sur le carnet de recherche JEDI-OpenLab.
 
 **Événements** : congrès de la SFSIC ; journées d'étude sur les écritures numériques et l'IA générative.
 
@@ -391,6 +422,11 @@ Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 - Perez, J., Kovač, G., Léger, C., Colas, C., Molinaro, G., Derex, M., Oudeyer, P.-Y., & Moulin-Frier, C. (2025). When LLMs Play the Telephone Game: Cultural Attractors as Conceptual Tools to Evaluate LLMs in Multi-turn Settings. *Proceedings of ICLR 2025*.
 - Rosnow, R. L. (1991). Inside rumor: A personal journey. *American Psychologist*, 46(5), 484-496.
 - Sperber, D. (1996). *La contagion des idées. Théorie naturaliste de la culture*. Paris : Odile Jacob.
+
+### Complexité et incertitude
+- Morin, E. (1977-2004). *La Méthode* (6 tomes). Paris : Seuil.
+- Morin, E. (1990). *Introduction à la pensée complexe*. Paris : ESF éditeur.
+- Morin, E. (1999). *Les sept savoirs nécessaires à l'éducation du futur*. Paris : UNESCO. Rééd. Paris : Seuil, 2000.
 
 ### Modèles de langage, simulation, validation
 - Argyle, L. P., Busby, E. C., Fulda, N., Gubler, J. R., Rytting, C., & Wingate, D. (2023). Out of One, Many: Using Language Models to Simulate Human Samples. *Political Analysis*, 31(3), 337-351.

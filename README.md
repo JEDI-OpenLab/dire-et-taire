@@ -37,7 +37,7 @@ Voir le guide de lecture : `docs/README.md`, et le glossaire : `docs/glossaire.m
 
 ## État
 
-Conception terminée, installation de la station en cours (octobre 2026). Documents en vigueur : cadre scientifique 6.3, scénario 11.2, glossaire 3.2, socle technique 4.2. La revue adversariale n° 2 est faite et ses dix-sept décisions sont consignées. Le projet ne compte plus qu'un scénario ; la rumeur de la boulangerie est gardée comme prolongement possible, selon les résultats (cadre, section 7).
+Conception terminée, installation de la station en cours (octobre 2026). Documents en vigueur : cadre scientifique 6.4, scénario 11.3, glossaire 3.3, socle technique 4.2. La revue adversariale n° 2 est faite et ses dix-sept décisions sont consignées. Le projet ne compte plus qu'un scénario ; la rumeur de la boulangerie est gardée comme prolongement possible, selon les résultats (cadre, section 7). Un volet réflexif sur la complexité et l'incertitude, au sens d'Edgar Morin, donne au projet un intérêt pour l'ingénierie pédagogique (cadre, 2.6).
 
 **Station, au 19 octobre 2026** (détail dans le journal du socle technique, section 12) : Ubuntu 26.04.1 LTS, accès par clé SSH seulement, pare-feu, Docker 29.9.1, Langfuse 4.63.0 et passe-plat LiteLLM 1.106.0 en service, clés virtuelles par usage créées (sans budget : la consommation est suivie en tokens) ; un premier appel à un modèle ILaaS aboutit et apparaît dans les traces. En attente : la clé de Le Chonk (AMUE). À décider : le remplaçant du second juge (Qwen 3.6, retiré par ILaaS), le traitement de Mistral Medium (publié sans version datée), le niveau de raisonnement des modèles qui raisonnent, et l'étiquetage des appels dans les traces.
 

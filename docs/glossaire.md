@@ -1,6 +1,6 @@
 # Glossaire
 
-*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3.2 du 19 octobre 2026 : nouvelle rubrique « Termes techniques » (section 7 : station, passe-plat, clés, traces, outils), entrées « Le Chonk », « Modèle à raisonnement » et « Modèle de plongement » (section 4). Version 3.1 du 17 octobre 2026 : codes « C4 » retirés ; entrée « Expériences C0 à C5 » réécrite ; entrée « Masse critique » retirée (notion de l'ancienne expérience sur la convention) ; renvoi au prolongement possible dans l'entrée « Rumeur ». Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
+*Définitions retenues dans le projet « Dire et taire », paternité des notions et références d'origine. Version 3.3 du 21 octobre 2026 : nouvelle rubrique « Complexité et incertitude » (section 8, d'après Edgar Morin), pour le volet réflexif du projet ; les références propres au glossaire deviennent la section 9 ; entrée « Hypothèse opérationnelle » mise à jour (HO12). Version 3.2 du 19 octobre 2026 : nouvelle rubrique « Termes techniques » (section 7 : station, passe-plat, clés, traces, outils), entrées « Le Chonk », « Modèle à raisonnement » et « Modèle de plongement » (section 4). Version 3.1 du 17 octobre 2026 : codes « C4 » retirés ; entrée « Expériences C0 à C5 » réécrite ; entrée « Masse critique » retirée (notion de l'ancienne expérience sur la convention) ; renvoi au prolongement possible dans l'entrée « Rumeur ». Version 3 du 16 octobre 2026 : suites de la revue n° 2 ; codes HO1b, HO7a, HO7b, HO9b, HO10c ; gazette neutre G= ; mémoire d'entraînement ; découpage du concepteur ; graine ; modèle juge ; statuts des hypothèses opérationnelles. La version 2 avait introduit l'inventaire en trois statuts et les codes T0 à T3, HO1 à HO11.*
 
 **Comment lire ce glossaire.** Pour chaque notion : la **définition retenue** dans le projet (qui peut adapter la définition d'origine), la **paternité** (qui l'a forgée ou popularisée, dans quelle tradition), la **référence** principale, et, quand c'est utile, **à ne pas confondre**. Les références complètes figurent dans les bibliographies du cadre scientifique et du scénario.
 
@@ -142,7 +142,7 @@
 |---|---|---|
 | **Problématique « Comment X alors que Y »** | Forme qui met en tension l'objet étudié (X) et une contradiction apparente (Y) | Convention de rédaction du projet |
 | **Hypothèse de travail** | Réponse proposée à la problématique, interprétable en SIC (HT1 à HT4) | scénario, section 1.5 |
-| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO11, avec HO1b, HO7a, HO7b, HO9b, HO10a, HO10b, HO10c). Statut **principal** (entre dans une règle de décision), **secondaire** (critère propre, sans effet sur l'issue des hypothèses de travail), **descriptif** ou **exploratoire** (rapporté sans test) | scénario, section 1.6 |
+| **Hypothèse opérationnelle** | Traduction mesurable d'une hypothèse de travail (HO1 à HO12, avec HO1b, HO7a, HO7b, HO9b, HO10a, HO10b, HO10c). Statut **principal** (entre dans une règle de décision), **secondaire** (critère propre, sans effet sur l'issue des hypothèses de travail), **descriptif** ou **exploratoire** (rapporté sans test) | scénario, section 1.6 |
 | **Règle de décision à trois issues** | Critère préenregistré qui classe chaque hypothèse de travail comme soutenue, réfutée ou indéterminée | Cadre scientifique, section 6.4 |
 | **Contraste de référence** | Variation fixée à l'avance pour chaque instance (par exemple scène privée contre publique), dont l'effet est exprimé dans une unité commune pour comparer les parts. Son choix est la part du concepteur dans la mesure. Pour l'instance dont l'hypothèse centrale prédit la moindre part, le contraste reçoit son étendue maximale | Terme du projet ; cadre scientifique, section 6.4 |
 | **Contrôle de manipulation** | Vérification préalable qu'une condition produit bien la différence qu'elle est censée produire (par exemple, que la consigne d'autocensure rend l'agent plus réservé) | Usage méthodologique courant en psychologie expérimentale |
@@ -186,7 +186,24 @@ Termes du socle technique, c'est-à-dire de la machine qui fait tourner le villa
 
 ---
 
-## 8. Références propres au glossaire
+## 8. Complexité et incertitude
+
+Rubrique du volet réflexif du projet (cadre, 2.6) : un recul pédagogique et méthodologique sur l'incertitude que l'on programme dans les scénarios pédagogiques.
+
+| Notion | Définition retenue | Paternité et tradition | Référence | À ne pas confondre |
+|---|---|---|---|---|
+| **Complexité** | Ce qui est « tissé ensemble » (*complexus*) : des éléments en interactions et en rétroactions, dont le tout a des propriétés que les parties n'ont pas et qu'on ne peut pas en déduire | Edgar Morin, pensée complexe | Morin (1990) ; Morin (1977-2004) | Avec le **compliqué** : beaucoup d'éléments ou de branches, que l'on peut énumérer et prévoir. Un scénario pédagogique à embranchements est compliqué, pas complexe |
+| **Incertitude** | Ce qui ne peut être ni su ni prévu, même avec plus d'information ; à affronter plutôt qu'à éliminer, dans la connaissance comme dans l'action | Edgar Morin | Morin (1999), « Affronter les incertitudes » | Avec l'**aléa** : un tirage dont tous les résultats possibles sont connus d'avance. La part aléatoire d'un modèle de langage n'est pas l'incertitude au sens de Morin |
+| **Écologie de l'action** | Dès qu'une action entre dans un milieu d'interactions, elle échappe aux intentions de son auteur, et peut aller jusqu'à se retourner contre elles | Edgar Morin | Morin (1990, 1999) | Avec un échec du concepteur : c'est la condition de toute action. Dans le projet, c'est la co-agentivité vue depuis le concepteur |
+| **Boucle récursive** | Processus dont les produits et les effets sont en même temps causes et producteurs de ce qui les produit (récursion organisationnelle) | Edgar Morin | Morin (1990) | Avec la causalité linéaire. Dans le projet : la spirale du silence, où le climat perçu fait taire et où le silence modifie le climat |
+| **Programme et stratégie** | Le programme déroule une séquence d'actions fixée d'avance ; la stratégie se modifie selon les informations qui arrivent en route, et intègre l'aléa | Edgar Morin | Morin (1990) | Dans le projet : le préenregistrement est un programme ; les règles à trois issues, les replis du plan, le prolongement conditionnel et le journal des imprévus en font une stratégie |
+| **Incertitude programmée** | Variation écrite d'avance par le concepteur : graines, tirages, ordonnanceur au hasard ; il en connaît tous les possibles | Terme du projet | Cadre, 2.6 | Avec l'incertitude générée |
+| **Incertitude générée** | Variation produite par les modèles et par les interactions entre agents ; le concepteur ne peut pas l'énumérer, mais elle reste bornée par l'architexte | Terme du projet | Cadre, 2.6 ; scénario, HO12 | Avec l'incertitude au sens de Morin |
+| **Incertitude du chercheur** | Ce que le chercheur ne peut pas savoir, comme l'intériorité des agents ou les parts qui ne peuvent être isolées ; déclarée plutôt que masquée | Terme du projet, d'après Morin | Cadre, 2.6 et 7 | |
+| **Part du hasard** | Part de la variation entre simulations due aux graines, rapportée à celle due aux conditions ; mesure descriptive de l'incertitude programmée et générée | Terme du projet | Scénario, HO12 et 4.3 | Avec la part d'une instance (HO11), qui compare des conditions |
+| **Journal des imprévus** | Partie du carnet de conception qui consigne ce que le concepteur n'avait pas prévu et ce qu'il a changé en route, avec la date et la règle du préenregistrement concernée | Terme du projet | Cadre, 6.2 | Avec un écart non déclaré au préenregistrement |
+
+## 9. Références propres au glossaire
 
 Les références ci-dessous ne figurent pas dans les bibliographies du cadre et du scénario.
 
