@@ -1,6 +1,6 @@
 # Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 21 octobre 2026, version 0.6 (question réflexive QR-F, descriptive ; version 0.5 : période de vie ordinaire et ligne de base du taire ; version 0.4 : contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 21 octobre 2026, version 0.7 (publication sans référence à un calendrier extérieur ; version 0.6 : question réflexive QR-F, descriptive ; version 0.5 : période de vie ordinaire et ligne de base du taire ; version 0.4 : contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,7 +8,7 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.7, scénario 11.6, glossaire 3.6, socle technique 4.2, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.7, scénario 11.7, glossaire 3.6, socle technique 4.2, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11.6), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.7), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
@@ -70,4 +70,4 @@ Générations archivées avec consignes, graines, identifiants datés, métadonn
 
 ## 13. Publication
 
-Billets de méthode avant la fin de l'élection présidentielle de 2027 ; résultats sur le contenu ensuite ; aucune version déformée des thèses de T1 et T3 présentée autrement que comme production d'agents ; prise de contact avec les auteurs avant publication, réponse ou absence de réponse rapportée. Le volet réflexif sur la complexité et l'incertitude donne lieu à un billet, puis à un article pour l'ingénierie pédagogique.
+Billets de méthode et de dispositif d'abord ; résultats sur le contenu ensuite, au moment jugé opportun ; aucune version déformée des thèses de T1 et T3 présentée autrement que comme production d'agents ; prise de contact avec les auteurs avant publication, réponse ou absence de réponse rapportée. Le volet réflexif sur la complexité et l'incertitude donne lieu à un billet, puis à un article pour l'ingénierie pédagogique.
