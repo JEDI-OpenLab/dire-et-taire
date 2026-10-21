@@ -90,7 +90,7 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · « Dire et taire » · <a href="cadre.html" style="color:inherit">retour au site</a></div>
     <h1>Carte des concepts</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.5 et au cadre version 6.6, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.6 et au cadre version 6.7, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6.6 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.5 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6.7 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.6 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -182,11 +182,13 @@ const N=[
 {id:"QR2",c:2,code:"QR2",l:"La part des instances",d:"Quelle part de ces transformations revient à chaque instance ? (question centrale)"},
 {id:"QR3",c:2,code:"QR3",l:"La communication inscrite",d:"Quelle conception de la communication l'agencement réalise-t-il ? Dans le scénario : analyse qualitative du niveau 1 de la grille."},
 {id:"QR4",c:2,code:"QR4",l:"Le dire et le taire",d:"Problématique du scénario."},
+{id:"QR5",c:2,code:"QR5",l:"L'incertitude et l'émergence",d:"Que peut-on savoir de l'incertitude et de l'émergence dans un dispositif entièrement écrit, et qu'en retenir pour la conception pédagogique ? Question réflexive du cadre (2.6)."},
 {id:"QRA",c:2,code:"QR-A",l:"Les formes du dire et du taire",d:"Quelles positions l'agencement exprime-t-il face aux sollicitations, en public et en privé, et sous quelles formes se manifeste le taire ?"},
 {id:"QRB",c:2,code:"QR-B",l:"Le climat",d:"Comment se forme le climat perçu, quelles instances le façonnent, pèse-t-il sur ce qui se dit ?"},
 {id:"QRC",c:2,code:"QR-C",l:"La part des instances",d:"Quelle part du dire et du taire revient à chaque instance ? (question centrale du scénario)"},
 {id:"QRD",c:2,code:"QR-D",l:"La trivialité co-produite",d:"Quelles versions dominent, convergent-elles, que change l'agencement social par rapport à une transmission linéaire ?"},
 {id:"QRE",c:2,code:"QR-E",l:"L'étalonnage théorique",d:"De quelle formalisation de la spirale du silence la dynamique se rapproche-t-elle ? Modèles publiés comme plancher."},
+{id:"QRF",c:2,code:"QR-F",l:"Incertitude, émergence, observation",d:"Part du hasard, ligne de base du taire, émergence lue par HO8, HO10a et HT4, contrôles de l'observation, journal des imprévus. Descriptive, sans règle de décision."},
 /* HT */
 {id:"HT1",c:3,code:"HT1",regle:true,l:"Le taire est co-produit",d:"Relative aux contrastes déclarés : la scène (principal) ou un contraste secondaire pèse plus que la fiche à étendue maximale sur le taux de taire. Hypothèse centrale ; règle en scénario, 7.2 (HO11)."},
 {id:"HT2",c:3,code:"HT2",regle:true,l:"Un dire vide",d:"Les formes de neutralisation font plus de la moitié du taire, et plus pour T1 que pour T0. Règle en scénario, 7.3 (HO1b, HO5c)."},
@@ -285,9 +287,11 @@ const E=[
 ["S6","ecart"],["S6","transfo"],["S7","taire"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S10b","divers"],["HT3","S10b"],["archi","S10b"],["S11","taire"],
 ["morin","S12"],["morin","concepteur"],["morin","HT3"],["morin","spirale"],["morin","imprevus"],["S12","hasard"],["modele","S12"],["ordo","S12"],["concepteur","imprevus"],
 ["emerg","S8"],["emerg","S10"],["emerg","HT4"],["emerg","social"],["morin","emerg"],["evalaw","modele"],["evalaw","enq"],["evalaw","HT2"],["evalaw","rupt"],["evalaw","recEval"],["juge","rupt"],["modele","recEval"],
-["ordin","HT2"],["ordin","tbase"],["ordin","inv"],["HT2","tbase"],["silences","tbase"],["juge","tbase"],["emerg","ordin"]
+["ordin","HT2"],["ordin","tbase"],["ordin","inv"],["HT2","tbase"],["silences","tbase"],["juge","tbase"],["emerg","ordin"],
+["morin","QR5"],["QR5","QRF"],["QRF","S12"],["QRF","S8"],["QRF","S10"],["QRF","HT4"],["QRF","tbase"],["QRF","rupt"],["QRF","recEval"],["QRF","imprevus"],["emerg","QRF"],["evalaw","QRF"],["ordin","QRF"]
 ];
 const GAPS=[
+{s:"n",t:"Le volet réflexif n'avait pas de question",p:"Morin menait directement aux mesures, sans question de recherche.",f:"QR5 dans le cadre, déclinée par QR-F dans le scénario, descriptive et sans hypothèse de travail, pour ne pas compter deux fois HT4, HO8 et HO10a.",n:["morin","QR5","QRF","S12","emerg"]},
 {s:"i",t:"Revue n° 1 : le silence n'avait pas de ligne de base",p:"Sans mesure de ce qui se dit quand rien n'est en jeu, on ne peut pas parler de silence.",f:"Période de vie ordinaire de trois journées avant le livre, avec la même sollicitation et le même livre de codes ; commune par graine (scénario, 3.11).",n:["ordin","tbase","HT2","silences"]},
 {s:"b",t:"Revue n° 2 : HT2 n'avait pas de règle",p:"Aucun point d'analyse ne tranchait HT2.",f:"scénario, 7.3 : part des formes dans le taire et neutralisation différentielle (HO1b, HO5c).",n:["HT2","S1b","S5c","partF","neutrS"]},
 {s:"b",t:"Revue n° 2 : la hiérarchie des parts dépendait de la calibration",p:"L'amplitude de chaque contraste était choisie sans règle.",f:"Fiche à étendue maximale et contrôle de manipulation ; scène comme contraste principal ; Holm sur les secondaires ; 10 graines par bras entre simulations (scénario, 1.6, 3.4, 6, 7.2).",n:["HT1","S11","fiche","cadres","contraste","concepteur"]},

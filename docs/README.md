@@ -27,15 +27,18 @@ Problématique générale du village (cadre, 3.1)
     des énoncés, alors qu'aucune des voix qui la peuplent ne parle seule ? »
         |
         +-- Volet réflexif : complexité et incertitude, d'après Morin (cadre, 2.6) ;
-        |     sans hypothèse de travail, mesuré par HO12 (descriptive)
-        +-- Questions de recherche QR1 à QR4 (cadre, 3.2) ; QR2 = la part des instances
+        |     questions QR5 et QR-F, sans hypothèse de travail ; décrit par HO12,
+        |     la ligne de base du taire et des contrôles de l'observation
+        +-- Questions de recherche QR1 à QR5 (cadre, 3.2) ; QR2 = la part des instances ;
+        |     QR5 = réflexive (incertitude et émergence)
                 |
                 +-- QR4 = problématique du scénario (scénario, 1.3)
                       « Comment un dispositif génératif met-il en scène le dire et le taire
                         autour d'un savoir savant, alors que ses agents, conçus pour toujours
                         répondre, n'ont rien à craindre de la parole ? »
                         |
-                        +-- Questions de recherche QR-A à QR-E (scénario, 1.4)
+                        +-- Questions de recherche QR-A à QR-F (scénario, 1.4) ; QR-F = réflexive,
+                        |     descriptive, sans hypothèse de travail
                         +-- Hypothèses de travail HT1 à HT4 (scénario, 1.5)
                         |     HT1, centrale : le taire est co-produit par l'agencement
                         +-- Hypothèses opérationnelles HO1 à HO12 (scénario, 1.6), principales,

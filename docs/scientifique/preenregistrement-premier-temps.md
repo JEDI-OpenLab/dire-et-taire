@@ -1,6 +1,6 @@
 # Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 21 octobre 2026, version 0.5 (période de vie ordinaire et ligne de base du taire ; version 0.4 : contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 21 octobre 2026, version 0.6 (question réflexive QR-F, descriptive ; version 0.5 : période de vie ordinaire et ligne de base du taire ; version 0.4 : contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,11 +8,11 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.6, scénario 11.5, glossaire 3.6, socle technique 4.2, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.7, scénario 11.6, glossaire 3.6, socle technique 4.2, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
-Problématique du scénario (QR4 du cadre) : « Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? » Les deux moitiés de Y sont explicitées dans le scénario, 1.3. Questions QR-A à QR-E (scénario, 1.4). QR-E s'appuie sur des modèles publiés, et sur les formalisations du projet seulement si elles existent au moment de l'analyse.
+Problématique du scénario (QR4 du cadre) : « Comment un dispositif génératif met-il en scène le dire et le taire autour d'un savoir savant, alors que ses agents, conçus pour toujours répondre, n'ont rien à craindre de la parole ? » Les deux moitiés de Y sont explicitées dans le scénario, 1.3. Questions QR-A à QR-F (scénario, 1.4) ; QR-F, réflexive (QR5 du cadre), est traitée de façon descriptive, sans règle de décision. QR-E s'appuie sur des modèles publiés, et sur les formalisations du projet seulement si elles existent au moment de l'analyse.
 
 ## 3. Hypothèses de travail et règles de décision
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11.5), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.6), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
