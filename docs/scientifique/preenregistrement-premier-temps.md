@@ -1,6 +1,6 @@
 # Préenregistrement du scénario « Dire et taire », premier temps (ébauche)
 
-*Ébauche du 21 octobre 2026, version 0.4 (contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
+*Ébauche du 21 octobre 2026, version 0.5 (période de vie ordinaire et ligne de base du taire ; version 0.4 : contrôles de l'observation : règle d'écriture des consignes, code de rupture du cadre, test de reconnaissance d'évaluation ; version 0.3 : hypothèse descriptive HO12 ajoutée, pour le volet réflexif sur la complexité et l'incertitude ; version 0.2 du 17 octobre : codes « C4 » retirés, étape 0 de construction des personas ajoutée ; version 0.1 du 16 octobre), établie à partir de la proposition de la revue n° 2 et des dix-sept décisions du chercheur (« ../revues/revue-adversariale-2-cadre-et-scenario.md », section 10). Le premier temps dépose, avant toute génération : questions, hypothèses, règles de décision, contrastes de référence et leur justification, étapes préalables, plan B. Le second temps (avenant après le pilote) fixe : livres de codes, nombre de graines, température, modèle de plongement, identifiants datés, bornes et seuils confirmés ou révisés au vu du seul pilote.*
 
 *Les crochets signalent ce qui reste à compléter avant le dépôt. Les signes « − » des codes (G−, K−, −2) sont des signes moins.*
 
@@ -8,7 +8,7 @@
 
 ## 1. Projet
 
-Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.5, scénario 11.4, glossaire 3.5, socle technique 4.2, revues n° 1 et n° 2.
+Village simulé, scénario « Dire et taire ». Chercheur : [nom], ingénieur pédagogique, docteur en SIC, Centrale Lille. Projet mené seul. Dépôt daté sur [OSF ou équivalent]. Documents de référence : cadre scientifique 6.6, scénario 11.5, glossaire 3.6, socle technique 4.2, revues n° 1 et n° 2.
 
 ## 2. Problématique et questions
 
@@ -28,7 +28,7 @@ Chaque hypothèse de travail a une issue parmi trois : soutenue, réfutée, ind�
 
 ## 4. Hypothèses opérationnelles
 
-Tableau du scénario, 1.6 (version 11.4), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
+Tableau du scénario, 1.6 (version 11.5), avec le statut de chacune : principale (HO1b, HO5c, HO9, HO10a, HO10b, HO11), secondaire avec critère (HO1, HO2, HO4, HO5a, HO5b, HO6, HO7a, HO8, HO9b, HO10c), descriptive (HO3, HO7b, HO12). HO12, la part du hasard, sert le volet réflexif du cadre (2.6) et ne départage aucune hypothèse de travail. Les hypothèses secondaires sont rapportées avec leur critère ; elles ne modifient pas l'issue des hypothèses de travail.
 
 ## 5. Contrastes de référence et leur justification
 
@@ -42,7 +42,7 @@ Tableau du scénario, 1.6 (version 11.4), avec le statut de chacune : principale
 
 ## 6. Mesures et instruments
 
-Enquête du matin (questions 4 et 5) et du soir (neuf questions) ; sollicitations standardisées (au moins 5 en public et 5 en privé par agent) ; deux juges, jamais de la famille du modèle qui a écrit la réplique codée, validés contre un échantillon humain de 300 répliques (kappa ≥ 0,7 par juge) ; analyses sur les codes concordants, désaccords arbitrés à l'aveugle de la condition ; fiabilité intra-codeur sur 15 % du corpus codé par le chercheur, après trois semaines au moins ; accord brut et AC1 de Gwet rapportés ; modèle de plongement fixé au second temps, doublé d'une mesure lexicale ; test de connaissance préalable des textes sources à l'étape 0a. Part du hasard (HO12) : variance entre graines d'une même condition rapportée à la variance entre conditions, sur les simulations de priorité 1, pour le taux de taire (T1) et la pente de diversité des versions ; si une même graine ne reproduit pas les sorties (étape 6), écart entre deux exécutions d'une même graine, rapporté à part ; rapportée sans test. Contrôles de l'observation : aucune consigne ne mentionne une étude, un chercheur ou une observation ; code de rupture du cadre (RUP), taux rapporté par condition ; test de reconnaissance d'évaluation à l'étape 0a.
+Enquête du matin (questions 4 et 5) et du soir (neuf questions) ; sollicitations standardisées (au moins 5 en public et 5 en privé par agent) ; deux juges, jamais de la famille du modèle qui a écrit la réplique codée, validés contre un échantillon humain de 300 répliques (kappa ≥ 0,7 par juge) ; analyses sur les codes concordants, désaccords arbitrés à l'aveugle de la condition ; fiabilité intra-codeur sur 15 % du corpus codé par le chercheur, après trois semaines au moins ; accord brut et AC1 de Gwet rapportés ; modèle de plongement fixé au second temps, doublé d'une mesure lexicale ; test de connaissance préalable des textes sources à l'étape 0a. Part du hasard (HO12) : variance entre graines d'une même condition rapportée à la variance entre conditions, sur les simulations de priorité 1, pour le taux de taire (T1) et la pente de diversité des versions ; si une même graine ne reproduit pas les sorties (étape 6), écart entre deux exécutions d'une même graine, rapporté à part ; rapportée sans test. Contrôles de l'observation : aucune consigne ne mentionne une étude, un chercheur ou une observation ; code de rupture du cadre (RUP), taux rapporté par condition ; test de reconnaissance d'évaluation à l'étape 0a. Ligne de base du taire : la sollicitation standardisée est posée pendant la période de vie ordinaire, et ses réponses sont codées avec le même livre de codes, plus le code INV des lectures inventées ; rapportée sans test, pour interpréter HT2.
 
 ## 7. Textes sources
 
@@ -50,7 +50,7 @@ T1 : Chapoutot (2025). T0 : [à choisir] ; T3 : [à choisir] ; critères : même
 
 ## 8. Plan d'expérience
 
-Priorité 1 (70 simulations) : cœur T1 × G0 (10 graines), G= (5), G+ (10), G− (10) ; T0 × G0 (10) ; sans autocensure (5) ; O-HOM (10) ; M-AUT (10). Repli à 40 (5 graines par bras) si le débit mesuré à l'étape −1 l'impose, les contrastes secondaires de HO11 étant alors déclarés de faible puissance ; second repli à 35 (G= à la place de G0 dans le cœur). Priorité 2 (27) : T3 (5), lecture intégrale (5), mémoire sans résumé (3), T2 (3), narrateurs N2 et N3 (6), M-PLU (5). Priorité 3 (12) : compères (6), durée longue (3), auteur unique (3). Le nombre de graines est confirmé ou révisé au second temps, par calcul de puissance pour un écart de 5 points entre contrastes (HT1) et pour la règle de HT4.
+Priorité 1 (70 simulations) : cœur T1 × G0 (10 graines), G= (5), G+ (10), G− (10) ; T0 × G0 (10) ; sans autocensure (5) ; O-HOM (10) ; M-AUT (10). Repli à 40 (5 graines par bras) si le débit mesuré à l'étape −1 l'impose, les contrastes secondaires de HO11 étant alors déclarés de faible puissance ; second repli à 35 (G= à la place de G0 dans le cœur). Priorité 2 (27) : T3 (5), lecture intégrale (5), mémoire sans résumé (3), T2 (3), narrateurs N2 et N3 (6), M-PLU (5). Priorité 3 (12) : compères (6), durée longue (3), auteur unique (3). Le nombre de graines est confirmé ou révisé au second temps, par calcul de puissance pour un écart de 5 points entre contrastes (HT1) et pour la règle de HT4. Chaque simulation commence par trois journées de vie ordinaire, sans livre, communes aux simulations d'une même graine qui partagent le modèle, le narrateur, les fiches et la mémoire (scénario, 3.11) : 25 périodes en priorité 1 ; effet aléatoire de la période partagée dans les modèles d'analyse.
 
 ## 9. Étapes préalables
 
@@ -62,7 +62,7 @@ En cas de retrait de la préversion de Mistral Large 4 avant la fin de la priori
 
 ## 11. Ce qui est fixé au second temps
 
-Livres de codes figés ; nombre de graines ; température unique et graines ; modèle de plongement ; bornes et seuils (5 points, ±0,05, 0,5, 20 points, 10 points de conservation) confirmés ou révisés au vu du seul pilote, avec justification par la plus petite différence d'intérêt et non par les effets observés ; identifiants datés des modèles et empreintes de comportement.
+Livres de codes figés ; nombre de graines ; durée de la période de vie ordinaire (trois journées par défaut) ; température unique et graines ; modèle de plongement ; bornes et seuils (5 points, ±0,05, 0,5, 20 points, 10 points de conservation) confirmés ou révisés au vu du seul pilote, avec justification par la plus petite différence d'intérêt et non par les effets observés ; identifiants datés des modèles et empreintes de comportement.
 
 ## 12. Reproductibilité et données
 

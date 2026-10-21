@@ -20,13 +20,13 @@
 <section class="band">
   <div class="wrap">
     <div class="prose">
-      <div class="eyebrow">Scénario · version 11.4</div>
+      <div class="eyebrow">Scénario · version 11.5</div>
       <h1>Comment le village fonctionne</h1>
-      <p class="lead">Quarante habitants, quinze journées, un livre qui circule. Cette page décrit le scénario à trois échelles : le plan d'ensemble des simulations, le déroulé d'une simulation, et le trajet d'une seule réplique.</p>
+      <p class="lead">Quarante habitants, dix-huit journées, un livre qui circule. Cette page décrit le scénario à trois échelles : le plan d'ensemble des simulations, le déroulé d'une simulation, et le trajet d'une seule réplique.</p>
     </div>
     <div class="cards">
       <a class="card" href="#macro" style="text-decoration:none;color:inherit"><span class="code">Macro</span><h3>109 simulations</h3><p>Le plan d'expérience : quelles conditions, combien de fois, dans quel ordre de priorité.</p></a>
-      <a class="card" href="#meso" style="text-decoration:none;color:inherit"><span class="code">Méso</span><h3>Une simulation</h3><p>Quinze journées : rencontres, gazette, sollicitations, enquêtes du matin et du soir.</p></a>
+      <a class="card" href="#meso" style="text-decoration:none;color:inherit"><span class="code">Méso</span><h3>Une simulation</h3><p>Trois journées de vie ordinaire, puis quinze avec le livre : rencontres, gazette, sollicitations, enquêtes du matin et du soir.</p></a>
       <a class="card" href="#anime" style="text-decoration:none;color:inherit"><span class="code">Méso, animé</span><h3>Le village en mouvement</h3><p>Qui rencontre qui, où, et comment le livre se répand.</p></a>
       <a class="card" href="#micro" style="text-decoration:none;color:inherit"><span class="code">Micro</span><h3>Une réplique</h3><p>Du choix de la scène au codage par les juges.</p></a>
     </div>
@@ -61,7 +61,7 @@
     <div class="prose">
       <div class="eyebrow">Échelle macro</div>
       <h2>Le plan d'expérience</h2>
-      <p>Chaque carré est une simulation de quinze journées. Sauf mention contraire, tout le village (habitants, lecteur, narrateur) est joué par Le Chonk, les rencontres sont tirées au hasard et il n'y a pas de gazette. Chaque bloc ne change qu'une chose, pour isoler la part d'une instance. Une « graine » est un tirage du hasard : rejouer une condition avec plusieurs graines mesure la variabilité.</p>
+      <p>Chaque carré est une simulation de dix-huit journées : trois de vie ordinaire, puis quinze avec le livre. Sauf mention contraire, tout le village (habitants, lecteur, narrateur) est joué par Le Chonk, les rencontres sont tirées au hasard et il n'y a pas de gazette. Chaque bloc ne change qu'une chose, pour isoler la part d'une instance. Une « graine » est un tirage du hasard : rejouer une condition avec plusieurs graines mesure la variabilité.</p>
     </div>
     <div class="units" role="img" aria-label="Plan d'expérience : 70 simulations en priorité 1, 27 en priorité 2, 12 en priorité 3, soit 109.">
       <h3>Priorité 1 · garantie · 70 simulations</h3>
@@ -93,32 +93,28 @@
   <div class="wrap">
     <div class="prose">
       <div class="eyebrow">Échelle méso</div>
-      <h2>Une simulation : quinze journées</h2>
-      <p>Au premier matin, seul le lecteur connaît le livre. Il en parle à ceux qu'il rencontre, qui en parlent à leur tour. Selon la condition, une gazette locale paraît aux jours 2, 5, 8 et 11, neutre, favorable ou critique. Chaque soir, un enquêteur interroge les habitants hors de leur mémoire.</p>
+      <h2>Une simulation : dix-huit journées</h2>
+      <p>Pendant trois journées, le village vit sans livre : les habitants se rencontrent, parlent de leur vie et se forgent des souvenirs communs. On leur pose déjà la question « Quelqu'un a lu quelque chose d'intéressant ces temps-ci ? », pour savoir comment ils se taisent quand rien n'est en jeu. Au matin du jour 1, le lecteur reçoit le livre. Il en parle à ceux qu'il rencontre, qui en parlent à leur tour. Selon la condition, une gazette locale paraît aux jours 2, 5, 8 et 11, neutre, favorable ou critique. Chaque soir, un enquêteur interroge les habitants hors de leur mémoire.</p>
     </div>
     <figure>
       <div class="fig">
-        <svg class="wide" viewBox="0 0 760 210" role="img" aria-label="Frise de quinze journées : le lecteur seul informé au jour 1, la gazette aux jours 2, 5, 8 et 11 selon la condition, une enquête chaque matin et chaque soir, des sollicitations chaque jour.">
+        <svg class="wide" viewBox="0 0 760 210" role="img" aria-label="Frise de dix-huit journées : trois journées de vie ordinaire sans livre, puis quinze journées du livre ; le lecteur reçoit le livre au jour 1, la gazette paraît aux jours 2, 5, 8 et 11 selon la condition, une enquête chaque matin et chaque soir pendant les journées du livre, des sollicitations chaque jour.">
+          <rect x="101" y="32" width="105" height="160" rx="6" class="box-s" style="opacity:.45"/>
+          <text x="153" y="59" text-anchor="middle" class="t-s muted">vie ordinaire</text>
           <g class="t-s muted">
             <text x="10" y="58">Gazette</text><text x="10" y="98">Rencontres</text><text x="10" y="138">Enquêtes</text><text x="10" y="178">Mesures</text>
           </g>
           <g id="days"></g>
-          <g class="t-s mono muted">
-            <text x="121" y="24" text-anchor="middle">1</text><text x="163" y="24" text-anchor="middle">2</text><text x="205" y="24" text-anchor="middle">3</text><text x="247" y="24" text-anchor="middle">4</text><text x="289" y="24" text-anchor="middle">5</text>
-            <text x="331" y="24" text-anchor="middle">6</text><text x="373" y="24" text-anchor="middle">7</text><text x="415" y="24" text-anchor="middle">8</text><text x="457" y="24" text-anchor="middle">9</text><text x="499" y="24" text-anchor="middle">10</text>
-            <text x="541" y="24" text-anchor="middle">11</text><text x="583" y="24" text-anchor="middle">12</text><text x="625" y="24" text-anchor="middle">13</text><text x="667" y="24" text-anchor="middle">14</text><text x="709" y="24" text-anchor="middle">15</text>
-          </g>
-          <g>
-            <rect x="148" y="44" width="30" height="22" rx="4" class="box-a"/><rect x="274" y="44" width="30" height="22" rx="4" class="box-a"/>
-            <rect x="400" y="44" width="30" height="22" rx="4" class="box-a"/><rect x="526" y="44" width="30" height="22" rx="4" class="box-a"/>
-          </g>
+          <g class="t-s mono muted"><text x="118" y="24" text-anchor="middle">−3</text><text x="153" y="24" text-anchor="middle">−2</text><text x="188" y="24" text-anchor="middle">−1</text><text x="223" y="24" text-anchor="middle">1</text><text x="258" y="24" text-anchor="middle">2</text><text x="293" y="24" text-anchor="middle">3</text><text x="328" y="24" text-anchor="middle">4</text><text x="363" y="24" text-anchor="middle">5</text><text x="398" y="24" text-anchor="middle">6</text><text x="433" y="24" text-anchor="middle">7</text><text x="468" y="24" text-anchor="middle">8</text><text x="503" y="24" text-anchor="middle">9</text><text x="538" y="24" text-anchor="middle">10</text><text x="573" y="24" text-anchor="middle">11</text><text x="608" y="24" text-anchor="middle">12</text><text x="643" y="24" text-anchor="middle">13</text><text x="678" y="24" text-anchor="middle">14</text><text x="713" y="24" text-anchor="middle">15</text></g>
+          <g><rect x="245" y="44" width="26" height="22" rx="4" class="box-a"/><rect x="350" y="44" width="26" height="22" rx="4" class="box-a"/><rect x="455" y="44" width="26" height="22" rx="4" class="box-a"/><rect x="560" y="44" width="26" height="22" rx="4" class="box-a"/></g>
           <g id="meet"></g>
           <g id="enq"></g>
-          <rect x="102" y="166" width="38" height="20" rx="4" class="box-v"/><text x="121" y="180" text-anchor="middle" class="t-s">L</text>
-          <text x="150" y="180" class="t-s">Jour 1 : seul le lecteur est informé. Dès le jour 2, la diversité des versions de la thèse est mesurée chaque soir.</text>
+          <text x="153" y="180" text-anchor="middle" class="t-s muted">ligne de base</text>
+          <rect x="204" y="166" width="38" height="20" rx="4" class="box-v"/><text x="223" y="180" text-anchor="middle" class="t-s">L</text>
+          <text x="250" y="180" class="t-s">Jour 1 : le lecteur reçoit le livre. Dès le jour 2, on mesure la diversité des versions.</text>
         </svg>
       </div>
-      <figcaption>Quinze colonnes, une par journée. Les rectangles ambre marquent la gazette (absente dans la condition de référence). Chaque journée compte plusieurs créneaux de rencontres et deux enquêtes ; chaque habitant reçoit au moins cinq sollicitations en public et cinq en privé sur l'ensemble des quinze journées.</figcaption>
+      <figcaption>Dix-huit colonnes, une par journée ; la bande grise marque la vie ordinaire, jouée une fois par graine et reprise dans les conditions qui partagent le même village. Les rectangles ambre marquent la gazette (absente dans la condition de référence). Chaque journée compte plusieurs créneaux de rencontres et deux enquêtes ; chaque habitant reçoit au moins cinq sollicitations en public et cinq en privé sur l'ensemble des quinze journées du livre.</figcaption>
     </figure>
 
     <div class="prose"><h3>Une journée type</h3></div>
@@ -264,6 +260,7 @@
           <tr><td><b>Taux de conservation</b></td><td>Part des propositions du livre encore présentes dans une version, à même distance du lecteur, dans le village et dans des chaînes linéaires</td><td>Trivialité (HO8)</td></tr>
           <tr><td><b>Écart entre cadres</b></td><td>Position déclarée en enquête contre position exprimée en scène</td><td>Hypothèses secondaires</td></tr>
           <tr><td><b>Part du hasard</b></td><td>Part de la variation entre simulations due aux graines, rapportée à celle due aux conditions</td><td>Volet réflexif (HO12, <a href="cadre.html#complexite">complexité et incertitude</a>)</td></tr>
+          <tr><td><b>Formes du silence de base</b></td><td>Comment les habitants se taisent pendant la vie ordinaire, quand rien n'est en jeu</td><td>Ligne de base de HT2</td></tr>
           <tr><td><b>Rupture du cadre</b></td><td>Part des répliques qui sortent du rôle d'habitant (« en tant qu'IA », « dans cette étude »)</td><td>Contrôle de l'observation (<a href="cadre.html#complexite">volet réflexif</a>)</td></tr>
         </tbody>
       </table>
@@ -284,22 +281,22 @@
       <li><time>Étape 0b</time><p><b>Dyades contrôlées.</b> Chaque persona face à un interlocuteur favorable puis critique : environ 480 courts dialogues, pour mesurer la complaisance.</p></li>
       <li><time>Étape 1</time><p><b>Cohérence des personas.</b> Et contrôle que la consigne d'autocensure change bien le comportement.</p></li>
       <li><time>Étapes 2 à 5</time><p><b>Matériaux.</b> Grille des propositions du livre, livres de codes, textes de gazette appariés, chaînes linéaires de dix agents.</p></li>
-      <li><time>Étape 6</time><p><b>Pilote.</b> Trois simulations hors analyse : variance entre graines, puissance, saturation sur quinze journées.</p></li>
+      <li><time>Étape 6</time><p><b>Pilote.</b> Trois simulations hors analyse : variance entre graines, puissance, saturation sur les quinze journées du livre, durée de la vie ordinaire.</p></li>
     </ol>
     <div class="next"><a class="btn" href="cadre.html">Retour au cadre</a><a class="btn primary" href="technique.html">Continuer : la technique</a></div>
   </div>
 </section>
 </main>
 <script>
-/* Carrés du plan d'expérience et frise des quinze journées */
+/* Carrés du plan d'expérience et frise des dix-huit journées */
 document.querySelectorAll(".units .sq").forEach(function(el){var n=+el.dataset.n;for(var i=0;i<n;i++)el.appendChild(document.createElement("i"))});
 (function(){
   var NS="http://www.w3.org/2000/svg";
   function mk(t,a,p){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
   var meet=document.getElementById("meet"),enq=document.getElementById("enq");
-  for(var d=0;d<15;d++){var x=121+d*42;
-    for(var s=0;s<3;s++){mk("rect",{x:x-15+s*10.5,y:86,width:8,height:20,rx:2,class:s===1?"box-t":"box-v"},meet)}
-    mk("circle",{cx:x-8,cy:132,r:4,class:"f-t"},enq);mk("circle",{cx:x+8,cy:132,r:4,class:"f-t"},enq);
+  for(var d=0;d<18;d++){var x=118+d*35;
+    for(var s=0;s<3;s++){mk("rect",{x:x-13+s*9,y:86,width:7,height:20,rx:2,class:s===1?"box-t":"box-v"},meet)}
+    if(d>=3){mk("circle",{cx:x-7,cy:132,r:4,class:"f-t"},enq);mk("circle",{cx:x+7,cy:132,r:4,class:"f-t"},enq);}
   }
 })();
 </script>

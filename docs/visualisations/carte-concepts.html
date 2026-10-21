@@ -90,7 +90,7 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · scénario « Dire et taire »</div>
     <h1>Carte des concepts</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.4 et au cadre version 6.5, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.5 et au cadre version 6.6, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6.5 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.4 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6.6 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.5 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -176,6 +176,7 @@ const N=[
 {id:"enq",c:1,k:"instr",l:"Enquêteur (matin et soir)",d:"Positions déclarées, climat et tendance perçus, test du train, versions de la thèse. Ses réponses sont elles-mêmes des énoncés produits dans un cadre.",cd:"Matin : questions 4 et 5, prédicteurs de HO1 et HO9. Soir : neuf questions ; formulations A et B (test de stabilité)."},
 {id:"juge",c:1,k:"instr",l:"Deux modèles juges",d:"Codent position, intensité, formes du silence, transformations.",cd:"gemma-4-31b et qwen-3.6-35b-a3b (en cours de retrait par ILaaS, remplaçant à décider) ; un juge ne code jamais une réplique écrite par un modèle de sa famille ; chacun validé contre 300 répliques codées par le chercheur (kappa ≥ 0,7) ; analyses sur les codes concordants."},
 {id:"plong",c:1,k:"instr",l:"Modèle de plongement",d:"Mesure sémantique de la diversité des versions.",cd:"Modèle multilingue ouvert, version figée au second temps du préenregistrement ; doublé d'une mesure lexicale qui ne dépend d'aucun modèle."},
+{id:"ordin",c:1,k:"stim",l:"Période de vie ordinaire",d:"Trois journées sans livre au début de chaque simulation, communes par graine. Structure, pas instance.",cd:"Ligne de base du taire ; plan apparié ; terrain pour l'émergence (scénario, 3.11)."},
 /* QR */
 {id:"QR1",c:2,code:"QR1",l:"Les transformations",d:"Quelles transformations les énoncés subissent-ils en circulant ?"},
 {id:"QR2",c:2,code:"QR2",l:"La part des instances",d:"Quelle part de ces transformations revient à chaque instance ? (question centrale)"},
@@ -238,6 +239,8 @@ const N=[
 {id:"matin",c:5,k:"ctrl",l:"Écart matin-soir",d:"Différence entre positions déclarées du matin et du soir ; cohérence du modèle."},
 {id:"hasard",c:5,l:"Part du hasard",d:"Variance entre graines d'une même condition contre variance entre conditions ; écart entre deux exécutions d'une même graine si elle ne reproduit pas les sorties (étape 6)."},
 {id:"imprevus",c:5,k:"qual",l:"Journal des imprévus",d:"Ce que le concepteur n'avait pas prévu et ce qu'il a changé en route, consigné dans le carnet de conception (cadre, 6.2) ; lu avec le niveau 1."},
+{id:"tbase",c:5,l:"Formes du silence de base",d:"Taux de taire et formes du silence en réponse aux sollicitations de la période ordinaire, sans livre ; interprétation de HT2."},
+{id:"inv",c:5,k:"ctrl",l:"Lectures inventées",d:"Réponses de la période ordinaire codées INV, et leur reprise après J1."},
 {id:"rupt",c:5,k:"ctrl",l:"Rupture du cadre",d:"Part des répliques codées RUP, par condition ; contrôle de l'observation."},
 {id:"recEval",c:5,k:"ctrl",l:"Reconnaissance d'évaluation",d:"Part des réponses du test de l'étape 0a qui voient dans la situation un test ou une étude, par modèle."},
 {id:"connais",c:5,k:"ctrl",l:"Connaissance préalable",d:"Recouvrement entre la grille et ce que le modèle restitue du titre seul (étape 0a) ; sert à interpréter HO8 et HO10."}
@@ -281,9 +284,11 @@ const E=[
 ["S5a","taire"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
 ["S6","ecart"],["S6","transfo"],["S7","taire"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S10b","divers"],["HT3","S10b"],["archi","S10b"],["S11","taire"],
 ["morin","S12"],["morin","concepteur"],["morin","HT3"],["morin","spirale"],["morin","imprevus"],["S12","hasard"],["modele","S12"],["ordo","S12"],["concepteur","imprevus"],
-["emerg","S8"],["emerg","S10"],["emerg","HT4"],["emerg","social"],["morin","emerg"],["evalaw","modele"],["evalaw","enq"],["evalaw","HT2"],["evalaw","rupt"],["evalaw","recEval"],["juge","rupt"],["modele","recEval"]
+["emerg","S8"],["emerg","S10"],["emerg","HT4"],["emerg","social"],["morin","emerg"],["evalaw","modele"],["evalaw","enq"],["evalaw","HT2"],["evalaw","rupt"],["evalaw","recEval"],["juge","rupt"],["modele","recEval"],
+["ordin","HT2"],["ordin","tbase"],["ordin","inv"],["HT2","tbase"],["silences","tbase"],["juge","tbase"],["emerg","ordin"]
 ];
 const GAPS=[
+{s:"i",t:"Revue n° 1 : le silence n'avait pas de ligne de base",p:"Sans mesure de ce qui se dit quand rien n'est en jeu, on ne peut pas parler de silence.",f:"Période de vie ordinaire de trois journées avant le livre, avec la même sollicitation et le même livre de codes ; commune par graine (scénario, 3.11).",n:["ordin","tbase","HT2","silences"]},
 {s:"b",t:"Revue n° 2 : HT2 n'avait pas de règle",p:"Aucun point d'analyse ne tranchait HT2.",f:"scénario, 7.3 : part des formes dans le taire et neutralisation différentielle (HO1b, HO5c).",n:["HT2","S1b","S5c","partF","neutrS"]},
 {s:"b",t:"Revue n° 2 : la hiérarchie des parts dépendait de la calibration",p:"L'amplitude de chaque contraste était choisie sans règle.",f:"Fiche à étendue maximale et contrôle de manipulation ; scène comme contraste principal ; Holm sur les secondaires ; 10 graines par bras entre simulations (scénario, 1.6, 3.4, 6, 7.2).",n:["HT1","S11","fiche","cadres","contraste","concepteur"]},
 {s:"b",t:"Revue n° 2 : le modèle connaissait déjà le livre",p:"Rien ne mesurait la mémoire d'entraînement.",f:"Culture commune du village, mesurée par un test de connaissance préalable (étape 0a) ; critère de choix de T0 et T3 ; masquage en dernier recours (scénario, 1.2, 3.2).",n:["memEnt","modele","source","connais","S10","S8"]},
