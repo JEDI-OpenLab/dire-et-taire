@@ -1,8 +1,8 @@
 # Cadre scientifique en sciences de l'information et de la communication
 
-*Le village simulé comme objet de recherche en SIC. Version 6.4 du 21 octobre 2026 : volet réflexif sur la complexité et l'incertitude au sens d'Edgar Morin, pour l'ingénierie pédagogique (2.6, 4.2, 6.2, 7, 8, 9). Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
+*Le village simulé comme objet de recherche en SIC. Version 6.5 du 21 octobre 2026 : émergence et observateur dans l'observation (2.6, 4.3, 7, 9). Version 6.4 du 21 octobre 2026 : volet réflexif sur la complexité et l'incertitude au sens d'Edgar Morin, pour l'ingénierie pédagogique (2.6, 4.2, 6.2, 7, 8, 9). Version 6.3 du 16 octobre 2026 : le projet ne compte plus qu'un scénario, « Dire et taire » ; les expériences C0 à C5 prévues au départ sont retirées, les chaînes linéaires (ancienne C0) restent le modèle nul du scénario, et la rumeur de la boulangerie (ancienne C1) devient un prolongement possible (section 7). Version 6.2 : suites de la revue n° 2 ; statut de la décomposition des parts par rapport à la théorie de l'acteur-réseau (1.3, 1.4) ; résumé de mémoire rattaché à l'instance modèle et mémoire d'entraînement (1.1, 4.3) ; fournisseur réel du village (4.3) ; contrastes à étendue justifiée et interactions entre instances (6.4) ; graine, température, intervalles et comparaisons multiples (6.6) ; règle des juges par réplique (6.3). Version 6 : inventaire canonique des instances en trois statuts (production, stimuli, instruments), contrastes de référence, règles de décision à trois issues. Version 6.1 : condition de référence « tout Le Chonk », et contraste de modèle entre deux villages entiers. La version 5 avait réécrit le cadre autour de la co-agentivité.*
 
-*Documents associés : « scenario-dire-et-taire.md » (version 11.3), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
+*Documents associés : « scenario-dire-et-taire.md » (version 11.4), « projet-spirale-du-silence-formalisation.md », « ../revues/revue-adversariale-1-cadre-et-scenario.md », « ../revues/revue-adversariale-2-cadre-et-scenario.md ». Les termes, leur paternité et leurs références d'origine sont définis dans « ../glossaire.md ».*
 
 ---
 
@@ -119,18 +119,27 @@ Le projet se donne un second regard, réflexif, emprunté à la pensée complexe
 
 **Le constat de départ.** En ingénierie pédagogique, on introduit de l'incertitude dans les scénarios : un événement imprévu dans une étude de cas, un tirage dans un jeu sérieux, des embranchements dans une simulation. Cette incertitude est écrite d'avance : le concepteur a prévu l'ensemble des possibles, et l'apprenant découvre seulement lequel se produit. Au sens de Morin, c'est du **compliqué** (beaucoup d'éléments, beaucoup de branches, que l'on peut énumérer), non du **complexe** (ce qui est « tissé ensemble » : des éléments en interactions et en rétroactions, dont le tout ne se déduit pas des parties). Le village pousse la situation à sa limite. Le concepteur écrit tout, fiches, ordonnanceur, consignes, graines, et ne peut pourtant pas prévoir ce qui sera dit.
 
-**Trois notions de Morin, et leur traduction dans le village.**
+**Quatre notions de Morin, et leur traduction dans le village.**
 
 | Notion | Chez Morin | Dans le village |
 |---|---|---|
 | **Écologie de l'action** | Dès qu'une action entre dans un milieu d'interactions, elle échappe aux intentions de son auteur | La co-agentivité vue depuis le concepteur : il est une instance parmi six, pas l'auteur du résultat (section 1) |
 | **Boucle récursive** | Les produits et les effets d'un processus sont aussi causes de ce qui les produit | La spirale du silence : le climat perçu fait taire, le silence modifie le climat, qui fait taire davantage. C'est la boucle que HT4 et HO9 mettent à l'épreuve : si le climat ne pèse pas sur ce qui se dit, elle ne se ferme pas dans le village (scénario, 1.5, 1.6) |
+| **Émergence** | Les qualités qu'un tout organisé possède et que ses parties n'ont pas, et qui rétroagissent sur elles | Climat d'opinion, convergence, ignorance pluraliste ; mesurée contre les parties isolées et les chaînes linéaires ; HT4 éprouve la rétroaction (voir ci-dessous) |
 | **Programme et stratégie** | Le programme déroule une séquence fixée d'avance ; la stratégie se modifie selon ce qui arrive en route | Le préenregistrement est un programme ; les règles à trois issues, les replis du plan, le prolongement conditionnel (section 7) et le journal des imprévus (6.2) en font une stratégie |
 
 **Trois incertitudes dans le projet.**
 - L'**incertitude programmée** : les graines, les tirages, l'ordonnanceur au hasard. Le concepteur en connaît tous les possibles.
 - L'**incertitude générée** : ce que produisent les modèles et les interactions entre agents. Le concepteur ne peut pas l'énumérer, mais elle reste bornée par l'architexte. Si les versions convergent vers le lieu commun (scénario, HT3), l'IA générative donne une impression d'ouverture tout en réduisant la diversité.
 - L'**incertitude du chercheur** : ce qu'il ne peut pas savoir, comme l'intériorité des agents ou les parts qui ne peuvent être isolées. Le projet la déclare au lieu de la masquer, ce que Morin appelle « affronter les incertitudes » (1999).
+
+**L'émergence, et la boucle qui la referme.** Chez Morin, l'émergence désigne les qualités qu'un tout organisé possède et que ses parties, prises isolément, n'ont pas ; et le tout rétroagit sur les parties (1977-2004, tome 1). Le village a trois candidates, qu'aucun agent ne porte seul : le climat d'opinion, la convergence vers le lieu commun ou au contraire la polarisation, l'ignorance pluraliste. Le dispositif permet de les observer, parce qu'il mesure séparément les parties isolées (test sans public, dyades contrôlées), un modèle nul sans société (les chaînes linéaires) et le tout (le village). Ce que le village produit et que ni les parties ni les chaînes ne produisent est une définition opérationnelle de l'émergence ; HO8 et HO10a la mesurent déjà. La rétroaction du tout sur les parties, c'est le climat perçu qui pèse sur ce que l'agent dit. Si HT4 est soutenue (socialité sans climat), le village produit des formes collectives sans boucle : une agrégation plutôt qu'une émergence au sens de Morin. Si HT4 est réfutée, la boucle existe. HT4 vaut donc aussi test de l'émergence.
+
+Trois précautions. Une convergence peut venir des préférences du modèle plutôt que de l'organisation du village : d'où les chaînes linéaires et le contraste M-AUT contre M-PLU. Avec 40 agents, 15 journées et une mémoire résumée, on ne peut parler que d'**émergence faible**, qu'on ne connaît qu'en faisant tourner la simulation (Bedau, 1997), jamais d'émergence forte. Enfin, l'émergence dépend du découpage de l'observateur, qui fixe ce qui compte comme partie et comme tout.
+
+**L'observateur dans l'observation.** Les agents ne savent rien, au sens où un humain sait. Mais les modèles reconnaissent souvent qu'ils sont dans un test ou une évaluation, et leurs réponses changent (Needham et al., 2025). Le village est plein d'indices de ce genre : questionnaire matin et soir, échelles de 0 à 100, questions reprises des études d'opinion, monde fictif décrit dans une consigne. Un modèle peut alors répondre en « bon répondant », plus prudent, plus neutre, plus désirable : une forme d'effet Hawthorne (Landsberger, 1958), qui pèserait d'abord sur le dire vide (HT2). C'est le principe de Morin selon lequel l'observateur fait partie de ce qu'il observe (1990) ; dans le projet, l'observation est une part de l'instance « concepteur ». Trois garde-fous (scénario, 1.2, 4.2, 5, 9) : aucune consigne ne mentionne une étude, un chercheur ou une observation, ce qui est vérifié et consigné dans le carnet de conception ; un code de **rupture du cadre** (RUP) relève les répliques qui sortent du rôle, avec un taux rapporté par condition ; un **test de reconnaissance d'évaluation**, à l'étape 0a, demande au modèle, hors du village, ce qu'il pense de la situation qu'on lui décrit.
+
+**Ce que la pédagogie peut en retenir.** On ne programme pas l'émergence : on en programme seulement les conditions. Et un apprenant qui se sait évalué, comme un modèle qui se sait testé, peut jouer le rôle du bon répondant plutôt que répondre. Deux leçons pour les scénarios pédagogiques : concevoir des conditions plutôt que des issues, et traiter le cadre d'évaluation comme une instance qui agit sur ce que l'on observe.
 
 **Mesure.** Le volet a une prise empirique sans simulation supplémentaire. La **part du hasard** (scénario, HO12, descriptive) rapporte la variation due aux graines à celle due aux conditions ; si une même graine ne reproduit pas les sorties (scénario, étape 6), l'écart entre deux exécutions d'une même graine isole l'incertitude générée. Le journal des imprévus du carnet de conception (6.2) en donne la trace qualitative.
 
@@ -210,6 +219,7 @@ Les hypothèses de travail (HT) et les hypothèses opérationnelles (HO) sont d�
 | **Règles de conduite des fournisseurs** | Mistral AI (politique d'usage, s. d.) ; OpenAI (2026) | Le fournisseur comme actant. Le fournisseur du village est Mistral, dont la politique d'usage pose un principe général de neutralité sans spécification comportementale publique ; la spécification d'OpenAI sert d'exemple de ce qu'un fournisseur peut prescrire. La neutralité apprise est mesurée (scénario, étape 0a), non attestée |
 | **Mémoire d'entraînement** | Terme du projet | Ce que le modèle sait déjà des textes sources et de leur réception, traité comme la culture commune du village, identique chez tous les habitants ; mesuré avant toute circulation (scénario, étape 0a) ; conditionne l'interprétation des transformations, des analogies avec le présent et de la convergence |
 | **Préférence des juges automatiques pour leurs propres textes** | Panickssery et al. (2024) | Justifie la séparation entre modèles générateurs et modèles juges |
+| **Conscience d'évaluation** | Needham et al. (2025) | Les modèles reconnaissent souvent un contexte de test et y répondent autrement ; garde-fous du scénario : règle d'écriture des consignes, rupture du cadre, test de reconnaissance d'évaluation (2.6) |
 
 ---
 
@@ -340,7 +350,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 | Cohérence théorie, méthode, corpus | Noyau théorique centré sur l'agencement ; décomposition des instances ; livre de codes descriptif |
 | Validité des comparaisons | Réplication procédurale ; chaînes linéaires comme modèle nul |
 | Distinction entre forme reproduite et mécanisme | Décomposition par instance ; prudence sur la suffisance générative |
-| Réflexivité | Le concepteur traité comme une instance ; carnet de conception et journal des imprévus ; volet réflexif sur la complexité et l'incertitude (2.6) |
+| Réflexivité | Le concepteur traité comme une instance ; carnet de conception et journal des imprévus ; volet réflexif sur la complexité, l'incertitude, l'émergence et l'observateur dans l'observation (2.6) |
 | Fiabilité | Préenregistrement en deux temps, règles de décision à trois issues, fiabilité intra-codeur, deux modèles juges indépendants, codages publiés, puissance, répétitions |
 | Prudence interprétative | Aucune généralisation aux humains ; vocabulaire des cadres d'énonciation |
 | Transparence | Code, consignes, livres de codes, fiches, archives publiés selon le plan de gestion des données |
@@ -356,6 +366,7 @@ Pour les indicateurs collectifs, l'unité est la simulation ; pour les indicateu
 - Les références humaines viennent de dispositifs différents ; seules certaines sont reproductibles procéduralement.
 - Les modèles évoluent : les résultats valent pour des versions datées.
 - **La complexité du village est bornée** : un seul architexte écrit toutes les voix, et les médiations sont écrites par le concepteur ; l'incertitude qui y apparaît n'est pas celle d'une société (2.6).
+- **Les agents peuvent « se savoir » observés** : les indices d'enquête peuvent orienter les réponses vers celles d'un bon répondant ; c'est mesuré (rupture du cadre, test de reconnaissance d'évaluation), non éliminé (2.6).
 - Le codage automatique ajoute une instance à l'analyse elle-même ; d'où la séparation des modèles et la validation humaine.
 
 ### Prolongements possibles
@@ -423,7 +434,9 @@ Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 - Rosnow, R. L. (1991). Inside rumor: A personal journey. *American Psychologist*, 46(5), 484-496.
 - Sperber, D. (1996). *La contagion des idées. Théorie naturaliste de la culture*. Paris : Odile Jacob.
 
-### Complexité et incertitude
+### Complexité, émergence, observation
+- Bedau, M. A. (1997). Weak emergence. *Philosophical Perspectives*, 11, 375-399.
+- Landsberger, H. A. (1958). *Hawthorne Revisited*. Ithaca : Cornell University.
 - Morin, E. (1977-2004). *La Méthode* (6 tomes). Paris : Seuil.
 - Morin, E. (1990). *Introduction à la pensée complexe*. Paris : ESF éditeur.
 - Morin, E. (1999). *Les sept savoirs nécessaires à l'éducation du futur*. Paris : UNESCO. Rééd. Paris : Seuil, 2000.
@@ -439,6 +452,7 @@ Si les résultats sont indéterminés, ce prolongement n'est pas engagé.
 - Noelle-Neumann, E. (1974). The spiral of silence: A theory of public opinion. *Journal of Communication*, 24(2), 43-51.
 - Noelle-Neumann, E. (1993). *The Spiral of Silence: Public Opinion, Our Social Skin* (2e éd.). Chicago : University of Chicago Press.
 - OpenAI (2026). *Model Spec*, version du 18 août 2026. https://model-spec.openai.com/2026-08-18.html (consulté le 16 octobre 2026).
+- Needham, J., Edkins, G., Pimpale, G., Bartsch, H., & Hobbhahn, M. (2025). Large Language Models Often Know When They Are Being Evaluated. *arXiv:2505.23836*.
 - Panickssery, A., Bowman, S. R., & Feng, S. (2024). LLM Evaluators Recognize and Favor Their Own Generations. *Advances in Neural Information Processing Systems 37 (NeurIPS 2024)*. *arXiv:2404.13076*.
 - Park, J. S., O'Brien, J., Cai, C. J., Morris, M. R., Liang, P., & Bernstein, M. S. (2023). Generative Agents: Interactive Simulacra of Human Behavior. *Proceedings of UIST '23*.
 - Varenne, F. (2007). *Du modèle à la simulation informatique*. Paris : Vrin.

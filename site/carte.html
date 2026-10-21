@@ -90,7 +90,7 @@ svg{display:block}
   <header>
     <div class="eyebrow">Village simulé · « Dire et taire » · <a href="cadre.html" style="color:inherit">retour au site</a></div>
     <h1>Carte des concepts</h1>
-    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.3 et au cadre version 6.4, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
+    <p class="lede">Chaque concept du cadre est suivi jusqu'à ce qui le mesure : instance de l'agencement, question de recherche, hypothèse de travail, hypothèse opérationnelle, indicateur. État au scénario version 11.4 et au cadre version 6.5, après la revue n° 2 et le passage à un scénario unique. La carte vérifie trois choses : que chaque concept mène à une mesure, que chaque hypothèse opérationnelle a un indicateur et un critère, et que chaque hypothèse de travail a une règle de décision ; elle ne vérifie pas la validité des règles. Cliquez sur un nœud pour suivre sa filiation, ou sur un point pour voir ce qu'il touche.</p>
   </header>
 
   <section class="stats" id="stats" aria-label="Bilan"></section>
@@ -107,7 +107,7 @@ svg{display:block}
       <button class="reset" id="reset" type="button">Tout afficher</button>
     </div>
     <div class="map" id="map"></div>
-    <p class="note">Sources : cadre scientifique v6.4 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.3 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
+    <p class="note">Sources : cadre scientifique v6.5 (sections 1, 2.5, 2.6, 3, 4, 6, 7) et scénario v11.4 (sections 1.4 à 1.6, 2, 3, 4, 6, 7). Les liens en pointillés partent des instruments (enquêteur, juges, modèle de plongement), qui sont eux aussi des agencements. Un nœud en pointillés rouges signale une pièce manquante ; une pastille rouge signale une hypothèse sans règle de décision ou sans critère. Il n'en reste aucune.</p>
   </section>
 </div>
 
@@ -160,6 +160,8 @@ const N=[
 {id:"contraste",c:0,fam:"methode",l:"Contrastes de référence",r:"Projet (cadre 6.4)",d:"Une variation fixée à l'avance par instance, effets exprimés en points de pourcentage. Leur choix est la part du concepteur dans la mesure ; la fiche reçoit son étendue maximale ; la scène est le contraste principal."},
 {id:"equiv",c:0,fam:"methode",l:"Test d'équivalence",r:"Lakens (2017) ; Lakens, Scheel et Isager (2018)",d:"Établit qu'un effet est négligeable (climat perçu dans HO9, borne ±0,05 sous l'effet humain moyen), et non seulement non significatif."},
 {id:"morin",c:0,fam:"methode",l:"Complexité et incertitude (volet réflexif)",r:"Morin (1977-2004 ; 1990 ; 1999)",d:"Recul pédagogique et méthodologique : écologie de l'action, boucle récursive, programme et stratégie ; incertitude programmée, générée, du chercheur (cadre, 2.6). Ne porte aucune hypothèse de travail ; mesure descriptive par la part du hasard (HO12)."},
+{id:"emerg",c:0,fam:"methode",l:"Émergence",r:"Morin (1977-2004) ; Bedau (1997)",d:"Ce que le village produit et que ni les parties isolées ni les chaînes linéaires ne produisent (HO8, HO10a) ; la rétroaction du tout sur les parties est éprouvée par HT4 (cadre, 2.6)."},
+{id:"evalaw",c:0,fam:"llm",l:"Conscience d'évaluation",r:"Needham et al. (2025) ; Landsberger (1958)",d:"Un modèle qui reconnaît une enquête peut répondre en « bon répondant » ; contrôles : règle d'écriture des consignes, rupture du cadre, test de l'étape 0a (cadre, 2.6)."},
 {id:"suff",c:0,fam:"posture",l:"Suffisance générative",r:"Epstein (1999) ; Zhao, Pham et Vincent (2026)",d:"Une spirale reproduite n'est pas une spirale expliquée."},
 {id:"critique",c:0,fam:"posture",l:"Simulacres, perroquets, silicium",r:"Park et al. (2023) ; Bender et al. (2021) ; Argyle et al. (2023) ; Wang et al. (2025)",d:"Concepts critiques sur les agents génératifs ; ils cadrent l'interprétation."},
 /* Instances, stimuli, instruments */
@@ -236,6 +238,8 @@ const N=[
 {id:"matin",c:5,k:"ctrl",l:"Écart matin-soir",d:"Différence entre positions déclarées du matin et du soir ; cohérence du modèle."},
 {id:"hasard",c:5,l:"Part du hasard",d:"Variance entre graines d'une même condition contre variance entre conditions ; écart entre deux exécutions d'une même graine si elle ne reproduit pas les sorties (étape 6)."},
 {id:"imprevus",c:5,k:"qual",l:"Journal des imprévus",d:"Ce que le concepteur n'avait pas prévu et ce qu'il a changé en route, consigné dans le carnet de conception (cadre, 6.2) ; lu avec le niveau 1."},
+{id:"rupt",c:5,k:"ctrl",l:"Rupture du cadre",d:"Part des répliques codées RUP, par condition ; contrôle de l'observation."},
+{id:"recEval",c:5,k:"ctrl",l:"Reconnaissance d'évaluation",d:"Part des réponses du test de l'étape 0a qui voient dans la situation un test ou une étude, par modèle."},
 {id:"connais",c:5,k:"ctrl",l:"Connaissance préalable",d:"Recouvrement entre la grille et ce que le modèle restitue du titre seul (étape 0a) ; sert à interpréter HO8 et HO10."}
 ];
 const PROD=["modele","fiche","orch","ordo","cadres","concepteur"];
@@ -276,7 +280,8 @@ const E=[
 ["S1","taire"],["S1","silence"],["S1","ecart"],["S1","falsif"],["S2","double"],["S3","ignorI"],["S4","noyauI"],
 ["S5a","taire"],["S5a","ecart"],["S5a","falsif"],["S5b","dyade"],["S5c","neutr"],["S5c","formes"],
 ["S6","ecart"],["S6","transfo"],["S7","taire"],["S8","transfo"],["S9","sensib"],["S10","divers"],["S10b","divers"],["HT3","S10b"],["archi","S10b"],["S11","taire"],
-["morin","S12"],["morin","concepteur"],["morin","HT3"],["morin","spirale"],["morin","imprevus"],["S12","hasard"],["modele","S12"],["ordo","S12"],["concepteur","imprevus"]
+["morin","S12"],["morin","concepteur"],["morin","HT3"],["morin","spirale"],["morin","imprevus"],["S12","hasard"],["modele","S12"],["ordo","S12"],["concepteur","imprevus"],
+["emerg","S8"],["emerg","S10"],["emerg","HT4"],["emerg","social"],["morin","emerg"],["evalaw","modele"],["evalaw","enq"],["evalaw","HT2"],["evalaw","rupt"],["evalaw","recEval"],["juge","rupt"],["modele","recEval"]
 ];
 const GAPS=[
 {s:"b",t:"Revue n° 2 : HT2 n'avait pas de règle",p:"Aucun point d'analyse ne tranchait HT2.",f:"scénario, 7.3 : part des formes dans le taire et neutralisation différentielle (HO1b, HO5c).",n:["HT2","S1b","S5c","partF","neutrS"]},
