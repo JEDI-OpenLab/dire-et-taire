@@ -1,28 +1,35 @@
 # Publie le dossier site/ sur GitHub Pages à chaque modification poussée sur main.
+# Préparation et déploiement sont séparés : dans un même job, le déploiement
+# ne trouvait pas l'artefact qui venait d'être envoyé (24 novembre 2026).
 name: Site du projet
 on:
   push:
     branches: [main]
-    paths: ["site/**"]
+    paths: ["site/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
 concurrency:
   group: pages
   cancel-in-progress: true
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
   deploy:
+    needs: build
+    permissions:
+      actions: read
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: site
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
